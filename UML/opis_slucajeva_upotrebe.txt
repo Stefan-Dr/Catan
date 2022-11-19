@@ -1,0 +1,50 @@
+ -Kratak opis igre: Igrac zapocinje jednu partiju igre iz glavnog menija aplikacije. Aplikacija ucitava podesavanja partije kao i asete potrebne za odigravanje jedne partije. Nakon odigrane partije aplikacija skladisti podatke o odigranoj partiji.
+ 
+ -Akteri: 
+ *Igrac
+ *Bot
+ 
+ -Preduslovi: Aplikacija je pokreuta i prikazuje glavni meni 
+ -Postuslovi: Informacije o odigranoj partiji se trajno cuvaju
+ 
+ -Osnovni tok:
+ 
+ 1. Igrac bira dugme "Zapocni igru" iz glavnog menija
+ 2. Aplikacija zatim otvara prozor u kome igrac bira nacin igre(single player, multiplayer)
+    2.1. Ako je igrac odabrao opciju multiplayer:
+        2.1.1. Potrebno je da se ostala 3 igraca prikljuce partiji
+        2.1.2. Ukoliko se u roku od 2 minuta nisu ostala 3 igraca priklucila partiji, aplikacija se vraca na korak broj 2 (prozor sa izborom nacina partije)
+        2.1.3. Ukoliko su se svi igraci prikljucili partiji prelazi se na korak 3.
+    2.2. Ako je igrac odabrao opciju single player partiji se prikljucuju 3 bota i prelazi s na korak 3.
+3. Aplikacija dohvata informacije o podesavanjima partije.
+4. Aplikacija konstruise novu partiju i zapocinje je 
+***(RANDOM REDOSLED?)***
+5. Svaki od igraca baca 2 kockice, na osnovu cega se odlucuje redosled igraca koji su na potezu, pri cemu najvecu prednost ima igrac sa najvecim zbirom dobijenih brojeva na kockicama
+    5.1 U slucaju da su 2 ili vise igraca dobila isti broj pri bacanju kockica, ponavlja se bacanje izmedju tih igraca iznova dok god se ne ustanovi redosled igranja, pridrzavajuci se rasporeda odredjenog prilikom prethodnog bacanja
+6. Postavljanje jednog naselja i jednog puta koji je vezan za to isto naselje u polja koja nisu vec zauzeta u narednom redosledu:
+    6.1 Na osnovu redosleda igraca utvrdjenog u koraku 5. igraci izvrsvaju akciju opisanu u koraku 6.
+        6.1.1 Uslov za postavljanje naselja na odredjeno polje jeste da ne postoji nijedno drugo naselje na bilo kom od susednih polja
+            6.1.1.1 Polja su susedna ukoliko ih razdvaja samo jedan putic
+    6.2 Obrnutim redosledom u odnosu na korak 6.1 svaki igrac izvrsava akciju opisanu u koraku 6. pri cemu u zavisnosti od mesta postavljanja naselja dobija po jednu karticu od svakog resursa koji je pokriven tim naseljem
+7. Sve dok neki igrac ne dostigne 10 poena ponavljaju se sledeci koraci redosledom utvrdjenim u koraku 6.:
+    7.1 Igrac ima 10 sekundi za bacanje dve kockice i u zavisnosti od zbir brojeva na kocikcama resursi se dodeljiju na sledeci nacin:
+        7.1.1 Ukoliko igrac ima izgradjenu kucicu koja pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 7.1 dobija jednu karticu resursa na kome se nalazi taj broj
+        7.1.2 Ukoliko igrac ima izgradjen grad koji pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 7.1 dobija dve kartice resursa na kome se nalazi taj broj
+    7.2 Svaki igrac ima 2 minuta na raspolaganju za odigravanje svog poteza 
+    7.3 U okviru svog poteza svaki igrac moze izgraditi neki objekat ili kupiti magicnu karticu pod sledecim uslovima:
+        7.3.1 Da bi igrac sagradio jedan putic potrebna mu je jedna kartica resursa gline i jedna kartica resursa drveta
+        7.3.2 Da bi igrac sagradio jedno naselje potrebna mu je jedna kartica resursa sena, jedna kratica resursa gline, jedna kartica resursa drveta i jedna kartica resursa ovce
+        7.3.3 Da bi igrac sagradio jedan grad potrebno mu je da ima tri kartice resursa kamena i dve kartice resursa sena takodje grad moze da bude sagradjen samo na mestime gde je taj igrac prethodno imao izgradjeno naselje 
+        7.3.4 Da bi igrac dobio od banke jednu magicnu karticu potrebno je da
+        kod sebe ima jednu karticu resursa ovce, jednu karticu resursa sena i jednu karticu resursa kamena
+        7.3.5 Prilikom svake izgradje nekog objekta ili kupovine magicne kartice igrac vraca banci odredjeni broj resursa pod stakama 7.3.1 , 7.3.2 , 7.3.3 , 7.3.4
+    7.4 U svakom potezu svaki igrac ima pravo da banci vrati, ukoliko ima mogucnost, 4 kartice istog resursa i da uzme iz banke jednu karticu resursa po zelji
+    7.5 //TREJD UKOLIKO BUDEMO ZELELI DA UBACIMO
+    7.6 Potez svakog igraca se zavrsava ukoliko pritisne dugme "Dalje" ili istekne vreme predvidjeno za svaki potez i tada se prelazi na sledeceg igraca po rasporedu utvrdjenom u koraku 5.
+8. Poeni se dobijaju na sledeci nacin:
+    8.1 Za svako izgradjeno naselje igrac dobija jedan poena
+    8.2 Za svaki izgradjeni grad  igrac dobija dva poena ali gubi jedan poena jer se grad gradi na mestu nekog od naselja tog igraca
+    8.3 Ukoliko igrac ima vise od pet povezanih putica, i ako niko od ostalih igraca nema vise poveznih putica od njega, igrad dobija dva poena
+        8.3.1 Dva poena dobijena za najvise povezanih putica igrac moze izgubiti u slucaju da drugi igrac u medjuvremenu sagradi vise povezanih putica od njega
+9. Na kraju svake partije informacije o odigranoj partiji se cuvaju 
+    
