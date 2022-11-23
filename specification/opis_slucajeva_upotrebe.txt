@@ -46,5 +46,18 @@
     8.2 Za svaki izgradjeni grad  igrac dobija dva poena ali gubi jedan poena jer se grad gradi na mestu nekog od naselja tog igraca
     8.3 Ukoliko igrac ima vise od pet povezanih putica, i ako niko od ostalih igraca nema vise poveznih putica od njega, igrad dobija dva poena
         8.3.1 Dva poena dobijena za najvise povezanih putica igrac moze izgubiti u slucaju da drugi igrac u medjuvremenu sagradi vise povezanih putica od njega
-9. Na kraju svake partije informacije o odigranoj partiji se cuvaju 
+9. Na kraju svake partije informacije o odigranoj partiji se cuvaju i prelazi se na korak 10.
+10.Aplikacija prikazuje glavni meni.    
     
+    
+-Alternativni tokovi:
+
+A1. Neocekivani izlaz iz aplikacije. U slucaju da u bilo kom koraku korisnik iskljuci aplikaciju, sve eventualno zapamcene informacije o trenutnoj partiji igre se ponistavaju i aplikacija prestaje sa radom.
+Slucaj upotrebe se zavrsava.
+
+-Podtokovi: /
+
+-Specijalni zahtevi: /
+
+-Dodatne informacije: Tokom trajanja partije, aplikacija pamti informacije o broju poena svakog od igraca
+
