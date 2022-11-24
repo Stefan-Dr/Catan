@@ -4,7 +4,7 @@
  -Igrac
  -Bot
  
- •Preduslovi: Aplikacija je pokreuta i prikazuje glavni meni 
+ •Preduslovi: Aplikacija je pokrenuta i prikazuje glavni meni 
  •Postuslovi: Informacije o odigranoj partiji se trajno cuvaju
  
  •Osnovni tok:
@@ -19,7 +19,7 @@
 4. Svaki od igraca baca 2 kockice, na osnovu cega se odlucuje redosled igraca koji su na potezu, pri cemu najvecu prednost ima igrac sa najvecim zbirom dobijenih brojeva na kockicama
     4.1 U slucaju da su 2 ili vise igraca dobila isti broj pri bacanju kockica, ponavlja se bacanje izmedju tih igraca iznova dok god se ne ustanovi redosled igranja, pridrzavajuci se rasporeda odredjenog prilikom prethodnog bacanja
 5. Postavljanje jednog naselja i jednog puta koji je vezan za to isto naselje u polja koja nisu vec zauzeta u narednom redosledu:
-    5.1 Na osnovu redosleda igraca utvrdjenog u koraku 5. igraci izvrsvaju akciju opisanu u koraku 6.
+    5.1 Na osnovu redosleda igraca utvrdjenog u koraku 4. igraci izvrsvaju akciju opisanu u koraku 5.
         5.1.1 Uslov za postavljanje naselja na odredjeno polje jeste da ne postoji nijedno drugo naselje na bilo kom od susednih polja
             5.1.1.1 Polja su susedna ukoliko ih razdvaja samo jedan putic
     5.2 Obrnutim redosledom u odnosu na korak 5.1 svaki igrac izvrsava akciju opisanu u koraku 5. pri cemu u zavisnosti od mesta postavljanja naselja dobija po jednu karticu od svakog resursa koji je pokriven tim naseljem
