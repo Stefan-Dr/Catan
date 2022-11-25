@@ -1,5 +1,11 @@
 <RCC>
     <qresource prefix="/resources">
         <file>images/pozadina.jpg</file>
+        <file>images/helpBackground.jpg</file>
+        <file>images/helpb.png</file>
+        <file>images/rules.png</file>
+        <file>images/rls.png</file>
+        <file>images/rlss.png</file>
+        <file>images/rlsss.png</file>
     </qresource>
 </RCC>

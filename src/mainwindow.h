@@ -15,6 +15,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    void on_pbStartGame_clicked();
+    void on_pbSettings_clicked();
+    void on_pbBackToMenu_clicked();
+    void on_pbBackToMenu_2_clicked();
+    void on_pbHelp_clicked();
+    void on_pbExit_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
