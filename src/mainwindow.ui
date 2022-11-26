@@ -43,7 +43,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="gridLayoutWidget">
@@ -362,55 +362,6 @@ border-color: #fff3ab;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QRadioButton" name="rbON">
-          <property name="geometry">
-           <rect>
-            <x>444</x>
-            <y>70</y>
-            <width>112</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Sahadeva</family>
-            <pointsize>15</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:#fff3ab;
-</string>
-          </property>
-          <property name="text">
-           <string>ON</string>
-          </property>
-         </widget>
-         <widget class="QRadioButton" name="rbOFF">
-          <property name="geometry">
-           <rect>
-            <x>444</x>
-            <y>100</y>
-            <width>112</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Sahadeva</family>
-            <pointsize>15</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:#fff3ab;</string>
-          </property>
-          <property name="text">
-           <string>OFF</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="label_2">
           <property name="geometry">
            <rect>
@@ -453,53 +404,6 @@ border-color: #fff3ab;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QRadioButton" name="rbFAST">
-          <property name="geometry">
-           <rect>
-            <x>440</x>
-            <y>220</y>
-            <width>112</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Sahadeva</family>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">
-color:#fff3ab;</string>
-          </property>
-          <property name="text">
-           <string>FAST</string>
-          </property>
-         </widget>
-         <widget class="QRadioButton" name="rbSLOW">
-          <property name="geometry">
-           <rect>
-            <x>440</x>
-            <y>190</y>
-            <width>112</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Sahadeva</family>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:#fff3ab;</string>
-          </property>
-          <property name="text">
-           <string>SLOW</string>
-          </property>
-         </widget>
          <widget class="QPushButton" name="pbBackToMenu">
           <property name="geometry">
            <rect>
@@ -538,6 +442,134 @@ border-color: #fff3ab;</string>
           <property name="text">
            <string>BACK TO MAIN MENU</string>
           </property>
+         </widget>
+         <widget class="QGroupBox" name="gbox1">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>50</y>
+            <width>120</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:none;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QRadioButton" name="rbON">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>20</y>
+             <width>112</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sahadeva</family>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:#fff3ab;
+</string>
+           </property>
+           <property name="text">
+            <string>ON</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbOFF">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>112</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sahadeva</family>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:#fff3ab;</string>
+           </property>
+           <property name="text">
+            <string>OFF</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="gbox2">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>170</y>
+            <width>120</width>
+            <height>80</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QRadioButton" name="rbFAST">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>112</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sahadeva</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+color:#fff3ab;</string>
+           </property>
+           <property name="text">
+            <string>FAST</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbSLOW">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>112</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sahadeva</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:#fff3ab;</string>
+           </property>
+           <property name="text">
+            <string>SLOW</string>
+           </property>
+          </widget>
          </widget>
         </widget>
        </item>

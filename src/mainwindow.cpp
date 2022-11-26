@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->rbON->setChecked(true);
+    ui->rbSLOW->setChecked(true);
 }
 
 MainWindow::~MainWindow()
@@ -37,3 +39,5 @@ void MainWindow::on_pbHelp_clicked(){
 void MainWindow::on_pbExit_clicked(){
     qApp->exit();
 }
+
+
