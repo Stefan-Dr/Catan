@@ -1,3 +1,7 @@
+build-Catan-Desktop-Debug/
+Catan.pro.user.*
+*.pro.user
+*.pro.user.*
 # Created by https://www.toptal.com/developers/gitignore/api/qtcreator
 # Edit at https://www.toptal.com/developers/gitignore?templates=qtcreator
 
