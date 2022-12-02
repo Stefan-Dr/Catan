@@ -52,7 +52,7 @@ bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Pla
     p2_resources[rt] += amount;
     p.set_PlayerResources(p2_resources);
 }
-bool Player::take_resource_card_from_bank(ResourceType res_type, int amount, Player &p){
+bool Player::take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank){
  m_player_resource[res_type]+=amount;
  bank.remove_resource_card(rt,amount);
  return true;
