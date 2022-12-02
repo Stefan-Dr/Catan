@@ -28,7 +28,7 @@ public:
     void set_city(Bank &bank);
 
     bool give_resource_card_to_player(ResourceType res_type, int amount, Player &p);
-    bool take_resource_card_from_bank(ResourceType res_type, int amount, Player &p);
+    bool take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
     bool return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
     std::unordered_map<ResourceType,int> get_PlayerResources() const;
