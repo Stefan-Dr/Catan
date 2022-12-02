@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     bank.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    node.cpp
 
 HEADERS += \
     bank.h \
     mainwindow.h \
+    node.h \
     resourcetype.h
 
 FORMS += \
