@@ -40,4 +40,12 @@ void MainWindow::on_pbExit_clicked(){
     qApp->exit();
 }
 
+void MainWindow::on_pbBackToMenu_3_clicked(){
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pbContinue_clicked(){
+
+}
+
 

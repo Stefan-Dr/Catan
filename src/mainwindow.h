@@ -23,6 +23,8 @@ private slots:
     void on_pbBackToMenu_2_clicked();
     void on_pbHelp_clicked();
     void on_pbExit_clicked();
+    void on_pbContinue_clicked();
+    void on_pbBackToMenu_3_clicked();
 
 private:
     Ui::MainWindow *ui;
