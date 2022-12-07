@@ -31,7 +31,7 @@ public:
     bool take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
     bool return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
-    std::unordered_map<ResourceType,int> get_PlayerResources() const;
+    std::unordered_map<ResourceType,int> get_PlayerResources();
     void set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource);
     void increase_victory_points();
     void increase_house_number();

@@ -21,9 +21,10 @@ Player::Player(int id, std::string name, Color color)
 
 }
 
-Color PLayer::get_color() const{
+/*Color Player::get_color(){
     return m_color;
 }
+*/
 int Player::get_victory_points() const{
     return m_victory_points;
 }
@@ -39,7 +40,7 @@ int Player::get_num_of_roads() const{
 std::unordered_map<ResourceType,int> Player::get_PlayerResources(){
     return m_player_resource;
 }
-void Player::set_PlayerResources(std::unordered_map<ResourceType,int> &mPlayerResource){
+void Player::set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource){
     m_player_resource = mPlayerResource;
 }
 
@@ -47,20 +48,20 @@ bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Pla
     if(m_player_resource[res_type]<amount){
     return false;
     }
-    m_player_resource[rt] -= amount;
+    m_player_resource[res_type] -= amount;
     auto p2_resources = p.get_PlayerResources();
-    p2_resources[rt] += amount;
+    p2_resources[res_type] += amount;
     p.set_PlayerResources(p2_resources);
 }
 bool Player::take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank){
  m_player_resource[res_type]+=amount;
- bank.remove_resource_card(rt,amount);
+ bank.remove_resource_card(res_type,amount);
  return true;
 }
 
 bool Player::return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank){
     m_player_resource[res_type]-=amount;
-    bank.add_resource_card(rt,amount);
+    bank.add_resource_card(res_type,amount);
     return true;
 }
 
