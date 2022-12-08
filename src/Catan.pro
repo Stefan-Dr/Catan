@@ -19,12 +19,14 @@ SOURCES += \
     bank.cpp \
     main.cpp \
     mainwindow.cpp \
+    map.cpp \
     node.cpp \
     player.cpp
 
 HEADERS += \
     color.h \
     mainwindow.h \
+    map.h \
     player.h\
     node.h\
     bank.h\
