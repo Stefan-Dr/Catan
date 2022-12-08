@@ -17,18 +17,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bank.cpp \
+    field.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
-    player.cpp
+    player.cpp \
+    road.cpp
 
 HEADERS += \
     color.h \
+    field.h \
     mainwindow.h \
     player.h\
     node.h\
     bank.h\
     resourcetype.h\
+    road.h
 
 
 FORMS += \
