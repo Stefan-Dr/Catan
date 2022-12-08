@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bank.cpp \
+    dice.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 
 HEADERS += \
     color.h \
+    dice.h \
     mainwindow.h \
     player.h\
     node.h\
