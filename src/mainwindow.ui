@@ -1048,43 +1048,6 @@ border-radius: 10%;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="page_5">
-     <widget class="QWidget" name="widget_3" native="true">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>800</width>
-        <height>650</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>800</width>
-        <height>650</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:#5aa0b0
-</string>
-      </property>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>676</x>
-         <y>10</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:#f6f6f6;
-color:&quot;red&quot;</string>
-       </property>
-       <property name="text">
-        <string>time remaining</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QWidget" name="widget_4" native="true">
       <property name="geometry">
        <rect>
@@ -1394,6 +1357,25 @@ color:&quot;red&quot;</string>
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>650</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>650</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/resources/images/catanMap.png) 0 0 0 0 stretch stretch;</string>
+      </property>
      </widget>
     </widget>
    </widget>

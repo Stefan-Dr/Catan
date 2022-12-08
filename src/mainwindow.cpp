@@ -45,7 +45,7 @@ void MainWindow::on_pbBackToMenu_3_clicked(){
 }
 
 void MainWindow::on_pbContinue_clicked(){
-
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 

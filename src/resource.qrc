@@ -12,5 +12,6 @@
         <file>images/wood.png</file>
         <file>images/next.png</file>
         <file>images/transparent.png</file>
+        <file>images/catanMap.png</file>
     </qresource>
 </RCC>
