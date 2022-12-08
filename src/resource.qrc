@@ -7,5 +7,10 @@
         <file>images/rls.png</file>
         <file>images/rlss.png</file>
         <file>images/rlsss.png</file>
+        <file>images/resBoard.png</file>
+        <file>images/boardR.png</file>
+        <file>images/wood.png</file>
+        <file>images/next.png</file>
+        <file>images/transparent.png</file>
     </qresource>
 </RCC>
