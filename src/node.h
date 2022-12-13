@@ -13,6 +13,9 @@ private:
     int m_owner;
     //indicator if the node meets requirements for building
     bool m_can_build;
+    int m_node_width = 0;
+    int m_node_height = 0;
+    //postavi get i set
 
 public:
     Node(int id);

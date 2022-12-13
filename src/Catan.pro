@@ -17,15 +17,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bank.cpp \
+    board.cpp \
     dice.cpp \
+    gui_node.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
     player.cpp
 
 HEADERS += \
+    board.h \
     color.h \
     dice.h \
+    gui_node.h \
     mainwindow.h \
     player.h\
     node.h\

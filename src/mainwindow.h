@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+class QGraphicsScene;
+class Node;
+class GUI_Node;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -15,6 +19,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+signals:
+    void AddedNewBlankNode(GUI_Node *node);
+
 private slots:
 
     void on_pbStartGame_clicked();
@@ -25,8 +32,10 @@ private slots:
     void on_pbExit_clicked();
     void on_pbContinue_clicked();
     void on_pbBackToMenu_3_clicked();
+    void AddNewBlankNode();
 
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *m_board;
 };
 #endif // MAINWINDOW_H
