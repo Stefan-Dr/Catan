@@ -1,13 +1,29 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "board.h"
+#include "node.h"
+#include "gui_node.h"
+#include "gui_board.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , m_board(new GUI_Board(this))
 {
     ui->setupUi(this);
     ui->rbON->setChecked(true);
     ui->rbSLOW->setChecked(true);
+
+    m_board->setSceneRect(ui->graphicsView->rect());
+    ui->graphicsView->setScene(m_board);
+    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
+
+    m_board->addAllNodes(ui->graphicsView->width(),ui->graphicsView->height());
+    //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
+    //offset);
+
+    //connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::AddNewBlankNode);
+    //connect(this, &MainWindow::AddedNewBlankNode, dynamic_cast<Board *>(m_board));
 }
 
 MainWindow::~MainWindow()
@@ -43,6 +59,8 @@ void MainWindow::on_pbExit_clicked(){
 void MainWindow::on_pbBackToMenu_3_clicked(){
     ui->stackedWidget->setCurrentIndex(0);
 }
+
+
 
 void MainWindow::on_pbContinue_clicked(){
     ui->stackedWidget->setCurrentIndex(4);
