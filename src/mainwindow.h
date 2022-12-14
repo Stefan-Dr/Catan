@@ -41,7 +41,7 @@ private slots:
 
 protected:
     Ui::MainWindow *ui;
-    GUI_Board *m_board;
+    Board *m_board;
 
 
 };

@@ -8,7 +8,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , m_board(new GUI_Board(this))
+    , m_board(new Board(this))
 {
     ui->setupUi(this);
     ui->rbON->setChecked(true);

@@ -15,7 +15,7 @@ class Board : public QGraphicsScene
 public:
     Board(QObject *parent = nullptr);
     ~Board();
-    virtual void addAllNodes(qreal viewWidth,qreal viewHeight) = 0;
+    void addAllNodes(qreal viewWidth,qreal viewHeight);
     QVector<Node *> m_nodes;
 
 };
