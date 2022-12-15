@@ -43,7 +43,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="gridLayoutWidget">
@@ -1041,6 +1041,70 @@ border-radius: 10%;</string>
          </property>
          <property name="text">
           <string>CONTINUE</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QLabel" name="lbPlayer2Required">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color : &quot;white&quot;;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4">
+        <widget class="QLabel" name="lbPlayer3Required">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color : &quot;white&quot;;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
+        <widget class="QLabel" name="lbPlayer4Required">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color : &quot;white&quot;;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="lbPlayer1Required">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color : &quot;white&quot;;</string>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>
