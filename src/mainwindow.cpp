@@ -63,7 +63,42 @@ void MainWindow::on_pbBackToMenu_3_clicked(){
 
 
 void MainWindow::on_pbContinue_clicked(){
-    ui->stackedWidget->setCurrentIndex(4);
+    bool con1 = false;
+    bool con2 = false;
+    bool con3 = false;
+    bool con4 = false;
+    if ( ui->lePlayer1->text().length() < 3){
+        ui->lbPlayer1Required->setText("Name must be at least 3 characters long!");
+    }
+    else {
+       con1 = true;
+       ui->lbPlayer1Required->setText("");
+    }
+    if ( ui->lePlayer2->text().length() < 3){
+        ui->lbPlayer2Required->setText("Name must be at least 3 characters long!");
+    }
+    else {
+        con2 = true;
+        ui->lbPlayer2Required->setText("");
+     }
+    if ( ui->lePlayer3->text().length() < 3){
+        ui->lbPlayer3Required->setText("Name must be at least 3 characters long!");
+    }
+    else {
+        con3 = true;
+        ui->lbPlayer3Required->setText("");
+     }
+    if ( ui->lePlayer4->text().length() < 3){
+        ui->lbPlayer4Required->setText("Name must be at least 3 characters long!");
+    }
+    else {
+        con4 = true;
+        ui->lbPlayer4Required->setText("");
+     }
+
+    if (con1 && con2 && con3 && con4){
+        ui->stackedWidget->setCurrentIndex(4);
+    }
 }
 
 
