@@ -15,8 +15,12 @@ class Board : public QGraphicsScene
 public:
     Board(QObject *parent = nullptr);
     ~Board();
-    void addAllNodes(qreal viewWidth,qreal viewHeight);
+    void addAllNodes();
     QVector<Node *> m_nodes;
+    QVector<GUI_Node *> m_gui_nodes;
+
+private:
+    const int numOfNodes = 6;
 
 };
 

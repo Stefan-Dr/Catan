@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
-    m_board->addAllNodes(ui->gvMapa->width(),ui->gvMapa->height());
+    m_board->addAllNodes();
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
