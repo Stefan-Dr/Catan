@@ -14,11 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->rbON->setChecked(true);
     ui->rbSLOW->setChecked(true);
 
-    m_board->setSceneRect(ui->graphicsView->rect());
-    ui->graphicsView->setScene(m_board);
-    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
+    m_board->setSceneRect(ui->gvMapa->rect());
+    ui->gvMapa->setScene(m_board);
+    ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
-    m_board->addAllNodes(ui->graphicsView->width(),ui->graphicsView->height());
+    m_board->addAllNodes(ui->gvMapa->width(),ui->gvMapa->height());
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 

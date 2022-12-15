@@ -70,8 +70,8 @@ void Board::addAllNodes(qreal viewWidth, qreal viewHeight){
     }
 
     //dno poslednjeg heksagona po y osi
-    for(int i=52;i<55;i++){
-        const auto guiNode = new GUI_Node(new Node(i),QPointF(250+(i-52)*130,600));
+    for(int i=53;i<56;i++){
+        const auto guiNode = new GUI_Node(new Node(i),QPointF(250+(i-53)*130,600));
         addItem(guiNode);
     }
 }

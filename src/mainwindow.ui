@@ -43,7 +43,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="gridLayoutWidget">
@@ -1211,7 +1211,7 @@ border-radius: 10%;</string>
          <x>370</x>
          <y>20</y>
          <width>410</width>
-         <height>71</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1229,68 +1229,68 @@ border-radius: 10%;</string>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/resources/images/wood.png) 0 0 0 0 stretch stretch;</string>
        </property>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="pb_Road">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>150</x>
           <y>10</y>
           <width>71</width>
           <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">border-image: url(:/resources/images/transparent.png) 0 0 0 0 stretch stretch;</string>
+         <string notr="true">border-image: url(:/resources/images/button_road.png) 0 0 0 0 stretch stretch;</string>
         </property>
         <property name="text">
-         <string>Put</string>
+         <string/>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="pb_Settlement">
         <property name="geometry">
          <rect>
-          <x>320</x>
+          <x>310</x>
           <y>10</y>
           <width>71</width>
           <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">border-image: url(:/resources/images/transparent.png) 0 0 0 0 stretch stretch;</string>
+         <string notr="true">border-image: url(:/resources/images/button_settlement.png) 0 0 0 0 stretch stretch;</string>
         </property>
         <property name="text">
-         <string>Grad</string>
+         <string/>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="pb_MagicCard">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>30</x>
           <y>10</y>
           <width>71</width>
           <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">border-image: url(:/resources/images/transparent.png) 0 0 0 0 stretch stretch;</string>
+         <string notr="true">border-image: url(:/resources/images/button_magicCard.png) 0 0 0 0 stretch stretch;</string>
         </property>
         <property name="text">
-         <string>Magicna</string>
+         <string/>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="pb_House">
         <property name="geometry">
          <rect>
-          <x>220</x>
+          <x>230</x>
           <y>10</y>
           <width>71</width>
           <height>61</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">border-image: url(:/resources/images/transparent.png) 0 0 0 0 stretch stretch;</string>
+         <string notr="true">border-image: url(:/resources/images/button_house.png) 0 0 0 0 stretch stretch;</string>
         </property>
         <property name="text">
-         <string>Kuca</string>
+         <string/>
         </property>
        </widget>
       </widget>
@@ -1300,7 +1300,7 @@ border-radius: 10%;</string>
          <x>10</x>
          <y>20</y>
          <width>340</width>
-         <height>71</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1358,7 +1358,7 @@ border-radius: 10%;</string>
        </item>
       </layout>
      </widget>
-     <widget class="QGraphicsView" name="graphicsView">
+     <widget class="QGraphicsView" name="gvMapa">
       <property name="geometry">
        <rect>
         <x>0</x>

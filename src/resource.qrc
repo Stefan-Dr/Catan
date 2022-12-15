@@ -13,5 +13,9 @@
         <file>images/next.png</file>
         <file>images/transparent.png</file>
         <file>images/catanMap.png</file>
+        <file>images/button_house.png</file>
+        <file>images/button_magicCard.png</file>
+        <file>images/button_road.png</file>
+        <file>images/button_settlement.png</file>
     </qresource>
 </RCC>
