@@ -5,8 +5,8 @@ Player::Player()
 {
 
 }
-Player::Player(int id, std::string name, Color color)
-    : m_id(id), m_name(name),m_color(color),
+Player::Player(int id, std::string name/*, Color color*treba ovo da se doradi*/)
+    : m_id(id), m_name(name),/*m_color(color),*/
       m_victory_points(0),m_num_of_houses(0),m_num_of_cities(0),
       m_num_of_roads(0),m_num_of_allowed_houses(5),
       m_num_of_allowed_cities(4),m_num_of_allowed_roads(15){

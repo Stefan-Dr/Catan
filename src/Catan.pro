@@ -20,6 +20,7 @@ SOURCES += \
     board.cpp \
     dice.cpp \
     field.cpp \
+    game.cpp \
     gui_node.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     color.h \
     dice.h \
     field.h \
+    game.h \
     gui_node.h \
     mainwindow.h \
     player.h\

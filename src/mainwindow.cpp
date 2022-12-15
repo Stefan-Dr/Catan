@@ -57,6 +57,14 @@ void MainWindow::on_pbExit_clicked(){
 }
 
 void MainWindow::on_pbBackToMenu_3_clicked(){
+    ui->lePlayer1->setText("");
+    ui->lbPlayer1Required->setText("");
+    ui->lePlayer2->setText("");
+    ui->lbPlayer2Required->setText("");
+    ui->lePlayer3->setText("");
+    ui->lbPlayer3Required->setText("");
+    ui->lePlayer4->setText("");
+    ui->lbPlayer4Required->setText("");
     ui->stackedWidget->setCurrentIndex(0);
 }
 

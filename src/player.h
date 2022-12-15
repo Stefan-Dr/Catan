@@ -16,7 +16,7 @@ class Player
 public:
     Player();
     Player(const Player& ) = delete;
-    Player(int id, std::string name, Color);
+    Player(int id, std::string name /*Color*/);
 
     const std::string &get_name();
     Color get_color() const;
