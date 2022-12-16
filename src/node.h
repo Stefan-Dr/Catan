@@ -1,6 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
-
+#include <QVector>
 
 class Node
 {
@@ -13,6 +13,7 @@ private:
     int m_owner;
     //indicator if the node meets requirements for building
     bool m_can_build;
+    QVector<int> m_neighbours;
 
 public:
     Node(int id);
@@ -24,12 +25,14 @@ public:
     bool get_is_city_built() const;
     int get_owner() const;
     bool get_can_build() const;
+    const QVector<int>& get_neighbours() const;
 
     //Setters
     void set_is_house_built(bool value);
     void set_is_city_built(bool value);
     void set_owner(int owner);
     void set_can_build(bool value);
+    void set_all_neighbours(QVector<int> &neighbours);
 
     //Methods for setting a house or city on the node using setters
     void place_house(int owner);

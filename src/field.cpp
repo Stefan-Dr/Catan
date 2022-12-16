@@ -37,11 +37,11 @@ bool Field::is_robber_on_the_field() const{
     return m_is_robber_od_the_field;
 }
 
-const std::vector<Node*>& Field::get_corners() const{
+const QVector<Node*>& Field::get_corners() const{
     return m_corners;
 }
 
-const std::vector<Road*>& Field::get_edges() const{
+const QVector<Road*>& Field::get_edges() const{
     return m_edges;
 }
 

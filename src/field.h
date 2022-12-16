@@ -3,8 +3,7 @@
 #include "resourcetype.h"
 #include "node.h"
 #include "road.h"
-#include <iostream>
-#include <vector>
+#include <QVector>
 
 class Field
 {
@@ -26,9 +25,9 @@ public:
 
     bool is_robber_on_the_field() const;
 
-    const std::vector<Node*>& get_corners() const;
+    const QVector<Node*>& get_corners() const;
 
-    const std::vector<Road*>& get_edges() const;
+    const QVector<Road*>& get_edges() const;
 
     void set_robber_on_the_field(bool robber_on_the_field);
 
@@ -53,7 +52,7 @@ private:
     int m_id;
     int m_number;
     ResourceType m_res_type;
-    std::vector<Node*>m_corners;
+    QVector<Node*>m_corners;
 //parts of field for houses and cities
     Node* m_up_corner;
     Node* m_down_corner;
@@ -61,7 +60,7 @@ private:
     Node* m_bottom_left_corner;
     Node* m_up_right_corner;
     Node* m_up_left_corner;
-    std::vector<Road*> m_edges;
+    QVector<Road*> m_edges;
 //parts of field for roads
     Road* m_right_edge;
     Road* m_left_edge;
