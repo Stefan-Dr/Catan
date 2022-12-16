@@ -13,7 +13,25 @@
 class Game
 {
 public:
+    //konstruktor
     Game();
+    //destruktor
+    ~Game();
+    Game(const Game &) = delete;
+    //geteri
+    Player getPlayer1() const ;
+    Player getPlayer2() const ;
+    Player getPlayer3() const ;
+    Player getPlayer4() const ;
+    Player getCurrentPlayer() const ;
+    //seteri
+    void setPlayer1(Player *player1);
+    void setPlayer2(Player *player2);
+    void setPlayer3(Player *player3);
+    void setPlayer4(Player *player4);
+    void setCurrentPlayer(Player *currentPlayer);
+
+
 
 private:
     Player *m_player1;
