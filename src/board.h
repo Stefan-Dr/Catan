@@ -22,6 +22,7 @@ public:
 private:
     const int numOfNodes = 6;
 
+
 };
 
 #endif // BOARD_H

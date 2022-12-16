@@ -15,6 +15,8 @@ bool Node::get_can_build() const { return m_can_build; }
 
 int Node::get_owner() const { return m_owner; }
 
+const QVector<int>& Node::get_neighbours() const{return m_neighbours; }
+
 void Node::set_is_house_built(bool value) { m_is_house_built = value; }
 
 void Node::set_is_city_built(bool value) { m_is_city_built = value; }
@@ -32,6 +34,12 @@ void Node::place_city(int owner) {
     set_is_house_built(false);
     set_is_city_built(true);
     set_owner(owner);
+}
+
+void Node::set_all_neighbours(QVector<int> &neighbours){
+    for(auto i : neighbours){
+       m_neighbours.push_back(i);
+    }
 }
 
 
