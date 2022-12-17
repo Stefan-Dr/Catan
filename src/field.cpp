@@ -22,9 +22,9 @@ Field::Field(int id, int number, ResourceType res_type,
         }
 
 Field::Field(int id, int number,
-             Node* up_corner, Node* bottom_corner,
-             Node* bottom_right_corner, Node* bottom_left_corner,
-             Node* up_right_corner, Node* up_left_corner)
+             Node* up_left_corner, Node* up_corner,
+             Node* up_right_corner, Node* bottom_right_corner,
+             Node* bottom_corner, Node* bottom_left_corner)
     :m_id(id), m_number(number),m_up_corner(up_corner),
     m_down_corner(bottom_corner),m_bottom_right_corner(bottom_right_corner),
     m_bottom_left_corner(bottom_left_corner),m_up_right_corner(up_right_corner),

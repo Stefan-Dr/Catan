@@ -21,9 +21,9 @@ public:
           Road* up_right_edge, Road* up_left_edge);
     //probni konstruktor dok ne dodamo road-ove
     Field(int id, int number,
-          Node* up_corner, Node* bottom_corner,
-          Node* bottom_right_corner, Node* bottom_left_corner,
-          Node* up_right_corner, Node* up_left_corner);
+          Node* up_left_corner, Node* up_corner,
+          Node* up_right_corner, Node* bottom_right_corner,
+          Node* bottom_corner, Node* bottom_left_corner);
     Field(const Field&) = delete;
 
     int get_id() const;
