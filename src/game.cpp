@@ -89,24 +89,51 @@ void Game::BuildHouse(Node* node){
            current_player->get_num_of_brick() == 1){
 
         node->place_house(current_player->get_id());
+
+        current_player->decrease_house_number();
+        current_player->increase_victory_points();
+        //graficko postavljanje kuce
+
+
         }
 
     }
 }
 
 void Game::BuildCity(Node* node){
+
     auto current_player = m_currentPlayer;
+
     if(node->get_can_build() == true){
         if(current_player->get_num_of_wheat() == 2 &&
            current_player->get_num_of_stone() == 3){
 
             node->place_city(current_player->get_id());
+
+            current_player->increase_house_number();
+            current_player->decrease_city_number();
+            current_player->increase_victory_points();
+
+
+            //graficko postavljanje grada
+
+
         }
     }
 
 }
 
 void Game::BuildRoad(Road* road){
+    auto current_player = m_currentPlayer;
 
+    if(current_player->get_num_of_brick() == 1 &&
+       current_player->get_num_of_wood() == 1){
+
+        road->set_owner(current_player->get_id());
+
+        current_player->decrease_road_number();
+
+        //graficko postavljanje puta
+    }
 
 }
