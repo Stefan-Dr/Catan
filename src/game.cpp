@@ -1,6 +1,7 @@
 #include "game.h"
 #include "player.h"
 
+
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
 Game::Game()
@@ -74,4 +75,38 @@ bool Game::wonPlayer3() {
 
 bool Game::wonPlayer4() {
  return m_player4->get_victory_points() == 10;
+}
+
+//izgradnja
+
+void Game::BuildHouse(Node* node){
+    auto current_player = m_currentPlayer;
+
+    if(node->get_can_build() == true){
+        if(current_player->get_num_of_wood() == 1 &&
+           current_player->get_num_of_wool() ==1 &&
+           current_player->get_num_of_wheat() == 1 &&
+           current_player->get_num_of_brick() == 1){
+
+        node->place_house(current_player->get_id());
+        }
+
+    }
+}
+
+void Game::BuildCity(Node* node){
+    auto current_player = m_currentPlayer;
+    if(node->get_can_build() == true){
+        if(current_player->get_num_of_wheat() == 2 &&
+           current_player->get_num_of_stone() == 3){
+
+            node->place_city(current_player->get_id());
+        }
+    }
+
+}
+
+void Game::BuildRoad(Road* road){
+
+
 }

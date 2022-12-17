@@ -7,6 +7,7 @@
 #include "field.h"
 #include "player.h"
 #include "road.h"
+#include "node.h"
 
 #include <QObject>
 
@@ -39,6 +40,9 @@ public:
     bool wonPlayer4();
 
 
+    void BuildHouse(Node* node);
+    void BuildCity(Node* node);
+    void BuildRoad(Road* road);
 
 
 
