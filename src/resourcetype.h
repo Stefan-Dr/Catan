@@ -4,9 +4,9 @@
 
 enum class ResourceType {
     Wood, //drvo
-    Brick,   //vuna
-    Wool,  //psenica
-    Wheat,  //cigla
+    Brick,   //cigla
+    Wool,  //vuna
+    Wheat,  //psenica
     Stone   //kamen
 };
 
