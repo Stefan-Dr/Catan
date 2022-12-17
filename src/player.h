@@ -19,11 +19,18 @@ public:
     Player(int id, std::string name /*Color*/);
 
     const std::string &get_name();
+    int get_id() const;
     Color get_color() const;
     int get_victory_points() const;
     int get_num_of_houses() const;
     int get_num_of_cities() const;
     int get_num_of_roads() const;
+
+    int get_num_of_wood() const;
+    int get_num_of_brick() const;
+    int get_num_of_wool() const;
+    int get_num_of_wheat() const;
+    int get_num_of_stone() const;
 
     void set_city(Bank &bank);
 
@@ -54,6 +61,14 @@ private:
     int m_num_of_allowed_houses;
     int m_num_of_allowed_cities;
     int m_num_of_allowed_roads;
+
+    int m_num_of_wood;
+    int m_num_of_brick;
+    int m_num_of_wool;
+    int m_num_of_wheat;
+    int m_num_of_stone;
+
+
 
 
 };

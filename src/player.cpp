@@ -25,6 +25,28 @@ Player::Player(int id, std::string name/*, Color color*treba ovo da se doradi*/)
     return m_color;
 }
 */
+
+int Player::get_num_of_wood() const {
+    return m_num_of_wood;
+}
+int Player::get_num_of_brick() const {
+    return m_num_of_brick;
+}
+int Player::get_num_of_wool() const {
+    return m_num_of_wool;
+}
+int Player::get_num_of_wheat() const {
+    return m_num_of_wheat;
+}
+int Player::get_num_of_stone() const {
+    return m_num_of_stone;
+}
+
+
+int Player::get_id() const{
+    return m_id;
+}
+
 int Player::get_victory_points() const{
     return m_victory_points;
 }
