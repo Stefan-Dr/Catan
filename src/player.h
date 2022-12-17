@@ -19,6 +19,7 @@ public:
     Player(int id, std::string name /*Color*/);
 
     const std::string &get_name();
+    int get_id() const;
     Color get_color() const;
     int get_victory_points() const;
     int get_num_of_houses() const;

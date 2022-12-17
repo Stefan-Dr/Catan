@@ -19,11 +19,11 @@ public:
     ~Game();
     Game(const Game &) = delete;
     //geteri
-    Player getPlayer1() const ;
-    Player getPlayer2() const ;
-    Player getPlayer3() const ;
-    Player getPlayer4() const ;
-    Player getCurrentPlayer() const ;
+    Player* getPlayer1() const;
+    Player* getPlayer2() const;
+    Player* getPlayer3() const;
+    Player* getPlayer4() const;
+    Player* getCurrentPlayer() const;
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
@@ -32,13 +32,22 @@ public:
     void setCurrentPlayer(Player *currentPlayer);
 
 
+    int currentPlayerId() const;
+    bool wonPlayer1();
+    bool wonPlayer2();
+    bool wonPlayer3();
+    bool wonPlayer4();
+
+
+
+
 
 private:
-    Player *m_player1;
-    Player *m_player2;
-    Player *m_player3;
-    Player *m_player4;
-    Player *m_currentPlayer;
+    Player* m_player1;
+    Player* m_player2;
+    Player* m_player3;
+    Player* m_player4;
+    Player* m_currentPlayer;
     Board m_board;
     int numOfPlayers = 4;
 };

@@ -25,6 +25,11 @@ Player::Player(int id, std::string name/*, Color color*treba ovo da se doradi*/)
     return m_color;
 }
 */
+
+int Player::get_id() const{
+    return m_id;
+}
+
 int Player::get_victory_points() const{
     return m_victory_points;
 }
