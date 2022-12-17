@@ -1,9 +1,13 @@
 #ifndef FIELD_H
 #define FIELD_H
 #include "resourcetype.h"
-#include "node.h"
-#include "road.h"
+//#include "node.h"
+//#include "road.h"
 #include <QVector>
+
+class Node;
+class Road;
+
 
 class Field
 {
@@ -15,6 +19,11 @@ public:
           Road* right_edge, Road* left_edge,
           Road* bottom_right_edge, Road* bottom_left_edge,
           Road* up_right_edge, Road* up_left_edge);
+    //probni konstruktor dok ne dodamo road-ove
+    Field(int id, int number,
+          Node* up_corner, Node* bottom_corner,
+          Node* bottom_right_corner, Node* bottom_left_corner,
+          Node* up_right_corner, Node* up_left_corner);
     Field(const Field&) = delete;
 
     int get_id() const;
@@ -46,6 +55,9 @@ public:
     Road* get_bottom_left_edge() const;
     Road* get_up_right_edge() const;
     Road* get_up_left_edge() const;
+
+ //res_type setter
+    void set_res_type(ResourceType res_type);
 
 
 private:

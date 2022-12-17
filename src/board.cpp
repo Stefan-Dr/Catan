@@ -1,4 +1,5 @@
 #include "board.h"
+#include "field.h"
 #include "node.h"
 #include "gui_node.h"
 
@@ -511,6 +512,8 @@ void Board::addAllNodes(){
 
     for(int i=0;i<54;i++)
           addItem(m_gui_nodes[i]);
+    //fields
+    //const auto Field1 = new Field(1,10,node1,node2,node3,node4,node5,node6);
 
 }
 
@@ -522,4 +525,87 @@ void Board::SetNodeOnPosition(GUI_Node *node)
     node->setPos(100,100);
 }
 */
+void Board::addAllFields(){
+    addAllNodes();
+    //prvi red
+    const auto Field1 = new Field(1,10,m_nodes[1],m_nodes[2],m_nodes[3],m_nodes[4],m_nodes[5],m_nodes[6]);
+    Field1->set_res_type(ResourceType::Stone);
+    m_fields.push_back(Field1);
+
+    const auto Field2 = new Field(2,8,m_nodes[3],m_nodes[7],m_nodes[8],m_nodes[9],m_nodes[10], m_nodes[4]);
+    Field2->set_res_type(ResourceType::Brick);
+    m_fields.push_back(Field2);
+
+    const auto Field3 = new Field(3,3,m_nodes[8],m_nodes[11],m_nodes[12],m_nodes[13],m_nodes[14],m_nodes[9]);
+    Field3->set_res_type(ResourceType::Wood);
+    m_fields.push_back(Field3);
+
+    //drugi red
+    const auto Field4 = new Field(4,2,m_nodes[15],m_nodes[6],m_nodes[5], m_nodes[18], m_nodes[17], m_nodes[16]);
+    Field4->set_res_type(ResourceType::Wheat);
+    m_fields.push_back(Field4);
+
+    const auto Field5 = new Field(5,3,m_nodes[5],m_nodes[4],m_nodes[10],m_nodes[20],m_nodes[19],m_nodes[18]);
+    Field5->set_res_type(ResourceType::Wool);
+    m_fields.push_back(Field5);
+
+    const auto Field6 = new Field(6,9,m_nodes[10],m_nodes[9],m_nodes[14],m_nodes[22],m_nodes[21],m_nodes[20]);
+    Field6->set_res_type(ResourceType::Brick);
+    m_fields.push_back(Field6);
+
+    const auto Field7 = new Field(7,4,m_nodes[14],m_nodes[13],m_nodes[24],m_nodes[25],m_nodes[23],m_nodes[22]);
+    Field7->set_res_type(ResourceType::Brick);
+    m_fields.push_back(Field7);
+
+    //treci red
+    const auto Field8 = new Field(8,12,m_nodes[26],m_nodes[16],m_nodes[17],m_nodes[29],m_nodes[28],m_nodes[27]);
+    Field8->set_res_type(ResourceType::Wool);
+    m_fields.push_back(Field8);
+
+    const auto Field9 = new Field(9,8,m_nodes[17],m_nodes[18],m_nodes[19],m_nodes[31],m_nodes[30],m_nodes[29]);
+    Field9->set_res_type(ResourceType::Stone);
+    m_fields.push_back(Field9);
+
+    const auto Field10 = new Field(10,4,m_nodes[19],m_nodes[20],m_nodes[21],m_nodes[33],m_nodes[32],m_nodes[31]);
+    Field10->set_res_type(ResourceType::Stone);
+    m_fields.push_back(Field10);
+
+    const auto Field11 = new Field(11,6,m_nodes[21],m_nodes[22],m_nodes[23],m_nodes[35],m_nodes[34],m_nodes[33]);
+    Field11->set_res_type(ResourceType::Wood);
+    m_fields.push_back(Field11);
+
+    const auto Field12 = new Field(12,11,m_nodes[23],m_nodes[25],m_nodes[38],m_nodes[37],m_nodes[36],m_nodes[25]);
+    Field12->set_res_type(ResourceType::Wheat);
+    m_fields.push_back(Field12);
+
+    //cetvrti red
+    const auto Field13 = new Field(13,9,m_nodes[28],m_nodes[29],m_nodes[30],m_nodes[41],m_nodes[40],m_nodes[39]);
+    Field13->set_res_type(ResourceType::Wheat);
+    m_fields.push_back(Field13);
+
+    const auto Field14 = new Field(14,5,m_nodes[30],m_nodes[31],m_nodes[32],m_nodes[43],m_nodes[42],m_nodes[41]);
+    Field14->set_res_type(ResourceType::Wood);
+    m_fields.push_back(Field14);
+
+    const auto Field15 = new Field(15,11,m_nodes[32],m_nodes[33],m_nodes[34],m_nodes[45],m_nodes[44],m_nodes[43]);
+    Field15->set_res_type(ResourceType::Wool);
+    m_fields.push_back(Field15);
+
+    const auto Field16 = new Field(16,5,m_nodes[34],m_nodes[35],m_nodes[36],m_nodes[47],m_nodes[46],m_nodes[45]);
+    Field16->set_res_type(ResourceType::Wood);
+    m_fields.push_back(Field16);
+
+    //peti red
+    const auto Field17 = new Field(17,6,m_nodes[40],m_nodes[41],m_nodes[42],m_nodes[50],m_nodes[49],m_nodes[48]);
+    Field17->set_res_type(ResourceType::Wheat);
+    m_fields.push_back(Field17);
+
+    const auto Field18 = new Field(18,10,m_nodes[42],m_nodes[43],m_nodes[44],m_nodes[52],m_nodes[51],m_nodes[50]);
+    Field18->set_res_type(ResourceType::Wheat);
+    m_fields.push_back(Field18);
+
+    //poslednje polje je pustinja pa cu staviti da je na njemu broj = 0,takodje nema tip resursa
+    const auto Field19 = new Field(19,0,m_nodes[44],m_nodes[45],m_nodes[46],m_nodes[54],m_nodes[53],m_nodes[52]);
+    m_fields.push_back(Field19);
+}
 

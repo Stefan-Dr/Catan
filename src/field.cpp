@@ -21,6 +21,20 @@ Field::Field(int id, int number, ResourceType res_type,
                     m_right_edge,m_up_right_edge};
         }
 
+Field::Field(int id, int number,
+             Node* up_corner, Node* bottom_corner,
+             Node* bottom_right_corner, Node* bottom_left_corner,
+             Node* up_right_corner, Node* up_left_corner)
+    :m_id(id), m_number(number),m_up_corner(up_corner),
+    m_down_corner(bottom_corner),m_bottom_right_corner(bottom_right_corner),
+    m_bottom_left_corner(bottom_left_corner),m_up_right_corner(up_right_corner),
+    m_up_left_corner(up_left_corner)
+    {
+    //inserting edges and corners into specialized vectors
+            m_corners = {m_up_corner,m_up_left_corner,m_bottom_left_corner,
+                         m_down_corner,m_bottom_right_corner, m_up_right_corner};
+    }
+
 int Field::get_id() const{
     return m_id;
 }
@@ -98,3 +112,6 @@ Road* Field::get_up_left_edge() const{
     return m_up_left_edge;
 }
 
+void Field::set_res_type(ResourceType res_type){
+    m_res_type = res_type;
+}
