@@ -32,19 +32,30 @@ public:
     int get_num_of_wheat() const;
     int get_num_of_stone() const;
 
+    int get_num_of_allowed_houses() const;
+    int get_num_of_allowed_cities() const;
+    int get_num_of_allowed_roads() const;
+
     void set_city(Bank &bank);
 
     bool give_resource_card_to_player(ResourceType res_type, int amount, Player &p);
-    bool take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
+    void take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
-    bool return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
+    void return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
     std::unordered_map<ResourceType,int> get_PlayerResources();
     void set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource);
+
+    void increase_num_of_houses();
+    void decrease_num_of_houses();
+    void increase_num_of_cities();
+    void increase_num_of_roads();
+
+
     void increase_victory_points();
-    void increase_house_number();
-    void decrease_house_number();
-    void decrease_city_number();
-    void decrease_road_number();
+    void increase_allowed_house_number();
+    void decrease_allowed_house_number();
+    void decrease_allowed_city_number();
+    void decrease_allowed_road_number();
     void decrease_victory_point();
 
     /*void set_city(Bank); set_house(NOde,Bank), set_road(road,NOde,Bank);..*/
