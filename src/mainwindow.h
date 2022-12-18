@@ -7,6 +7,7 @@
 #include <QMainWindow>
 #include <QGraphicsItem>
 #include <QWidget>
+#include "dice.h"
 class QGraphicsScene;
 class Node;
 class GUI_Node;
@@ -39,10 +40,12 @@ private slots:
     void on_pbBackToMenu_3_clicked();
 
 
+    void on_pbRollDice_clicked();
+
 protected:
     Ui::MainWindow *ui;
     Board *m_board;
-
+    Dice *m_dice;
 
 };
 #endif // MAINWINDOW_H

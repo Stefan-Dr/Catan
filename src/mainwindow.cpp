@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , m_board(new Board(this))
+    , m_dice(new Dice())
 {
     ui->setupUi(this);
     ui->rbON->setChecked(true);
@@ -109,4 +110,53 @@ void MainWindow::on_pbContinue_clicked(){
     }
 }
 
+
+
+void MainWindow::on_pbRollDice_clicked()
+{
+    m_dice->roll_dice();
+    int d1 = m_dice->get_dice1();
+    int d2 = m_dice->get_dice2();
+    switch (d1) {
+        case 1 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 2 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 3 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 4 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 5 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 6 :
+            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
+            break;
+    }
+
+    switch (d2) {
+        case 1 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 2 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 3 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 4 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 5 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
+            break;
+        case 6 :
+            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
+            break;
+    }
+}
 
