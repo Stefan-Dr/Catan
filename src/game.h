@@ -24,12 +24,14 @@ public:
     Player* getPlayer2() const;
     Player* getPlayer3() const;
     Player* getPlayer4() const;
+    Bank* getBank() const;
     Player* getCurrentPlayer() const;
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
     void setPlayer3(Player *player3);
     void setPlayer4(Player *player4);
+    void setBank(Bank* bank);
     void setCurrentPlayer(Player *currentPlayer);
 
 
@@ -52,6 +54,7 @@ private:
     Player* m_player3;
     Player* m_player4;
     Player* m_currentPlayer;
+    Bank* m_bank;
     Board m_board;
     int numOfPlayers = 4;
 };

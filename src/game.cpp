@@ -9,7 +9,9 @@ Game::Game()
     , m_player2(new Player(2, ""))
     , m_player3(new Player(3, ""))
     , m_player4(new Player(4, ""))
-    , m_currentPlayer(m_player1){}
+    , m_currentPlayer(m_player1)
+    , m_bank(new Bank()){}
+
 
 //destruktor
 Game::~Game() {
@@ -18,6 +20,7 @@ Game::~Game() {
   delete m_player3;
   delete m_player4;
   delete m_currentPlayer;
+  delete m_bank;
 }
 
 //geteri
@@ -32,6 +35,9 @@ Player* Game::getPlayer3() const{
 }
 Player* Game::getPlayer4() const{
     return m_player4;
+}
+Bank* Game::getBank() const{
+    return m_bank;
 }
 Player* Game::getCurrentPlayer() const{
     return m_currentPlayer;
@@ -50,6 +56,9 @@ void Game::setPlayer3(Player *player3) {
 }
 void Game::setPlayer4(Player *player4) {
     m_player4 = player4;
+}
+void Game::setBank(Bank* bank){
+    m_bank = bank;
 }
 void Game::setCurrentPlayer(Player *player) {
     m_currentPlayer = player;
@@ -80,40 +89,55 @@ bool Game::wonPlayer4() {
 //izgradnja
 
 void Game::BuildHouse(Node* node){
-    auto current_player = m_currentPlayer;
+    if(m_currentPlayer->get_num_of_allowed_houses() > 0){
+        if(node->get_can_build() == true){
+            if(m_currentPlayer->get_num_of_wood() >= 1 &&
+               m_currentPlayer->get_num_of_wool() >= 1 &&
+               m_currentPlayer->get_num_of_wheat() >= 1 &&
+               m_currentPlayer->get_num_of_brick() >= 1){
 
-    if(node->get_can_build() == true){
-        if(current_player->get_num_of_wood() == 1 &&
-           current_player->get_num_of_wool() ==1 &&
-           current_player->get_num_of_wheat() == 1 &&
-           current_player->get_num_of_brick() == 1){
+                node->place_house(m_currentPlayer->get_id());
 
-        node->place_house(current_player->get_id());
+                //davanje potrebnih resursa banci
+                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
+                m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
+                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,1,*m_bank);
+                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wool,1,*m_bank);
 
-        current_player->decrease_house_number();
-        current_player->increase_victory_points();
-        //graficko postavljanje kuce
+                //menja broj dostupnih objekata
+                m_currentPlayer->increase_allowed_house_number();
+                m_currentPlayer->increase_victory_points();
 
+                //menjanje broja izgradjenih objekata
+                m_currentPlayer->increase_num_of_houses();
+                //graficko postavljanje kuce
+
+
+            }
 
         }
-
-    }
+   }
 }
 
 void Game::BuildCity(Node* node){
 
-    auto current_player = m_currentPlayer;
 
     if(node->get_can_build() == true){
-        if(current_player->get_num_of_wheat() == 2 &&
-           current_player->get_num_of_stone() == 3){
+        if(m_currentPlayer->get_num_of_wheat() >= 2 &&
+           m_currentPlayer->get_num_of_stone() >= 3){
 
-            node->place_city(current_player->get_id());
+            node->place_city(m_currentPlayer->get_id());
 
-            current_player->increase_house_number();
-            current_player->decrease_city_number();
-            current_player->increase_victory_points();
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,2,*m_bank);
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,3,*m_bank);
 
+            m_currentPlayer->increase_allowed_house_number();
+            m_currentPlayer->decrease_allowed_city_number();
+            m_currentPlayer->increase_victory_points();
+
+            //menjanje broja izgradjenih objekata
+            m_currentPlayer->decrease_num_of_houses();
+            m_currentPlayer->increase_num_of_cities();
 
             //graficko postavljanje grada
 
@@ -124,14 +148,19 @@ void Game::BuildCity(Node* node){
 }
 
 void Game::BuildRoad(Road* road){
-    auto current_player = m_currentPlayer;
 
-    if(current_player->get_num_of_brick() == 1 &&
-       current_player->get_num_of_wood() == 1){
+    if(m_currentPlayer->get_num_of_brick() >= 1 &&
+       m_currentPlayer->get_num_of_wood() >= 1){
 
-        road->set_owner(current_player->get_id());
+        road->set_owner(m_currentPlayer->get_id());
 
-        current_player->decrease_road_number();
+        m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
+        m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
+
+        m_currentPlayer->decrease_allowed_road_number();
+
+        //menjanje broja izgradjenih objekata
+        m_currentPlayer->increase_num_of_roads();
 
         //graficko postavljanje puta
     }
