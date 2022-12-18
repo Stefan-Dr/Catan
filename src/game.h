@@ -44,6 +44,8 @@ public:
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
+    void Turn();
+
 
 
 private:

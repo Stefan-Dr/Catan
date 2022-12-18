@@ -137,3 +137,9 @@ void Game::BuildRoad(Road* road){
     }
 
 }
+
+void Game::Turn(){
+
+
+
+}
