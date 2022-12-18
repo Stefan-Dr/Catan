@@ -17,5 +17,11 @@
         <file>images/button_magicCard.png</file>
         <file>images/button_road.png</file>
         <file>images/button_settlement.png</file>
+        <file>images/dice1.png</file>
+        <file>images/dice2.png</file>
+        <file>images/dice3.png</file>
+        <file>images/dice4.png</file>
+        <file>images/dice5.png</file>
+        <file>images/dice6.png</file>
     </qresource>
 </RCC>
