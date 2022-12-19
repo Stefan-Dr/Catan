@@ -26,6 +26,7 @@ public:
     Player* getPlayer4() const;
     Bank* getBank() const;
     Player* getCurrentPlayer() const;
+    std::vector<Player*> get_players();
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
@@ -46,9 +47,12 @@ public:
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
+    void Turn();
 
 
 private:
+    //napraviti niz playera radi lakseg funkcionisanja
+    std::vector<Player*> m_players;
     Player* m_player1;
     Player* m_player2;
     Player* m_player3;

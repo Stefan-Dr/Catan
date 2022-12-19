@@ -1,6 +1,6 @@
 #include "game.h"
 #include "player.h"
-
+#include "dice.h"
 
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
@@ -41,6 +41,10 @@ Bank* Game::getBank() const{
 }
 Player* Game::getCurrentPlayer() const{
     return m_currentPlayer;
+}
+
+std::vector<Player*> Game::get_players(){
+    return m_players;
 }
 
 
@@ -166,3 +170,38 @@ void Game::BuildRoad(Road* road){
     }
 
 }
+
+
+void Game::Turn(){
+    /*
+     * Redosled:
+     * 1.Bacanje kockice
+     * 2.Dodavanje resursa svim igracima na osnovu zauzetih cvorova
+     * 3.BuildRoad/BuildHouse/BuildCity
+     * 4.Kliktanje dugmeta za kraj poteza
+     */
+
+     m_currentPlayer = m_player1;
+
+     Dice* dice;
+     bool btRollDiceIsCLicked = false;
+     //if(dugme roll dice je kliknuto){
+        btRollDiceIsCLicked = true;
+        //if(opet je kliknuto dugme roll dice)
+            std::cout << "Error: button is already clicked" << std::endl;
+
+        dice->roll_dice();
+
+        int dice1 = dice->get_dice1();
+        int dice2 = dice->get_dice2();
+
+        int result = dice->get_dice_sum();
+
+        std::cout << result << std::endl;
+
+
+
+
+}
+
+
