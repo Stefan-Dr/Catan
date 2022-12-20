@@ -183,23 +183,18 @@ void Game::Turn(){
 
      m_currentPlayer = m_player1;
 
-     Dice* dice;
-     bool btRollDiceIsCLicked = false;
-     //if(dugme roll dice je kliknuto){
-        btRollDiceIsCLicked = true;
-        //if(opet je kliknuto dugme roll dice)
-            std::cout << "Error: button is already clicked" << std::endl;
+     Dice* dice = new Dice();
+     dice->roll_dice();
+     dice->set_button_is_clicked(true);
 
-        dice->roll_dice();
+     int result = dice->get_dice_sum();
 
-        int dice1 = dice->get_dice1();
-        int dice2 = dice->get_dice2();
+       //if(dice->get_button_clicked()){
 
-        int result = dice->get_dice_sum();
+       //}
+          //  std::cout << "Error: button is already clicked" << std::endl;
 
-        std::cout << result << std::endl;
-
-
+        //std::cout << result << std::endl;
 
 
 }
