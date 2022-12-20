@@ -68,7 +68,7 @@ int Player::get_num_of_cities() const{
 int Player::get_num_of_roads() const{
     return m_num_of_roads;
 }
-std::unordered_map<ResourceType,int> Player::get_PlayerResources(){
+std::unordered_map<ResourceType,int>& Player::get_PlayerResources(){
     return m_player_resource;
 }
 void Player::set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource){

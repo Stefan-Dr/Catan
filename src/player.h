@@ -42,7 +42,7 @@ public:
     void take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
     void return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
-    std::unordered_map<ResourceType,int> get_PlayerResources();
+    std::unordered_map<ResourceType,int>& get_PlayerResources();
     void set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource);
 
     void increase_num_of_houses();
