@@ -19,6 +19,7 @@ public:
     ~Board();
     void addAllNodes();
     void addAllFields();
+
     //move to private part of the class
     QVector<Node *> m_nodes;
     QVector<GUI_Node *> m_gui_nodes;

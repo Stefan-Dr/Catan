@@ -5,6 +5,7 @@
 
 Board::Board(QObject *parent): QGraphicsScene(parent){}
 
+
 Board::~Board(){
     for(auto node : m_nodes){
         delete node;
