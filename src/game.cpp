@@ -188,10 +188,7 @@ void Game::Turn(int result, Board* board){
 
      int result = dice->get_dice_sum();*/
 
-
-     board->addAllFields();
-
-     for(auto i : board->m_fields){
+     for(auto &i : board->m_fields){
          //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
             //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
@@ -201,7 +198,7 @@ void Game::Turn(int result, Board* board){
                     //prolazimo kroz sve cvorove na tom polju
                     if(j->get_is_house_built()){
                         //proveravamo da li ima izgradjena kucica na tom cvoru
-                        for(auto player : m_players){
+                        for(auto &player : m_players){
                             //u petlji sada za svakog igraca proveravamo da li se njegov id poklapa sa id-em onog igraca koji ima objekat na tom cvoru
                             if(player->get_id() == j->get_owner()){
 
@@ -220,7 +217,7 @@ void Game::Turn(int result, Board* board){
                     }
                     if(j->get_is_city_built()){
                         //isto sve samo ovaj put proveravamo da li je na tom polju izgradjen grad
-                        for(auto player : m_players){
+                        for(auto &player : m_players){
                             if(player->get_id() == j->get_owner()){
 
                                 for(auto resource : player->get_PlayerResources()){

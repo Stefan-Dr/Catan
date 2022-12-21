@@ -4,6 +4,7 @@
 #include "node.h"
 #include "gui_node.h"
 #include "gui_board.h"
+#include "game.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,19 +20,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
+
     m_board->addAllFields();
 
     Game* game = new Game();
 
-    while(true){
-        if(game->getCurrentPlayer()->get_victory_points() == 10){
-            break;
-        }
+    while(game->getCurrentPlayer()->get_victory_points() != 10){
         int result = on_pbRollDice_clicked();
         game->Turn(result,m_board);
     //current player?
         game->ChangeCurrentPlayer();
+        //iz nekog razloka radi sve kada se u petlji stavi break
+        break;
     }
+
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
