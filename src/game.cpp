@@ -9,7 +9,7 @@ Game::Game()
     , m_player2(new Player(2, ""))
     , m_player3(new Player(3, ""))
     , m_player4(new Player(4, ""))
-    , m_currentPlayer()
+    , m_currentPlayer(m_player1)
     , m_bank(new Bank())
     /*, m_board(new Board())*/{}
 
@@ -173,7 +173,7 @@ void Game::BuildRoad(Road* road){
 }
 
 
-void Game::Turn(){
+void Game::Turn(int result, Board* board){
     /*
      * Redosled:
      * 1.Bacanje kockice
@@ -182,16 +182,16 @@ void Game::Turn(){
      * 4.Kliktanje dugmeta za kraj poteza
      */
 
-     Dice* dice = new Dice();
+     /*Dice* dice = new Dice();
      dice->roll_dice();
      dice->set_button_is_clicked(true);
 
-     int result = dice->get_dice_sum();
+     int result = dice->get_dice_sum();*/
 
 
-     m_board->addAllFields();
+     board->addAllFields();
 
-     for(auto i : m_board->m_fields){
+     for(auto i : board->m_fields){
          //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
             //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
@@ -229,6 +229,7 @@ void Game::Turn(){
                                         resource.second += 2;
                                     }
                                 }
+                                break;
                             }
                         }
                     }
@@ -256,7 +257,21 @@ void Game::Turn(){
       * }
      */
 
+}
 
+void Game::ChangeCurrentPlayer(){
+    if(m_currentPlayer->get_id() == m_player1->get_id()){
+        m_currentPlayer = m_player2;
+    }
+    else if(m_currentPlayer->get_id() == m_player2->get_id()){
+        m_currentPlayer = m_player3;
+    }
+    else if(m_currentPlayer->get_id() == m_player3->get_id()){
+        m_currentPlayer = m_player4;
+    }
+    else if(m_currentPlayer->get_id() == m_player4->get_id()){
+        m_currentPlayer = m_player1;
+    }
 }
 
 

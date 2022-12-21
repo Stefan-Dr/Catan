@@ -37,6 +37,7 @@ public:
     int get_num_of_allowed_roads() const;
 
     void set_city(Bank &bank);
+    void set_id(int id);
 
     bool give_resource_card_to_player(ResourceType res_type, int amount, Player &p);
     void take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
