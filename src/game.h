@@ -47,8 +47,8 @@ public:
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
-    void Turn();
-
+    void Turn(int result, Board* board);
+    void ChangeCurrentPlayer();
 
 private:
     //napraviti niz playera radi lakseg funkcionisanja
@@ -59,7 +59,7 @@ private:
     Player* m_player4;
     Player* m_currentPlayer;
     Bank* m_bank;
-    Board* m_board;
+    //Board* m_board;
     int numOfPlayers = 4;
 };
 

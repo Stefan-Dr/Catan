@@ -19,7 +19,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
-    m_board->addAllNodes();
+    m_board->addAllFields();
+
+    Game* game = new Game();
+
+    while(true){
+        if(game->getCurrentPlayer()->get_victory_points() == 10){
+            break;
+        }
+        int result = on_pbRollDice_clicked();
+        game->Turn(result,m_board);
+    //current player?
+        game->ChangeCurrentPlayer();
+    }
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
@@ -112,9 +124,12 @@ void MainWindow::on_pbContinue_clicked(){
 
 
 
-void MainWindow::on_pbRollDice_clicked()
+int MainWindow::on_pbRollDice_clicked()
 {
+    m_dice->set_button_is_clicked(false);
+
     m_dice->roll_dice();
+    m_dice->set_button_is_clicked(true);
     int d1 = m_dice->get_dice1();
     int d2 = m_dice->get_dice2();
     switch (d1) {
@@ -158,5 +173,6 @@ void MainWindow::on_pbRollDice_clicked()
             ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
             break;
     }
+    return m_dice->get_dice_sum();
 }
 

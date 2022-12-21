@@ -75,6 +75,10 @@ void Player::set_PlayerResources(const std::unordered_map<ResourceType,int> &mPl
     m_player_resource = mPlayerResource;
 }
 
+void Player::set_id(int id){
+    m_id = id;
+}
+
 bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Player &p){
     if(m_player_resource[res_type]<amount){
         return false;
