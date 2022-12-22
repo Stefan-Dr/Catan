@@ -90,29 +90,29 @@ void MainWindow::on_pbContinue_clicked(){
     bool con2 = false;
     bool con3 = false;
     bool con4 = false;
-    if ( ui->lePlayer1->text().length() < 3){
-        ui->lbPlayer1Required->setText("Name must be at least 3 characters long!");
+    if ( ui->lePlayer1->text().length() < 3 || ui->lePlayer1->text().length() > 14){
+        ui->lbPlayer1Required->setText("Name length must be within 3-14 letters!");
     }
     else {
        con1 = true;
        ui->lbPlayer1Required->setText("");
     }
-    if ( ui->lePlayer2->text().length() < 3){
-        ui->lbPlayer2Required->setText("Name must be at least 3 characters long!");
+    if ( ui->lePlayer2->text().length() < 3 || ui->lePlayer2->text().length() > 14){
+        ui->lbPlayer2Required->setText("Name length must be within 3-14 letters!");
     }
     else {
         con2 = true;
         ui->lbPlayer2Required->setText("");
      }
-    if ( ui->lePlayer3->text().length() < 3){
-        ui->lbPlayer3Required->setText("Name must be at least 3 characters long!");
+    if ( ui->lePlayer3->text().length() < 3 || ui->lePlayer3->text().length() > 14){
+        ui->lbPlayer3Required->setText("Name length must be within 3-14 letters!");
     }
     else {
         con3 = true;
         ui->lbPlayer3Required->setText("");
      }
-    if ( ui->lePlayer4->text().length() < 3){
-        ui->lbPlayer4Required->setText("Name must be at least 3 characters long!");
+    if ( ui->lePlayer4->text().length() < 3 || ui->lePlayer4->text().length() > 14){
+        ui->lbPlayer4Required->setText("Name length must be within 3-14 letters!");
     }
     else {
         con4 = true;
@@ -120,6 +120,10 @@ void MainWindow::on_pbContinue_clicked(){
      }
 
     if (con1 && con2 && con3 && con4){
+        ui->lbPlayer1Name->setText(ui->lePlayer1->text());
+        ui->lbPlayer2Name->setText(ui->lePlayer2->text());
+        ui->lbPlayer3Name->setText(ui->lePlayer3->text());
+        ui->lbPlayer4Name->setText(ui->lePlayer4->text());
         ui->stackedWidget->setCurrentIndex(4);
     }
 }

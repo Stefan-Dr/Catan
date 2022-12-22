@@ -23,5 +23,10 @@
         <file>images/dice4.png</file>
         <file>images/dice5.png</file>
         <file>images/dice6.png</file>
+        <file>images/resources--brick.png</file>
+        <file>images/resources--grain.png</file>
+        <file>images/resources--lumber.png</file>
+        <file>images/resources--ore.png</file>
+        <file>images/resources--wool.png</file>
     </qresource>
 </RCC>
