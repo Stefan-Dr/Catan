@@ -2217,17 +2217,151 @@ border-radius: 10%;</string>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/resources/images/wood.png) 0 0 0 0 stretch stretch;</string>
        </property>
-       <widget class="QLabel" name="label_5">
+       <widget class="QWidget" name="horizontalLayoutWidget_10">
         <property name="geometry">
          <rect>
-          <x>76</x>
-          <y>16</y>
-          <width>161</width>
-          <height>31</height>
+          <x>10</x>
+          <y>40</y>
+          <width>321</width>
+          <height>41</height>
          </rect>
         </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="QLabel" name="label_29">
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/resources/images/resources--grain.png) 0 0 0 0 stretch stretch;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbWheatBank">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_32">
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/resources/images/resources--wool.png) 0 0 0 0 stretch stretch;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbWoolBank">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_34">
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/resources/images/resources--ore.png) 0 0 0 0 stretch stretch;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbStoneBank">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_36">
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/resources/images/resources--lumber.png) 0 0 0 0 stretch stretch;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbWoodBank">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_37">
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/resources/images/resources--brick.png) 0 0 0 0 stretch stretch;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbBrickBank">
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="lbBank">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>93</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: green;
+
+</string>
+        </property>
         <property name="text">
-         <string>banka</string>
+         <string>Bank</string>
         </property>
        </widget>
       </widget>
