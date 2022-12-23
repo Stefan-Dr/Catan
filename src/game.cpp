@@ -172,6 +172,26 @@ void Game::BuildRoad(Road* road){
 
 }
 
+//Da li cemo bacati kockice i odredjivati ko igra prvi, ili cemo ici redom po igracima?
+
+
+void Game::firstTurn(){
+    //redosled igraca je od 1 do 4
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
+
+
+}
+
+void Game::secondTurn(){
+    //redosled igraca je od 4 do 1
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
+    //dobijanje resursa u zavisnosti gde je postavljena druga kuca
+
+
+}
+
 
 void Game::Turn(int result, Board* board){
     /*
@@ -235,24 +255,44 @@ void Game::Turn(int result, Board* board){
         }
      }
 
-     //sada igrac ima opcije za izgradnju objekata
-     /*if(kliknuto dugme za izgradnju grada){
-      *     //for(auto node : m_board->m_nodes){
-      *         //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
-      *         if(node->is_house_build){
-      *             BuildCity(node);
-      *         }
-      *     }
-      * }
-      *
-      * if(kliknuto dugme za izgradnju kucice){
-      *     for(auto node : m_board->m_nodes){
-      *         //u petlji prveravamo da li je taj cvor kliknut
-      *         //ako jeste na tom cvoru postavljamo kucicu
-      *         BuildHouse(node);
-      *     }
-      * }
-     */
+     //opcije za izgradnju objekata
+
+         //if(kliknuto dugme za izgradnju kucice){
+             for(auto node : board->m_nodes){
+                 //u petlji prveravamo da li je taj cvor kliknut
+                 //if(kliknut cvor)
+                 if(!node->get_is_house_built()){
+                 //ako jeste na tom cvoru postavljamo kucicu
+                 BuildHouse(node);
+                 }
+             }
+
+         //if(kliknuto dugme za izgradnju grada){
+               for(auto node : board->m_nodes){
+                   //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
+                    //if(kliknut cvor)
+                    if(node->get_is_house_built()){
+                        BuildCity(node);
+                    }
+               }
+        /*
+         * ne moze da se pokrene dokle god se ne zavrsi klasa road
+         if(kliknuto dugme za izgradnju puta){
+               if(cvor1 je kliknut){
+                  for(auto node1: board->m_nodes){
+                     for(auto node2: node1->get_neighbours()){
+                       if(cvor2 je klinut){
+                          if(node->get_can_build()){
+                              BuildRoad(road);
+                          }
+                       }
+                     }
+                  }
+               }
+         }
+
+        */
+
 
 }
 
