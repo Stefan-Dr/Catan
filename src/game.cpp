@@ -48,6 +48,7 @@ Player* Game::getCurrentPlayer() const{
 QVector<Player*>& Game::get_players(){
     return m_players;
 }
+int Game::getDiceSum() const { return m_dice_sum; }
 
 
 //seteri
@@ -69,7 +70,9 @@ void Game::setBank(Bank* bank){
 void Game::setCurrentPlayer(Player *player) {
     m_currentPlayer = player;
 }
-
+void Game::setDiceSum(int dice_sum) {
+    m_dice_sum = dice_sum;
+}
 
 auto Game::currentPlayerId() const -> int {
     return m_currentPlayer->get_id();
@@ -194,20 +197,8 @@ void Game::secondTurn(){
 }
 
 
-void Game::Turn(int result, Board* board){
-    /*
-     * Redosled:
-     * 1.Bacanje kockice
-     * 2.Dodavanje resursa svim igracima na osnovu zauzetih cvorova
-     * 3.BuildRoad/BuildHouse/BuildCity
-     * 4.Kliktanje dugmeta za kraj poteza
-     */
-
-     /*Dice* dice = new Dice();
-     dice->roll_dice();
-     dice->set_button_is_clicked(true);
-
-     int result = dice->get_dice_sum();*/
+void Game::Turn(Board* board){
+    int result = getDiceSum();
 
      for(auto &i : board->m_fields){
          //prolazimo kroz sva polja na tabli

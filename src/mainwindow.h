@@ -41,12 +41,13 @@ private slots:
     void on_pbBackToMenu_3_clicked();
 
 
-    int on_pbRollDice_clicked();
+    void on_pbRollDice_clicked();
 
 protected:
     Ui::MainWindow *ui;
     Board *m_board;
     Dice *m_dice;
+    Game *m_game;
 
 };
 #endif // MAINWINDOW_H

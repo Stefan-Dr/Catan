@@ -9,7 +9,7 @@ class Node;
 class GUI_Node : public QGraphicsObject
 {
 public:
-    GUI_Node(Node *node,QPointF);
+    GUI_Node(QPointF);
 
 
     // QGraphicsItem interface

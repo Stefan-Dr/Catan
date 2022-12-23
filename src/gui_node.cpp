@@ -2,9 +2,9 @@
 #include <QPainter>
 #include "node.h"
 
-GUI_Node::GUI_Node(Node *node,QPointF p)
+GUI_Node::GUI_Node(QPointF p)
     : QGraphicsObject()
-    , m_node(node)
+    , m_node(nullptr)
     , m_x(p.rx())
     , m_y(p.ry())
 {
