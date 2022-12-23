@@ -1,6 +1,7 @@
 #include "game.h"
 #include "player.h"
 #include "dice.h"
+#include <algorithm>
 
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
@@ -172,6 +173,26 @@ void Game::BuildRoad(Road* road){
 
 }
 
+//Da li cemo bacati kockice i odredjivati ko igra prvi, ili cemo ici redom po igracima?
+
+
+void Game::firstTurn(){
+    //redosled igraca je od 1 do 4
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
+
+
+}
+
+void Game::secondTurn(){
+    //redosled igraca je od 4 do 1
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
+    //dobijanje resursa u zavisnosti gde je postavljena druga kuca
+
+
+}
+
 
 void Game::Turn(int result, Board* board){
     /*
@@ -235,24 +256,44 @@ void Game::Turn(int result, Board* board){
         }
      }
 
-     //sada igrac ima opcije za izgradnju objekata
-     /*if(kliknuto dugme za izgradnju grada){
-      *     //for(auto node : m_board->m_nodes){
-      *         //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
-      *         if(node->is_house_build){
-      *             BuildCity(node);
-      *         }
-      *     }
-      * }
-      *
-      * if(kliknuto dugme za izgradnju kucice){
-      *     for(auto node : m_board->m_nodes){
-      *         //u petlji prveravamo da li je taj cvor kliknut
-      *         //ako jeste na tom cvoru postavljamo kucicu
-      *         BuildHouse(node);
-      *     }
-      * }
-     */
+     //opcije za izgradnju objekata
+
+         //if(kliknuto dugme za izgradnju kucice){
+             for(auto node : board->m_nodes){
+                 //u petlji prveravamo da li je taj cvor kliknut
+                 //if(kliknut cvor)
+                 if(!node->get_is_house_built()){
+                 //ako jeste na tom cvoru postavljamo kucicu
+                 BuildHouse(node);
+                 }
+             }
+
+         //if(kliknuto dugme za izgradnju grada){
+               for(auto node : board->m_nodes){
+                   //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
+                    //if(kliknut cvor)
+                    if(node->get_is_house_built()){
+                        BuildCity(node);
+                    }
+               }
+        /*
+         * ne moze da se pokrene dokle god se ne zavrsi klasa road
+         if(kliknuto dugme za izgradnju puta){
+               if(cvor1 je kliknut){
+                  for(auto node1: board->m_nodes){
+                     for(auto node2: node1->get_neighbours()){
+                       if(cvor2 je klinut){
+                          if(node->get_can_build()){
+                              BuildRoad(road);
+                          }
+                       }
+                     }
+                  }
+               }
+         }
+
+        */
+
 
 }
 
@@ -271,4 +312,67 @@ void Game::ChangeCurrentPlayer(){
     }
 }
 
+
+
+
+void Game::gameResult(){
+
+      Player* players[] = { m_player1,
+                            m_player2,
+                            m_player3,
+                            m_player4  };
+
+      int numPlayers = sizeof(players) / sizeof(players[0]);
+
+      //std::sort(players, players + numPlayers, comparePlayers);
+      //prosledjivanje pokazivaca na fukcniju???
+
+
+      for (int i = 0; i < numPlayers; i++) {
+        std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
+      }
+
+
+    /*
+     * pokusaj sortiranja
+    players.push_back(m_player1);
+    players.push_back(m_player2);
+    players.push_back(m_player3);
+    players.push_back(m_player4);
+
+    QVector<int> players_points = {
+            players[0]->get_victory_points(),
+            players[1]->get_victory_points(),
+            players[2]->get_victory_points(),
+            players[3]->get_victory_points()
+    };
+
+
+    Player* first;
+    Player* second;
+    Player* third;
+    Player* fourth;
+
+    int n = sizeof(players);
+
+    std::sort(players_points.begin(), players_points.end());
+    //sortiranje na osnovu broja ostvarenih poena???
+    for(int i = 0; i < players_points.size(); i++){
+        first = players[4];
+        second = players[3];
+        third = players[2];
+        fourth = players[1];
+
+    }
+
+    std::cout << "First: " << first << std::endl;
+
+    std::cout << "Second: " << second << std::endl;
+
+    std::cout << "Third: " << third << std::endl;
+
+    std::cout << "Fourth: " << fourth << std::endl;
+    */
+
+}
 

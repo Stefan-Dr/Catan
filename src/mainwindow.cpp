@@ -133,9 +133,15 @@ void MainWindow::on_pbContinue_clicked(){
 int MainWindow::on_pbRollDice_clicked()
 {
     m_dice->set_button_is_clicked(false);
-
     m_dice->roll_dice();
     m_dice->set_button_is_clicked(true);
+
+    //if(korisnik je opet klinuo na dugme za bacanje kockice)
+        if(m_dice->get_button_clicked() == true){
+            //ispis greske ili izbacivanje prozora sa upozorenjem
+            std::cout << "Error: button is already clicked!" << std::endl;
+        }
+
     int d1 = m_dice->get_dice1();
     int d2 = m_dice->get_dice2();
     switch (d1) {

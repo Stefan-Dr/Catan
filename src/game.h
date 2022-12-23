@@ -8,6 +8,7 @@
 #include "player.h"
 #include "road.h"
 #include "node.h"
+#include <vector>
 
 #include <QObject>
 
@@ -47,8 +48,11 @@ public:
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
+    void firstTurn();
+    void secondTurn();
     void Turn(int result, Board* board);
     void ChangeCurrentPlayer();
+    void gameResult();
 
 private:
     //napraviti niz playera radi lakseg funkcionisanja

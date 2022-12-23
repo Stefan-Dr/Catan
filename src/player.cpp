@@ -135,3 +135,6 @@ void Player::decrease_victory_point(){
     m_victory_points--;
 }
 
+bool Player::comparePlayers(const Player* pl1, const Player* pl2) {
+  return pl1->get_victory_points() < pl2->get_victory_points();
+}
