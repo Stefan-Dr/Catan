@@ -59,6 +59,8 @@ public:
     void decrease_allowed_road_number();
     void decrease_victory_point();
 
+    bool comparePlayers(const Player* pl1, const Player* pl2);
+
     /*void set_city(Bank); set_house(NOde,Bank), set_road(road,NOde,Bank);..*/
 
 private:

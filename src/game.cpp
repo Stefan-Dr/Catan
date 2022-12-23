@@ -1,6 +1,7 @@
 #include "game.h"
 #include "player.h"
 #include "dice.h"
+#include <algorithm>
 
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
@@ -311,4 +312,67 @@ void Game::ChangeCurrentPlayer(){
     }
 }
 
+
+
+
+void Game::gameResult(){
+
+      Player* players[] = { m_player1,
+                            m_player2,
+                            m_player3,
+                            m_player4  };
+
+      int numPlayers = sizeof(players) / sizeof(players[0]);
+
+      //std::sort(players, players + numPlayers, comparePlayers);
+      //prosledjivanje pokazivaca na fukcniju???
+
+
+      for (int i = 0; i < numPlayers; i++) {
+        std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
+      }
+
+
+    /*
+     * pokusaj sortiranja
+    players.push_back(m_player1);
+    players.push_back(m_player2);
+    players.push_back(m_player3);
+    players.push_back(m_player4);
+
+    QVector<int> players_points = {
+            players[0]->get_victory_points(),
+            players[1]->get_victory_points(),
+            players[2]->get_victory_points(),
+            players[3]->get_victory_points()
+    };
+
+
+    Player* first;
+    Player* second;
+    Player* third;
+    Player* fourth;
+
+    int n = sizeof(players);
+
+    std::sort(players_points.begin(), players_points.end());
+    //sortiranje na osnovu broja ostvarenih poena???
+    for(int i = 0; i < players_points.size(); i++){
+        first = players[4];
+        second = players[3];
+        third = players[2];
+        fourth = players[1];
+
+    }
+
+    std::cout << "First: " << first << std::endl;
+
+    std::cout << "Second: " << second << std::endl;
+
+    std::cout << "Third: " << third << std::endl;
+
+    std::cout << "Fourth: " << fourth << std::endl;
+    */
+
+}
 
