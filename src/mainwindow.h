@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 #include "board.h"
 #include "node.h"
-#include "gui_board.h"
+
 #include "gui_node.h"
 #include <QMainWindow>
 #include <QGraphicsItem>

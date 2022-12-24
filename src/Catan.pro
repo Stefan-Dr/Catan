@@ -22,6 +22,7 @@ SOURCES += \
     field.cpp \
     game.cpp \
     gui_node.cpp \
+    gui_road.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     field.h \
     game.h \
     gui_node.h \
+    gui_road.h \
     mainwindow.h \
     player.h\
     node.h\
