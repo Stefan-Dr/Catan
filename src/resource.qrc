@@ -28,5 +28,6 @@
         <file>images/resources--lumber.png</file>
         <file>images/resources--ore.png</file>
         <file>images/resources--wool.png</file>
+        <file>sounds/background_music.mp3</file>
     </qresource>
 </RCC>
