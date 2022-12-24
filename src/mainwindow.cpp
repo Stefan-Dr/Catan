@@ -11,15 +11,20 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , m_board(new Board(this))
     , m_dice(new Dice())
+    , m_music(new QMediaPlayer())
 {
     ui->setupUi(this);
     ui->rbON->setChecked(true);
     ui->rbSLOW->setChecked(true);
 
+
     m_board->setSceneRect(ui->gvMapa->rect());
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
+    m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
+    m_music->setVolume(100);
+    m_music->play();
 
     m_board->addAllFields();
 
@@ -186,5 +191,17 @@ int MainWindow::on_pbRollDice_clicked()
             break;
     }
     return m_dice->get_dice_sum();
+}
+
+
+void MainWindow::on_rbON_toggled(bool checked)
+{
+    if ( checked ) { m_music->play(); }
+}
+
+
+void MainWindow::on_rbOFF_toggled(bool checked)
+{
+    if ( checked ) { m_music->stop(); }
 }
 
