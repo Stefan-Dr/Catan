@@ -3,7 +3,7 @@
 #include "board.h"
 #include "node.h"
 #include "gui_node.h"
-#include "gui_board.h"
+
 #include "game.h"
 
 MainWindow::MainWindow(QWidget *parent)
