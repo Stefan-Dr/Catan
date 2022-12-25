@@ -28,17 +28,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_board->addAllFields();
 
-    Game* game = new Game();
+    m_game = new Game();
 
-    while(game->getCurrentPlayer()->get_victory_points() != 10){
-        int result = on_pbRollDice_clicked();
-        game->Turn(result,m_board);
-    //current player?
-        game->ChangeCurrentPlayer();
-        //iz nekog razloka radi sve kada se u petlji stavi break
-        break;
-    }
-
+    
+    connect(ui->pbRollDice, &QPushButton::clicked, this, &MainWindow::on_pbRollDice_clicked);
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
@@ -135,7 +128,7 @@ void MainWindow::on_pbContinue_clicked(){
 
 
 
-int MainWindow::on_pbRollDice_clicked()
+void MainWindow::on_pbRollDice_clicked()
 {
     m_dice->set_button_is_clicked(false);
     m_dice->roll_dice();
@@ -190,7 +183,14 @@ int MainWindow::on_pbRollDice_clicked()
             ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
             break;
     }
-    return m_dice->get_dice_sum();
+    int dice_sum = m_dice->get_dice_sum();
+    m_game->setDiceSum(dice_sum);
+
+    if (m_game->getCurrentPlayer()->get_victory_points() == 10){
+       // handle win
+        return;
+    }
+    m_game->Turn(m_board);
 }
 
 
