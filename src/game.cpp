@@ -48,6 +48,7 @@ Player* Game::getCurrentPlayer() const{
 QVector<Player*>& Game::get_players(){
     return m_players;
 }
+int Game::getDiceSum() const { return m_dice_sum; }
 
 
 //seteri
@@ -70,10 +71,15 @@ void Game::setCurrentPlayer(Player *player) {
     m_currentPlayer = player;
 }
 
+void Game::setDiceSum(int dice_sum) {
+    m_dice_sum = dice_sum;
+}
+
 
 auto Game::currentPlayerId() const -> int {
     return m_currentPlayer->get_id();
 }
+
 
 //pobednik partije
 bool Game::wonPlayer1() {
@@ -173,41 +179,11 @@ void Game::BuildRoad(Road* road){
 
 }
 
-//Da li cemo bacati kockice i odredjivati ko igra prvi, ili cemo ici redom po igracima?
 
-
-void Game::firstTurn(){
-    //redosled igraca je od 1 do 4
-    //postavljanje jedne kuce
-    //postavljanje jednog puta
-
-
-}
-
-void Game::secondTurn(){
-    //redosled igraca je od 4 do 1
-    //postavljanje jedne kuce
-    //postavljanje jednog puta
-    //dobijanje resursa u zavisnosti gde je postavljena druga kuca
-
-
-}
 
 
 void Game::Turn(int result, Board* board){
-    /*
-     * Redosled:
-     * 1.Bacanje kockice
-     * 2.Dodavanje resursa svim igracima na osnovu zauzetih cvorova
-     * 3.BuildRoad/BuildHouse/BuildCity
-     * 4.Kliktanje dugmeta za kraj poteza
-     */
-
-     /*Dice* dice = new Dice();
-     dice->roll_dice();
-     dice->set_button_is_clicked(true);
-
-     int result = dice->get_dice_sum();*/
+    
 
      for(auto &i : board->m_fields){
          //prolazimo kroz sva polja na tabli
@@ -255,44 +231,6 @@ void Game::Turn(int result, Board* board){
             }
         }
      }
-
-     //opcije za izgradnju objekata
-
-         //if(kliknuto dugme za izgradnju kucice){
-             for(auto node : board->m_nodes){
-                 //u petlji prveravamo da li je taj cvor kliknut
-                 //if(kliknut cvor)
-                 if(!node->get_is_house_built()){
-                 //ako jeste na tom cvoru postavljamo kucicu
-                 BuildHouse(node);
-                 }
-             }
-
-         //if(kliknuto dugme za izgradnju grada){
-               for(auto node : board->m_nodes){
-                   //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
-                    //if(kliknut cvor)
-                    if(node->get_is_house_built()){
-                        BuildCity(node);
-                    }
-               }
-        /*
-         * ne moze da se pokrene dokle god se ne zavrsi klasa road
-         if(kliknuto dugme za izgradnju puta){
-               if(cvor1 je kliknut){
-                  for(auto node1: board->m_nodes){
-                     for(auto node2: node1->get_neighbours()){
-                       if(cvor2 je klinut){
-                          if(node->get_can_build()){
-                              BuildRoad(road);
-                          }
-                       }
-                     }
-                  }
-               }
-         }
-
-        */
 
 
 }

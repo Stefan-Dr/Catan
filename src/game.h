@@ -28,6 +28,7 @@ public:
     Bank* getBank() const;
     Player* getCurrentPlayer() const;
     QVector<Player*>& get_players();
+    int getDiceSum() const;
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
@@ -35,6 +36,7 @@ public:
     void setPlayer4(Player *player4);
     void setBank(Bank* bank);
     void setCurrentPlayer(Player *currentPlayer);
+    void setDiceSum(int dice_sum);
 
 
     int currentPlayerId() const;
@@ -48,8 +50,6 @@ public:
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
-    void firstTurn();
-    void secondTurn();
     void Turn(int result, Board* board);
     void ChangeCurrentPlayer();
     void gameResult();
@@ -65,6 +65,8 @@ private:
     Bank* m_bank;
     //Board* m_board;
     int numOfPlayers = 4;
+    // state
+    int m_dice_sum = 0;
 };
 
 #endif // GAME_H
