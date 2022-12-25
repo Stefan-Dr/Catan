@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_game = new Game();
 
     
-
+    connect(ui->pbRollDice, &QPushButton::clicked, this, &MainWindow::on_pbRollDice_clicked);
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
