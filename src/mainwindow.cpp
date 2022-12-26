@@ -265,19 +265,32 @@ void MainWindow::on_pb_House_clicked()
         m_game->BuildHouse();
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
         displayResources();
+        ui->lbError->setText("");
     }
     else {
         m_board->m_setHouse = false;
         m_board->m_setRoad = false;
         m_board->m_setCity = false;
+        ui->lbError->setText("Not enough resources for a house");
     }
 }
 
 void MainWindow::on_pb_Road_clicked()
 {
-    m_board->m_setRoad = true;
-    m_board->m_setCity = false;
-    m_board->m_setHouse = false;
+    if ( m_game->can_build_road() ) {
+        m_board->m_setRoad = true;
+        m_board->m_setCity = false;
+        m_board->m_setHouse = false;
+        m_game->BuildRoad();
+        displayResources();
+        ui->lbError->setText("");
+    }
+    else {
+        m_board->m_setHouse = false;
+        m_board->m_setRoad = false;
+        m_board->m_setCity = false;
+        ui->lbError->setText("Not enough resources for a road");
+    }
 }
 
 void MainWindow::on_pb_Settlement_clicked()
@@ -286,13 +299,16 @@ void MainWindow::on_pb_Settlement_clicked()
         m_board->m_setCity = true;
         m_board->m_setHouse = false;
         m_board->m_setRoad = false;
+        m_game->BuildCity();
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
         displayResources();
+        ui->lbError->setText("");
     }
     else {
         m_board->m_setHouse = false;
         m_board->m_setRoad = false;
         m_board->m_setCity = false;
+        ui->lbError->setText("Not enough resources for a city");
     }
 }
 
