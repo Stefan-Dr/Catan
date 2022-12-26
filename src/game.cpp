@@ -167,7 +167,7 @@ void Game::BuildRoad(/*Road* road*/){
 
         //menjanje broja izgradjenih objekata
         m_currentPlayer->increase_num_of_roads();
-        if(m_currentPlayer->get_num_of_roads() == 2){
+        if(m_currentPlayer->get_num_of_roads() == 7){
             m_currentPlayer->increase_victory_points(2);
         }
         //graficko postavljanje puta
