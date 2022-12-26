@@ -108,6 +108,27 @@ void Player::dec_num_of_wool()
     m_num_of_wool--;
 }
 
+void Player::double_inc_num_of_wood(){
+    m_player_resource[ResourceType::Wood] += 2;
+    m_num_of_wood += 2;
+}
+void Player::double_inc_num_of_wheat(){
+    m_player_resource[ResourceType::Wheat] += 2;
+    m_num_of_wheat += 2;
+}
+void Player::double_inc_num_of_stone(){
+    m_player_resource[ResourceType::Stone] += 2;
+    m_num_of_stone += 2;
+}
+void Player::double_inc_num_of_brick(){
+    m_player_resource[ResourceType::Brick] += 2;
+    m_num_of_brick += 2;
+}
+void Player::double_inc_num_of_wool(){
+    m_player_resource[ResourceType::Wool] += 2;
+    m_num_of_wool += 2;
+}
+
 int Player::get_num_of_allowed_houses() const{
     return m_num_of_allowed_houses;
 }
@@ -166,8 +187,8 @@ bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Pla
     return true;
 }
 void Player::take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank){
- m_player_resource[res_type]+=amount;
- bank.remove_resource_card(res_type,amount);
+    m_player_resource[res_type]+=amount;
+    bank.remove_resource_card(res_type,amount);
 
 }
 
