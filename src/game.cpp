@@ -202,9 +202,9 @@ void Game::Turn(int result, Board* board){
          //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
             //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
-            if(!i->is_robber_on_the_field()){
+            //if(!i->is_robber_on_the_field()){
                 //ako se na tom polju ne nalazi lopov radimo sledece
-                for(auto j : i->get_corners()){
+                for(auto &j : i->get_corners()){
                     //prolazimo kroz sve cvorove na tom polju
                     if(j->get_is_house_built()){
                         //proveravamo da li ima izgradjena kucica na tom cvoru
@@ -268,7 +268,7 @@ void Game::Turn(int result, Board* board){
                         }
                     }
                 }
-            }
+            //}
         }
     }
 }

@@ -83,11 +83,11 @@ void MainWindow::displayResources()
 void MainWindow::displayBankResources(){
     Bank* bank = m_game->getBank();
 
-    ui->lbBrickBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Brick]));
-    ui->lbStoneBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Stone]));
-    ui->lbWheatBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wheat]));
-    ui->lbWoodBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wood]));
-    ui->lbWoolBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wool]));
+    ui->lbBrickBank->setText(QString::number(bank->get_num_of_brick_from_bank()));
+    ui->lbStoneBank->setText(QString::number(bank->get_num_of_stone_from_bank()));
+    ui->lbWheatBank->setText(QString::number(bank->get_num_of_wheat_from_bank()));
+    ui->lbWoodBank->setText(QString::number(bank->get_num_of_wood_from_bank()));
+    ui->lbWoolBank->setText(QString::number(bank->get_num_of_wool_from_bank()));
 }
 
 void MainWindow::on_pbStartGame_clicked(){
@@ -133,28 +133,28 @@ void MainWindow::on_pbContinue_clicked(){
     bool con2 = false;
     bool con3 = false;
     bool con4 = false;
-    if ( ui->lePlayer1->text().length() < 3 || ui->lePlayer1->text().length() > 14){
+    if ( ui->lePlayer1->text().length() < 2 || ui->lePlayer1->text().length() > 14){
         ui->lbPlayer1Required->setText("Name length must be within 3-14 letters!");
     }
     else {
        con1 = true;
        ui->lbPlayer1Required->setText("");
     }
-    if ( ui->lePlayer2->text().length() < 3 || ui->lePlayer2->text().length() > 14){
+    if ( ui->lePlayer2->text().length() < 2 || ui->lePlayer2->text().length() > 14){
         ui->lbPlayer2Required->setText("Name length must be within 3-14 letters!");
     }
     else {
         con2 = true;
         ui->lbPlayer2Required->setText("");
      }
-    if ( ui->lePlayer3->text().length() < 3 || ui->lePlayer3->text().length() > 14){
+    if ( ui->lePlayer3->text().length() < 2 || ui->lePlayer3->text().length() > 14){
         ui->lbPlayer3Required->setText("Name length must be within 3-14 letters!");
     }
     else {
         con3 = true;
         ui->lbPlayer3Required->setText("");
      }
-    if ( ui->lePlayer4->text().length() < 3 || ui->lePlayer4->text().length() > 14){
+    if ( ui->lePlayer4->text().length() < 2 || ui->lePlayer4->text().length() > 14){
         ui->lbPlayer4Required->setText("Name length must be within 3-14 letters!");
     }
     else {
@@ -189,11 +189,13 @@ void MainWindow::on_pbRollDice_clicked()
     m_dice->roll_dice();
     m_dice->set_button_is_clicked(true);
 
+    int result = m_dice->get_dice_sum();
+    m_game->Turn(result,m_board);
     //if(korisnik je opet klinuo na dugme za bacanje kockice)
-        if(m_dice->get_button_clicked() == true){
-            //ispis greske ili izbacivanje prozora sa upozorenjem
-            std::cout << "Error: button is already clicked!" << std::endl;
-        }
+    if(m_dice->get_button_clicked() == true){
+           //ispis greske ili izbacivanje prozora sa upozorenjem
+       ui->lbError->setText("Dice has been already rolled!");
+    }
 
     int d1 = m_dice->get_dice1();
     int d2 = m_dice->get_dice2();
@@ -238,8 +240,6 @@ void MainWindow::on_pbRollDice_clicked()
             ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
             break;
     }
-    int result = m_dice->get_dice_sum();
-    m_game->Turn(result,m_board);
 }
 
 

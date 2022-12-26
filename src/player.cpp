@@ -187,8 +187,8 @@ bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Pla
     return true;
 }
 void Player::take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank){
- m_player_resource[res_type]+=amount;
- bank.remove_resource_card(res_type,amount);
+    m_player_resource[res_type]+=amount;
+    bank.remove_resource_card(res_type,amount);
 
 }
 
