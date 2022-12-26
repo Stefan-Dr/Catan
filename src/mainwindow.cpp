@@ -90,6 +90,13 @@ void MainWindow::displayBankResources(){
     ui->lbWoolBank->setText(QString::number(bank->get_num_of_wool_from_bank()));
 }
 
+void MainWindow::displayPlayerPoints(){
+    ui->lbPointsPlayer1->setText(QString::number(m_game->getPlayer1()->get_victory_points()));
+    ui->lbPointsPlayer2->setText(QString::number(m_game->getPlayer2()->get_victory_points()));
+    ui->lbPointsPlayer3->setText(QString::number(m_game->getPlayer3()->get_victory_points()));
+    ui->lbPointsPlayer4->setText(QString::number(m_game->getPlayer4()->get_victory_points()));
+}
+
 void MainWindow::on_pbStartGame_clicked(){
     ui->stackedWidget->setCurrentIndex(3);
 }
@@ -179,6 +186,7 @@ void MainWindow::on_pbContinue_clicked(){
         displayResources();
         m_game->nextPlayer();
         displayBankResources();
+        displayPlayerPoints();
     }
 }
 
@@ -266,6 +274,7 @@ void MainWindow::on_pb_House_clicked()
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
         displayResources();
         displayBankResources();
+        displayPlayerPoints();
         ui->lbError->setText("");
     }
     else {
@@ -285,6 +294,7 @@ void MainWindow::on_pb_Road_clicked()
         m_game->BuildRoad();
         displayResources();
         displayBankResources();
+        displayPlayerPoints();
         ui->lbError->setText("");
     }
     else {
@@ -305,6 +315,7 @@ void MainWindow::on_pb_Settlement_clicked()
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
         displayResources();
         displayBankResources();
+        displayPlayerPoints();
         ui->lbError->setText("");
     }
     else {

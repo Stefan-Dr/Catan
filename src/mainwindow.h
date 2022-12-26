@@ -28,6 +28,7 @@ public:
     void addAllNodes();
     void displayResources();
     void displayBankResources();
+    void displayPlayerPoints();
 
 signals:
     void AddedNewBlankNode(GUI_Node *node);
