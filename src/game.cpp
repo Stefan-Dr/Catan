@@ -125,14 +125,14 @@ void Game::BuildHouse(/*Node* node*/){
    //}
 }
 
-void Game::BuildCity(Node* node){
+void Game::BuildCity(/*Node* node*/){
 
 
-    if(node->get_can_build_city() == true){
-        if(m_currentPlayer->get_num_of_wheat() >= 2 &&
-           m_currentPlayer->get_num_of_stone() >= 3){
+//    if(node->get_can_build_city() == true){
+//        if(m_currentPlayer->get_num_of_wheat() >= 2 &&
+//           m_currentPlayer->get_num_of_stone() >= 3){
 
-            node->place_city(m_currentPlayer->get_id());
+//            node->place_city(m_currentPlayer->get_id());
 
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,2,*m_bank);
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,3,*m_bank);
@@ -148,17 +148,17 @@ void Game::BuildCity(Node* node){
             //graficko postavljanje grada
 
 
-        }
-    }
+//        }
+//    }
 
 }
 
-void Game::BuildRoad(Road* road){
+void Game::BuildRoad(/*Road* road*/){
 
-    if(m_currentPlayer->get_num_of_brick() >= 1 &&
-       m_currentPlayer->get_num_of_wood() >= 1){
+//    if(m_currentPlayer->get_num_of_brick() >= 1 &&
+//       m_currentPlayer->get_num_of_wood() >= 1){
 
-        road->set_owner(m_currentPlayer->get_id());
+//        road->set_owner(m_currentPlayer->get_id());
 
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
@@ -169,7 +169,7 @@ void Game::BuildRoad(Road* road){
         m_currentPlayer->increase_num_of_roads();
 
         //graficko postavljanje puta
-    }
+//    }
 
 }
 
@@ -418,6 +418,13 @@ bool Game::can_build_city()
 {
     if(m_currentPlayer->get_num_of_wheat() >= 2 &&
        m_currentPlayer->get_num_of_stone() >= 3) { return true; }
+    else return false;
+}
+
+bool Game::can_build_road()
+{
+    if ( m_currentPlayer->get_num_of_wood() >= 1 &&
+         m_currentPlayer->get_num_of_brick() >= 1) { return true; }
     else return false;
 }
 

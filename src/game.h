@@ -45,8 +45,8 @@ public:
 
 
     void BuildHouse(/*Node* node*/);
-    void BuildCity(Node* node);
-    void BuildRoad(Road* road);
+    void BuildCity(/*Node* node*/);
+    void BuildRoad(/*Road* road*/);
 
     void firstTurn();
     void secondTurn();
@@ -62,6 +62,7 @@ public:
 
     bool can_build_house();
     bool can_build_city();
+    bool can_build_road();
 
     void dec_resources_house();
     void dec_resources_city();

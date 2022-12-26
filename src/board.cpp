@@ -709,6 +709,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
                 GUI_Road* road = new GUI_Road(m_tmp, node);
                 road->set_pen(getRoadColor());
                 addItem(road);
+                m_setRoad = false;
 
 
                 //emit addedNewEdge(m_tmp->getNode(), node->getNode(), 1);
@@ -732,6 +733,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             else if (getCurrColor() == Qt::green) {node->getNode()->set_owner(3);}
             else  {node->getNode()->set_owner(4);}
         }
+        m_setHouse = false;
         //emit nodeChanged();
         //connect(node,&Board::nodeChanged,this,&Board::Redraw);
 
@@ -741,8 +743,10 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         Redraw();
         GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
         //provera da li postoji kuca i da li ta kuca pripada igracu na potezu
-        if (node->get_is_house_built() && node->check_owner_city(getCurrColor()))
+        if (node->get_is_house_built() && node->check_owner_city(getCurrColor())){
             node->setBrush(QBrush(getCurrColor()));
+            m_setCity = false;
+        }
         //node->setBrush(QBrush(getCurrColor()));
 
     }
