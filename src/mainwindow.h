@@ -9,7 +9,7 @@
 #include <QWidget>
 #include "dice.h"
 #include "game.h"
-#include <QMediaPlayer>
+//#include <QMediaPlayer>
 class QGraphicsScene;
 class Node;
 class GUI_Node;
@@ -27,6 +27,7 @@ public:
     ~MainWindow();
     void addAllNodes();
     void displayResources();
+    void displayBankResources();
 
 signals:
     void AddedNewBlankNode(GUI_Node *node);
@@ -43,7 +44,7 @@ private slots:
     void on_pbBackToMenu_3_clicked();
 
 
-    int on_pbRollDice_clicked();
+    void on_pbRollDice_clicked();
 
     void on_rbON_toggled(bool checked);
 
@@ -61,7 +62,7 @@ protected:
     Ui::MainWindow *ui;
     Board *m_board;
     Dice *m_dice;
-    QMediaPlayer *m_music;
+    //QMediaPlayer *m_music;
     Game *m_game;
 };
 #endif // MAINWINDOW_H

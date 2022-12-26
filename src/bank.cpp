@@ -13,6 +13,10 @@ Bank::Bank()
     m_bank_resource[ResourceType::Stone] = 19;  // 19 resources type stone at the start of the game
 }
 
+std::unordered_map<ResourceType, unsigned>& Bank::get_bank_resources(){
+    return m_bank_resource;
+}
+
 // adding num_cards number of resources type res_type to the bank
 void Bank::add_resource_card(ResourceType res_type, int num_cards){
     m_bank_resource[res_type] += num_cards;

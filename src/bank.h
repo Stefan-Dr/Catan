@@ -10,6 +10,8 @@ public:
     Bank(); // constructor
     Bank(const Bank &) = delete;    //destructor
 
+    std::unordered_map<ResourceType, unsigned>& get_bank_resources();
+
     void print_bank_content();
     void add_resource_card(ResourceType, int num_cards);
     void remove_resource_card(ResourceType, int num_card);

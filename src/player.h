@@ -43,6 +43,12 @@ public:
     void dec_num_of_brick();
     void dec_num_of_wool();
 
+    void double_inc_num_of_wood();
+    void double_inc_num_of_wheat();
+    void double_inc_num_of_stone();
+    void double_inc_num_of_brick();
+    void double_inc_num_of_wool();
+
     int get_num_of_allowed_houses() const;
     int get_num_of_allowed_cities() const;
     int get_num_of_allowed_roads() const;

@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , m_board(new Board(this))
     , m_dice(new Dice())
-    , m_music(new QMediaPlayer())
+    //, m_music(new QMediaPlayer())
     , m_game(new Game())
 {
     ui->setupUi(this);
@@ -27,24 +27,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
-    m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
-    m_music->setVolume(40);
+   // m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
+    //m_music->setVolume(40);
     //m_music->play();
 
     m_board->addAllFields();
 
-    //ZAKOMENTARISANO
-    //Game* game = new Game();
 
-    //ZAKOMENTARISANO
-//    while(game->getCurrentPlayer()->get_victory_points() != 10){
-//        int result = on_pbRollDice_clicked();
-//        game->Turn(result,m_board);
-//    //current player?
-//        game->ChangeCurrentPlayer();
-//        //iz nekog razloka radi sve kada se u petlji stavi break
-//        break;
-//    }
 
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
@@ -91,6 +80,15 @@ void MainWindow::displayResources()
     }
 }
 
+void MainWindow::displayBankResources(){
+    Bank* bank = m_game->getBank();
+
+    ui->lbBrickBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Brick]));
+    ui->lbStoneBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Stone]));
+    ui->lbWheatBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wheat]));
+    ui->lbWoodBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wood]));
+    ui->lbWoolBank->setText(QString::number(bank->get_bank_resources()[ResourceType::Wool]));
+}
 
 void MainWindow::on_pbStartGame_clicked(){
     ui->stackedWidget->setCurrentIndex(3);
@@ -185,7 +183,7 @@ void MainWindow::on_pbContinue_clicked(){
 
 
 
-int MainWindow::on_pbRollDice_clicked()
+void MainWindow::on_pbRollDice_clicked()
 {
     m_dice->set_button_is_clicked(false);
     m_dice->roll_dice();
@@ -240,19 +238,20 @@ int MainWindow::on_pbRollDice_clicked()
             ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
             break;
     }
-    return m_dice->get_dice_sum();
+    int result = m_dice->get_dice_sum();
+    m_game->Turn(result,m_board);
 }
 
 
 void MainWindow::on_rbON_toggled(bool checked)
 {
-    if ( checked ) { m_music->play(); }
+    //if ( checked ) { m_music->play(); }
 }
 
 
 void MainWindow::on_rbOFF_toggled(bool checked)
 {
-    if ( checked ) { m_music->stop(); }
+    //if ( checked ) { m_music->stop(); }
 }
 
 

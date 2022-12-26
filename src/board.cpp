@@ -494,7 +494,7 @@ void Board::addAllNodes(){
         //ali bitna napomena, sva crtanja kuca/grad itd se rade u okviru mousepressevent funkcije, samo se razlicito pisu uslovi i to je to
         addItem(m_gui_nodes[i]);
     }
-    QVector<int> node1_neighbours = {2,6};
+        QVector<int> node1_neighbours = {2,6};
         node1->set_all_neighbours(node1_neighbours);
 
         QVector<int> node2_neighbours = {1,3};
@@ -650,7 +650,6 @@ void Board::addAllNodes(){
 
     QVector<int> node42_neighbours = {41,43,50};
         node42->set_all_neighbours(node42_neighbours);
-
 
      QVector<int> node43_neighbours = {32,42,44};
         node43->set_all_neighbours(node43_neighbours);
