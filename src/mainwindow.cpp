@@ -97,6 +97,13 @@ void MainWindow::displayPlayerPoints(){
     ui->lbPointsPlayer4->setText(QString::number(m_game->getPlayer4()->get_victory_points()));
 }
 
+void MainWindow::displayPlayerRoads(){
+    ui->lbRoadsPlayer1->setText(QString::number(m_game->getPlayer1()->get_num_of_roads()));
+    ui->lbRoadsPlayer2->setText(QString::number(m_game->getPlayer2()->get_num_of_roads()));
+    ui->lbRoadsPlayer3->setText(QString::number(m_game->getPlayer3()->get_num_of_roads()));
+    ui->lbRoadsPlayer4->setText(QString::number(m_game->getPlayer4()->get_num_of_roads()));
+}
+
 void MainWindow::on_pbStartGame_clicked(){
     ui->stackedWidget->setCurrentIndex(3);
 }
@@ -185,8 +192,10 @@ void MainWindow::on_pbContinue_clicked(){
         m_game->nextPlayer();
         displayResources();
         m_game->nextPlayer();
+
         displayBankResources();
         displayPlayerPoints();
+        displayPlayerRoads();
     }
 }
 
@@ -295,6 +304,7 @@ void MainWindow::on_pb_Road_clicked()
         displayResources();
         displayBankResources();
         displayPlayerPoints();
+        displayPlayerRoads();
         ui->lbError->setText("");
     }
     else {

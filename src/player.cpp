@@ -216,8 +216,8 @@ void Player::increase_num_of_roads(){
     m_num_of_roads++;
 }
 
-void Player::increase_victory_points(){
-    m_victory_points++;
+void Player::increase_victory_points(int amount){
+    m_victory_points += amount;
 }
 void Player::increase_allowed_house_number(){
     m_num_of_allowed_houses++;
