@@ -71,7 +71,7 @@ public:
     void increase_num_of_roads();
 
 
-    void increase_victory_points();
+    void increase_victory_points(int amount);
     void increase_allowed_house_number();
     void decrease_allowed_house_number();
     void decrease_allowed_city_number();

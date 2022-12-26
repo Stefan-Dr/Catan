@@ -114,7 +114,7 @@ void Game::BuildHouse(/*Node* node*/){
 
                 //menja broj dostupnih objekata
                 m_currentPlayer->increase_allowed_house_number();
-                m_currentPlayer->increase_victory_points();
+                m_currentPlayer->increase_victory_points(1);
 
                 //menjanje broja izgradjenih objekata
                 m_currentPlayer->increase_num_of_houses();
@@ -139,7 +139,7 @@ void Game::BuildCity(/*Node* node*/){
 
             m_currentPlayer->increase_allowed_house_number();
             m_currentPlayer->decrease_allowed_city_number();
-            m_currentPlayer->increase_victory_points();
+            m_currentPlayer->increase_victory_points(1);
 
             //menjanje broja izgradjenih objekata
             m_currentPlayer->decrease_num_of_houses();
@@ -167,7 +167,9 @@ void Game::BuildRoad(/*Road* road*/){
 
         //menjanje broja izgradjenih objekata
         m_currentPlayer->increase_num_of_roads();
-
+        if(m_currentPlayer->get_num_of_roads() == 2){
+            m_currentPlayer->increase_victory_points(2);
+        }
         //graficko postavljanje puta
 //    }
 
