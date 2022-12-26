@@ -178,6 +178,7 @@ void MainWindow::on_pbContinue_clicked(){
         m_game->nextPlayer();
         displayResources();
         m_game->nextPlayer();
+        displayBankResources();
     }
 }
 
@@ -264,6 +265,7 @@ void MainWindow::on_pb_House_clicked()
         m_game->BuildHouse();
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
         displayResources();
+        displayBankResources();
         ui->lbError->setText("");
     }
     else {
@@ -282,6 +284,7 @@ void MainWindow::on_pb_Road_clicked()
         m_board->m_setHouse = false;
         m_game->BuildRoad();
         displayResources();
+        displayBankResources();
         ui->lbError->setText("");
     }
     else {
@@ -301,6 +304,7 @@ void MainWindow::on_pb_Settlement_clicked()
         m_game->BuildCity();
         m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
         displayResources();
+        displayBankResources();
         ui->lbError->setText("");
     }
     else {
