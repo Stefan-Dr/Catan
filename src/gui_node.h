@@ -21,25 +21,33 @@ public:
     inline const Node *Node_get() const {
         return m_node;
     }
+    inline QBrush getBrush(){return m_brush;}
     int type() const override;
     QPointF CenterPosition();
     Node *node() const;
     void setNode(Node *newNode);
+    Node * getNode();
     static QColor m_color;
+    bool get_is_house_built() const;
+    void set_is_house_built(bool value);
+    QString m_text = QString::fromStdString("");
+    bool check_owner_city(QColor color);
+
 signals:
     void nodeChanged();
     void needRedraw();
 
 protected:
-    void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
-    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
+    void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 private:
     Node *m_node;
  //   qreal m_x;
   //  qreal m_y;
-    QBrush m_brush = QBrush(Qt::white);
 
+    QBrush m_brush = QBrush(Qt::white);
     Q_PROPERTY(Node *node READ node WRITE setNode NOTIFY nodeChanged)
+    bool m_is_house_built = false;
 };
 
 #endif // GUI_NODE_H

@@ -16,7 +16,7 @@ class Player
 public:
     Player();
     Player(const Player& ) = delete;
-    Player(int id, std::string name /*Color*/);
+    Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
     const std::string &get_name();
     int get_id() const;
@@ -32,9 +32,22 @@ public:
     int get_num_of_wheat() const;
     int get_num_of_stone() const;
 
+    void inc_num_of_wood();
+    void inc_num_of_wheat();
+    void inc_num_of_stone();
+    void inc_num_of_brick();
+    void inc_num_of_wool();
+    void dec_num_of_wood();
+    void dec_num_of_wheat();
+    void dec_num_of_stone();
+    void dec_num_of_brick();
+    void dec_num_of_wool();
+
     int get_num_of_allowed_houses() const;
     int get_num_of_allowed_cities() const;
     int get_num_of_allowed_roads() const;
+    QColor get_player_color() const;
+    QColor get_city_color() const;
 
     void set_city(Bank &bank);
     void set_id(int id);
@@ -82,7 +95,8 @@ private:
     int m_num_of_wheat;
     int m_num_of_stone;
 
-
+    QColor m_player_color;
+    QColor m_city_color;
 
 
 };

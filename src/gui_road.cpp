@@ -17,7 +17,7 @@ GUI_Road::~GUI_Road(){
 
 }
 
-QColor GUI_Road::m_color = QColor("black");
+QColor GUI_Road::m_color = QColor("blue");
 
 QRectF GUI_Road::boundingRect() const {
     QPainterPath ret;
@@ -44,6 +44,11 @@ QRectF GUI_Road::boundingRect() const {
 QPointF GUI_Road::getCenter(){
     return QPointF(m_start->CenterPosition().rx() - (m_start->CenterPosition().rx() - m_end->CenterPosition().rx())/2.0,
                    m_start->CenterPosition().ry() - (m_start->CenterPosition().ry() - m_end->CenterPosition().ry())/2.0);
+}
+
+void GUI_Road::set_pen(QColor color)
+{
+    m_pen = QPen(color);
 }
 
 void GUI_Road::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){

@@ -28,7 +28,6 @@ public:
     Bank* getBank() const;
     Player* getCurrentPlayer() const;
     QVector<Player*>& get_players();
-    int getDiceSum() const;
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
@@ -36,7 +35,6 @@ public:
     void setPlayer4(Player *player4);
     void setBank(Bank* bank);
     void setCurrentPlayer(Player *currentPlayer);
-    void setDiceSum(int dice_sum);
 
 
     int currentPlayerId() const;
@@ -46,13 +44,30 @@ public:
     bool wonPlayer4();
 
 
-    void BuildHouse(Node* node);
+    void BuildHouse(/*Node* node*/);
     void BuildCity(Node* node);
     void BuildRoad(Road* road);
 
+    void firstTurn();
+    void secondTurn();
     void Turn(int result, Board* board);
     void ChangeCurrentPlayer();
     void gameResult();
+    void nextPlayer();
+
+    void set_can_build_house(bool value);
+    void set_can_build_city(bool value);
+    bool get_can_build_house() const;
+    bool get_can_build_city() const;
+
+    bool can_build_house();
+    bool can_build_city();
+
+    void dec_resources_house();
+    void dec_resources_city();
+
+    //treba private
+    Player *next_player;
 
 private:
     //napraviti niz playera radi lakseg funkcionisanja
@@ -65,8 +80,8 @@ private:
     Bank* m_bank;
     //Board* m_board;
     int numOfPlayers = 4;
-    // state
-    int m_dice_sum = 0;
+    bool m_can_build_house;
+    bool m_can_build_city;
 };
 
 #endif // GAME_H

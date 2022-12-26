@@ -26,10 +26,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void addAllNodes();
+    void displayResources();
 
 signals:
     void AddedNewBlankNode(GUI_Node *node);
-
+    void AddHouse();
 private slots:
 
     void on_pbStartGame_clicked();
@@ -42,17 +43,25 @@ private slots:
     void on_pbBackToMenu_3_clicked();
 
 
-    void on_pbRollDice_clicked();
+    int on_pbRollDice_clicked();
 
     void on_rbON_toggled(bool checked);
 
     void on_rbOFF_toggled(bool checked);
 
+    void on_pb_House_clicked();
+
+    void on_pb_Road_clicked();
+
+    void on_pb_Settlement_clicked();
+
+    void on_pushButton_clicked();
+
 protected:
     Ui::MainWindow *ui;
     Board *m_board;
     Dice *m_dice;
-    Game* m_game;
     QMediaPlayer *m_music;
+    Game *m_game;
 };
 #endif // MAINWINDOW_H
