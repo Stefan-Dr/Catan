@@ -3,6 +3,7 @@
 #include "gui_node.h"
 #include <iostream>
 #include "field.h"
+#include <QColor>
 
 Board::Board(QObject *parent): QGraphicsScene(parent){}
 
@@ -488,6 +489,7 @@ void Board::addAllNodes(){
 //    addItem(gnode3);
     for(int i=0;i<54;i++){
         connect(m_gui_nodes[i],&GUI_Node::needRedraw,this,&Board::Redraw); //slicno ovom hoveru i signalu treba da se uradi sa iscrtavanjem kuce odredjenog igraca
+
         //tj. u fji set house/ city se baca signal needRedraw
         //ali bitna napomena, sva crtanja kuca/grad itd se rade u okviru mousepressevent funkcije, samo se razlicito pisu uslovi i to je to
         addItem(m_gui_nodes[i]);
@@ -694,17 +696,18 @@ void Board::addAllNodes(){
 void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     //treba dodati if isto ovo dole == null da ne radi nista, da ne bi bacao signal za prekid rada
     //treba dodati u ovaj donji if, if pbRoadEnabled && itemAt...
-    if(itemAt(event->scenePos(), QTransform())->type() == 1){
+    if(m_setRoad && itemAt(event->scenePos(), QTransform())->type() == 1){
         if(!m_hasTmp){
 
             this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
             setHasTmp(true);
         }
         else{
-            GUI_Node* node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
+            GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
 
             if(m_tmp != node) {
                 GUI_Road* road = new GUI_Road(m_tmp, node);
+                road->set_pen(getRoadColor());
                 addItem(road);
 
 
@@ -714,6 +717,36 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             setHasTmp(false);
         }
     }
+
+    //kliknuto dugme za kucu (u mainwindow je implementacija) pa moze da se crta
+    if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
+        Redraw();
+        GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
+        //prvo proveravamo da li nema nicega sagradjenog da mozemo da sagradimo kucu
+        if (!node->get_is_house_built()){
+            node->setBrush(QBrush(getCurrColor()));
+            node->set_is_house_built(true);
+            //postavljanje ownera node-a kada sagradi kucu
+            if (getCurrColor() == Qt::blue) {node->getNode()->set_owner(1);}
+            else if (getCurrColor() == Qt::yellow) {node->getNode()->set_owner(2);}
+            else if (getCurrColor() == Qt::green) {node->getNode()->set_owner(3);}
+            else  {node->getNode()->set_owner(4);}
+        }
+        //emit nodeChanged();
+        //connect(node,&Board::nodeChanged,this,&Board::Redraw);
+
+    }
+    //kliknuto dugme za city (u mainwindow je implementacija) pa moze da se crta
+    if(m_setCity && (itemAt(event->scenePos(),QTransform())->type()==1)){
+        Redraw();
+        GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
+        //provera da li postoji kuca i da li ta kuca pripada igracu na potezu
+        if (node->get_is_house_built() && node->check_owner_city(getCurrColor()))
+            node->setBrush(QBrush(getCurrColor()));
+        //node->setBrush(QBrush(getCurrColor()));
+
+    }
+
 }
 
 
@@ -724,6 +757,27 @@ void Board::Redraw(){
 void Board::setHasTmp(bool x){
     m_hasTmp = x;
 }
+
+void Board::setCurrColor(QColor color)
+{
+    m_curr_color = color;
+}
+
+QColor Board::getCurrColor()
+{
+    return m_curr_color;
+}
+
+void Board::setRoadColor(QColor color)
+{
+    m_road_color = color;
+}
+
+QColor Board::getRoadColor()
+{
+    return m_road_color;
+}
+
 /*
 void Board::SetNodeOnPosition(GUI_Node *node)
 {

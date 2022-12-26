@@ -19,6 +19,7 @@ public:
     GUI_Node* getStart(){return m_start;}
     GUI_Node* getEnd(){return m_end;}
     QPointF getCenter();
+    void set_pen(QColor color);
 
 
 signals:
@@ -27,7 +28,7 @@ signals:
 private:
     GUI_Node* m_start;
     GUI_Node* m_end;
-    QPen m_pen = QPen(Qt::red);
+    QPen m_pen = QPen(Qt::blue);
 
 };
 

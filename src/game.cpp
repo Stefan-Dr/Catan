@@ -2,14 +2,15 @@
 #include "player.h"
 #include "dice.h"
 #include <algorithm>
+#include "resourcetype.h"
 
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
 Game::Game()
-    : m_player1(new Player(1, ""))
-    , m_player2(new Player(2, ""))
-    , m_player3(new Player(3, ""))
-    , m_player4(new Player(4, ""))
+    : m_player1(new Player(1, "", Qt::blue, Qt::darkBlue))
+    , m_player2(new Player(2, "", Qt::yellow, Qt::darkYellow))
+    , m_player3(new Player(3, "", Qt::green,  Qt::darkGreen))
+    , m_player4(new Player(4, "", Qt::red, Qt::darkRed))
     , m_currentPlayer(m_player1)
     , m_bank(new Bank())
     /*, m_board(new Board())*/{}
@@ -48,7 +49,6 @@ Player* Game::getCurrentPlayer() const{
 QVector<Player*>& Game::get_players(){
     return m_players;
 }
-int Game::getDiceSum() const { return m_dice_sum; }
 
 
 //seteri
@@ -71,15 +71,10 @@ void Game::setCurrentPlayer(Player *player) {
     m_currentPlayer = player;
 }
 
-void Game::setDiceSum(int dice_sum) {
-    m_dice_sum = dice_sum;
-}
-
 
 auto Game::currentPlayerId() const -> int {
     return m_currentPlayer->get_id();
 }
-
 
 //pobednik partije
 bool Game::wonPlayer1() {
@@ -100,15 +95,16 @@ bool Game::wonPlayer4() {
 
 //izgradnja
 
-void Game::BuildHouse(Node* node){
-    if(m_currentPlayer->get_num_of_allowed_houses() > 0){
-        if(node->get_can_build() == true){
-            if(m_currentPlayer->get_num_of_wood() >= 1 &&
-               m_currentPlayer->get_num_of_wool() >= 1 &&
-               m_currentPlayer->get_num_of_wheat() >= 1 &&
-               m_currentPlayer->get_num_of_brick() >= 1){
+void Game::BuildHouse(/*Node* node*/){
+    //if(m_currentPlayer->get_num_of_allowed_houses() > 0){
+        //ZAKOMENTARISANO
+//        if(node->get_can_build() == true){
+//            if(m_currentPlayer->get_num_of_wood() >= 1 &&
+//               m_currentPlayer->get_num_of_wool() >= 1 &&
+//               m_currentPlayer->get_num_of_wheat() >= 1 &&
+//               m_currentPlayer->get_num_of_brick() >= 1){
 
-                node->place_house(m_currentPlayer->get_id());
+                //node->place_house(m_currentPlayer->get_id());
 
                 //davanje potrebnih resursa banci
                 m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
@@ -124,17 +120,15 @@ void Game::BuildHouse(Node* node){
                 m_currentPlayer->increase_num_of_houses();
                 //graficko postavljanje kuce
 
-
-            }
-
-        }
-   }
+        //}
+        //}
+   //}
 }
 
 void Game::BuildCity(Node* node){
 
 
-    if(node->get_can_build() == true){
+    if(node->get_can_build_city() == true){
         if(m_currentPlayer->get_num_of_wheat() >= 2 &&
            m_currentPlayer->get_num_of_stone() >= 3){
 
@@ -179,61 +173,130 @@ void Game::BuildRoad(Road* road){
 
 }
 
+//Da li cemo bacati kockice i odredjivati ko igra prvi, ili cemo ici redom po igracima?
 
 
-
-void Game::Turn(int result, Board* board){
-    
-
-     for(auto &i : board->m_fields){
-         //prolazimo kroz sva polja na tabli
-        if(result == i->get_number()){
-            //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
-            if(!i->is_robber_on_the_field()){
-                //ako se na tom polju ne nalazi lopov radimo sledece
-                for(auto j : i->get_corners()){
-                    //prolazimo kroz sve cvorove na tom polju
-                    if(j->get_is_house_built()){
-                        //proveravamo da li ima izgradjena kucica na tom cvoru
-                        for(auto &player : m_players){
-                            //u petlji sada za svakog igraca proveravamo da li se njegov id poklapa sa id-em onog igraca koji ima objekat na tom cvoru
-                            if(player->get_id() == j->get_owner()){
-
-                                for(auto resource : player->get_PlayerResources()){
-
-                                    if(resource.first == i->get_res_type()){
-                                        resource.second++;
-                                    }
-
-                                }
-                                //nakon sto se pronadje vlasnik i dodele resursi zaustavi se petlja
-                                //koja pronalazi igraca koji poseduje objekat na tom cvoru
-                                break;
-                            }
-                        }
-                    }
-                    if(j->get_is_city_built()){
-                        //isto sve samo ovaj put proveravamo da li je na tom polju izgradjen grad
-                        for(auto &player : m_players){
-                            if(player->get_id() == j->get_owner()){
-
-                                for(auto resource : player->get_PlayerResources()){
-
-                                    if(resource.first == i->get_res_type()){
-                                        resource.second += 2;
-                                    }
-                                }
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-     }
+void Game::firstTurn(){
+    //redosled igraca je od 1 do 4
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
 
 
 }
+
+void Game::secondTurn(){
+    //redosled igraca je od 4 do 1
+    //postavljanje jedne kuce
+    //postavljanje jednog puta
+    //dobijanje resursa u zavisnosti gde je postavljena druga kuca
+
+
+}
+
+
+//ZAKOMENTARISANO
+//void Game::Turn(int result, Board* board){
+//    /*
+//     * Redosled:
+//     * 1.Bacanje kockice
+//     * 2.Dodavanje resursa svim igracima na osnovu zauzetih cvorova
+//     * 3.BuildRoad/BuildHouse/BuildCity
+//     * 4.Kliktanje dugmeta za kraj poteza
+//     */
+
+//     /*Dice* dice = new Dice();
+//     dice->roll_dice();
+//     dice->set_button_is_clicked(true);
+
+//     int result = dice->get_dice_sum();*/
+
+//     for(auto &i : board->m_fields){
+//         //prolazimo kroz sva polja na tabli
+//        if(result == i->get_number()){
+//            //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
+//            if(!i->is_robber_on_the_field()){
+//                //ako se na tom polju ne nalazi lopov radimo sledece
+//                for(auto j : i->get_corners()){
+//                    //prolazimo kroz sve cvorove na tom polju
+//                    if(j->get_is_house_built()){
+//                        //proveravamo da li ima izgradjena kucica na tom cvoru
+//                        for(auto &player : m_players){
+//                            //u petlji sada za svakog igraca proveravamo da li se njegov id poklapa sa id-em onog igraca koji ima objekat na tom cvoru
+//                            if(player->get_id() == j->get_owner()){
+
+//                                for(auto resource : player->get_PlayerResources()){
+
+//                                    if(resource.first == i->get_res_type()){
+//                                        resource.second++;
+//                                    }
+
+//                                }
+//                                //nakon sto se pronadje vlasnik i dodele resursi zaustavi se petlja
+//                                //koja pronalazi igraca koji poseduje objekat na tom cvoru
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    if(j->get_is_city_built()){
+//                        //isto sve samo ovaj put proveravamo da li je na tom polju izgradjen grad
+//                        for(auto &player : m_players){
+//                            if(player->get_id() == j->get_owner()){
+
+//                                for(auto resource : player->get_PlayerResources()){
+
+//                                    if(resource.first == i->get_res_type()){
+//                                        resource.second += 2;
+//                                    }
+//                                }
+//                                break;
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//     }
+
+//     //opcije za izgradnju objekata
+
+//         //if(kliknuto dugme za izgradnju kucice){
+//             for(auto node : board->m_nodes){
+//                 //u petlji prveravamo da li je taj cvor kliknut
+//                 //if(kliknut cvor)
+//                 if(!node->get_is_house_built()){
+//                 //ako jeste na tom cvoru postavljamo kucicu
+//                 BuildHouse(node);
+//                 }
+//             }
+
+//         //if(kliknuto dugme za izgradnju grada){
+//               for(auto node : board->m_nodes){
+//                   //u petlji trazimo cvor koji je kliknuo igrac i na tom polju gradimo grad
+//                    //if(kliknut cvor)
+//                    if(node->get_is_house_built()){
+//                        BuildCity(node);
+//                    }
+//               }
+//        /*
+//         * ne moze da se pokrene dokle god se ne zavrsi klasa road
+//         if(kliknuto dugme za izgradnju puta){
+//               if(cvor1 je kliknut){
+//                  for(auto node1: board->m_nodes){
+//                     for(auto node2: node1->get_neighbours()){
+//                       if(cvor2 je klinut){
+//                          if(node->get_can_build()){
+//                              BuildRoad(road);
+//                          }
+//                       }
+//                     }
+//                  }
+//               }
+//         }
+
+//        */
+
+
+//}
 
 void Game::ChangeCurrentPlayer(){
     if(m_currentPlayer->get_id() == m_player1->get_id()){
@@ -311,6 +374,62 @@ void Game::gameResult(){
 
     std::cout << "Fourth: " << fourth << std::endl;
     */
+
+}
+
+void Game::nextPlayer()
+{
+    if (getCurrentPlayer() == m_player1 )   { setCurrentPlayer(m_player2); }
+    else if (getCurrentPlayer() == m_player2 )   { setCurrentPlayer(m_player3); }
+    else if (getCurrentPlayer() == m_player3 )   { setCurrentPlayer(m_player4); }
+    else  { setCurrentPlayer(m_player1); }
+}
+
+void Game::set_can_build_house(bool value)
+{
+    m_can_build_house = value;
+}
+
+void Game::set_can_build_city(bool value)
+{
+    m_can_build_city = value;
+}
+
+bool Game::get_can_build_house() const
+{
+    return m_can_build_house;
+}
+
+bool Game::get_can_build_city() const
+{
+    return m_can_build_city;
+}
+
+bool Game::can_build_house()
+{
+    if(m_currentPlayer->get_num_of_wood() >= 1 &&
+                   m_currentPlayer->get_num_of_wool() >= 1 &&
+                   m_currentPlayer->get_num_of_wheat() >= 1 &&
+                   m_currentPlayer->get_num_of_brick() >= 1) { return true; }
+    else return false;
+}
+
+bool Game::can_build_city()
+{
+    if(m_currentPlayer->get_num_of_wheat() >= 2 &&
+       m_currentPlayer->get_num_of_stone() >= 3) { return true; }
+    else return false;
+}
+
+void Game::dec_resources_house()
+{
+
+
+
+}
+
+void Game::dec_resources_city()
+{
 
 }
 

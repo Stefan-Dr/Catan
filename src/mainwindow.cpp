@@ -3,6 +3,7 @@
 #include "board.h"
 #include "node.h"
 #include "gui_node.h"
+#include <string>
 
 #include "game.h"
 
@@ -12,26 +13,39 @@ MainWindow::MainWindow(QWidget *parent)
     , m_board(new Board(this))
     , m_dice(new Dice())
     , m_music(new QMediaPlayer())
+    , m_game(new Game())
 {
     ui->setupUi(this);
     ui->rbON->setChecked(true);
     ui->rbSLOW->setChecked(true);
 
-
+    //connect(this,&MainWindow::AddHouse,dynamic_cast<Board*>(m_board),&Board::setHouse);
+    //connect(ui->pb_House,&QPushButton::clicked,this,&MainWindow::on_pb_House_clicked);
+    //connect(ui->pb_Settlement,&QPushButton::clicked,this,&MainWindow::on_pb_Settlement_clicked);
+    //connect(ui->pb_Road,&QPushButton::clicked,this,&MainWindow::on_pb_Road_clicked);
     m_board->setSceneRect(ui->gvMapa->rect());
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
     m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
-    m_music->setVolume(100);
-    m_music->play();
+    m_music->setVolume(40);
+    //m_music->play();
 
     m_board->addAllFields();
 
-    m_game = new Game();
+    //ZAKOMENTARISANO
+    //Game* game = new Game();
 
-    
-    connect(ui->pbRollDice, &QPushButton::clicked, this, &MainWindow::on_pbRollDice_clicked);
+    //ZAKOMENTARISANO
+//    while(game->getCurrentPlayer()->get_victory_points() != 10){
+//        int result = on_pbRollDice_clicked();
+//        game->Turn(result,m_board);
+//    //current player?
+//        game->ChangeCurrentPlayer();
+//        //iz nekog razloka radi sve kada se u petlji stavi break
+//        break;
+//    }
+
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
@@ -42,6 +56,39 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::displayResources()
+{
+    Player *curr_p =  m_game->getCurrentPlayer();
+    if ( curr_p->get_id() == 1){
+        ui->lbWheatP1->setText(QString::number((curr_p->get_num_of_wheat())));
+        ui->lbWoodP1->setText(QString::number(curr_p->get_num_of_wood()));
+        ui->lbBrickP1->setText(QString::number(curr_p->get_num_of_brick()));
+        ui->lbWoolP1->setText(QString::number(curr_p->get_num_of_wool()));
+        ui->lbStoneP1->setText(QString::number(curr_p->get_num_of_stone()));
+    }
+    if ( curr_p->get_id() == 2){
+        ui->lbWheatP2->setText((QString::number(curr_p->get_num_of_wheat())));
+        ui->lbWoodP2->setText((QString::number(curr_p->get_num_of_wood())));
+        ui->lbBrickP2->setText((QString::number(curr_p->get_num_of_brick())));
+        ui->lbWoolP2->setText((QString::number(curr_p->get_num_of_wool())));
+        ui->lbStoneP2->setText((QString::number(curr_p->get_num_of_stone())));
+    }
+    if ( curr_p->get_id() == 3){
+        ui->lbWheatP3->setText(QString::number((curr_p->get_num_of_wheat())));
+        ui->lbWoodP3->setText(QString::number(curr_p->get_num_of_wood()));
+        ui->lbBrickP3->setText(QString::number(curr_p->get_num_of_brick()));
+        ui->lbWoolP3->setText(QString::number(curr_p->get_num_of_wool()));
+        ui->lbStoneP3->setText(QString::number(curr_p->get_num_of_stone()));
+    }
+    if ( curr_p->get_id() == 4){
+        ui->lbWheatP4->setText(QString::number((curr_p->get_num_of_wheat())));
+        ui->lbWoodP4->setText(QString::number(curr_p->get_num_of_wood()));
+        ui->lbBrickP4->setText(QString::number(curr_p->get_num_of_brick()));
+        ui->lbWoolP4->setText(QString::number(curr_p->get_num_of_wool()));
+        ui->lbStoneP4->setText(QString::number(curr_p->get_num_of_stone()));
+    }
 }
 
 
@@ -123,12 +170,22 @@ void MainWindow::on_pbContinue_clicked(){
         ui->lbPlayer3Name->setText(ui->lePlayer3->text());
         ui->lbPlayer4Name->setText(ui->lePlayer4->text());
         ui->stackedWidget->setCurrentIndex(4);
+        m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
+        //za svakog playera predstavljamo koliko resursa ima na pocetku
+        displayResources();
+        m_game->nextPlayer();
+        displayResources();
+        m_game->nextPlayer();
+        displayResources();
+        m_game->nextPlayer();
+        displayResources();
+        m_game->nextPlayer();
     }
 }
 
 
 
-void MainWindow::on_pbRollDice_clicked()
+int MainWindow::on_pbRollDice_clicked()
 {
     m_dice->set_button_is_clicked(false);
     m_dice->roll_dice();
@@ -183,14 +240,7 @@ void MainWindow::on_pbRollDice_clicked()
             ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
             break;
     }
-    int dice_sum = m_dice->get_dice_sum();
-    m_game->setDiceSum(dice_sum);
-
-    if (m_game->getCurrentPlayer()->get_victory_points() == 10){
-       // handle win
-        return;
-    }
-    m_game->Turn(m_board);
+    return m_dice->get_dice_sum();
 }
 
 
@@ -203,5 +253,56 @@ void MainWindow::on_rbON_toggled(bool checked)
 void MainWindow::on_rbOFF_toggled(bool checked)
 {
     if ( checked ) { m_music->stop(); }
+}
+
+
+void MainWindow::on_pb_House_clicked()
+{
+    if ( m_game->can_build_house()){
+        m_board->m_setHouse = true;
+        m_board->m_setRoad = false;
+        m_board->m_setCity = false;
+        m_game->BuildHouse();
+        m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
+        displayResources();
+    }
+    else {
+        m_board->m_setHouse = false;
+        m_board->m_setRoad = false;
+        m_board->m_setCity = false;
+    }
+}
+
+void MainWindow::on_pb_Road_clicked()
+{
+    m_board->m_setRoad = true;
+    m_board->m_setCity = false;
+    m_board->m_setHouse = false;
+}
+
+void MainWindow::on_pb_Settlement_clicked()
+{
+    if ( m_game->can_build_city() ) {
+        m_board->m_setCity = true;
+        m_board->m_setHouse = false;
+        m_board->m_setRoad = false;
+        m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
+        displayResources();
+    }
+    else {
+        m_board->m_setHouse = false;
+        m_board->m_setRoad = false;
+        m_board->m_setCity = false;
+    }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    m_game->nextPlayer();
+    m_board->m_setHouse = false;
+    m_board->m_setRoad = false;
+    m_board->m_setCity = false;
+    m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
+    m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
 }
 

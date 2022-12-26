@@ -28,14 +28,26 @@ public:
     void mousePressEvent ( QGraphicsSceneMouseEvent * event ) override;
     void setHasTmp(bool x);
 
+    void setCurrColor(QColor color);
+    QColor getCurrColor();
+
+    void setRoadColor(QColor color);
+    QColor getRoadColor();
+
+    bool m_setHouse = false;
+    bool m_setRoad = false;
+    bool m_setCity = false;
 public slots:
     void Redraw();
+    void setHouse(bool x);
+
 
 private:
     const int numOfNodes = 6;
     bool m_hasTmp = false;
     GUI_Node* m_tmp;
-
+    QColor m_curr_color;
+    QColor m_road_color;
 };
 
 #endif // BOARD_H
