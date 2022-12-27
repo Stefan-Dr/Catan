@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     //m_music->setVolume(40);
     //m_music->play();
 
-    m_board->addAllFields();
+    //m_board->addAllFields();
 
 
 
@@ -183,6 +183,7 @@ void MainWindow::on_pbContinue_clicked(){
         ui->lbPlayer4Name->setText(ui->lePlayer4->text());
         ui->stackedWidget->setCurrentIndex(4);
         m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
+        m_board->addAllFields();
         //za svakog playera predstavljamo koliko resursa ima na pocetku
         displayResources();
         m_game->nextPlayer();

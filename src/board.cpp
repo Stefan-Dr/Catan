@@ -8,7 +8,7 @@
 Board::Board(QObject *parent): QGraphicsScene(parent){}
 
 Board::~Board(){
-    for(auto node : m_nodes){
+    for(auto &node : m_nodes){
         delete node;
     }
     m_nodes.clear();
@@ -646,6 +646,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         if (!gui_node->get_is_house_built()){
             gui_node->setBrush(QBrush(getCurrColor()));
             gui_node->set_is_house_built(true);
+            //gui_node->getNode()->set_owner()
             //postavljanje ownera node-a kada sagradi kucu
             if (getCurrColor() == Qt::blue) {gui_node->getNode()->set_owner(1);}
             else if (getCurrColor() == Qt::yellow) {gui_node->getNode()->set_owner(2);}
