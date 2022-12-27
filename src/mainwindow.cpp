@@ -201,63 +201,64 @@ void MainWindow::on_pbContinue_clicked(){
 
 
 
-void MainWindow::on_pbRollDice_clicked()
+
+int MainWindow::on_pbRollDice_clicked()
 {
-    m_dice->set_button_is_clicked(false);
-    m_dice->roll_dice();
-    m_dice->set_button_is_clicked(true);
-
-    int result = m_dice->get_dice_sum();
-    m_game->Turn(result,m_board);
     //if(korisnik je opet klinuo na dugme za bacanje kockice)
-    if(m_dice->get_button_clicked() == true){
-           //ispis greske ili izbacivanje prozora sa upozorenjem
-       ui->lbError->setText("Dice has been already rolled!");
-    }
+        if(m_dice->get_button_clicked() == true){
+            //ispis greske ili izbacivanje prozora sa upozorenjem
+            //std::cout << "Error: button is already clicked!" << std::endl;
+            ui->lbError->setText("Dice has been already roled!");
+        }else {
+            m_dice->roll_dice();
+            m_dice->set_button_is_clicked(true);
 
-    int d1 = m_dice->get_dice1();
-    int d2 = m_dice->get_dice2();
-    switch (d1) {
-        case 1 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 2 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 3 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 4 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 5 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 6 :
-            ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
-            break;
-    }
+            int d1 = m_dice->get_dice1();
+            int d2 = m_dice->get_dice2();
+            switch (d1) {
+                case 1 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 2 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 3 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 4 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 5 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 6 :
+                    ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
+                    break;
+            }
 
-    switch (d2) {
-        case 1 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 2 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 3 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 4 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 5 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
-            break;
-        case 6 :
-            ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
-            break;
-    }
+            switch (d2) {
+                case 1 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 2 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice2.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 3 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice3.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 4 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice4.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 5 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice5.png) 0 0 0 0 stretch stretch;");
+                    break;
+                case 6 :
+                    ui->wDice2->setStyleSheet("border-image: url(:/resources/images/dice6.png) 0 0 0 0 stretch stretch;");
+                    break;
+            }
+         }
+
+       return m_dice->get_dice_sum();
 }
 
 
@@ -344,5 +345,7 @@ void MainWindow::on_pushButton_clicked()
     m_board->m_setCity = false;
     m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
     m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
+
+    m_dice->set_button_is_clicked(false);
 }
 
