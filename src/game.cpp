@@ -97,15 +97,6 @@ bool Game::wonPlayer4() {
 //izgradnja
 
 void Game::BuildHouse(/*Node* node*/){
-    //if(m_currentPlayer->get_num_of_allowed_houses() > 0){
-        //ZAKOMENTARISANO
-//        if(node->get_can_build() == true){
-//            if(m_currentPlayer->get_num_of_wood() >= 1 &&
-//               m_currentPlayer->get_num_of_wool() >= 1 &&
-//               m_currentPlayer->get_num_of_wheat() >= 1 &&
-//               m_currentPlayer->get_num_of_brick() >= 1){
-
-                //node->place_house(m_currentPlayer->get_id());
 
                 //davanje potrebnih resursa banci
                 m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
@@ -122,19 +113,9 @@ void Game::BuildHouse(/*Node* node*/){
 
                 m_currentPlayer->increase_victory_points(1);
 
-        //}
-        //}
-   //}
 }
 
 void Game::BuildCity(/*Node* node*/){
-
-
-//    if(node->get_can_build_city() == true){
-//        if(m_currentPlayer->get_num_of_wheat() >= 2 &&
-//           m_currentPlayer->get_num_of_stone() >= 3){
-
-//            node->place_city(m_currentPlayer->get_id());
 
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,2,*m_bank);
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,3,*m_bank);
@@ -147,20 +128,9 @@ void Game::BuildCity(/*Node* node*/){
             m_currentPlayer->decrease_num_of_houses();
             m_currentPlayer->increase_num_of_cities();
 
-            //graficko postavljanje grada
-
-
-//        }
-//    }
-
 }
 
 void Game::BuildRoad(/*Road* road*/){
-
-//    if(m_currentPlayer->get_num_of_brick() >= 1 &&
-//       m_currentPlayer->get_num_of_wood() >= 1){
-
-//        road->set_owner(m_currentPlayer->get_id());
 
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
@@ -176,8 +146,6 @@ void Game::BuildRoad(/*Road* road*/){
 //    }
 
 }
-
-//Da li cemo bacati kockice i odredjivati ko igra prvi, ili cemo ici redom po igracima?
 
 
 void Game::firstTurn(){
@@ -219,26 +187,28 @@ void Game::Turn(int result, Board* board){
                                 if(i->get_res_type() == ResourceType::Brick){
                                     player->inc_num_of_brick();
                                     m_bank->remove_resource_card(ResourceType::Brick,1);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Stone){
                                     player->inc_num_of_stone();
                                     m_bank->remove_resource_card(ResourceType::Stone,1);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Wheat){
                                     player->inc_num_of_wheat();
                                     m_bank->remove_resource_card(ResourceType::Wheat,1);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Wood){
                                     player->inc_num_of_wood();
                                     m_bank->remove_resource_card(ResourceType::Wood,1);
+                                    break;
                                 }
                                 else{
                                     player->inc_num_of_wool();
                                     m_bank->remove_resource_card(ResourceType::Wool,1);
+                                    break;
                                 }
-                                //nakon sto se pronadje vlasnik i dodele resursi zaustavi se petlja
-                                //koja pronalazi igraca koji poseduje objekat na tom cvoru
-
                             }
                         }
                     }
@@ -249,25 +219,28 @@ void Game::Turn(int result, Board* board){
                                 if(i->get_res_type() == ResourceType::Brick){
                                     player->double_inc_num_of_brick();
                                     m_bank->remove_resource_card(ResourceType::Brick,2);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Stone){
                                     player->double_inc_num_of_stone();
                                     m_bank->remove_resource_card(ResourceType::Stone,2);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Wheat){
                                     player->double_inc_num_of_wheat();
                                     m_bank->remove_resource_card(ResourceType::Wheat,2);
+                                    break;
                                 }
                                 else if(i->get_res_type() == ResourceType::Wood){
                                     player->double_inc_num_of_wood();
                                     m_bank->remove_resource_card(ResourceType::Wood,2);
+                                    break;
                                 }
                                 else{
                                     player->double_inc_num_of_wool();
                                     m_bank->remove_resource_card(ResourceType::Wool,2);
+                                    break;
                                 }
-
-                                break;
                             }
                         }
                     }
@@ -314,48 +287,6 @@ void Game::gameResult(){
       for (int i = 0; i < numPlayers; i++) {
         std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
       }
-
-
-    /*
-     * pokusaj sortiranja
-    players.push_back(m_player1);
-    players.push_back(m_player2);
-    players.push_back(m_player3);
-    players.push_back(m_player4);
-
-    QVector<int> players_points = {
-            players[0]->get_victory_points(),
-            players[1]->get_victory_points(),
-            players[2]->get_victory_points(),
-            players[3]->get_victory_points()
-    };
-
-
-    Player* first;
-    Player* second;
-    Player* third;
-    Player* fourth;
-
-    int n = sizeof(players);
-
-    std::sort(players_points.begin(), players_points.end());
-    //sortiranje na osnovu broja ostvarenih poena???
-    for(int i = 0; i < players_points.size(); i++){
-        first = players[4];
-        second = players[3];
-        third = players[2];
-        fourth = players[1];
-
-    }
-
-    std::cout << "First: " << first << std::endl;
-
-    std::cout << "Second: " << second << std::endl;
-
-    std::cout << "Third: " << third << std::endl;
-
-    std::cout << "Fourth: " << fourth << std::endl;
-    */
 
 }
 

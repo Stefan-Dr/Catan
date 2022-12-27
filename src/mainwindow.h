@@ -53,7 +53,7 @@ private slots:
     void on_pb_Settlement_clicked();
     void on_pushButton_clicked();
 
-    int on_pbRollDice_clicked();
+    void on_pbRollDice_clicked();
 
 
 protected:
