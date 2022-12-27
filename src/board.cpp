@@ -14,6 +14,10 @@ Board::~Board(){
     m_nodes.clear();
 }
 
+QVector<Field *>Board::get_fields(){
+    return m_fields;
+}
+
 void Board::addAllNodes(){
 
     /*prvi heksagon prvi red */
