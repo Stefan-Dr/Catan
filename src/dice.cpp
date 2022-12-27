@@ -9,6 +9,9 @@ void Dice::set_button_is_clicked(bool button_clicked){
     m_button_is_clicked = button_clicked;
 }
 
+void Dice::set_dice_is_rolled(bool x) {
+    m_dice_is_rolled = x;
+}
 
 void Dice::set_dice1(int num) {
     m_dice1 = num;
@@ -32,6 +35,10 @@ int Dice::get_dice_sum() const {
 
 bool Dice::get_button_clicked() const {
     return m_button_is_clicked;
+}
+
+bool Dice::get_dice_is_rolled()const {
+    return m_dice_is_rolled;
 }
 
 void Dice::roll_dice() {

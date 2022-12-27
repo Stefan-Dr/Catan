@@ -11,17 +11,18 @@ Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color c
       m_num_of_houses(0),m_num_of_cities(0),m_num_of_allowed_houses(5),
       m_num_of_allowed_cities(4),m_num_of_allowed_roads(15), m_player_color(color), m_city_color(color_c){
 
-    //sve treba da bude 0
       m_player_resource[ResourceType::Brick] = 15;
       m_player_resource[ResourceType::Stone] = 15;
       m_player_resource[ResourceType::Wheat] = 15;
       m_player_resource[ResourceType::Wood] = 15;
       m_player_resource[ResourceType::Wool] = 15;
-      m_num_of_wood = 15;
-      m_num_of_stone = 15;
-      m_num_of_brick = 15;
-      m_num_of_wheat = 15;
-      m_num_of_wool = 15;
+
+      //na pocetku igre svaki igrac ima resursa za izgradnju 2 kuce i 2 puta
+      m_num_of_wood = 4;
+      m_num_of_stone = 0;
+      m_num_of_brick = 4;
+      m_num_of_wheat = 2;
+      m_num_of_wool = 2;
 
 
 

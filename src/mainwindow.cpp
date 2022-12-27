@@ -212,6 +212,7 @@ int MainWindow::on_pbRollDice_clicked()
         }else {
             m_dice->roll_dice();
             m_dice->set_button_is_clicked(true);
+            m_dice->set_dice_is_rolled(true);
 
             int d1 = m_dice->get_dice1();
             int d2 = m_dice->get_dice2();
@@ -259,6 +260,7 @@ int MainWindow::on_pbRollDice_clicked()
          }
 
        return m_dice->get_dice_sum();
+
 }
 
 
@@ -276,64 +278,81 @@ void MainWindow::on_rbOFF_toggled(bool checked)
 
 void MainWindow::on_pb_House_clicked()
 {
-    if ( m_game->can_build_house()){
-        m_board->m_setHouse = true;
-        m_board->m_setRoad = false;
-        m_board->m_setCity = false;
-        m_game->BuildHouse();
-        m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
-        displayResources();
-        displayBankResources();
-        displayPlayerPoints();
-        ui->lbError->setText("");
+    if(m_dice->get_dice_is_rolled() == true){
+        if ( m_game->can_build_house()){
+            m_board->m_setHouse = true;
+            m_board->m_setRoad = false;
+            m_board->m_setCity = false;
+            m_game->BuildHouse();
+            m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
+            displayResources();
+            displayBankResources();
+            displayPlayerPoints();
+            ui->lbError->setText("");
+            //m_game->getCurrentPlayer()->increase_victory_points(1);
+        }
+        else {
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_board->m_setCity = false;
+            ui->lbError->setText("Not enough resources for a house");
+        }
+    }else {
+        ui->lbError->setText("You must first roll dice!");
     }
-    else {
-        m_board->m_setHouse = false;
-        m_board->m_setRoad = false;
-        m_board->m_setCity = false;
-        ui->lbError->setText("Not enough resources for a house");
-    }
+
 }
 
 void MainWindow::on_pb_Road_clicked()
 {
-    if ( m_game->can_build_road() ) {
-        m_board->m_setRoad = true;
-        m_board->m_setCity = false;
-        m_board->m_setHouse = false;
-        m_game->BuildRoad();
-        displayResources();
-        displayBankResources();
-        displayPlayerPoints();
-        displayPlayerRoads();
-        ui->lbError->setText("");
-    }
-    else {
-        m_board->m_setHouse = false;
-        m_board->m_setRoad = false;
-        m_board->m_setCity = false;
-        ui->lbError->setText("Not enough resources for a road");
-    }
+   if(m_dice->get_dice_is_rolled() == true){
+        if ( m_game->can_build_road() ) {
+            m_board->m_setRoad = true;
+            m_board->m_setCity = false;
+            m_board->m_setHouse = false;
+            m_game->BuildRoad();
+            displayResources();
+            displayBankResources();
+            displayPlayerPoints();
+            displayPlayerRoads();
+            ui->lbError->setText("");
+            //m_game->getCurrentPlayer()->increase_num_of_roads();
+        }
+        else {
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_board->m_setCity = false;
+            ui->lbError->setText("Not enough resources for a road");
+        }
+    }else {
+       ui->lbError->setText("You must first roll dice!");
+   }
 }
 
 void MainWindow::on_pb_Settlement_clicked()
 {
-    if ( m_game->can_build_city() ) {
-        m_board->m_setCity = true;
-        m_board->m_setHouse = false;
-        m_board->m_setRoad = false;
-        m_game->BuildCity();
-        m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
-        displayResources();
-        displayBankResources();
-        displayPlayerPoints();
-        ui->lbError->setText("");
-    }
-    else {
-        m_board->m_setHouse = false;
-        m_board->m_setRoad = false;
-        m_board->m_setCity = false;
-        ui->lbError->setText("Not enough resources for a city");
+    if(m_dice->get_dice_is_rolled() == true){
+        if ( m_game->can_build_city() ) {
+            m_board->m_setCity = true;
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_game->BuildCity();
+            m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
+            displayResources();
+            displayBankResources();
+            displayPlayerPoints();
+            ui->lbError->setText("");
+            //m_game->getCurrentPlayer()->decrease_victory_point();
+            //m_game->getCurrentPlayer()->increase_victory_points(2);
+        }
+        else {
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_board->m_setCity = false;
+            ui->lbError->setText("Not enough resources for a city");
+        }
+    }else {
+        ui->lbError->setText("You must first roll dice!");
     }
 }
 
@@ -347,5 +366,6 @@ void MainWindow::on_pushButton_clicked()
     m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
 
     m_dice->set_button_is_clicked(false);
+    m_dice->set_dice_is_rolled(false);
 }
 
