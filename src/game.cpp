@@ -3,6 +3,7 @@
 #include "dice.h"
 #include <algorithm>
 #include "resourcetype.h"
+#include <vector>
 
 //konstruktor
 //mora da se prosledjuje iz labela u guiu ime igraca
@@ -420,4 +421,5 @@ void Game::dec_resources_city()
 {
 
 }
+
 

@@ -19,6 +19,9 @@ Q_OBJECT
 public:
     Board(QObject *parent = nullptr);
     ~Board();
+
+    QVector<Field *> get_fields() ;
+
     void addAllNodes();
     void addAllFields();
     QVector<Node *> m_nodes;
@@ -48,6 +51,7 @@ private:
     GUI_Node* m_tmp;
     QColor m_curr_color;
     QColor m_road_color;
+
 };
 
 #endif // BOARD_H
