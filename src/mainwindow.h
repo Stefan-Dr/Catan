@@ -46,19 +46,15 @@ private slots:
     void on_pbBackToMenu_3_clicked();
 
 
-    void on_pbRollDice_clicked();
-
     void on_rbON_toggled(bool checked);
-
     void on_rbOFF_toggled(bool checked);
-
     void on_pb_House_clicked();
-
     void on_pb_Road_clicked();
-
     void on_pb_Settlement_clicked();
-
     void on_pushButton_clicked();
+
+    int on_pbRollDice_clicked();
+
 
 protected:
     Ui::MainWindow *ui;
