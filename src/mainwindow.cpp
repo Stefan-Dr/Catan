@@ -33,8 +33,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     //m_board->addAllFields();
 
-
-
     //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
     //offset);
 
@@ -49,36 +47,63 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayResources()
 {
-    Player *curr_p =  m_game->getCurrentPlayer();
-    if ( curr_p->get_id() == 1){
-        ui->lbWheatP1->setText(QString::number((curr_p->get_num_of_wheat())));
-        ui->lbWoodP1->setText(QString::number(curr_p->get_num_of_wood()));
-        ui->lbBrickP1->setText(QString::number(curr_p->get_num_of_brick()));
-        ui->lbWoolP1->setText(QString::number(curr_p->get_num_of_wool()));
-        ui->lbStoneP1->setText(QString::number(curr_p->get_num_of_stone()));
-    }
-    if ( curr_p->get_id() == 2){
-        ui->lbWheatP2->setText((QString::number(curr_p->get_num_of_wheat())));
-        ui->lbWoodP2->setText((QString::number(curr_p->get_num_of_wood())));
-        ui->lbBrickP2->setText((QString::number(curr_p->get_num_of_brick())));
-        ui->lbWoolP2->setText((QString::number(curr_p->get_num_of_wool())));
-        ui->lbStoneP2->setText((QString::number(curr_p->get_num_of_stone())));
-    }
-    if ( curr_p->get_id() == 3){
-        ui->lbWheatP3->setText(QString::number((curr_p->get_num_of_wheat())));
-        ui->lbWoodP3->setText(QString::number(curr_p->get_num_of_wood()));
-        ui->lbBrickP3->setText(QString::number(curr_p->get_num_of_brick()));
-        ui->lbWoolP3->setText(QString::number(curr_p->get_num_of_wool()));
-        ui->lbStoneP3->setText(QString::number(curr_p->get_num_of_stone()));
-    }
-    if ( curr_p->get_id() == 4){
-        ui->lbWheatP4->setText(QString::number((curr_p->get_num_of_wheat())));
-        ui->lbWoodP4->setText(QString::number(curr_p->get_num_of_wood()));
-        ui->lbBrickP4->setText(QString::number(curr_p->get_num_of_brick()));
-        ui->lbWoolP4->setText(QString::number(curr_p->get_num_of_wool()));
-        ui->lbStoneP4->setText(QString::number(curr_p->get_num_of_stone()));
-    }
+//    Player *curr_p =  m_game->getCurrentPlayer();
+//    if ( curr_p->get_id() == 1){
+//        ui->lbWheatP1->setText(QString::number((curr_p->get_num_of_wheat())));
+//        ui->lbWoodP1->setText(QString::number(curr_p->get_num_of_wood()));
+//        ui->lbBrickP1->setText(QString::number(curr_p->get_num_of_brick()));
+//        ui->lbWoolP1->setText(QString::number(curr_p->get_num_of_wool()));
+//        ui->lbStoneP1->setText(QString::number(curr_p->get_num_of_stone()));
+//    }
+//    if ( curr_p->get_id() == 2){
+//        ui->lbWheatP2->setText((QString::number(curr_p->get_num_of_wheat())));
+//        ui->lbWoodP2->setText((QString::number(curr_p->get_num_of_wood())));
+//        ui->lbBrickP2->setText((QString::number(curr_p->get_num_of_brick())));
+//        ui->lbWoolP2->setText((QString::number(curr_p->get_num_of_wool())));
+//        ui->lbStoneP2->setText((QString::number(curr_p->get_num_of_stone())));
+//    }
+//    if ( curr_p->get_id() == 3){
+//        ui->lbWheatP3->setText(QString::number((curr_p->get_num_of_wheat())));
+//        ui->lbWoodP3->setText(QString::number(curr_p->get_num_of_wood()));
+//        ui->lbBrickP3->setText(QString::number(curr_p->get_num_of_brick()));
+//        ui->lbWoolP3->setText(QString::number(curr_p->get_num_of_wool()));
+//        ui->lbStoneP3->setText(QString::number(curr_p->get_num_of_stone()));
+//    }
+//    if ( curr_p->get_id() == 4){
+//        ui->lbWheatP4->setText(QString::number((curr_p->get_num_of_wheat())));
+//        ui->lbWoodP4->setText(QString::number(curr_p->get_num_of_wood()));
+//        ui->lbBrickP4->setText(QString::number(curr_p->get_num_of_brick()));
+//        ui->lbWoolP4->setText(QString::number(curr_p->get_num_of_wool()));
+//        ui->lbStoneP4->setText(QString::number(curr_p->get_num_of_stone()));
+//    }
+
+    //drugaciji nacin implementacije
+    ui->lbWheatP1->setText(QString::number(m_game->getPlayer1()->get_num_of_wheat()));
+    ui->lbWoodP1->setText(QString::number(m_game->getPlayer1()->get_num_of_wood()));
+    ui->lbBrickP1->setText(QString::number(m_game->getPlayer1()->get_num_of_brick()));
+    ui->lbWoolP1->setText(QString::number(m_game->getPlayer1()->get_num_of_wool()));
+    ui->lbStoneP1->setText(QString::number(m_game->getPlayer1()->get_num_of_stone()));
+
+    ui->lbWheatP2->setText(QString::number(m_game->getPlayer2()->get_num_of_wheat()));
+    ui->lbWoodP2->setText(QString::number(m_game->getPlayer2()->get_num_of_wood()));
+    ui->lbBrickP2->setText(QString::number(m_game->getPlayer2()->get_num_of_brick()));
+    ui->lbWoolP2->setText(QString::number(m_game->getPlayer2()->get_num_of_wool()));
+    ui->lbStoneP2->setText(QString::number(m_game->getPlayer2()->get_num_of_stone()));
+
+    ui->lbWheatP3->setText(QString::number(m_game->getPlayer3()->get_num_of_wheat()));
+    ui->lbWoodP3->setText(QString::number(m_game->getPlayer3()->get_num_of_wood()));
+    ui->lbBrickP3->setText(QString::number(m_game->getPlayer3()->get_num_of_brick()));
+    ui->lbWoolP3->setText(QString::number(m_game->getPlayer3()->get_num_of_wool()));
+    ui->lbStoneP3->setText(QString::number(m_game->getPlayer3()->get_num_of_stone()));
+
+    ui->lbWheatP4->setText(QString::number(m_game->getPlayer4()->get_num_of_wheat()));
+    ui->lbWoodP4->setText(QString::number(m_game->getPlayer4()->get_num_of_wood()));
+    ui->lbBrickP4->setText(QString::number(m_game->getPlayer4()->get_num_of_brick()));
+    ui->lbWoolP4->setText(QString::number(m_game->getPlayer4()->get_num_of_wool()));
+    ui->lbStoneP4->setText(QString::number(m_game->getPlayer4()->get_num_of_stone()));
+
 }
+
 
 void MainWindow::displayBankResources(){
     Bank* bank = m_game->getBank();
