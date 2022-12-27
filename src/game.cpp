@@ -114,11 +114,12 @@ void Game::BuildHouse(/*Node* node*/){
 
                 //menja broj dostupnih objekata
                 m_currentPlayer->increase_allowed_house_number();
-                m_currentPlayer->increase_victory_points(1);
+               // m_currentPlayer->increase_victory_points(1);
 
                 //menjanje broja izgradjenih objekata
                 m_currentPlayer->increase_num_of_houses();
-                //graficko postavljanje kuce
+
+                m_currentPlayer->increase_victory_points(1);
 
         //}
         //}
