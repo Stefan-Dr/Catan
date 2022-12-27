@@ -202,17 +202,21 @@ void MainWindow::on_pbContinue_clicked(){
 
 
 
-int MainWindow::on_pbRollDice_clicked()
+void MainWindow::on_pbRollDice_clicked()
 {
     //if(korisnik je opet klinuo na dugme za bacanje kockice)
         if(m_dice->get_button_clicked() == true){
-            //ispis greske ili izbacivanje prozora sa upozorenjem
-            //std::cout << "Error: button is already clicked!" << std::endl;
             ui->lbError->setText("Dice has been already roled!");
         }else {
             m_dice->roll_dice();
             m_dice->set_button_is_clicked(true);
             m_dice->set_dice_is_rolled(true);
+
+            int result = m_dice->get_dice_sum();
+            m_game->Turn(result,m_board);
+
+            displayResources();
+            displayBankResources();
 
             int d1 = m_dice->get_dice1();
             int d2 = m_dice->get_dice2();
@@ -258,9 +262,6 @@ int MainWindow::on_pbRollDice_clicked()
                     break;
             }
          }
-
-       return m_dice->get_dice_sum();
-
 }
 
 

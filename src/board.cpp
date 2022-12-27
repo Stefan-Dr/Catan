@@ -641,16 +641,16 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     //kliknuto dugme za kucu (u mainwindow je implementacija) pa moze da se crta
     if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
         Redraw();
-        GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
+        GUI_Node *gui_node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
         //prvo proveravamo da li nema nicega sagradjenog da mozemo da sagradimo kucu
-        if (!node->get_is_house_built()){
-            node->setBrush(QBrush(getCurrColor()));
-            node->set_is_house_built(true);
+        if (!gui_node->get_is_house_built()){
+            gui_node->setBrush(QBrush(getCurrColor()));
+            gui_node->set_is_house_built(true);
             //postavljanje ownera node-a kada sagradi kucu
-            if (getCurrColor() == Qt::blue) {node->getNode()->set_owner(1);}
-            else if (getCurrColor() == Qt::yellow) {node->getNode()->set_owner(2);}
-            else if (getCurrColor() == Qt::green) {node->getNode()->set_owner(3);}
-            else  {node->getNode()->set_owner(4);}
+            if (getCurrColor() == Qt::blue) {gui_node->getNode()->set_owner(1);}
+            else if (getCurrColor() == Qt::yellow) {gui_node->getNode()->set_owner(2);}
+            else if (getCurrColor() == Qt::green) {gui_node->getNode()->set_owner(3);}
+            else  {gui_node->getNode()->set_owner(4);}
         }
         m_setHouse = false;
         //emit nodeChanged();
