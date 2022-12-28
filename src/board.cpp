@@ -616,27 +616,27 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     //treba dodati if isto ovo dole == null da ne radi nista, da ne bi bacao signal za prekid rada
     //treba dodati u ovaj donji if, if pbRoadEnabled && itemAt...
     if(m_setRoad && itemAt(event->scenePos(), QTransform())->type() == 1){
-        if(!m_hasTmp){
-
-            this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
-            setHasTmp(true);
-        }
-        else{
-            GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
-
-            if(m_tmp != node) {
-                GUI_Road* road = new GUI_Road(m_tmp, node);
-                road->set_pen(getRoadColor());
-                addItem(road);
-                m_setRoad = false;
-
-
-                //emit addedNewEdge(m_tmp->getNode(), node->getNode(), 1);
+            if(!m_hasTmp){
+                this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
+                Node* node = m_tmp->getNode();
+                setHasTmp(true);
             }
+            else{
+                GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
+                node->set_hasRoad(true);
+                if((m_tmp->get_is_house_built() || m_tmp->get_hasRoad()) && m_tmp != node) {
+                    GUI_Road* road = new GUI_Road(m_tmp, node);
+                    road->set_pen(getRoadColor());
+                    addItem(road);
+                    m_setRoad = false;
 
-            setHasTmp(false);
+
+                    //emit addedNewEdge(m_tmp->getNode(), node->getNode(), 1);
+                }
+
+                setHasTmp(false);
+            }
         }
-    }
 
     //kliknuto dugme za kucu (u mainwindow je implementacija) pa moze da se crta
     if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
