@@ -22,6 +22,9 @@ public:
 
     QVector<Field *> get_fields() ;
 
+    bool get_canBuildRoad() const;
+    void set_canBuildRoad(bool x);
+
     void addAllNodes();
     void addAllFields();
     QVector<Node *> m_nodes;
@@ -51,6 +54,7 @@ private:
     GUI_Node* m_tmp;
     QColor m_curr_color;
     QColor m_road_color;
+    bool m_canBuildRoad = true;
 
 };
 

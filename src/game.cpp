@@ -423,3 +423,6 @@ void Game::dec_resources_city()
 }
 
 
+
+
+

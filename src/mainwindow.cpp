@@ -310,13 +310,16 @@ void MainWindow::on_pb_Road_clicked()
             m_board->m_setRoad = true;
             m_board->m_setCity = false;
             m_board->m_setHouse = false;
-            m_game->BuildRoad();
-            displayResources();
-            displayBankResources();
-            displayPlayerPoints();
-            displayPlayerRoads();
-            ui->lbError->setText("");
-            //m_game->getCurrentPlayer()->increase_num_of_roads();
+            if(m_board->get_canBuildRoad()){
+                m_game->BuildRoad();
+                displayResources();
+                displayBankResources();
+                displayPlayerPoints();
+                displayPlayerRoads();
+                ui->lbError->setText("");
+            }else{
+                ui->lbError->setText("Your road must begin from already existed house on node!");
+            }
         }
         else {
             m_board->m_setHouse = false;
