@@ -51,7 +51,7 @@ bool Field::is_robber_on_the_field() const{
     return m_is_robber_od_the_field;
 }
 
-const QVector<Node*>& Field::get_corners() const{
+QVector<Node*>& Field::get_corners(){
     return m_corners;
 }
 

@@ -642,10 +642,20 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
         Redraw();
         GUI_Node *gui_node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
+        //provera za node da li na susednim cvorovima ima izgradjenih obejkata
+        auto node_neighbours = gui_node->Node_get()->get_neighbours();
+        int neighbours_are_occupied = 0;
+        for(auto &neighbour : node_neighbours){
+            if(m_gui_nodes[neighbour-1]->get_is_house_built()){
+                neighbours_are_occupied = 1;
+                break;
+            }
+        }
         //prvo proveravamo da li nema nicega sagradjenog da mozemo da sagradimo kucu
-        if (!gui_node->get_is_house_built()){
+        if (!gui_node->get_is_house_built() && neighbours_are_occupied == 0){
             gui_node->setBrush(QBrush(getCurrColor()));
             gui_node->set_is_house_built(true);
+            gui_node->getNode()->set_is_house_built(true);
             //gui_node->getNode()->set_owner()
             //postavljanje ownera node-a kada sagradi kucu
             if (getCurrColor() == Qt::blue) {gui_node->getNode()->set_owner(1);}
@@ -727,7 +737,7 @@ void Board::addAllFields(){
         m_fields.push_back(Field3);
 
         //drugi red
-        const auto Field4 = new Field(4,2,m_nodes[14],m_nodes[5],m_nodes[4], m_nodes[17], m_nodes[18], m_nodes[15]);
+        const auto Field4 = new Field(4,2,m_nodes[14],m_nodes[5],m_nodes[4], m_nodes[17], m_nodes[16], m_nodes[15]);
         Field4->set_res_type(ResourceType::Wheat);
         m_fields.push_back(Field4);
 
