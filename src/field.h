@@ -34,7 +34,7 @@ public:
 
     bool is_robber_on_the_field() const;
 
-    const QVector<Node*>& get_corners() const;
+    QVector<Node*>& get_corners();
 
     const QVector<Road*>& get_edges() const;
 

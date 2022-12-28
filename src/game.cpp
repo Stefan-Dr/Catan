@@ -14,7 +14,10 @@ Game::Game()
     , m_player4(new Player(4, "", Qt::red, Qt::darkRed))
     , m_currentPlayer(m_player1)
     , m_bank(new Bank())
-    /*, m_board(new Board())*/{}
+    /*, m_board(new Board())*/
+{
+    m_players = {m_player1,m_player2,m_player3,m_player4};
+}
 
 
 //destruktor
@@ -169,83 +172,76 @@ void Game::secondTurn(){
 
 void Game::Turn(int result, Board* board){
 
-
+     std::cout <<result << std::endl;
      for(auto &i : board->m_fields){
          //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
             //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
             //if(!i->is_robber_on_the_field()){
                 //ako se na tom polju ne nalazi lopov radimo sledece
+                std::cout << i->get_id() << std::endl;
                 for(auto &j : i->get_corners()){
                     //prolazimo kroz sve cvorove na tom polju
+                    std::cout << j->get_is_house_built() << std::endl;
                     if(j->get_is_house_built()){
+                        std::cout << j->get_id() << std::endl;
                         //proveravamo da li ima izgradjena kucica na tom cvoru
-                        for(auto &player : m_players){
-                            //u petlji sada za svakog igraca proveravamo da li se njegov id poklapa sa id-em onog igraca koji ima objekat na tom cvoru
-                            if(player->get_id() == j->get_owner()){
-
-                                if(i->get_res_type() == ResourceType::Brick){
-                                    player->inc_num_of_brick();
-                                    m_bank->remove_resource_card(ResourceType::Brick,1);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Stone){
-                                    player->inc_num_of_stone();
-                                    m_bank->remove_resource_card(ResourceType::Stone,1);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Wheat){
-                                    player->inc_num_of_wheat();
-                                    m_bank->remove_resource_card(ResourceType::Wheat,1);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Wood){
-                                    player->inc_num_of_wood();
-                                    m_bank->remove_resource_card(ResourceType::Wood,1);
-                                    break;
-                                }
-                                else{
-                                    player->inc_num_of_wool();
-                                    m_bank->remove_resource_card(ResourceType::Wool,1);
-                                    break;
-                                }
-                            }
+                        std::cout << j->get_owner() << std::endl;
+                        if(i->get_res_type() == ResourceType::Brick){
+                            m_players[j->get_owner()-1]->inc_num_of_brick();
+                            m_bank->remove_resource_card(ResourceType::Brick,1);
+                            break;
+                        }
+                        else if(i->get_res_type() == ResourceType::Stone){
+                            m_players[j->get_owner()-1]->inc_num_of_stone();
+                            m_bank->remove_resource_card(ResourceType::Stone,1);
+                            break;
+                        }
+                        else if(i->get_res_type() == ResourceType::Wheat){
+                            m_players[j->get_owner()-1]->inc_num_of_wheat();
+                            m_bank->remove_resource_card(ResourceType::Wheat,1);
+                            break;
+                        }
+                        else if(i->get_res_type() == ResourceType::Wood){
+                            m_players[j->get_owner()-1]->inc_num_of_wood();
+                            m_bank->remove_resource_card(ResourceType::Wood,1);
+                            break;
+                        }
+                        else{
+                            m_players[j->get_owner()-1]->inc_num_of_wool();
+                            m_bank->remove_resource_card(ResourceType::Wool,1);
+                            break;
                         }
                     }
                     if(j->get_is_city_built()){
-                        //isto sve samo ovaj put proveravamo da li je na tom polju izgradjen grad
-                        for(auto &player : m_players){
-                            if(player->get_id() == j->get_owner()){
-                                if(i->get_res_type() == ResourceType::Brick){
-                                    player->double_inc_num_of_brick();
-                                    m_bank->remove_resource_card(ResourceType::Brick,2);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Stone){
-                                    player->double_inc_num_of_stone();
-                                    m_bank->remove_resource_card(ResourceType::Stone,2);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Wheat){
-                                    player->double_inc_num_of_wheat();
-                                    m_bank->remove_resource_card(ResourceType::Wheat,2);
-                                    break;
-                                }
-                                else if(i->get_res_type() == ResourceType::Wood){
-                                    player->double_inc_num_of_wood();
-                                    m_bank->remove_resource_card(ResourceType::Wood,2);
-                                    break;
-                                }
-                                else{
-                                    player->double_inc_num_of_wool();
-                                    m_bank->remove_resource_card(ResourceType::Wool,2);
-                                    break;
-                                }
-                            }
-                        }
+                          if(i->get_res_type() == ResourceType::Brick){
+                               m_players[j->get_owner()-1]->double_inc_num_of_brick();
+                               m_bank->remove_resource_card(ResourceType::Brick,2);
+                               break;
+                          }
+                          else if(i->get_res_type() == ResourceType::Stone){
+                               m_players[j->get_owner()-1]->double_inc_num_of_stone();
+                               m_bank->remove_resource_card(ResourceType::Stone,2);
+                               break;
+                          }
+                          else if(i->get_res_type() == ResourceType::Wheat){
+                               m_players[j->get_owner()-1]->double_inc_num_of_wheat();
+                               m_bank->remove_resource_card(ResourceType::Wheat,2);
+                               break;
+                          }
+                          else if(i->get_res_type() == ResourceType::Wood){
+                               m_players[j->get_owner()-1]->double_inc_num_of_wood();
+                               m_bank->remove_resource_card(ResourceType::Wood,2);
+                               break;
+                          }
+                          else{
+                               m_players[j->get_owner()-1]->double_inc_num_of_wool();
+                               m_bank->remove_resource_card(ResourceType::Wool,2);
+                               break;
+                          }
+
                     }
                 }
-            //}
         }
     }
 }
