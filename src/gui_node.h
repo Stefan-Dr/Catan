@@ -33,6 +33,9 @@ public:
     QString m_text = QString::fromStdString("");
     bool check_owner_city(QColor color);
 
+    bool get_hasRoad() const;
+    void set_hasRoad(bool x);
+
 signals:
     void nodeChanged();
     void needRedraw();
@@ -42,6 +45,9 @@ protected:
     void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 private:
     Node *m_node;
+
+    bool hasRoad;
+
  //   qreal m_x;
   //  qreal m_y;
 

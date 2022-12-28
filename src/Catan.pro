@@ -27,7 +27,8 @@ SOURCES += \
     mainwindow.cpp \
     node.cpp \
     player.cpp \
-    road.cpp
+    road.cpp \
+    test1.cpp
 
 HEADERS += \
     board.h \

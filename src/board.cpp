@@ -626,19 +626,12 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         if(!m_hasTmp){
             this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
             Node* node = m_tmp->getNode();
-           /* if(node->get_is_house_built()){
-*/
                 setHasTmp(true);
-                set_canBuildRoad(true);
-            /*}else{
-
-                set_canBuildRoad(false);
-            }*/
         }
         else{
             GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
-
-            if(m_tmp != node) {
+            node->set_hasRoad(true);
+            if((m_tmp->get_is_house_built() || m_tmp->get_hasRoad()) && m_tmp != node) {
                 GUI_Road* road = new GUI_Road(m_tmp, node);
                 road->set_pen(getRoadColor());
                 addItem(road);

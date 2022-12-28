@@ -16,6 +16,8 @@ private:
     bool m_can_build_city = false;
     QVector<int> m_neighbours;
 
+
+
 public:
     Node(int id);
     Node(const Node &) = delete;
@@ -29,6 +31,7 @@ public:
     bool get_can_build_city() const;
     const QVector<int>& get_neighbours() const;
 
+
     //Setters
     void set_is_house_built(bool value);
     void set_is_city_built(bool value);
@@ -36,6 +39,7 @@ public:
     void set_can_build(bool value);
     void set_can_build_city(bool value);
     void set_all_neighbours(QVector<int> &neighbours);
+
 
     //Methods for setting a house or city on the node using setters
     void place_house(int owner);

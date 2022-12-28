@@ -12,6 +12,14 @@ GUI_Node::GUI_Node(Node *node)
 
 }
 
+bool GUI_Node::get_hasRoad() const{
+    return hasRoad;
+}
+
+void GUI_Node::set_hasRoad(bool x){
+    hasRoad = x;
+}
+
 QColor GUI_Node::m_color = QColor("white");
 
 QRectF GUI_Node::boundingRect() const
