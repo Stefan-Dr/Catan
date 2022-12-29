@@ -9,6 +9,7 @@
 #include "road.h"
 #include "node.h"
 #include <vector>
+#include "resourcetype.h"
 
 #include <QObject>
 
@@ -71,6 +72,9 @@ public:
     void MagicCard();
 
     int player_turn_counter = 1;
+
+    bool can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource);
+    void trade_with_bank(ResourceType player_resource, ResourceType bank_resource);
 
     //treba private
     Player *next_player;
