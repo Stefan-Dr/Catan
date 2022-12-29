@@ -74,7 +74,8 @@ public:
 
     //treba private
     Player *next_player;
-
+    bool win();
+    void setWin(bool x);
 private:
     //napraviti niz playera radi lakseg funkcionisanja
     QVector<Player*> m_players;
@@ -88,6 +89,7 @@ private:
     int numOfPlayers = 4;
     bool m_can_build_house;
     bool m_can_build_city;
+    bool m_win = false;
 };
 
 #endif // GAME_H
