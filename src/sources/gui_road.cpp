@@ -1,4 +1,4 @@
-#include "gui_road.h"
+#include "../headers/gui_road.h"
 
 #include <climits>
 #include <QPainter>

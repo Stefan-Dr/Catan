@@ -1,8 +1,8 @@
-#include "board.h"
-#include "node.h"
-#include "gui_node.h"
+#include "../headers/board.h"
+#include "../headers/node.h"
+#include "../headers/gui_node.h"
 #include <iostream>
-#include "field.h"
+#include "headers/field.h"
 #include <QColor>
 
 Board::Board(QObject *parent): QGraphicsScene(parent){}

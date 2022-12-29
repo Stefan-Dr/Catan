@@ -1,4 +1,4 @@
-#include "dice.h"
+#include "../headers/dice.h"
 #include <cstdlib>
 #include <time.h>
 

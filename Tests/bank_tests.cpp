@@ -1,6 +1,6 @@
 #include <catch.hpp>
 
-#include "../../06-catan/src/bank.h"
+#include "../../06-catan/src/headers/bank.h"
 
 TEST_CASE("BANK")
 {

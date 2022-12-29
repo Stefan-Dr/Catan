@@ -1,6 +1,6 @@
-#include "gui_node.h"
+#include "../headers/gui_node.h"
 #include <QPainter>
-#include "node.h"
+#include "../headers/node.h"
 #include "qgraphicsscene.h"
 #include "qgraphicssceneevent.h"
 GUI_Node::GUI_Node(Node *node)

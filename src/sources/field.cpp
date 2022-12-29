@@ -1,4 +1,4 @@
-#include "field.h"
+#include "../headers/field.h"
 
 Field::Field(int id, int number, ResourceType res_type,
             Node* up_corner, Node* bottom_corner,

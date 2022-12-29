@@ -11,18 +11,18 @@ isEmpty(CATCH_INCLUDE_DIR): {
 }
 
 SOURCES +=     main.cpp     \
-    ../src/bank.cpp \
-    ../src/dice.cpp \
-    ../src/node.cpp \
-    ../src/road.cpp \
+    ../src/sources/bank.cpp \
+    ../src/sources/dice.cpp \
+    ../src/sources/node.cpp \
+    ../src/sources/road.cpp \
     bank_tests.cpp \
     dice_tests.cpp \
     node_tests.cpp \
     road_tests.cpp
 
 HEADERS += \
-    ../src/bank.h \
-    ../src/dice.h \
-    ../src/node.h \
-    ../src/road.h \
+    ../src/headers/bank.h \
+    ../src/headers/dice.h \
+    ../src/headers/node.h \
+    ../src/headers/road.h \
     catch.hpp

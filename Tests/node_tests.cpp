@@ -1,6 +1,6 @@
 #include <catch.hpp>
 
-#include "../../06-catan/src/node.h"
+#include "../../06-catan/src/headers/node.h"
 
 
 TEST_CASE("NODE")

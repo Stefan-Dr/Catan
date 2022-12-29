@@ -1,6 +1,6 @@
 #include <catch.hpp>
 
-#include "../../06-catan/src/road.h"
+#include "../../06-catan/src/headers/road.h"
 
 
 TEST_CASE("ROAD")

@@ -1,6 +1,6 @@
 #include <catch.hpp>
 
-#include "../../06-catan/src/dice.h"
+#include "../../06-catan/src/headers/dice.h"
 
 
 TEST_CASE("DICE")

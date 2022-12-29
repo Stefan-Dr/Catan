@@ -16,33 +16,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    bank.cpp \
-    board.cpp \
-    dice.cpp \
-    field.cpp \
-    game.cpp \
-    gui_node.cpp \
-    gui_road.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    node.cpp \
-    player.cpp \
-    road.cpp
+    sources/bank.cpp \
+    sources/board.cpp \
+    sources/dice.cpp \
+    sources/field.cpp \
+    sources/game.cpp \
+    sources/gui_node.cpp \
+    sources/gui_road.cpp \
+    sources/main.cpp \
+    sources/mainwindow.cpp \
+    sources/node.cpp \
+    sources/player.cpp \
+    sources/road.cpp \
 
 HEADERS += \
-    board.h \
-    color.h \
-    dice.h \
-    field.h \
-    game.h \
-    gui_node.h \
-    gui_road.h \
-    mainwindow.h \
-    player.h\
-    node.h\
-    bank.h\
-    resourcetype.h\
-    road.h
+    headers/board.h \
+    headers/color.h \
+    headers/dice.h \
+    headers/field.h \
+    headers/game.h \
+    headers/gui_node.h \
+    headers/gui_road.h \
+    headers/mainwindow.h \
+    headers/player.h\
+    headers/node.h\
+    headers/bank.h\
+    headers/resourcetype.h\
+    headers/road.h\
 
 
 FORMS += \

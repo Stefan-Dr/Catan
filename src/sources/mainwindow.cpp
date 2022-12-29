@@ -1,11 +1,11 @@
-#include "mainwindow.h"
+#include "../headers/mainwindow.h"
 #include "ui_mainwindow.h"
-#include "board.h"
-#include "node.h"
-#include "gui_node.h"
+#include "../headers/board.h"
+#include "../headers/node.h"
+#include "../headers/gui_node.h"
 #include <string>
 #include <QMessageBox>
-#include "game.h"
+#include "../headers/game.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

@@ -1,8 +1,8 @@
-#include "game.h"
-#include "player.h"
-#include "dice.h"
+#include "../headers/game.h"
+#include "../headers/player.h"
+#include "../headers/dice.h"
 #include <algorithm>
-#include "resourcetype.h"
+#include "../headers/resourcetype.h"
 #include <vector>
 
 //konstruktor
