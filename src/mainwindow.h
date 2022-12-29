@@ -63,7 +63,7 @@ private slots:
     void on_pbRollDice_clicked();
 
 
-
+    void on_pb_MagicCard_clicked();
 
 protected:
     Ui::MainWindow *ui;
