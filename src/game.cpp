@@ -151,6 +151,14 @@ void Game::BuildRoad(/*Road* road*/){
 }
 
 
+void Game::MagicCard(){
+    m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,1,*m_bank);
+    m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,1,*m_bank);
+    m_currentPlayer->return_resource_card_to_bank(ResourceType::Wool,1,*m_bank);
+    m_currentPlayer->increase_victory_points(1);
+}
+
+
 void Game::firstTurn(){
     //redosled igraca je od 1 do 4
     //postavljanje jedne kuce
@@ -327,6 +335,14 @@ bool Game::can_build_city()
 {
     if(m_currentPlayer->get_num_of_wheat() >= 2 &&
        m_currentPlayer->get_num_of_stone() >= 3) { return true; }
+    else return false;
+}
+
+bool Game::can_get_magic_card(){
+    if(m_currentPlayer->get_num_of_stone() >=1 && m_currentPlayer->get_num_of_wheat() >=1
+            && m_currentPlayer->get_num_of_wool()>=1){
+        return true;
+    }
     else return false;
 }
 

@@ -63,10 +63,10 @@ public:
     bool can_build_house();
     bool can_build_city();
     bool can_build_road();
-
+    bool can_get_magic_card();
     void dec_resources_house();
     void dec_resources_city();
-
+    void MagicCard();
     //treba private
     Player *next_player;
 

@@ -389,6 +389,32 @@ void MainWindow::on_pb_Settlement_clicked()
     }
 }
 
+
+void MainWindow::on_pb_MagicCard_clicked()
+{
+    if(m_dice->get_dice_is_rolled()==true){
+        if(m_game->can_get_magic_card()){
+            m_board->m_setCity = false;
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_game->MagicCard();
+            displayResources();
+            displayBankResources();
+            displayPlayerPoints();
+            ui->lbError->setText("");
+
+        }else {
+            m_board->m_setHouse = false;
+            m_board->m_setRoad = false;
+            m_board->m_setCity = false;
+            ui->lbError->setText("Not enough resources for a magic card");
+        }
+    }else {
+            ui->lbError->setText("You must first roll dice!");
+        }
+}
+
+
 //Next player button
 void MainWindow::on_pushButton_clicked()
 {
@@ -404,4 +430,5 @@ void MainWindow::on_pushButton_clicked()
     m_dice->set_button_is_clicked(false);
     m_dice->set_dice_is_rolled(false);
 }
+
 
