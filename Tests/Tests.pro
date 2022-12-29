@@ -16,6 +16,7 @@ SOURCES +=     main.cpp     \
     ../src/node.cpp \
     ../src/road.cpp \
     bank_tests.cpp \
+    dice_tests.cpp \
     road_tests.cpp
 
 HEADERS += \

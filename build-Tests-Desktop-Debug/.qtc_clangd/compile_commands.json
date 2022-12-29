@@ -23,11 +23,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -50,10 +50,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/main.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/Tests/main.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/main.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/Tests/main.cpp"
 },
 {
     "arguments": [
@@ -79,11 +79,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -106,10 +106,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/bank.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/src/bank.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/bank.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/bank.cpp"
 },
 {
     "arguments": [
@@ -135,11 +135,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -162,10 +162,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/dice.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/src/dice.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/dice.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/dice.cpp"
 },
 {
     "arguments": [
@@ -191,11 +191,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -218,10 +218,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/node.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/src/node.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/node.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/node.cpp"
 },
 {
     "arguments": [
@@ -247,11 +247,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -274,10 +274,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/road.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/src/road.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/road.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/road.cpp"
 },
 {
     "arguments": [
@@ -303,11 +303,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -330,10 +330,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/bank_tests.cpp"
+        "/home/luka/Desktop/CATAN/06-catan/Tests/bank_tests.cpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/bank_tests.cpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/Tests/bank_tests.cpp"
 },
 {
     "arguments": [
@@ -359,11 +359,123 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
+        "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+        "-isystem",
+        "/usr/include/c++/9",
+        "-isystem",
+        "/usr/include/x86_64-linux-gnu/c++/9",
+        "-isystem",
+        "/usr/include/c++/9/backward",
+        "-isystem",
+        "/usr/local/include",
+        "-isystem",
+        "/home/luka/Qt/Tools/QtCreator/libexec/qtcreator/clang/lib/clang/14.0.3/include",
+        "-isystem",
+        "/usr/include/x86_64-linux-gnu",
+        "-isystem",
+        "/usr/include",
+        "-fmessage-length=0",
+        "-fdiagnostics-show-note-include-stack",
+        "-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "-x",
+        "c++",
+        "/home/luka/Desktop/CATAN/06-catan/Tests/dice_tests.cpp"
+    ],
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/Tests/dice_tests.cpp"
+},
+{
+    "arguments": [
+        "clang",
+        "-Wno-documentation-unknown-command",
+        "-Wno-unknown-warning-option",
+        "-Wno-unknown-pragmas",
+        "-nostdinc",
+        "-nostdinc++",
+        "-pipe",
+        "-g",
+        "-std=gnu++11",
+        "-Wall",
+        "-W",
+        "-D_REENTRANT",
+        "-fPIC",
+        "-fsyntax-only",
+        "-m64",
+        "--target=x86_64-linux-gnu",
+        "-DQT_QML_DEBUG",
+        "-DQT_GUI_LIB",
+        "-DQT_CORE_LIB",
+        "-DQ_CREATOR_RUN",
+        "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
+        "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
+        "-I/usr/include/x86_64-linux-gnu/qt5",
+        "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
+        "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
+        "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+        "-isystem",
+        "/usr/include/c++/9",
+        "-isystem",
+        "/usr/include/x86_64-linux-gnu/c++/9",
+        "-isystem",
+        "/usr/include/c++/9/backward",
+        "-isystem",
+        "/usr/local/include",
+        "-isystem",
+        "/home/luka/Qt/Tools/QtCreator/libexec/qtcreator/clang/lib/clang/14.0.3/include",
+        "-isystem",
+        "/usr/include/x86_64-linux-gnu",
+        "-isystem",
+        "/usr/include",
+        "-fmessage-length=0",
+        "-fdiagnostics-show-note-include-stack",
+        "-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "-x",
+        "c++",
+        "/home/luka/Desktop/CATAN/06-catan/Tests/road_tests.cpp"
+    ],
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/Tests/road_tests.cpp"
+},
+{
+    "arguments": [
+        "clang",
+        "-Wno-documentation-unknown-command",
+        "-Wno-unknown-warning-option",
+        "-Wno-unknown-pragmas",
+        "-nostdinc",
+        "-nostdinc++",
+        "-pipe",
+        "-g",
+        "-std=gnu++11",
+        "-Wall",
+        "-W",
+        "-D_REENTRANT",
+        "-fPIC",
+        "-fsyntax-only",
+        "-m64",
+        "--target=x86_64-linux-gnu",
+        "-DQT_QML_DEBUG",
+        "-DQT_GUI_LIB",
+        "-DQT_CORE_LIB",
+        "-DQ_CREATOR_RUN",
+        "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
+        "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
+        "-I/usr/include/x86_64-linux-gnu/qt5",
+        "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
+        "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -386,10 +498,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/catch.hpp"
+        "/home/luka/Desktop/CATAN/06-catan/Tests/catch.hpp"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests/catch.hpp"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/Tests/catch.hpp"
 },
 {
     "arguments": [
@@ -415,11 +527,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -442,10 +554,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/bank.h"
+        "/home/luka/Desktop/CATAN/06-catan/src/bank.h"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/bank.h"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/bank.h"
 },
 {
     "arguments": [
@@ -471,11 +583,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -498,10 +610,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/dice.h"
+        "/home/luka/Desktop/CATAN/06-catan/src/dice.h"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/dice.h"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/dice.h"
 },
 {
     "arguments": [
@@ -527,11 +639,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -554,10 +666,10 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/node.h"
+        "/home/luka/Desktop/CATAN/06-catan/src/node.h"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/node.h"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/node.h"
 },
 {
     "arguments": [
@@ -583,11 +695,11 @@
         "-DQ_CREATOR_RUN",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders",
         "-I/home/luka/Qt/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/Tests",
+        "-I/home/luka/Desktop/CATAN/06-catan/Tests",
         "-I/usr/include/x86_64-linux-gnu/qt5",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtGui",
         "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
-        "-I/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug",
+        "-I/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug",
         "-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
         "-isystem",
         "/usr/include/c++/9",
@@ -610,9 +722,9 @@
         "-ferror-limit=1000",
         "-x",
         "c++-header",
-        "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/road.h"
+        "/home/luka/Desktop/CATAN/06-catan/src/road.h"
     ],
-    "directory": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
-    "file": "/home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/src/road.h"
+    "directory": "/home/luka/Desktop/CATAN/06-catan/build-Tests-Desktop-Debug/.qtc_clangd",
+    "file": "/home/luka/Desktop/CATAN/06-catan/src/road.h"
 }
 ]
