@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Tests1.0.0
-DISTDIR = /home/luka/Desktop/CATAN-ZIG-ZAG/06-catan/build-Tests-Desktop-Debug/.tmp/Tests1.0.0
+DISTDIR = /home/snele/06-catan/build-Tests-Desktop-Debug/.tmp/Tests1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Core.so /usr/lib/x86_64-linux-gnu/libGL.so -lpthread   
@@ -57,13 +57,15 @@ SOURCES       = ../Tests/main.cpp \
 		../src/dice.cpp \
 		../src/node.cpp \
 		../src/road.cpp \
-		../Tests/bank_tests.cpp 
+		../Tests/bank_tests.cpp \
+		../Tests/road_tests.cpp 
 OBJECTS       = main.o \
 		bank.o \
 		dice.o \
 		node.o \
 		road.o \
-		bank_tests.o
+		bank_tests.o \
+		road_tests.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -150,7 +152,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../src/dice.cpp \
 		../src/node.cpp \
 		../src/road.cpp \
-		../Tests/bank_tests.cpp
+		../Tests/bank_tests.cpp \
+		../Tests/road_tests.cpp
 QMAKE_TARGET  = Tests
 DESTDIR       = 
 TARGET        = Tests
@@ -335,7 +338,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../src/bank.h ../src/dice.h ../src/node.h ../src/road.h ../Tests/catch.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Tests/main.cpp ../src/bank.cpp ../src/dice.cpp ../src/node.cpp ../src/road.cpp ../Tests/bank_tests.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Tests/main.cpp ../src/bank.cpp ../src/dice.cpp ../src/node.cpp ../src/road.cpp ../Tests/bank_tests.cpp ../Tests/road_tests.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -403,6 +406,10 @@ bank_tests.o: ../Tests/bank_tests.cpp ../Tests/catch.hpp \
 		../src/bank.h \
 		../src/resourcetype.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bank_tests.o ../Tests/bank_tests.cpp
+
+road_tests.o: ../Tests/road_tests.cpp ../Tests/catch.hpp \
+		../src/road.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o road_tests.o ../Tests/road_tests.cpp
 
 ####### Install
 
