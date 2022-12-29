@@ -43,7 +43,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="gridLayoutWidget">
@@ -56,8 +56,8 @@
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="9" column="2">
-        <spacer name="verticalSpacer_3">
+       <item row="8" column="2">
+        <spacer name="verticalSpacer_6">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -69,8 +69,8 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="2">
-        <spacer name="verticalSpacer">
+       <item row="6" column="2">
+        <spacer name="verticalSpacer_5">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -82,34 +82,8 @@
          </property>
         </spacer>
        </item>
-       <item row="11" column="2">
-        <spacer name="verticalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="3">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="3" column="2">
-        <widget class="QPushButton" name="pbStartGame">
+       <item row="7" column="2">
+        <widget class="QPushButton" name="pbExit">
          <property name="minimumSize">
           <size>
            <width>400</width>
@@ -137,12 +111,12 @@ border: 1px solid #fff3ab;
 border-color: #fff3ab;</string>
          </property>
          <property name="text">
-          <string>START GAME</string>
+          <string>EXIT</string>
          </property>
         </widget>
        </item>
-       <item row="6" column="2">
-        <spacer name="verticalSpacer_5">
+       <item row="1" column="2">
+        <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -154,21 +128,8 @@ border-color: #fff3ab;</string>
          </property>
         </spacer>
        </item>
-       <item row="4" column="2">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="8" column="2">
-        <spacer name="verticalSpacer_6">
+       <item row="11" column="2">
+        <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -213,6 +174,91 @@ height: 50;
          </property>
         </widget>
        </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="9" column="2">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="2">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="pbStartGame">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>37</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #c28a93;
+color:#fff3ab;
+border: 1px solid #fff3ab;
+border-color: #fff3ab;</string>
+         </property>
+         <property name="text">
+          <string>START GAME</string>
+         </property>
+        </widget>
+       </item>
        <item row="5" column="2">
         <widget class="QPushButton" name="pbSettings">
          <property name="minimumSize">
@@ -243,52 +289,6 @@ border-color: #fff3ab;</string>
          </property>
          <property name="text">
           <string>SETTINGS</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="7" column="2">
-        <widget class="QPushButton" name="pbExit">
-         <property name="minimumSize">
-          <size>
-           <width>400</width>
-           <height>80</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>400</width>
-           <height>80</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Sahadeva</family>
-           <pointsize>37</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: #c28a93;
-color:#fff3ab;
-border: 1px solid #fff3ab;
-border-color: #fff3ab;</string>
-         </property>
-         <property name="text">
-          <string>EXIT</string>
          </property>
         </widget>
        </item>
@@ -357,48 +357,6 @@ border-color: #fff3ab;</string>
           </property>
           <property name="text">
            <string>MUSIC</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_2">
-          <property name="geometry">
-           <rect>
-            <x>110</x>
-            <y>180</y>
-            <width>400</width>
-            <height>80</height>
-           </rect>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>400</width>
-            <height>80</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>400</width>
-            <height>80</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Sahadeva</family>
-            <pointsize>28</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: #c28a93;
-color:#fff3ab;
-border: 1px solid #fff3ab;
-border-color: #fff3ab;</string>
-          </property>
-          <property name="text">
-           <string>GAME SPEED</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -523,53 +481,6 @@ border-color: #fff3ab;</string>
           <property name="title">
            <string/>
           </property>
-          <widget class="QRadioButton" name="rbFAST">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>50</y>
-             <width>112</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Sahadeva</family>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">
-color:#fff3ab;</string>
-           </property>
-           <property name="text">
-            <string>FAST</string>
-           </property>
-          </widget>
-          <widget class="QRadioButton" name="rbSLOW">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>20</y>
-             <width>112</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Sahadeva</family>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:#fff3ab;</string>
-           </property>
-           <property name="text">
-            <string>SLOW</string>
-           </property>
-          </widget>
          </widget>
         </widget>
        </item>
