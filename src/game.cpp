@@ -200,21 +200,21 @@ void Game::secondTurn(){
 
 void Game::Turn(int result, Board* board){
 
-     std::cout <<result << std::endl;
+     //std::cout <<result << std::endl;
      for(auto &i : board->m_fields){
          //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
             //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
             //if(!i->is_robber_on_the_field()){
                 //ako se na tom polju ne nalazi lopov radimo sledece
-                std::cout << i->get_id() << std::endl;
+                //std::cout << i->get_id() << std::endl;
                 for(auto &j : i->get_corners()){
                     //prolazimo kroz sve cvorove na tom polju
-                    std::cout << j->get_is_house_built() << std::endl;
+                    //std::cout << j->get_is_house_built() << std::endl;
                     if(j->get_is_house_built()){
-                        std::cout << j->get_id() << std::endl;
+                        //std::cout << j->get_id() << std::endl;
                         //proveravamo da li ima izgradjena kucica na tom cvoru
-                        std::cout << j->get_owner() << std::endl;
+                        //std::cout << j->get_owner() << std::endl;
                         if(i->get_res_type() == ResourceType::Brick){
                             m_players[j->get_owner()-1]->inc_num_of_brick();
                             m_bank->remove_resource_card(ResourceType::Brick,1);
@@ -309,7 +309,7 @@ void Game::gameResult(){
 
 
       for (int i = 0; i < numPlayers; i++) {
-        std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
+        //std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
       }
 
 }
