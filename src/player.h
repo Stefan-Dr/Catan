@@ -18,7 +18,9 @@ public:
     Player(const Player& ) = delete;
     Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
-    const std::string &get_name();
+    std::string get_name() const;
+    void set_name(std::string new_name);
+
     int get_id() const;
     Color get_color() const;
     int get_victory_points() const;

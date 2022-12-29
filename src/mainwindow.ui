@@ -126,6 +126,7 @@
           <font>
            <family>Sahadeva</family>
            <pointsize>37</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -197,6 +198,7 @@ border-color: #fff3ab;</string>
           <font>
            <family>Sahadeva</family>
            <pointsize>30</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -229,6 +231,7 @@ height: 50;
           <font>
            <family>Sahadeva</family>
            <pointsize>37</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -274,6 +277,7 @@ border-color: #fff3ab;</string>
           <font>
            <family>Sahadeva</family>
            <pointsize>37</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -341,6 +345,7 @@ border-color: #fff3ab;</string>
            <font>
             <family>Sahadeva</family>
             <pointsize>28</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -382,6 +387,7 @@ border-color: #fff3ab;</string>
            <font>
             <family>Sahadeva</family>
             <pointsize>28</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -423,6 +429,7 @@ border-color: #fff3ab;</string>
            <font>
             <family>Sahadeva</family>
             <pointsize>22</pointsize>
+            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -464,6 +471,7 @@ border-color: #fff3ab;</string>
             <font>
              <family>Sahadeva</family>
              <pointsize>15</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -488,6 +496,7 @@ border-color: #fff3ab;</string>
             <font>
              <family>Sahadeva</family>
              <pointsize>15</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -526,6 +535,7 @@ border-color: #fff3ab;</string>
            <property name="font">
             <font>
              <family>Sahadeva</family>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -549,6 +559,7 @@ color:#fff3ab;</string>
            <property name="font">
             <font>
              <family>Sahadeva</family>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -617,6 +628,7 @@ color:#fff3ab;</string>
           <font>
            <family>Sahadeva</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -877,6 +889,7 @@ border-radius: 10%;</string>
           <font>
            <family>Sahadeva</family>
            <pointsize>37</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1012,6 +1025,7 @@ border-radius: 10%;
           <font>
            <family>Sahadeva</family>
            <pointsize>37</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -1152,6 +1166,7 @@ border-radius: 10%;</string>
            <property name="font">
             <font>
              <pointsize>18</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1180,6 +1195,7 @@ border-radius: 10%;</string>
           <widget class="QLabel" name="label_30">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1374,6 +1390,7 @@ border-radius: 10%;</string>
            <property name="font">
             <font>
              <pointsize>18</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1403,6 +1420,7 @@ border-radius: 10%;</string>
           <widget class="QLabel" name="label_31">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1597,6 +1615,7 @@ border-radius: 10%;</string>
            <property name="font">
             <font>
              <pointsize>18</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1626,6 +1645,7 @@ border-radius: 10%;</string>
           <widget class="QLabel" name="label_33">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1820,6 +1840,7 @@ border-radius: 10%;</string>
            <property name="font">
             <font>
              <pointsize>18</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1849,6 +1870,7 @@ border-radius: 10%;</string>
           <widget class="QLabel" name="label_35">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -2047,16 +2069,17 @@ border-radius: 10%;</string>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>161</width>
-          <height>51</height>
+          <x>0</x>
+          <y>0</y>
+          <width>181</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Sahadeva</family>
           <pointsize>15</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -2065,6 +2088,39 @@ border-radius: 10%;</string>
         </property>
         <property name="text">
          <string>PLAYER TURN</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbPlayerTurn">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sahadeva</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
@@ -2349,6 +2405,7 @@ border-radius: 10%;</string>
         <property name="font">
          <font>
           <pointsize>18</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
