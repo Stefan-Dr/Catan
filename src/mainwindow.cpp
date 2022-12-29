@@ -27,6 +27,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
 
+    connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesHouse, this, &MainWindow::manageResourcesHouse);
+    connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesRoad, this, &MainWindow::manageResourcesRoad);
+    connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesCity, this, &MainWindow::manageResourcesCity);
+
    // m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
     //m_music->setVolume(40);
     //m_music->play();
@@ -316,12 +320,12 @@ void MainWindow::on_pb_House_clicked()
             m_board->m_setHouse = true;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            m_game->BuildHouse();
+            //m_game->BuildHouse();
             m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
-            displayResources();
-            displayBankResources();
-            displayPlayerPoints();
-            ui->lbError->setText("");
+//            displayResources();
+//            displayBankResources();
+//            displayPlayerPoints();
+//            ui->lbError->setText("");
             //m_game->getCurrentPlayer()->increase_victory_points(1);
         }
         else {
@@ -336,6 +340,16 @@ void MainWindow::on_pb_House_clicked()
 
 }
 
+void MainWindow::manageResourcesHouse()
+{
+    m_game->BuildHouse();
+    displayResources();
+    displayBankResources();
+    displayPlayerPoints();
+    ui->lbError->setText("");
+}
+
+
 void MainWindow::on_pb_Road_clicked()
 {
    if(m_dice->get_dice_is_rolled() == true){
@@ -343,12 +357,12 @@ void MainWindow::on_pb_Road_clicked()
             m_board->m_setRoad = true;
             m_board->m_setCity = false;
             m_board->m_setHouse = false;
-            m_game->BuildRoad();
-            displayResources();
-            displayBankResources();
-            displayPlayerPoints();
-            displayPlayerRoads();
-            ui->lbError->setText("");
+//            m_game->BuildRoad();
+//            displayResources();
+//            displayBankResources();
+//            displayPlayerPoints();
+//            displayPlayerRoads();
+//            ui->lbError->setText("");
             //m_game->getCurrentPlayer()->increase_num_of_roads();
         }
         else {
@@ -362,6 +376,16 @@ void MainWindow::on_pb_Road_clicked()
    }
 }
 
+void MainWindow::manageResourcesRoad()
+{
+    m_game->BuildRoad();
+    displayResources();
+    displayBankResources();
+    displayPlayerPoints();
+    displayPlayerRoads();
+    ui->lbError->setText("");
+}
+
 void MainWindow::on_pb_Settlement_clicked()
 {
     if(m_dice->get_dice_is_rolled() == true){
@@ -369,12 +393,12 @@ void MainWindow::on_pb_Settlement_clicked()
             m_board->m_setCity = true;
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
-            m_game->BuildCity();
+//            m_game->BuildCity();
             m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
-            displayResources();
-            displayBankResources();
-            displayPlayerPoints();
-            ui->lbError->setText("");
+//            displayResources();
+//            displayBankResources();
+//            displayPlayerPoints();
+//            ui->lbError->setText("");
             //m_game->getCurrentPlayer()->decrease_victory_point();
             //m_game->getCurrentPlayer()->increase_victory_points(2);
         }
@@ -415,11 +439,22 @@ void MainWindow::on_pb_MagicCard_clicked()
 }
 
 
+void MainWindow::manageResourcesCity()
+{
+    m_game->BuildCity();
+    displayResources();
+    displayBankResources();
+    displayPlayerPoints();
+    ui->lbError->setText("");
+}
+
 //Next player button
 void MainWindow::on_pushButton_clicked()
 {
     ui->lbError->setText("");
     m_game->nextPlayer();
+    if ( m_game->player_turn_counter < 4) { m_game->player_turn_counter++; }
+    else { m_board->set_first_turn(false); }
     ui->lbPlayerTurn->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
     m_board->m_setHouse = false;
     m_board->m_setRoad = false;

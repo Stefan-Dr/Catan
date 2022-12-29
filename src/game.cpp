@@ -159,6 +159,7 @@ void Game::MagicCard(){
 }
 
 
+
 void Game::firstTurn(){
     //redosled igraca je od 1 do 4
     //postavljanje jedne kuce
@@ -345,6 +346,7 @@ bool Game::can_get_magic_card(){
     }
     else return false;
 }
+
 
 bool Game::can_build_road()
 {

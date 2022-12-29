@@ -38,6 +38,16 @@ void Player::set_name(std::string new_name)
     m_name = new_name;
 }
 
+bool Player::get_first_turn() const
+{
+    return m_first_turn;
+}
+
+void Player::set_first_turn(bool value)
+{
+    m_first_turn = value;
+}
+
 /*Color Player::get_color(){
     return m_color;
 }

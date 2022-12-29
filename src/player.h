@@ -21,6 +21,9 @@ public:
     std::string get_name() const;
     void set_name(std::string new_name);
 
+    bool get_first_turn() const;
+    void set_first_turn(bool value);
+
     int get_id() const;
     Color get_color() const;
     int get_victory_points() const;
@@ -105,6 +108,8 @@ private:
 
     QColor m_player_color;
     QColor m_city_color;
+
+    bool m_first_turn = true;
 
 
 };

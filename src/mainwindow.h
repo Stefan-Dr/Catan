@@ -48,9 +48,16 @@ private slots:
 
     void on_rbON_toggled(bool checked);
     void on_rbOFF_toggled(bool checked);
+
     void on_pb_House_clicked();
+    void manageResourcesHouse();
+
     void on_pb_Road_clicked();
+    void manageResourcesRoad();
+
     void on_pb_Settlement_clicked();
+    void manageResourcesCity();
+
     void on_pushButton_clicked();
 
     void on_pbRollDice_clicked();

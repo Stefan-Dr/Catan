@@ -28,6 +28,7 @@ public:
     void setNode(Node *newNode);
     Node *getNode();
     static QColor m_color;
+    //QColor m_node_owner_color = Qt::white;
     bool get_is_house_built() const;
     void set_is_house_built(bool value);
     QString m_text = QString::fromStdString("");
