@@ -209,7 +209,12 @@ bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Pla
     return true;
 }
 void Player::take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank){
-    m_player_resource[res_type]+=amount;
+    //m_player_resource[res_type]+=amount;
+    for (int i = 0; i < amount; i++ ) { if ( res_type == ResourceType::Brick) { inc_num_of_brick(); } }
+    for (int i = 0; i < amount; i++ ) { if ( res_type == ResourceType::Wool) { inc_num_of_wool(); } }
+    for (int i = 0; i < amount; i++ ) { if ( res_type == ResourceType::Stone) { inc_num_of_stone(); } }
+    for (int i = 0; i < amount; i++ ) { if ( res_type == ResourceType::Wood) { inc_num_of_wood(); } }
+    for (int i = 0; i < amount; i++ ) { if ( res_type == ResourceType::Wheat) { inc_num_of_wheat(); } }
     bank.remove_resource_card(res_type,amount);
 
 }

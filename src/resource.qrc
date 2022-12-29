@@ -29,5 +29,6 @@
         <file>images/resources--ore.png</file>
         <file>images/resources--wool.png</file>
         <file>sounds/background_music.mp3</file>
+        <file>images/trade_button.png</file>
     </qresource>
 </RCC>

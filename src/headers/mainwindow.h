@@ -9,6 +9,7 @@
 #include <QWidget>
 #include "dice.h"
 #include "game.h"
+#include "resourcetype.h"
 #include <QMediaPlayer>
 class QGraphicsScene;
 class Node;
@@ -64,6 +65,8 @@ private slots:
 
 
     void on_pb_MagicCard_clicked();
+
+    void on_pbTrade_clicked();
 
 protected:
     Ui::MainWindow *ui;

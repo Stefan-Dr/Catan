@@ -6,6 +6,7 @@
 #include <string>
 #include <QMessageBox>
 #include "../headers/game.h"
+#include "../headers/resourcetype.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,6 +34,20 @@ MainWindow::MainWindow(QWidget *parent)
     m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
     m_music->setVolume(40);
     m_music->play();
+
+    //dodavenje izbora u prvi dropdown meni
+    ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--wheat.png"), "Wheat");
+    ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--wool.png"), "Wool");
+    ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--stone.png"), "Stone");
+    ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--wood.png"), "Wood");
+    ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--brick.png"), "Brick");
+
+    //dodavanje izbora u 2. dropdown meni
+    ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--wheat.png"), "Wheat");
+    ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--wool.png"), "Wool");
+    ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--stone.png"), "Stone");
+    ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--wood.png"), "Wood");
+    ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--brick.png"), "Brick");
 
     //m_board->addAllFields();
 
@@ -240,9 +255,10 @@ void MainWindow::on_pbRollDice_clicked()
 {
     //if(korisnik je opet klinuo na dugme za bacanje kockice)
         if(m_dice->get_button_clicked() == true){
-            ui->lbError->setText("Dice has been already roled!");
+            QMessageBox msgBox;
+            msgBox.setText("Dice already rolled!");
+            msgBox.exec();
         }else {
-            ui->lbError->setText("");
             m_dice->roll_dice();
             m_dice->set_button_is_clicked(true);
             m_dice->set_dice_is_rolled(true);
@@ -351,9 +367,7 @@ void MainWindow::manageResourcesHouse()
     displayResources();
     displayBankResources();
     displayPlayerPoints();
-    ui->lbError->setText("");
     if(m_game->win()){
-        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
         QMessageBox msgBox;
         msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
         int ret = msgBox.exec();
@@ -403,10 +417,7 @@ void MainWindow::manageResourcesRoad()
     displayBankResources();
     displayPlayerPoints();
     displayPlayerRoads();
-    ui->lbError->setText("");
     if(m_game->win()){
-
-        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
         QMessageBox msgBox;
         msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
         int ret = msgBox.exec();
@@ -461,9 +472,7 @@ void MainWindow::on_pb_MagicCard_clicked()
             displayResources();
             displayBankResources();
             displayPlayerPoints();
-            ui->lbError->setText("");
             if(m_game->win()){
-                ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
                 QMessageBox msgBox;
                 msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
                 int ret = msgBox.exec();
@@ -495,9 +504,7 @@ void MainWindow::manageResourcesCity()
     displayResources();
     displayBankResources();
     displayPlayerPoints();
-    ui->lbError->setText("");
     if(m_game->win()){
-        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
         QMessageBox msgBox;
         msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
         int ret = msgBox.exec();
@@ -511,7 +518,6 @@ void MainWindow::manageResourcesCity()
 void MainWindow::on_pushButton_clicked()
 {
 
-    ui->lbError->setText("");
     m_game->nextPlayer();
     if ( m_game->player_turn_counter < 4) { m_game->player_turn_counter++; }
     else { m_board->set_first_turn(false); }
@@ -526,4 +532,47 @@ void MainWindow::on_pushButton_clicked()
     m_dice->set_dice_is_rolled(false);
 }
 
+
+
+void MainWindow::on_pbTrade_clicked()
+{
+    m_board->m_setHouse = false;
+    m_board->m_setRoad = false;
+    m_board->m_setCity = false;
+    if(m_dice->get_dice_is_rolled() == true){
+        ResourceType player_resource = ResourceType::Wheat;
+        ResourceType bank_resource = ResourceType::Wheat;
+        int player_index = ui->cbTradePlayer->currentIndex();
+        int bank_index = ui->cbTradeBank->currentIndex();
+        //proveravamo sta je igrac odabrao za svoj resurs
+        if ( player_index == 0 ) { player_resource = ResourceType::Wheat; }
+        if ( player_index == 1 ) { player_resource = ResourceType::Wool; }
+        if ( player_index == 2 ) { player_resource = ResourceType::Stone; }
+        if ( player_index == 3 ) { player_resource = ResourceType::Wood; }
+        if ( player_index == 4 ) { player_resource = ResourceType::Brick; }
+        //proveravamo sta je igrac odabrao za resurs banke
+        if ( bank_index == 0 ) { bank_resource = ResourceType::Wheat; }
+        if ( bank_index == 1 ) { bank_resource = ResourceType::Wool; }
+        if ( bank_index == 2 ) { bank_resource = ResourceType::Stone; }
+        if ( bank_index == 3 ) { bank_resource = ResourceType::Wood; }
+        if ( bank_index == 4 ) { bank_resource = ResourceType::Brick; }
+
+        if (m_game->can_trade_with_bank(player_resource, bank_resource)){
+            m_game->trade_with_bank(player_resource, bank_resource);
+            displayResources();
+            displayBankResources();
+        }
+        else {
+            QMessageBox msgBox;
+            msgBox.setText("Not enough resources form a player or in bank for procceding!");
+            msgBox.exec();
+        }
+
+    }
+    else {
+        QMessageBox msgBox;
+        msgBox.setText("You must first roll dice!");
+        msgBox.exec();
+    }
+}
 
