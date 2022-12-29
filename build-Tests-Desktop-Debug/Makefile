@@ -57,13 +57,13 @@ SOURCES       = ../Tests/main.cpp \
 		../src/dice.cpp \
 		../src/node.cpp \
 		../src/road.cpp \
-		../Tests/bank_tests.cpp 
+		../src/player.cpp 
 OBJECTS       = main.o \
 		bank.o \
 		dice.o \
 		node.o \
 		road.o \
-		bank_tests.o
+		player.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -145,12 +145,12 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../src/dice.h \
 		../src/node.h \
 		../src/road.h \
-		../Tests/catch.hpp ../Tests/main.cpp \
+		../src/player.h ../Tests/main.cpp \
 		../src/bank.cpp \
 		../src/dice.cpp \
 		../src/node.cpp \
 		../src/road.cpp \
-		../Tests/bank_tests.cpp
+		../src/player.cpp
 QMAKE_TARGET  = Tests
 DESTDIR       = 
 TARGET        = Tests
@@ -334,8 +334,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../src/bank.h ../src/dice.h ../src/node.h ../src/road.h ../Tests/catch.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Tests/main.cpp ../src/bank.cpp ../src/dice.cpp ../src/node.cpp ../src/road.cpp ../Tests/bank_tests.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../src/bank.h ../src/dice.h ../src/node.h ../src/road.h ../src/player.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Tests/main.cpp ../src/bank.cpp ../src/dice.cpp ../src/node.cpp ../src/road.cpp ../src/player.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -399,10 +399,11 @@ node.o: ../src/node.cpp ../src/node.h
 road.o: ../src/road.cpp ../src/road.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o road.o ../src/road.cpp
 
-bank_tests.o: ../Tests/bank_tests.cpp ../Tests/catch.hpp \
+player.o: ../src/player.cpp ../src/player.h \
 		../src/bank.h \
-		../src/resourcetype.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bank_tests.o ../Tests/bank_tests.cpp
+		../src/resourcetype.h \
+		../src/color.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o player.o ../src/player.cpp
 
 ####### Install
 

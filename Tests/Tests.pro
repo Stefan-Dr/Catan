@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT += gui
+QT += core gui
 
 CONFIG += c++11
 
@@ -15,6 +15,7 @@ SOURCES +=     main.cpp     \
     ../src/dice.cpp \
     ../src/node.cpp \
     ../src/road.cpp \
+    ../src/player.cpp
     bank_tests.cpp
 
 HEADERS += \
@@ -22,4 +23,5 @@ HEADERS += \
     ../src/dice.h \
     ../src/node.h \
     ../src/road.h \
+    ../src/player.h
     catch.hpp
