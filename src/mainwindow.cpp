@@ -466,3 +466,4 @@ void MainWindow::on_pushButton_clicked()
     m_dice->set_dice_is_rolled(false);
 }
 
+
