@@ -613,6 +613,7 @@ void Board::addAllNodes(){
 
 
 void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
+
     //treba dodati if isto ovo dole == null da ne radi nista, da ne bi bacao signal za prekid rada
     //treba dodati u ovaj donji if, if pbRoadEnabled && itemAt...
     if(m_setRoad && itemAt(event->scenePos(), QTransform())->type() == 1){

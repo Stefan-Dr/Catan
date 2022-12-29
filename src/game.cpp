@@ -97,6 +97,13 @@ bool Game::wonPlayer4() {
  return m_player4->get_victory_points() == 10;
 }
 
+bool Game::win(){
+    return m_win;
+}
+
+void Game::setWin(bool x){
+    m_win = x;
+}
 //izgradnja
 
 void Game::BuildHouse(/*Node* node*/){
@@ -115,6 +122,9 @@ void Game::BuildHouse(/*Node* node*/){
                 m_currentPlayer->increase_num_of_houses();
 
                 m_currentPlayer->increase_victory_points(1);
+                if(m_currentPlayer->get_victory_points()>=10){
+                    setWin(true);
+                }
 
 }
 
@@ -130,6 +140,9 @@ void Game::BuildCity(/*Node* node*/){
             //menjanje broja izgradjenih objekata
             m_currentPlayer->decrease_num_of_houses();
             m_currentPlayer->increase_num_of_cities();
+            if(m_currentPlayer->get_victory_points()>=10){
+                setWin(true);
+            }
 
 }
 
@@ -145,6 +158,9 @@ void Game::BuildRoad(/*Road* road*/){
         if(m_currentPlayer->get_num_of_roads() == 7){
             m_currentPlayer->increase_victory_points(2);
         }
+        if(m_currentPlayer->get_victory_points()>=10){
+            setWin(true);
+        }
         //graficko postavljanje puta
 //    }
 
@@ -156,6 +172,9 @@ void Game::MagicCard(){
     m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,1,*m_bank);
     m_currentPlayer->return_resource_card_to_bank(ResourceType::Wool,1,*m_bank);
     m_currentPlayer->increase_victory_points(1);
+    if(m_currentPlayer->get_victory_points()>=10){
+        setWin(true);
+    }
 }
 
 

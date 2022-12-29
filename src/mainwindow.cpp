@@ -4,7 +4,7 @@
 #include "node.h"
 #include "gui_node.h"
 #include <string>
-
+#include <QMessageBox>
 #include "game.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -332,10 +332,16 @@ void MainWindow::on_pb_House_clicked()
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            ui->lbError->setText("Not enough resources for a house");
+
+            QMessageBox msgBox;
+            msgBox.setText("Not enough resources for a house");
+            msgBox.exec();
         }
     }else {
-        ui->lbError->setText("You must first roll dice!");
+
+        QMessageBox msgBox;
+        msgBox.setText("You must first roll dice!");
+        msgBox.exec();
     }
 
 }
@@ -347,6 +353,15 @@ void MainWindow::manageResourcesHouse()
     displayBankResources();
     displayPlayerPoints();
     ui->lbError->setText("");
+    if(m_game->win()){
+        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
+        QMessageBox msgBox;
+        msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
+        int ret = msgBox.exec();
+        if(ret == QMessageBox::Ok){
+           qApp->exit();
+        }
+    }
 }
 
 
@@ -369,10 +384,16 @@ void MainWindow::on_pb_Road_clicked()
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            ui->lbError->setText("Not enough resources for a road");
+
+            QMessageBox msgBox;
+            msgBox.setText("Not enough resources for a road");
+            msgBox.exec();
         }
     }else {
-       ui->lbError->setText("You must first roll dice!");
+
+       QMessageBox msgBox;
+       msgBox.setText("You must first roll dice!");
+       msgBox.exec();
    }
 }
 
@@ -384,6 +405,16 @@ void MainWindow::manageResourcesRoad()
     displayPlayerPoints();
     displayPlayerRoads();
     ui->lbError->setText("");
+    if(m_game->win()){
+
+        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
+        QMessageBox msgBox;
+        msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
+        int ret = msgBox.exec();
+        if(ret == QMessageBox::Ok){
+           qApp->exit();
+        }
+    }
 }
 
 void MainWindow::on_pb_Settlement_clicked()
@@ -406,10 +437,16 @@ void MainWindow::on_pb_Settlement_clicked()
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            ui->lbError->setText("Not enough resources for a city");
+
+            QMessageBox msgBox;
+            msgBox.setText("Not enough resources for a city");
+            msgBox.exec();
         }
     }else {
-        ui->lbError->setText("You must first roll dice!");
+
+        QMessageBox msgBox;
+        msgBox.setText("You must first roll dice!");
+        msgBox.exec();
     }
 }
 
@@ -426,15 +463,29 @@ void MainWindow::on_pb_MagicCard_clicked()
             displayBankResources();
             displayPlayerPoints();
             ui->lbError->setText("");
+            if(m_game->win()){
+                ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
+                QMessageBox msgBox;
+                msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
+                int ret = msgBox.exec();
+                if(ret == QMessageBox::Ok){
+                   qApp->exit();
+                }
+            }
 
         }else {
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            ui->lbError->setText("Not enough resources for a magic card");
+
+            QMessageBox msgBox;
+            msgBox.setText("Not enough resources for a magic card");
+            msgBox.exec();
         }
     }else {
-            ui->lbError->setText("You must first roll dice!");
+        QMessageBox msgBox;
+        msgBox.setText("You must first roll dice!");
+        msgBox.exec();
         }
 }
 
@@ -446,11 +497,21 @@ void MainWindow::manageResourcesCity()
     displayBankResources();
     displayPlayerPoints();
     ui->lbError->setText("");
+    if(m_game->win()){
+        ui->lbError->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
+        QMessageBox msgBox;
+        msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
+        int ret = msgBox.exec();
+        if(ret == QMessageBox::Ok){
+           qApp->exit();
+        }
+    }
 }
 
 //Next player button
 void MainWindow::on_pushButton_clicked()
 {
+
     ui->lbError->setText("");
     m_game->nextPlayer();
     if ( m_game->player_turn_counter < 4) { m_game->player_turn_counter++; }
