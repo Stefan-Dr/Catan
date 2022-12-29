@@ -203,21 +203,26 @@ void MainWindow::on_pbContinue_clicked(){
 
     if (con1 && con2 && con3 && con4){
         ui->lbPlayer1Name->setText(ui->lePlayer1->text());
+        m_game->getPlayer1()->set_name(ui->lePlayer1->text().toStdString());
         ui->lbPlayer2Name->setText(ui->lePlayer2->text());
+        m_game->getPlayer2()->set_name(ui->lePlayer2->text().toStdString());
         ui->lbPlayer3Name->setText(ui->lePlayer3->text());
+        m_game->getPlayer3()->set_name(ui->lePlayer3->text().toStdString());
         ui->lbPlayer4Name->setText(ui->lePlayer4->text());
+        m_game->getPlayer4()->set_name(ui->lePlayer4->text().toStdString());
         ui->stackedWidget->setCurrentIndex(4);
         m_board->setRoadColor(m_game->getCurrentPlayer()->get_player_color());
         m_board->addAllFields();
         //za svakog playera predstavljamo koliko resursa ima na pocetku
         displayResources();
-        m_game->nextPlayer();
-        displayResources();
-        m_game->nextPlayer();
-        displayResources();
-        m_game->nextPlayer();
-        displayResources();
-        m_game->nextPlayer();
+        ui->lbPlayerTurn->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
+//        m_game->nextPlayer();
+//        displayResources();
+//        m_game->nextPlayer();
+//        displayResources();
+//        m_game->nextPlayer();
+//        displayResources();
+//        m_game->nextPlayer();
 
         displayBankResources();
         displayPlayerPoints();
@@ -234,6 +239,7 @@ void MainWindow::on_pbRollDice_clicked()
         if(m_dice->get_button_clicked() == true){
             ui->lbError->setText("Dice has been already roled!");
         }else {
+            ui->lbError->setText("");
             m_dice->roll_dice();
             m_dice->set_button_is_clicked(true);
             m_dice->set_dice_is_rolled(true);
@@ -383,9 +389,12 @@ void MainWindow::on_pb_Settlement_clicked()
     }
 }
 
+//Next player button
 void MainWindow::on_pushButton_clicked()
 {
+    ui->lbError->setText("");
     m_game->nextPlayer();
+    ui->lbPlayerTurn->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
     m_board->m_setHouse = false;
     m_board->m_setRoad = false;
     m_board->m_setCity = false;

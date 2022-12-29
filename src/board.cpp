@@ -619,7 +619,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             if(!m_hasTmp){
                 this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
                 Node* node = m_tmp->getNode();
-                setHasTmp(true);
+                if (this->m_tmp->get_is_end_of_road()) { setHasTmp(true); }
             }
             else{
                 GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
@@ -628,6 +628,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
                     GUI_Road* road = new GUI_Road(m_tmp, node);
                     road->set_pen(getRoadColor());
                     addItem(road);
+                    node->set_is_end_of_road(true);
                     m_setRoad = false;
 
 
@@ -664,6 +665,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             else  {gui_node->getNode()->set_owner(4);}
         }
         m_setHouse = false;
+        gui_node->set_is_end_of_road(true);
         //emit nodeChanged();
         //connect(node,&Board::nodeChanged,this,&Board::Redraw);
 

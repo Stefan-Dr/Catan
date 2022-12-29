@@ -28,6 +28,16 @@ Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color c
 
 }
 
+std::string Player::get_name() const
+{
+    return m_name;
+}
+
+void Player::set_name(std::string new_name)
+{
+    m_name = new_name;
+}
+
 /*Color Player::get_color(){
     return m_color;
 }
