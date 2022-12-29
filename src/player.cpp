@@ -18,11 +18,11 @@ Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color c
       m_player_resource[ResourceType::Wool] = 15;
 
       //na pocetku igre svaki igrac ima resursa za izgradnju 2 kuce i 2 puta
-      m_num_of_wood = 4;
+      m_num_of_wood = 40;
       m_num_of_stone = 0;
-      m_num_of_brick = 4;
-      m_num_of_wheat = 2;
-      m_num_of_wool = 2;
+      m_num_of_brick = 40;
+      m_num_of_wheat = 20;
+      m_num_of_wool = 20;
 
 
 
@@ -36,6 +36,16 @@ std::string Player::get_name() const
 void Player::set_name(std::string new_name)
 {
     m_name = new_name;
+}
+
+bool Player::get_first_turn() const
+{
+    return m_first_turn;
+}
+
+void Player::set_first_turn(bool value)
+{
+    m_first_turn = value;
 }
 
 /*Color Player::get_color(){

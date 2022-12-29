@@ -40,6 +40,15 @@ public:
     bool m_setHouse = false;
     bool m_setRoad = false;
     bool m_setCity = false;
+
+    bool is_first_turn() const;
+    void set_first_turn(bool value);
+
+signals:
+    void manageResourcesHouse();
+    void manageResourcesRoad();
+    void manageResourcesCity();
+
 public slots:
     void Redraw();
     void setHouse(bool x);
@@ -51,6 +60,7 @@ private:
     GUI_Node* m_tmp;
     QColor m_curr_color;
     QColor m_road_color;
+    bool m_first_turn = true;
 
 };
 

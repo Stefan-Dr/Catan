@@ -67,6 +67,8 @@ public:
     void dec_resources_house();
     void dec_resources_city();
 
+    int player_turn_counter = 1;
+
     //treba private
     Player *next_player;
 

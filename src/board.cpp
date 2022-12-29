@@ -629,6 +629,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
                     road->set_pen(getRoadColor());
                     addItem(road);
                     node->set_is_end_of_road(true);
+                    emit manageResourcesRoad();
                     m_setRoad = false;
 
 
@@ -643,6 +644,11 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
         Redraw();
         GUI_Node *gui_node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
+        //provera da li je prvi potez
+
+        if ( !is_first_turn() && !gui_node->get_is_end_of_road() )
+                return;
+
         //provera za node da li na susednim cvorovima ima izgradjenih obejkata
         auto node_neighbours = gui_node->Node_get()->get_neighbours();
         int neighbours_are_occupied = 0;
@@ -655,7 +661,10 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         //prvo proveravamo da li nema nicega sagradjenog da mozemo da sagradimo kucu
         if (!gui_node->get_is_house_built() && neighbours_are_occupied == 0){
             gui_node->setBrush(QBrush(getCurrColor()));
+            //gui_node->m_node_owner_color = getCurrColor();
             gui_node->set_is_house_built(true);
+            gui_node->set_is_end_of_road(true);
+            emit manageResourcesHouse();
             gui_node->getNode()->set_is_house_built(true);
             //gui_node->getNode()->set_owner()
             //postavljanje ownera node-a kada sagradi kucu
@@ -665,7 +674,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             else  {gui_node->getNode()->set_owner(4);}
         }
         m_setHouse = false;
-        gui_node->set_is_end_of_road(true);
+
         //emit nodeChanged();
         //connect(node,&Board::nodeChanged,this,&Board::Redraw);
 
@@ -678,6 +687,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         if (node->get_is_house_built() && node->check_owner_city(getCurrColor())){
             node->setBrush(QBrush(getCurrColor()));
             m_setCity = false;
+            emit manageResourcesCity();
         }
         //node->setBrush(QBrush(getCurrColor()));
 
@@ -712,6 +722,16 @@ void Board::setRoadColor(QColor color)
 QColor Board::getRoadColor()
 {
     return m_road_color;
+}
+
+bool Board::is_first_turn() const
+{
+    return m_first_turn;
+}
+
+void Board::set_first_turn(bool value)
+{
+    m_first_turn = value;
 }
 
 /*
