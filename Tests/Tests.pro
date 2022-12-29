@@ -15,7 +15,8 @@ SOURCES +=     main.cpp     \
     ../src/dice.cpp \
     ../src/node.cpp \
     ../src/road.cpp \
-    bank_tests.cpp
+    bank_tests.cpp \
+    road_tests.cpp
 
 HEADERS += \
     ../src/bank.h \
