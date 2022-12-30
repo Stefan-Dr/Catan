@@ -1,40 +1,25 @@
- •Kratak opis igre: Igrac zapocinje jednu partiju igre iz glavnog menija aplikacije. Aplikacija ucitava podesavanja partije kao i asete potrebne za odigravanje jedne partije. Nakon odigrane partije aplikacija skladisti podatke o odigranoj partiji.
- 
+Opis slucajeva upotrebe:
+•Kratak opis igre: Igrac zapocinje jednu partiju igre iz glavnog menija aplikacije. Aplikacija ucitava podesavanja partije kao i asete potrebne za odigravanje jedne partije. Nakon odigrane partije aplikacija skladisti podatke o odigranoj partiji.
  •Akteri: 
  -Igrac
- -Bot
- 
  •Preduslovi: Aplikacija je pokrenuta i prikazuje glavni meni 
  •Postuslovi: Informacije o odigranoj partiji se trajno cuvaju
- 
  •Osnovni tok:
- 
- 1. Igrac bira dugme "Zapocni igru" iz glavnog menija
-      1.1.1. Potrebno je da se ostala 3 igraca prikljuce partiji
-        1.1.2. Ukoliko se u roku od 2 minuta nisu ostala 3 igraca priklucila partiji, aplikacija se vraca na pocetni meni
-        1.1.3. Ukoliko su se svi igraci prikljucili partiji prelazi se na korak 2.
-    
-2. Aplikacija dohvata informacije o podesavanjima partije.
-3. Aplikacija konstruise novu partiju i zapocinje je.
-4. Svaki od igraca baca 2 kockice, na osnovu cega se odlucuje redosled igraca koji su na potezu, pri cemu najvecu prednost ima igrac sa najvecim zbirom dobijenih brojeva na kockicama
-    4.1 U slucaju da su 2 ili vise igraca dobila isti broj pri bacanju kockica, ponavlja se bacanje izmedju tih igraca iznova dok god se ne ustanovi redosled igranja, pridrzavajuci se rasporeda odredjenog prilikom prethodnog bacanja
-5. Postavljanje jednog naselja i jednog puta koji je vezan za to isto naselje u polja koja nisu vec zauzeta u narednom redosledu:
-    5.1 Na osnovu redosleda igraca utvrdjenog u koraku 4. igraci izvrsvaju akciju opisanu u koraku 5.
-        5.1.1 Uslov za postavljanje naselja na odredjeno polje jeste da ne postoji nijedno drugo naselje na bilo kom od susednih polja
-            5.1.1.1 Polja su susedna ukoliko ih razdvaja samo jedan putic
-    5.2 Obrnutim redosledom u odnosu na korak 5.1 svaki igrac izvrsava akciju opisanu u koraku 5. pri cemu u zavisnosti od mesta postavljanja naselja dobija po jednu karticu od svakog resursa koji je pokriven tim naseljem
+1. Igrac bira dugme "Zapocni igru" iz glavnog menija
+2. Svaki od igraca upisuje zeljeno ime u adekvatno polje za odredjenog igraca 
+3. Aplikacija dohvata informacije o podesavanjima partije.
+4. Aplikacija konstruise novu partiju i zapocinje je.
+5. Postavljanje 2 naselja i 2 puta koji je vezan za to isto naselje u polja koja nisu vec zauzeta u narednom redosledu:
+	5.1 Uslov za postavljanje naselja na odredjeno polje jeste da ne postoji nijedno drugo naselje na bilo kom od susednih polja
+		5.1.1 Polja su susedna ukoliko ih razdvaja samo jedan putic
+    5.2 Igrac dobija po 1 resurs odgovarajuceg tipa, u odnosu na pozicije postavljanih kuca
 6. Sve dok neki igrac ne dostigne 10 poena ponavljaju se sledeci koraci redosledom utvrdjenim u koraku 5.:
-    6.1 Igrac ima 10 sekundi za bacanje dve kockice i u zavisnosti od zbira brojeva na kocikcama se postupa na sledeci nacin:
-    	6.1.1. Ukoliko je dobijeni zbir na kockicama jednak broju 7 postupa se po sledecim pravilima
-    		6.1.1.1. Svaki od igraca koji u trenutku desavanja dogadjaja opisanog u koraku 6.1.1. koji kod sebe ima ukupno vise od 7 karata bilo kog od resursa mora da oslobodi proizvoljnih pola resursa nazad u banku
-    		6.1.1.2. Igrac koji je bacao kockice u dogadjaju opisanom u koraku 6.1.1. dobija posebnu sposobnost u vidu pijuna
-    		6.1.1.3 Postavljanjem pijuna na neko od polja igrac ostvaruje pravo na oduzimanje jednog od resursa po slucajnom izboru igracu koji je to polje zauzeo
-    			6.1.1.3.1. Ukoliko je jedno polje zauzeto od strane vise igraca, igrac bira od kog igraca ce resurs biti oduzet
+    6.1 Igrac baca dve kockice i u zavisnosti od zbira brojeva na kocikcama se postupa na sledeci nacin:
+		6.1.1. Ukoliko je dobijeni zbir na kockicama jednak broju 7 ne desava se nista
     	
-    	6.1.2. Ukoliko je dobijeni zbir na kockicama razlicit od broja 7 postupa se po sledecim pravilima
-        	6.1.2.1 Ukoliko igrac ima izgradjenu kucicu koja pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 6.1 dobija jednu karticu resursa na kome se nalazi taj broj
-        	6.1.2.2 Ukoliko igrac ima izgradjen grad koji pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 6.1 dobija dve kartice resursa na kome se nalazi taj broj
-    6.2 Svaki igrac ima 2 minuta na raspolaganju za odigravanje svog poteza 
+    		6.1.2. Ukoliko je dobijeni zbir na kockicama razlicit od broja 7 postupa se po sledecim pravilima
+        		6.1.2.1 Ukoliko igrac ima izgradjenu kucicu koja pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 6.1 dobija jednu karticu resursa na kome se nalazi taj broj
+        		6.1.2.2 Ukoliko igrac ima izgradjen grad koji pokriva neko polje na kome se nalazi broj jednak dobijenom zbiru kockica iz koraka 6.1 dobija dve kartice resursa na kome se nalazi taj broj 
     6.3 U okviru svog poteza svaki igrac moze izgraditi neki objekat ili kupiti magicnu karticu pod sledecim uslovima:
         6.3.1 Da bi igrac sagradio jedan putic potrebna mu je jedna kartica resursa gline i jedna kartica resursa drveta
         6.3.2 Da bi igrac sagradio jedno naselje potrebna mu je jedna kartica resursa sena, jedna kratica resursa gline, jedna kartica resursa drveta i jedna kartica resursa ovce
@@ -44,22 +29,17 @@
         6.3.5 Prilikom svake izgradje nekog objekta ili kupovine magicne kartice igrac vraca banci odredjeni broj resursa pod stavkama 6.3.1 , 6.3.2 , 6.3.3 , 6.3.4
     6.4 U svakom potezu svaki igrac ima pravo da banci vrati, ukoliko ima mogucnost, 4 kartice istog resursa i da uzme iz banke jednu karticu resursa po zelji
     
-    6.5 Potez svakog igraca se zavrsava ukoliko pritisne dugme "Dalje" ili istekne vreme predvidjeno za svaki potez i tada se prelazi na sledeceg igraca po rasporedu utvrdjenom u koraku 4.
+    6.5 Potez svakog igraca se zavrsava ukoliko pritisne dugme "Dalje"  i tada se prelazi na sledeceg igraca.
 7. Poeni se dobijaju na sledeci nacin:
     7.1 Za svako izgradjeno naselje igrac dobija jedan poena
-    7.2 Za svaki izgradjeni grad  igrac dobija dva poena ali gubi jedan poena jer se grad gradi na mestu nekog od naselja tog igraca
-    7.3 Ukoliko igrac ima vise od pet povezanih putica, i ako niko od ostalih igraca nema vise poveznih putica od njega, igrad dobija dva poena
-        7.3.1 Dva poena dobijena za najvise povezanih putica igrac moze izgubiti u slucaju da drugi igrac u medjuvremenu sagradi vise povezanih putica od njega
-8. Na kraju svake partije informacije o odigranoj partiji se cuvaju.
-9. Aplikacija prikazuje glavni meni.
+    7.2 Za svaki izgradjeni grad igrac dobija dva poena ali gubi jedan poen jer se grad gradi na mestu nekog od naselja tog igraca
+    7.3 Ukoliko igrac ima vise od 7 putica, i ako niko od ostalih igraca nema vise putica od njega, igrad dobija dva poena
+        7.3.1 Dva poena dobijena za najvise putica igrac moze izgubiti u slucaju da drugi igrac u medjuvremenu sagradi vise povezanih putica od njega
+8. Na kraju svake partije informacije o pobedniku se prikazuju u odgovarajuce prozoru.
 
 • Alternativni tokovi:
-– A1: Neocekivani izlaz iz aplikacije. U slucaju da u bilo kom koraku korisnik iskljuci aplikaciju, sve eventualno zapamcene informacije o trenutnoj partiji igre se            ponistavaju i aplikacija prestaje sa radom. Slucaj upotrebe se zavrsava.
+– A1: Neocekivani izlaz iz aplikacije. U slucaju da u bilo kom koraku korisnik iskljuci aplikaciju, sve eventualno zapamcene informacije o trenutnoj partiji igre se ponistavaju i aplikacija prestaje sa radom. Slucaj upotrebe se zavrsava.
 
 •Podtokovi: /
-
 •Specijalni zahtevi: /
-
 •Dodatne informacije: Tokom trajanja partije, aplikacija pamti informacije o broju poena svakog od igraca
-
-    

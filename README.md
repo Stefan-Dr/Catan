@@ -25,6 +25,8 @@
 - 2. Klonirati repozitorijum komandom: `$ git clone https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2022-2023/06-catan.git`
 - 3. Otvoriti okruzenje *Qt Creator* i u njemu otvoriti Catan.pro fajl
 - 4. Pritisnuti dugme Run u donjem levom uglu ekrana
+- 4. Ukolike se pri Build-ovanju pojave greske pri kompilaciji potrebno je otvoriti moc_board.cpp i zakomentarisati linije pod rednim brojem 95, 111, 119
+
 <br><br>
 
 
