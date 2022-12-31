@@ -30,9 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesHouse, this, &MainWindow::manageResourcesHouse);
     connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesRoad, this, &MainWindow::manageResourcesRoad);
     connect(dynamic_cast<Board*>(m_board), &Board::manageResourcesCity, this, &MainWindow::manageResourcesCity);
-    connect(dynamic_cast<Board*>(m_board), &Board::invalidHouse, this, &MainWindow::invalidHouse);
-    connect(dynamic_cast<Board*>(m_board), &Board::invalidRoad, this, &MainWindow::invalidRoad);
-    connect(dynamic_cast<Board*>(m_board), &Board::invalidCity, this, &MainWindow::invalidCity);
 
     m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
     m_music->setVolume(40);
@@ -352,7 +349,7 @@ void MainWindow::on_pb_House_clicked()
             m_board->m_setCity = false;
 
             QMessageBox msgBox;
-            msgBox.setText("Not enough resources for a house!");
+            msgBox.setText("Not enough resources for a house");
             msgBox.exec();
         }
     }else {
@@ -378,23 +375,6 @@ void MainWindow::manageResourcesHouse()
            qApp->exit();
         }
     }
-    else {
-        houseBuilt();
-    }
-}
-
-void MainWindow::houseBuilt()
-{
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a house!");
-    msgBox.exec();
-}
-
-void MainWindow::invalidHouse()
-{
-    QMessageBox msgBox;
-    msgBox.setText("Invalid house placement!");
-    msgBox.exec();
 }
 
 
@@ -419,7 +399,7 @@ void MainWindow::on_pb_Road_clicked()
             m_board->m_setCity = false;
 
             QMessageBox msgBox;
-            msgBox.setText("Not enough resources for a road!");
+            msgBox.setText("Not enough resources for a road");
             msgBox.exec();
         }
     }else {
@@ -445,23 +425,6 @@ void MainWindow::manageResourcesRoad()
            qApp->exit();
         }
     }
-    else {
-        roadBuilt();
-    }
-}
-
-void MainWindow::roadBuilt()
-{
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a road!");
-    msgBox.exec();
-}
-
-void MainWindow::invalidRoad()
-{
-    QMessageBox msgBox;
-    msgBox.setText("Invalid road placement!");
-    msgBox.exec();
 }
 
 void MainWindow::on_pb_Settlement_clicked()
@@ -486,7 +449,7 @@ void MainWindow::on_pb_Settlement_clicked()
             m_board->m_setCity = false;
 
             QMessageBox msgBox;
-            msgBox.setText("Not enough resources for a city!");
+            msgBox.setText("Not enough resources for a city");
             msgBox.exec();
         }
     }else {
@@ -517,9 +480,6 @@ void MainWindow::on_pb_MagicCard_clicked()
                    qApp->exit();
                 }
             }
-            else {
-                magicCardDrawn();
-            }
 
         }else {
             m_board->m_setHouse = false;
@@ -527,7 +487,7 @@ void MainWindow::on_pb_MagicCard_clicked()
             m_board->m_setCity = false;
 
             QMessageBox msgBox;
-            msgBox.setText("Not enough resources for a magic card!");
+            msgBox.setText("Not enough resources for a magic card");
             msgBox.exec();
         }
     }else {
@@ -552,23 +512,6 @@ void MainWindow::manageResourcesCity()
            qApp->exit();
         }
     }
-    else {
-        cityBuilt();
-    }
-}
-
-void MainWindow::cityBuilt()
-{
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a city!");
-    msgBox.exec();
-}
-
-void MainWindow::invalidCity()
-{
-    QMessageBox msgBox;
-    msgBox.setText("Invalid city placement!");
-    msgBox.exec();
 }
 
 //Next player button
@@ -618,7 +561,6 @@ void MainWindow::on_pbTrade_clicked()
             m_game->trade_with_bank(player_resource, bank_resource);
             displayResources();
             displayBankResources();
-            tradeSuccessfull();
         }
         else {
             QMessageBox msgBox;
@@ -632,21 +574,5 @@ void MainWindow::on_pbTrade_clicked()
         msgBox.setText("You must first roll dice!");
         msgBox.exec();
     }
-}
-
-void MainWindow::tradeSuccessfull()
-{
-    QMessageBox msgBox;
-    msgBox.setText("Trade successfull!");
-    msgBox.exec();
-
-}
-
-void MainWindow::magicCardDrawn()
-{
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully drawn a magic card!");
-    msgBox.exec();
-
 }
 

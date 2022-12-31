@@ -621,7 +621,6 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
                 this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
                 Node* node = m_tmp->getNode();
                 if (this->m_tmp->get_is_end_of_road()) { setHasTmp(true); }
-                else { emit invalidRoad(); }
             }
             else{
                 GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
@@ -648,11 +647,8 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         GUI_Node *gui_node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
         //provera da li je prvi potez
 
-        if ( !is_first_turn() && !gui_node->get_is_end_of_road() ){
-            emit invalidHouse();
-            return;
-        }
-
+        if ( !is_first_turn() && !gui_node->get_is_end_of_road() )
+                return;
 
         //provera za node da li na susednim cvorovima ima izgradjenih obejkata
         auto node_neighbours = gui_node->Node_get()->get_neighbours();
@@ -678,7 +674,6 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             else if (getCurrColor() == Qt::green) {gui_node->getNode()->set_owner(3);}
             else  {gui_node->getNode()->set_owner(4);}
         }
-        else { emit invalidHouse(); }
         m_setHouse = false;
 
         //emit nodeChanged();
@@ -694,9 +689,6 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
             node->setBrush(QBrush(getCurrColor()));
             m_setCity = false;
             emit manageResourcesCity();
-        }
-        else {
-            emit invalidCity();
         }
         //node->setBrush(QBrush(getCurrColor()));
 
