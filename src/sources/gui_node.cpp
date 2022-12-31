@@ -7,7 +7,7 @@ GUI_Node::GUI_Node(Node *node)
     : QGraphicsObject()
     , m_node(node)
 {
-    setFlags(GraphicsItemFlag::ItemIsSelectable | GraphicsItemFlag::ItemIsMovable);
+    setFlags(GraphicsItemFlag::ItemIsSelectable);
     setAcceptHoverEvents(true);
 
 }
@@ -109,7 +109,7 @@ void GUI_Node::setNode(Node *newNode)
     m_node = newNode;
 }
 
-Node* GUI_Node::getNode()
+Node* GUI_Node::getNode() const
 {
     return m_node;
 }

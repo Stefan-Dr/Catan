@@ -245,54 +245,44 @@ void Game::Turn(int result, Board* board){
                         if(i->get_res_type() == ResourceType::Brick){
                             m_players[j->get_owner()-1]->inc_num_of_brick();
                             m_bank->remove_resource_card(ResourceType::Brick,1);
-                            break;
                         }
                         else if(i->get_res_type() == ResourceType::Stone){
                             m_players[j->get_owner()-1]->inc_num_of_stone();
                             m_bank->remove_resource_card(ResourceType::Stone,1);
-                            break;
                         }
                         else if(i->get_res_type() == ResourceType::Wheat){
                             m_players[j->get_owner()-1]->inc_num_of_wheat();
                             m_bank->remove_resource_card(ResourceType::Wheat,1);
-                            break;
                         }
                         else if(i->get_res_type() == ResourceType::Wood){
                             m_players[j->get_owner()-1]->inc_num_of_wood();
                             m_bank->remove_resource_card(ResourceType::Wood,1);
-                            break;
                         }
                         else{
                             m_players[j->get_owner()-1]->inc_num_of_wool();
                             m_bank->remove_resource_card(ResourceType::Wool,1);
-                            break;
                         }
                     }
                     if(j->get_is_city_built()){
                           if(i->get_res_type() == ResourceType::Brick){
                                m_players[j->get_owner()-1]->double_inc_num_of_brick();
                                m_bank->remove_resource_card(ResourceType::Brick,2);
-                               break;
                           }
                           else if(i->get_res_type() == ResourceType::Stone){
                                m_players[j->get_owner()-1]->double_inc_num_of_stone();
                                m_bank->remove_resource_card(ResourceType::Stone,2);
-                               break;
                           }
                           else if(i->get_res_type() == ResourceType::Wheat){
                                m_players[j->get_owner()-1]->double_inc_num_of_wheat();
                                m_bank->remove_resource_card(ResourceType::Wheat,2);
-                               break;
                           }
                           else if(i->get_res_type() == ResourceType::Wood){
                                m_players[j->get_owner()-1]->double_inc_num_of_wood();
                                m_bank->remove_resource_card(ResourceType::Wood,2);
-                               break;
                           }
                           else{
                                m_players[j->get_owner()-1]->double_inc_num_of_wool();
                                m_bank->remove_resource_card(ResourceType::Wool,2);
-                               break;
                           }
 
                     }

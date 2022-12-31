@@ -54,7 +54,6 @@ signals:
 
 public slots:
     void Redraw();
-//    void setHouse(bool x);
 
 
 private:

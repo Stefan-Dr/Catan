@@ -26,7 +26,7 @@ public:
     QPointF CenterPosition();
 //    Node *node() const;
     void setNode(Node *newNode);
-    Node *getNode();
+    Node *getNode() const;
     static QColor m_color;
     //QColor m_node_owner_color = Qt::white;
     bool get_is_house_built() const;

@@ -4,13 +4,13 @@
 - Strateska drustvena igra u kojoj se 4 igraca medjusobno takmice tako sto dobijaju resurse u zavisnosti od bacanja kockica, koje kasnije koriste u izgradnji puteva, naselja i gradova. Pobednik je onaj ko prvi stigne do 10 poena. <br><br>
 
 ## :movie_camera: Demo snimak projekta 
-- link: [Catan]() <br><br>
+- link: [Catan](https://www.youtube.com/watch?v=ufzqkQhe1UI) <br><br>
 
-## Okruzenje
+## :black_circle: Okruzenje
 - [![qtCreator](https://img.shields.io/badge/IDE-Qt_Creator-olivia)](https://www.qt.io/download) <br><br>
 
 
-## Programski jezik
+## :white_circle: Programski jezik
 - [![c_plus_plus](https://img.shields.io/badge/Language-C%2B%2B-red)](https://www.cplusplus.com/)  *C++17*  <br>
 - [![qt5](https://img.shields.io/badge/Framework-Qt5-blue)](https://doc.qt.io/qt-6/)  <br><br>
 
@@ -18,8 +18,10 @@
 ## :hammer: Instalacija :
 - Preuzeti i instalirati [*Qt* i *Qt Creator*](https://www.qt.io/download).
 - Ako je to potrebno,  nadograditi verziju C++ na C++17 
-- Instalirati QtMultimedia modul
 <br><br>
+
+## :notebook: Biblioteke :
+- QtMultimedia
 
 
 ## :wrench: Preuzimanje i pokretanje :
