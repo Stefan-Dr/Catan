@@ -616,10 +616,10 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
 
     //treba dodati if isto ovo dole == null da ne radi nista, da ne bi bacao signal za prekid rada
     //treba dodati u ovaj donji if, if pbRoadEnabled && itemAt...
-    if(m_setRoad && itemAt(event->scenePos(), QTransform())->type() == 1){
+    if(m_setRoad && itemAt(event->scenePos(), QTransform())/*->type() == 1*/){
             if(!m_hasTmp){
                 this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
-                Node* node = m_tmp->getNode();
+                //Node* node = m_tmp->getNode();
                 if (this->m_tmp->get_is_end_of_road()) { setHasTmp(true); }
                 else { emit invalidRoad(); }
             }
@@ -643,7 +643,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
         }
 
     //kliknuto dugme za kucu (u mainwindow je implementacija) pa moze da se crta
-    if(m_setHouse && (itemAt(event->scenePos(),QTransform())->type()==1)){
+    if(m_setHouse && (itemAt(event->scenePos(),QTransform())/*->type()==1*/)){
         Redraw();
         GUI_Node *gui_node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
         //provera da li je prvi potez
@@ -686,7 +686,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
 
     }
     //kliknuto dugme za city (u mainwindow je implementacija) pa moze da se crta
-    if(m_setCity && (itemAt(event->scenePos(),QTransform())->type()==1)){
+    if(m_setCity && (itemAt(event->scenePos(),QTransform())/*->type()==1*/)){
         Redraw();
         GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
         //provera da li postoji kuca i da li ta kuca pripada igracu na potezu ili da li je vec izgradjen grad na tom cvoru

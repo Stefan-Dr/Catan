@@ -104,6 +104,11 @@ QPointF GUI_Node::CenterPosition() {
     return pos() + QPointF(18, 18);
 }
 
+void GUI_Node::setNode(Node *newNode)
+{
+    m_node = newNode;
+}
+
 Node* GUI_Node::getNode()
 {
     return m_node;
@@ -116,7 +121,7 @@ bool GUI_Node::get_is_house_built() const
 
 void GUI_Node::set_is_house_built(bool value)
 {
-    m_is_house_built = true;
+    m_is_house_built = value;
 }
 
 bool GUI_Node::check_owner_city(QColor color)

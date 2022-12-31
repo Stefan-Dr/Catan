@@ -17,7 +17,9 @@
 
 ## :hammer: Instalacija :
 - Preuzeti i instalirati [*Qt* i *Qt Creator*](https://www.qt.io/download).
-- Ako je to potrebno,  nadograditi verziju C++ na C++17 <br><br>
+- Ako je to potrebno,  nadograditi verziju C++ na C++17 
+- Instalirati QtMultimedia modul
+<br><br>
 
 
 ## :wrench: Preuzimanje i pokretanje :
@@ -25,7 +27,6 @@
 - 2. Klonirati repozitorijum komandom: `$ git clone https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2022-2023/06-catan.git`
 - 3. Otvoriti okruzenje *Qt Creator* i u njemu otvoriti Catan.pro fajl
 - 4. Pritisnuti dugme Run u donjem levom uglu ekrana
-- 4. Ukolike se pri Build-ovanju pojave greske pri kompilaciji potrebno je otvoriti kliknuti na gresku "undefined refference to "..." " koja ce vas pozicionirati u moc_board.cpp i treba zakomentarisati liniju na koju vas je Qt pozicionirao (u vecini slucajeva neke od 95, 108, 112, 111, 119...)
 <br><br>
 
 

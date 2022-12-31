@@ -35,8 +35,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(dynamic_cast<Board*>(m_board), &Board::invalidCity, this, &MainWindow::invalidCity);
 
     m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
-    m_music->setVolume(40);
     m_music->play();
+    m_music->setVolume(2);
+
 
     //dodavenje izbora u prvi dropdown meni
     ui->cbTradePlayer->addItem(QIcon("qrc:/resources/images/resources--wheat.png"), "Wheat");
