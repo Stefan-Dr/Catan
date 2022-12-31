@@ -24,9 +24,9 @@ public:
     inline QBrush getBrush(){return m_brush;}
     int type() const override;
     QPointF CenterPosition();
-    Node *node() const;
+//    Node *node() const;
     void setNode(Node *newNode);
-    Node *getNode();
+    Node *getNode() const;
     static QColor m_color;
     //QColor m_node_owner_color = Qt::white;
     bool get_is_house_built() const;
@@ -39,6 +39,9 @@ public:
 
     bool get_is_end_of_road() const;
     void set_is_end_of_road(bool value);
+
+    bool get_is_city_built() const;
+    void set_is_city_built(bool value);
 
 
 signals:
@@ -57,9 +60,10 @@ private:
   //  qreal m_y;
 
     QBrush m_brush = QBrush(Qt::white);
-    Q_PROPERTY(Node *node READ node WRITE setNode NOTIFY nodeChanged)
+    Q_PROPERTY(Node *node READ getNode WRITE setNode NOTIFY nodeChanged)
     bool m_is_house_built = false;
     bool m_is_end_of_road = false;
+    bool m_is_city_built = false;
 };
 
 #endif // GUI_NODE_H

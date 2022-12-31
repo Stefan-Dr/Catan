@@ -4,20 +4,24 @@
 - Strateska drustvena igra u kojoj se 4 igraca medjusobno takmice tako sto dobijaju resurse u zavisnosti od bacanja kockica, koje kasnije koriste u izgradnji puteva, naselja i gradova. Pobednik je onaj ko prvi stigne do 10 poena. <br><br>
 
 ## :movie_camera: Demo snimak projekta 
-- link: [Catan]() <br><br>
+- link: [Catan](https://www.youtube.com/watch?v=ufzqkQhe1UI) <br><br>
 
-## Okruzenje
+## :black_circle: Okruzenje
 - [![qtCreator](https://img.shields.io/badge/IDE-Qt_Creator-olivia)](https://www.qt.io/download) <br><br>
 
 
-## Programski jezik
+## :white_circle: Programski jezik
 - [![c_plus_plus](https://img.shields.io/badge/Language-C%2B%2B-red)](https://www.cplusplus.com/)  *C++17*  <br>
 - [![qt5](https://img.shields.io/badge/Framework-Qt5-blue)](https://doc.qt.io/qt-6/)  <br><br>
 
 
 ## :hammer: Instalacija :
 - Preuzeti i instalirati [*Qt* i *Qt Creator*](https://www.qt.io/download).
-- Ako je to potrebno,  nadograditi verziju C++ na C++17 <br><br>
+- Ako je to potrebno,  nadograditi verziju C++ na C++17 
+<br><br>
+
+## :notebook: Biblioteke :
+- QtMultimedia
 
 
 ## :wrench: Preuzimanje i pokretanje :
@@ -25,7 +29,6 @@
 - 2. Klonirati repozitorijum komandom: `$ git clone https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2022-2023/06-catan.git`
 - 3. Otvoriti okruzenje *Qt Creator* i u njemu otvoriti Catan.pro fajl
 - 4. Pritisnuti dugme Run u donjem levom uglu ekrana
-- 4. Ukolike se pri Build-ovanju pojave greske pri kompilaciji potrebno je otvoriti kliknuti na gresku "undefined refference to "..." " koja ce vas pozicionirati u moc_board.cpp i treba zakomentarisati liniju na koju vas je Qt pozicionirao (u vecini slucajeva neke od 95, 108, 112, 111, 119...)
 <br><br>
 
 

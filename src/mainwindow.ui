@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Catan</string>
   </property>
   <property name="styleSheet">
    <string notr="true">border-image: url(:/resources/images/pozadina.jpg) 0 0 0 0 stretch stretch;</string>
@@ -2450,9 +2450,9 @@ border-radius: 10%;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>600</x>
+        <x>598</x>
         <y>0</y>
-        <width>49</width>
+        <width>51</width>
         <height>46</height>
        </rect>
       </property>
@@ -2468,7 +2468,7 @@ border-radius: 10%;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>49</width>
+        <width>51</width>
         <height>46</height>
        </rect>
       </property>
@@ -2483,8 +2483,8 @@ border-radius: 10%;</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>600</y>
-        <width>49</width>
+        <y>40</y>
+        <width>51</width>
         <height>46</height>
        </rect>
       </property>
@@ -2681,9 +2681,9 @@ border-radius: 10%;</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>600</y>
+        <y>40</y>
         <width>149</width>
-        <height>42</height>
+        <height>41</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -2734,6 +2734,121 @@ border-radius: 10%;</string>
          </property>
          <property name="text">
           <string>3</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>560</y>
+        <width>51</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/resources/images/button_magicCard.png) 0 0 0 0 stretch stretch;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>560</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_24">
+       <item>
+        <widget class="QLabel" name="label_49">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/resources/images/resources--grain.png) 0 0 0 0 stretch stretch;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_50">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>15</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_51">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/resources/images/resources--wool.png) 0 0 0 0 stretch stretch;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_60">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>15</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>600</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_27">
+       <item>
+        <widget class="QLabel" name="label_61">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/resources/images/resources--ore.png) 0 0 0 0 stretch stretch;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_62">
+         <property name="font">
+          <font>
+           <family>Sahadeva</family>
+           <pointsize>15</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
          </property>
         </widget>
        </item>

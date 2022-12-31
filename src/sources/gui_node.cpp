@@ -7,7 +7,7 @@ GUI_Node::GUI_Node(Node *node)
     : QGraphicsObject()
     , m_node(node)
 {
-    setFlags(GraphicsItemFlag::ItemIsSelectable | GraphicsItemFlag::ItemIsMovable);
+    setFlags(GraphicsItemFlag::ItemIsSelectable);
     setAcceptHoverEvents(true);
 
 }
@@ -28,6 +28,16 @@ bool GUI_Node::get_is_end_of_road() const
 void GUI_Node::set_is_end_of_road(bool value)
 {
     m_is_end_of_road = value;
+}
+
+bool GUI_Node::get_is_city_built() const
+{
+    return m_is_city_built;
+}
+
+void GUI_Node::set_is_city_built(bool value)
+{
+    m_is_city_built = value;
 }
 
 QColor GUI_Node::m_color = QColor("white");
@@ -94,7 +104,12 @@ QPointF GUI_Node::CenterPosition() {
     return pos() + QPointF(18, 18);
 }
 
-Node* GUI_Node::getNode()
+void GUI_Node::setNode(Node *newNode)
+{
+    m_node = newNode;
+}
+
+Node* GUI_Node::getNode() const
 {
     return m_node;
 }
@@ -106,7 +121,7 @@ bool GUI_Node::get_is_house_built() const
 
 void GUI_Node::set_is_house_built(bool value)
 {
-    m_is_house_built = true;
+    m_is_house_built = value;
 }
 
 bool GUI_Node::check_owner_city(QColor color)

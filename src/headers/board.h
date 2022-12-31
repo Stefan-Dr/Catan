@@ -48,10 +48,12 @@ signals:
     void manageResourcesHouse();
     void manageResourcesRoad();
     void manageResourcesCity();
+    void invalidHouse();
+    void invalidRoad();
+    void invalidCity();
 
 public slots:
     void Redraw();
-    void setHouse(bool x);
 
 
 private:

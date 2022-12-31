@@ -33,8 +33,7 @@ Opis slucajeva upotrebe:
 7. Poeni se dobijaju na sledeci nacin:
     7.1 Za svako izgradjeno naselje igrac dobija jedan poena
     7.2 Za svaki izgradjeni grad igrac dobija dva poena ali gubi jedan poen jer se grad gradi na mestu nekog od naselja tog igraca
-    7.3 Ukoliko igrac ima vise od 7 putica, i ako niko od ostalih igraca nema vise putica od njega, igrad dobija dva poena
-        7.3.1 Dva poena dobijena za najvise putica igrac moze izgubiti u slucaju da drugi igrac u medjuvremenu sagradi vise povezanih putica od njega
+    7.3 Ukoliko igrac ima vise od 7 putica, igrac dobija dva poena
 8. Na kraju svake partije informacije o pobedniku se prikazuju u odgovarajuce prozoru.
 
 • Alternativni tokovi:
