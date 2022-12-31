@@ -52,21 +52,30 @@ private slots:
 
     void on_pb_House_clicked();
     void manageResourcesHouse();
+    void houseBuilt();
+    void invalidHouse();
 
     void on_pb_Road_clicked();
     void manageResourcesRoad();
+    void roadBuilt();
+    void invalidRoad();
 
     void on_pb_Settlement_clicked();
     void manageResourcesCity();
+    void cityBuilt();
+    void invalidCity();
 
     void on_pushButton_clicked();
 
     void on_pbRollDice_clicked();
 
-
     void on_pb_MagicCard_clicked();
 
     void on_pbTrade_clicked();
+
+    void tradeSuccessfull();
+    void magicCardDrawn();
+
 
 protected:
     Ui::MainWindow *ui;
