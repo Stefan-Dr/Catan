@@ -689,10 +689,11 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
     if(m_setCity && (itemAt(event->scenePos(),QTransform())->type()==1)){
         Redraw();
         GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(),QTransform()));
-        //provera da li postoji kuca i da li ta kuca pripada igracu na potezu
-        if (node->get_is_house_built() && node->check_owner_city(getCurrColor())){
+        //provera da li postoji kuca i da li ta kuca pripada igracu na potezu ili da li je vec izgradjen grad na tom cvoru
+        if (node->get_is_house_built() && !(node->get_is_city_built()) && node->check_owner_city(getCurrColor())){
             node->setBrush(QBrush(getCurrColor()));
             m_setCity = false;
+            node->set_is_city_built(true);
             emit manageResourcesCity();
         }
         else {

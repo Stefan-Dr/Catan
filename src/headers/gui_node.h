@@ -40,6 +40,9 @@ public:
     bool get_is_end_of_road() const;
     void set_is_end_of_road(bool value);
 
+    bool get_is_city_built() const;
+    void set_is_city_built(bool value);
+
 
 signals:
     void nodeChanged();
@@ -60,6 +63,7 @@ private:
     Q_PROPERTY(Node *node READ node WRITE setNode NOTIFY nodeChanged)
     bool m_is_house_built = false;
     bool m_is_end_of_road = false;
+    bool m_is_city_built = false;
 };
 
 #endif // GUI_NODE_H

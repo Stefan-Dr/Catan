@@ -30,6 +30,16 @@ void GUI_Node::set_is_end_of_road(bool value)
     m_is_end_of_road = value;
 }
 
+bool GUI_Node::get_is_city_built() const
+{
+    return m_is_city_built;
+}
+
+void GUI_Node::set_is_city_built(bool value)
+{
+    m_is_city_built = value;
+}
+
 QColor GUI_Node::m_color = QColor("white");
 
 QRectF GUI_Node::boundingRect() const

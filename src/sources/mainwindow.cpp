@@ -385,9 +385,9 @@ void MainWindow::manageResourcesHouse()
 
 void MainWindow::houseBuilt()
 {
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a house!");
-    msgBox.exec();
+//    QMessageBox msgBox;
+//    msgBox.setText("You have successfully built a house!");
+//    msgBox.exec();
 }
 
 void MainWindow::invalidHouse()
@@ -452,9 +452,9 @@ void MainWindow::manageResourcesRoad()
 
 void MainWindow::roadBuilt()
 {
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a road!");
-    msgBox.exec();
+//    QMessageBox msgBox;
+//    msgBox.setText("You have successfully built a road!");
+//    msgBox.exec();
 }
 
 void MainWindow::invalidRoad()
@@ -559,9 +559,9 @@ void MainWindow::manageResourcesCity()
 
 void MainWindow::cityBuilt()
 {
-    QMessageBox msgBox;
-    msgBox.setText("You have successfully built a city!");
-    msgBox.exec();
+//    QMessageBox msgBox;
+//    msgBox.setText("You have successfully built a city!");
+//    msgBox.exec();
 }
 
 void MainWindow::invalidCity()
