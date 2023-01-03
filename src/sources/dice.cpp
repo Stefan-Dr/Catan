@@ -2,9 +2,11 @@
 #include <cstdlib>
 #include <time.h>
 
+//constructor
 Dice::Dice():
     m_dice1(0), m_dice2(0) {}
 
+//setters
 void Dice::set_button_is_clicked(bool button_clicked){
     m_button_is_clicked = button_clicked;
 }
@@ -21,6 +23,7 @@ void Dice::set_dice2(int num) {
     m_dice2 = num;
 }
 
+//getters
 int Dice::get_dice1() const{
     return m_dice1;
 }

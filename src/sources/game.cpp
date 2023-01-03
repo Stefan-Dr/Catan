@@ -5,8 +5,7 @@
 #include "../headers/resourcetype.h"
 #include <vector>
 
-//konstruktor
-//mora da se prosledjuje iz labela u guiu ime igraca
+//constructor
 Game::Game()
     : m_player1(new Player(1, "", Qt::blue, Qt::darkBlue))
     , m_player2(new Player(2, "", Qt::yellow, Qt::darkYellow))
@@ -20,7 +19,7 @@ Game::Game()
 }
 
 
-//destruktor
+//destructor
 Game::~Game() {
   delete m_player1;
   delete m_player2;
@@ -30,7 +29,7 @@ Game::~Game() {
   delete m_bank;
 }
 
-//geteri
+//getters
 Player* Game::getPlayer1() const{
     return m_player1;
 }
@@ -55,7 +54,7 @@ QVector<Player*>& Game::get_players(){
 }
 
 
-//seteri
+//setters
 void Game::setPlayer1(Player *player1) {
     m_player1 = player1;
 }
@@ -80,7 +79,7 @@ auto Game::currentPlayerId() const -> int {
     return m_currentPlayer->get_id();
 }
 
-//pobednik partije
+
 bool Game::wonPlayer1() {
   return m_player1->get_victory_points() == 10;
 }
@@ -104,7 +103,7 @@ bool Game::win(){
 void Game::setWin(bool x){
     m_win = x;
 }
-//izgradnja
+
 
 void Game::BuildHouse(/*Node* node*/){
 
@@ -161,8 +160,8 @@ void Game::BuildRoad(/*Road* road*/){
         if(m_currentPlayer->get_victory_points()>=10){
             setWin(true);
         }
-        //graficko postavljanje puta
-//    }
+
+
 
 }
 
@@ -203,25 +202,6 @@ void Game::trade_with_bank(ResourceType player_resource, ResourceType bank_resou
     m_currentPlayer->take_resource_card_from_bank(bank_resource, 1, *m_bank);
 }
 
-
-
-
-void Game::firstTurn(){
-    //redosled igraca je od 1 do 4
-    //postavljanje jedne kuce
-    //postavljanje jednog puta
-
-
-}
-
-void Game::secondTurn(){
-    //redosled igraca je od 4 do 1
-    //postavljanje jedne kuce
-    //postavljanje jednog puta
-    //dobijanje resursa u zavisnosti gde je postavljena druga kuca
-
-
-}
 
 
 
@@ -292,7 +272,7 @@ void Game::Turn(int result, Board* board){
 }
 
 
-//}
+
 
 void Game::ChangeCurrentPlayer(){
     if(m_currentPlayer->get_id() == m_player1->get_id()){
@@ -322,8 +302,6 @@ void Game::gameResult(){
       int numPlayers = sizeof(players) / sizeof(players[0]);
 
       //std::sort(players, players + numPlayers, comparePlayers);
-      //prosledjivanje pokazivaca na fukcniju???
-
 
       for (int i = 0; i < numPlayers; i++) {
         //std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
@@ -391,16 +369,5 @@ bool Game::can_build_road()
     else return false;
 }
 
-void Game::dec_resources_house()
-{
-
-
-
-}
-
-void Game::dec_resources_city()
-{
-
-}
 
 

@@ -3,6 +3,8 @@
 #include "../headers/node.h"
 #include "qgraphicsscene.h"
 #include "qgraphicssceneevent.h"
+
+//constructor
 GUI_Node::GUI_Node(Node *node)
     : QGraphicsObject()
     , m_node(node)
@@ -12,22 +14,9 @@ GUI_Node::GUI_Node(Node *node)
 
 }
 
+//getters
 bool GUI_Node::get_hasRoad() const{
     return hasRoad;
-}
-
-void GUI_Node::set_hasRoad(bool x){
-    hasRoad = x;
-}
-
-bool GUI_Node::get_is_end_of_road() const
-{
-    return m_is_end_of_road;
-}
-
-void GUI_Node::set_is_end_of_road(bool value)
-{
-    m_is_end_of_road = value;
 }
 
 bool GUI_Node::get_is_city_built() const
@@ -35,10 +24,50 @@ bool GUI_Node::get_is_city_built() const
     return m_is_city_built;
 }
 
+bool GUI_Node::get_is_end_of_road() const
+{
+    return m_is_end_of_road;
+}
+
+Node* GUI_Node::getNode() const
+{
+    return m_node;
+}
+
+bool GUI_Node::get_is_house_built() const
+{
+    return m_is_house_built;
+}
+
+
+
+
+//setters
+void GUI_Node::set_is_end_of_road(bool value)
+{
+    m_is_end_of_road = value;
+}
+
 void GUI_Node::set_is_city_built(bool value)
 {
     m_is_city_built = value;
 }
+
+void GUI_Node::set_hasRoad(bool x){
+    hasRoad = x;
+}
+
+void GUI_Node::setNode(Node *newNode)
+{
+    m_node = newNode;
+}
+
+void GUI_Node::set_is_house_built(bool value)
+{
+    m_is_house_built = value;
+}
+
+
 
 QColor GUI_Node::m_color = QColor("white");
 
@@ -104,25 +133,6 @@ QPointF GUI_Node::CenterPosition() {
     return pos() + QPointF(18, 18);
 }
 
-void GUI_Node::setNode(Node *newNode)
-{
-    m_node = newNode;
-}
-
-Node* GUI_Node::getNode() const
-{
-    return m_node;
-}
-
-bool GUI_Node::get_is_house_built() const
-{
-    return m_is_house_built;
-}
-
-void GUI_Node::set_is_house_built(bool value)
-{
-    m_is_house_built = value;
-}
 
 bool GUI_Node::check_owner_city(QColor color)
 {

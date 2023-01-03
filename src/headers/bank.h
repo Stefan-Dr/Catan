@@ -14,7 +14,7 @@ public:
 
     std::unordered_map<ResourceType, unsigned>& get_bank_resources();
 
-    //geteri
+    //getters
     unsigned get_num_of_brick_from_bank() const;
     unsigned get_num_of_wood_from_bank() const;
     unsigned get_num_of_wool_from_bank() const;
