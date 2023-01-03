@@ -15,6 +15,7 @@ m_num_of_wheat(19),m_num_of_stone(19){
 
 }
 
+//getters
 std::unordered_map<ResourceType, unsigned>& Bank::get_bank_resources(){
     return m_bank_resource;
 }

@@ -35,6 +35,7 @@ Field::Field(int id, int number,
                          m_down_corner,m_bottom_right_corner, m_up_right_corner};
     }
 
+//getters
 int Field::get_id() const{
     return m_id;
 }
@@ -47,9 +48,6 @@ ResourceType Field::get_res_type() const{
     return m_res_type;
 }
 
-bool Field::is_robber_on_the_field() const{
-    return m_is_robber_od_the_field;
-}
 
 QVector<Node*>& Field::get_corners(){
     return m_corners;
@@ -57,11 +55,6 @@ QVector<Node*>& Field::get_corners(){
 
 const QVector<Road*>& Field::get_edges() const{
     return m_edges;
-}
-
-void Field::set_robber_on_the_field(bool robber_on_the_field){
-    //moze samo m_is_robber_on_the_field = true;
-    m_is_robber_od_the_field = robber_on_the_field;
 }
 
 Node* Field::get_up_corner() const{
@@ -111,6 +104,19 @@ Road* Field::get_up_right_edge() const{
 Road* Field::get_up_left_edge() const{
     return m_up_left_edge;
 }
+
+
+bool Field::is_robber_on_the_field() const{
+    return m_is_robber_od_the_field;
+}
+
+//setters
+void Field::set_robber_on_the_field(bool robber_on_the_field){
+    //moze samo m_is_robber_on_the_field = true;
+    m_is_robber_od_the_field = robber_on_the_field;
+}
+
+
 
 void Field::set_res_type(ResourceType res_type){
     m_res_type = res_type;

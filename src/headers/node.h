@@ -15,12 +15,12 @@ private:
     QVector<int> m_neighbours;
 
 public:
-    //konstruktor
+    //constructor
     Node(int id);
-    //destruktor
+    //destructor
     Node(const Node &) = delete;
 
-    //Geteri
+    //Getters
     int get_id() const;
     bool get_is_house_built() const;
     bool get_is_city_built() const;

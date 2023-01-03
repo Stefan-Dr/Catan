@@ -5,17 +5,17 @@
 class Road
 {
 public:
-    //konstruktor
+    //constructor
     Road(int owner,int id);
-    //destruktor
+    //destructor
     Road(const Road&) = delete;
 
-    //geteri
+    //getters
     int get_owner() const;
     int get_id() const;
     bool get_can_build() const;
 
-    //seteri
+    //setters
     void set_owner(int owner);
     void set_can_build(bool value);\
 

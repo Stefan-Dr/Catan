@@ -14,20 +14,20 @@
 class Player
 {
 public:
-    //konstruktor
+    //constructor
     Player();
-    //destruktor
+    //destructor
     Player(const Player& ) = delete;
     Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
-    //seteri
+    //setters
     std::string get_name() const;
     void set_name(std::string new_name);
     void set_first_turn(bool value);
     void set_city(Bank &bank);
     void set_id(int id);
 
-    //geteri
+    //getters
     bool get_first_turn() const;
     int get_id() const;
     Color get_color() const;

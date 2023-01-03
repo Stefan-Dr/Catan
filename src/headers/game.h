@@ -16,14 +16,14 @@
 class Game
 {
 public:
-    //konstruktor
+    //constructor
     Game();
 
-    //destruktor
+    //destructor
     ~Game();
     Game(const Game &) = delete;
 
-    //geteri
+    //getters
     Player* getPlayer1() const;
     Player* getPlayer2() const;
     Player* getPlayer3() const;
@@ -35,7 +35,7 @@ public:
     bool get_can_build_house() const;
     bool get_can_build_city() const;
 
-    //seteri
+    //setters
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
     void setPlayer3(Player *player3);
@@ -55,8 +55,6 @@ public:
     void BuildCity();
     void BuildRoad();
 
-    void firstTurn();
-    void secondTurn();
     void Turn(int result, Board* board);
     void ChangeCurrentPlayer();
     void gameResult();
@@ -66,9 +64,6 @@ public:
     bool can_build_city();
     bool can_build_road();
     bool can_get_magic_card();
-
-    void dec_resources_house();
-    void dec_resources_city();
 
     void MagicCard();
     int currentPlayerId() const;

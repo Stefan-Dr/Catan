@@ -10,7 +10,7 @@ class Road;
 class Field
 {
 public:
-    //konstruktor
+    //constructor
     Field(int id, int number, ResourceType res_type,
           Node* up_corner, Node* bottom_corner,
           Node* bottom_right_corner, Node* bottom_left_corner,
@@ -18,14 +18,14 @@ public:
           Road* right_edge, Road* left_edge,
           Road* bottom_right_edge, Road* bottom_left_edge,
           Road* up_right_edge, Road* up_left_edge);
-    //konstruktor
+    //constructor
     Field(int id, int number,
           Node* up_left_corner, Node* up_corner,
           Node* up_right_corner, Node* bottom_right_corner,
           Node* bottom_corner, Node* bottom_left_corner);
     Field(const Field&) = delete;
 
-    //geteri
+    //getters
     int get_id() const;
     ResourceType get_res_type() const;
     int get_number() const;
@@ -44,7 +44,7 @@ public:
     Road* get_up_right_edge() const;
     Road* get_up_left_edge() const;
 
-    //seteri
+    //setters
     void set_res_type(ResourceType res_type);
     void set_robber_on_the_field(bool robber_on_the_field);
 

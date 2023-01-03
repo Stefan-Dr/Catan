@@ -1,10 +1,12 @@
 #include "../headers/player.h"
 #include <iostream>
 
+//constructor(empty)
 Player::Player()
 {
 
 }
+//constructor
 Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
     : m_id(id), m_name(name),
       m_victory_points(0),m_num_of_roads(0),
@@ -27,32 +29,11 @@ Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color c
 
 
 }
-
+//getters
 std::string Player::get_name() const
 {
     return m_name;
 }
-
-void Player::set_name(std::string new_name)
-{
-    m_name = new_name;
-}
-
-bool Player::get_first_turn() const
-{
-    return m_first_turn;
-}
-
-
-void Player::set_first_turn(bool value)
-{
-    m_first_turn = value;
-}
-
-/*Color Player::get_color(){
-    return m_color;
-}
-*/
 
 int Player::get_num_of_wood() const {
     return m_num_of_wood;
@@ -69,6 +50,72 @@ int Player::get_num_of_wheat() const {
 int Player::get_num_of_stone() const {
     return m_num_of_stone;
 }
+
+int Player::get_num_of_allowed_houses() const{
+    return m_num_of_allowed_houses;
+}
+int Player::get_num_of_allowed_cities() const{
+    return m_num_of_allowed_cities;
+}
+int Player::get_num_of_allowed_roads() const{
+    return m_num_of_allowed_roads;
+}
+
+QColor Player::get_player_color() const
+{
+    return m_player_color;
+}
+
+QColor Player::get_city_color() const
+{
+    return m_city_color;
+}
+
+int Player::get_id() const{
+    return m_id;
+}
+
+int Player::get_victory_points() const{
+    return m_victory_points;
+}
+int Player::get_num_of_houses() const{
+    return m_num_of_houses;
+}
+int Player::get_num_of_cities() const{
+    return m_num_of_cities;
+}
+int Player::get_num_of_roads() const{
+    return m_num_of_roads;
+}
+std::unordered_map<ResourceType,int>& Player::get_PlayerResources(){
+    return m_player_resource;
+}
+
+bool Player::get_first_turn() const
+{
+    return m_first_turn;
+}
+
+
+
+void Player::set_first_turn(bool value)
+{
+    m_first_turn = value;
+}
+
+void Player::set_name(std::string new_name)
+{
+    m_name = new_name;
+}
+void Player::set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource){
+    m_player_resource = mPlayerResource;
+}
+
+/*Color Player::get_color(){
+    return m_color;
+}
+*/
+
 
 void Player::inc_num_of_wood()
 {
@@ -151,48 +198,7 @@ void Player::double_inc_num_of_wool(){
     m_num_of_wool += 2;
 }
 
-int Player::get_num_of_allowed_houses() const{
-    return m_num_of_allowed_houses;
-}
-int Player::get_num_of_allowed_cities() const{
-    return m_num_of_allowed_cities;
-}
-int Player::get_num_of_allowed_roads() const{
-    return m_num_of_allowed_roads;
-}
 
-QColor Player::get_player_color() const
-{
-    return m_player_color;
-}
-
-QColor Player::get_city_color() const
-{
-    return m_city_color;
-}
-
-int Player::get_id() const{
-    return m_id;
-}
-
-int Player::get_victory_points() const{
-    return m_victory_points;
-}
-int Player::get_num_of_houses() const{
-    return m_num_of_houses;
-}
-int Player::get_num_of_cities() const{
-    return m_num_of_cities;
-}
-int Player::get_num_of_roads() const{
-    return m_num_of_roads;
-}
-std::unordered_map<ResourceType,int>& Player::get_PlayerResources(){
-    return m_player_resource;
-}
-void Player::set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource){
-    m_player_resource = mPlayerResource;
-}
 
 void Player::set_id(int id){
     m_id = id;

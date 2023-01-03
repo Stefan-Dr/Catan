@@ -12,16 +12,18 @@ private:
     bool m_dice_is_rolled;
 
 public:
+    //constructor
     Dice();
-    Dice(const Dice &) = delete;    //destructor
+    //destructor
+    Dice(const Dice &) = delete;
 
-    //seteri
+    //setters
     void set_button_is_clicked(bool button_clicked);
     void set_dice1(int num);
     void set_dice2(int num);
     void set_dice_is_rolled(bool x);
 
-    //geteri
+    //getters
     int get_dice1() const;
     int get_dice2() const;
     int get_dice_sum() const;

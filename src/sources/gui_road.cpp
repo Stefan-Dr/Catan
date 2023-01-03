@@ -5,6 +5,7 @@
 #include <QtMath>
 #include <math.h>
 
+//constructor
 GUI_Road::GUI_Road(GUI_Node *start, GUI_Node *end)
     :QGraphicsLineItem()
     ,m_start(start)
@@ -41,11 +42,13 @@ QRectF GUI_Road::boundingRect() const {
     return nPolygon.boundingRect();
 }
 
+//getters
 QPointF GUI_Road::getCenter(){
     return QPointF(m_start->CenterPosition().rx() - (m_start->CenterPosition().rx() - m_end->CenterPosition().rx())/2.0,
                    m_start->CenterPosition().ry() - (m_start->CenterPosition().ry() - m_end->CenterPosition().ry())/2.0);
 }
 
+//setters
 void GUI_Road::set_pen(QColor color)
 {
     m_pen = QPen(color);
