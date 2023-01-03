@@ -14,28 +14,37 @@
 class Player
 {
 public:
+    //konstruktor
     Player();
+    //destruktor
     Player(const Player& ) = delete;
     Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
+    //seteri
     std::string get_name() const;
     void set_name(std::string new_name);
-
-    bool get_first_turn() const;
     void set_first_turn(bool value);
+    void set_city(Bank &bank);
+    void set_id(int id);
 
+    //geteri
+    bool get_first_turn() const;
     int get_id() const;
     Color get_color() const;
     int get_victory_points() const;
     int get_num_of_houses() const;
     int get_num_of_cities() const;
     int get_num_of_roads() const;
-
     int get_num_of_wood() const;
     int get_num_of_brick() const;
     int get_num_of_wool() const;
     int get_num_of_wheat() const;
     int get_num_of_stone() const;
+    int get_num_of_allowed_houses() const;
+    int get_num_of_allowed_cities() const;
+    int get_num_of_allowed_roads() const;
+    QColor get_player_color() const;
+    QColor get_city_color() const;
 
     void inc_num_of_wood();
     void inc_num_of_wheat();
@@ -54,15 +63,6 @@ public:
     void double_inc_num_of_brick();
     void double_inc_num_of_wool();
 
-    int get_num_of_allowed_houses() const;
-    int get_num_of_allowed_cities() const;
-    int get_num_of_allowed_roads() const;
-    QColor get_player_color() const;
-    QColor get_city_color() const;
-
-    void set_city(Bank &bank);
-    void set_id(int id);
-
     bool give_resource_card_to_player(ResourceType res_type, int amount, Player &p);
     void take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
@@ -75,7 +75,6 @@ public:
     void increase_num_of_cities();
     void increase_num_of_roads();
 
-
     void increase_victory_points(int amount);
     void increase_allowed_house_number();
     void decrease_allowed_house_number();
@@ -85,9 +84,9 @@ public:
 
     bool comparePlayers(const Player* pl1, const Player* pl2);
 
-    /*void set_city(Bank); set_house(NOde,Bank), set_road(road,NOde,Bank);..*/
 
 private:
+
     int m_id;
     std::string m_name;
     Color m_color;

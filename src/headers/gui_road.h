@@ -14,13 +14,12 @@ public:
     ~GUI_Road();
     QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    //int type() const override;
+
     static QColor m_color;
     GUI_Node* getStart(){return m_start;}
     GUI_Node* getEnd(){return m_end;}
     QPointF getCenter();
     void set_pen(QColor color);
-
 
 signals:
     void needRedraw();

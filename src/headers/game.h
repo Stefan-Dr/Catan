@@ -18,9 +18,11 @@ class Game
 public:
     //konstruktor
     Game();
+
     //destruktor
     ~Game();
     Game(const Game &) = delete;
+
     //geteri
     Player* getPlayer1() const;
     Player* getPlayer2() const;
@@ -29,6 +31,10 @@ public:
     Bank* getBank() const;
     Player* getCurrentPlayer() const;
     QVector<Player*>& get_players();
+
+    bool get_can_build_house() const;
+    bool get_can_build_city() const;
+
     //seteri
     void setPlayer1(Player *player1);
     void setPlayer2(Player *player2);
@@ -36,18 +42,18 @@ public:
     void setPlayer4(Player *player4);
     void setBank(Bank* bank);
     void setCurrentPlayer(Player *currentPlayer);
+    void set_can_build_house(bool value);
+    void set_can_build_city(bool value);
+    void setWin(bool x);
 
-
-    int currentPlayerId() const;
     bool wonPlayer1();
     bool wonPlayer2();
     bool wonPlayer3();
     bool wonPlayer4();
 
-
-    void BuildHouse(/*Node* node*/);
-    void BuildCity(/*Node* node*/);
-    void BuildRoad(/*Road* road*/);
+    void BuildHouse();
+    void BuildCity();
+    void BuildRoad();
 
     void firstTurn();
     void secondTurn();
@@ -55,11 +61,6 @@ public:
     void ChangeCurrentPlayer();
     void gameResult();
     void nextPlayer();
-
-    void set_can_build_house(bool value);
-    void set_can_build_city(bool value);
-    bool get_can_build_house() const;
-    bool get_can_build_city() const;
 
     bool can_build_house();
     bool can_build_city();
@@ -70,18 +71,18 @@ public:
     void dec_resources_city();
 
     void MagicCard();
+    int currentPlayerId() const;
 
     int player_turn_counter = 1;
 
     bool can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource);
     void trade_with_bank(ResourceType player_resource, ResourceType bank_resource);
 
-    //treba private
     Player *next_player;
     bool win();
-    void setWin(bool x);
+
 private:
-    //napraviti niz playera radi lakseg funkcionisanja
+
     QVector<Player*> m_players;
     Player* m_player1;
     Player* m_player2;
@@ -89,7 +90,7 @@ private:
     Player* m_player4;
     Player* m_currentPlayer;
     Bank* m_bank;
-    //Board* m_board;
+
     int numOfPlayers = 4;
     bool m_can_build_house;
     bool m_can_build_city;
