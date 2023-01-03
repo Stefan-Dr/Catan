@@ -7,11 +7,14 @@
 class Bank
 {
 public:
-    Bank(); // constructor
-    Bank(const Bank &) = delete;    //destructor
+    //constructor
+    Bank();    \
+    //destructor
+    Bank(const Bank &) = delete;
 
     std::unordered_map<ResourceType, unsigned>& get_bank_resources();
 
+    //geteri
     unsigned get_num_of_brick_from_bank() const;
     unsigned get_num_of_wood_from_bank() const;
     unsigned get_num_of_wool_from_bank() const;
@@ -23,6 +26,7 @@ public:
     void remove_resource_card(ResourceType, int num_card);
 
 private:
+
     std::unordered_map<ResourceType, unsigned> m_bank_resource;
     unsigned m_num_of_brick;
     unsigned m_num_of_wood;

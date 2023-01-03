@@ -24,11 +24,11 @@ public:
     inline QBrush getBrush(){return m_brush;}
     int type() const override;
     QPointF CenterPosition();
-//    Node *node() const;
+
     void setNode(Node *newNode);
     Node *getNode() const;
     static QColor m_color;
-    //QColor m_node_owner_color = Qt::white;
+
     bool get_is_house_built() const;
     void set_is_house_built(bool value);
     QString m_text = QString::fromStdString("");
@@ -51,13 +51,10 @@ signals:
 protected:
     void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
     void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
+
 private:
     Node *m_node;
-
     bool hasRoad;
-
- //   qreal m_x;
-  //  qreal m_y;
 
     QBrush m_brush = QBrush(Qt::white);
     Q_PROPERTY(Node *node READ getNode WRITE setNode NOTIFY nodeChanged)

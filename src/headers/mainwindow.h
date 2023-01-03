@@ -11,6 +11,7 @@
 #include "game.h"
 #include "resourcetype.h"
 #include <QMediaPlayer>
+
 class QGraphicsScene;
 class Node;
 class GUI_Node;
@@ -66,13 +67,9 @@ private slots:
     void invalidCity();
 
     void on_pushButton_clicked();
-
     void on_pbRollDice_clicked();
-
     void on_pb_MagicCard_clicked();
-
     void on_pbTrade_clicked();
-
     void tradeSuccessfull();
     void magicCardDrawn();
 

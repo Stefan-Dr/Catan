@@ -8,6 +8,7 @@
 #include<QGraphicsSceneMouseEvent>
 #include<QGraphicsLineItem>
 #include "gui_road.h"
+
 class Node;
 class GUI_Node;
 class GUI_Road;
@@ -17,6 +18,7 @@ class Board : public QGraphicsScene
 {
 Q_OBJECT
 public:
+
     Board(QObject *parent = nullptr);
     ~Board();
 
@@ -27,7 +29,7 @@ public:
     QVector<Node *> m_nodes;
     QVector<GUI_Node *> m_gui_nodes;
     QVector<Field*> m_fields;
-  //  void AddNewRoad(GUI_Road *g_road);
+
     void mousePressEvent ( QGraphicsSceneMouseEvent * event ) override;
     void setHasTmp(bool x);
 
@@ -55,8 +57,8 @@ signals:
 public slots:
     void Redraw();
 
-
 private:
+
     const int numOfNodes = 6;
     bool m_hasTmp = false;
     GUI_Node* m_tmp;
