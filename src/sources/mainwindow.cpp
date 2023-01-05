@@ -19,10 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->rbON->setChecked(true);
 
-    //connect(this,&MainWindow::AddHouse,dynamic_cast<Board*>(m_board),&Board::setHouse);
-    //connect(ui->pb_House,&QPushButton::clicked,this,&MainWindow::on_pb_House_clicked);
-    //connect(ui->pb_Settlement,&QPushButton::clicked,this,&MainWindow::on_pb_Settlement_clicked);
-    //connect(ui->pb_Road,&QPushButton::clicked,this,&MainWindow::on_pb_Road_clicked);
+
     m_board->setSceneRect(ui->gvMapa->rect());
     ui->gvMapa->setScene(m_board);
     ui->gvMapa->setRenderHint(QPainter::Antialiasing);
@@ -53,13 +50,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--wood.png"), "Wood");
     ui->cbTradeBank->addItem(QIcon("qrc:/resources/images/resources--brick.png"), "Brick");
 
-    //m_board->addAllFields();
-
-    //m_boardScene->addAllFields(ui->gvBoard->width(), ui->gvBoard->height(),
-    //offset);
-
-    //connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::AddNewBlankNode);
-    //connect(this, &MainWindow::AddedNewBlankNode, dynamic_cast<Board *>(m_board));
 }
 
 MainWindow::~MainWindow()
@@ -69,37 +59,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayResources()
 {
-//    Player *curr_p =  m_game->getCurrentPlayer();
-//    if ( curr_p->get_id() == 1){
-//        ui->lbWheatP1->setText(QString::number((curr_p->get_num_of_wheat())));
-//        ui->lbWoodP1->setText(QString::number(curr_p->get_num_of_wood()));
-//        ui->lbBrickP1->setText(QString::number(curr_p->get_num_of_brick()));
-//        ui->lbWoolP1->setText(QString::number(curr_p->get_num_of_wool()));
-//        ui->lbStoneP1->setText(QString::number(curr_p->get_num_of_stone()));
-//    }
-//    if ( curr_p->get_id() == 2){
-//        ui->lbWheatP2->setText((QString::number(curr_p->get_num_of_wheat())));
-//        ui->lbWoodP2->setText((QString::number(curr_p->get_num_of_wood())));
-//        ui->lbBrickP2->setText((QString::number(curr_p->get_num_of_brick())));
-//        ui->lbWoolP2->setText((QString::number(curr_p->get_num_of_wool())));
-//        ui->lbStoneP2->setText((QString::number(curr_p->get_num_of_stone())));
-//    }
-//    if ( curr_p->get_id() == 3){
-//        ui->lbWheatP3->setText(QString::number((curr_p->get_num_of_wheat())));
-//        ui->lbWoodP3->setText(QString::number(curr_p->get_num_of_wood()));
-//        ui->lbBrickP3->setText(QString::number(curr_p->get_num_of_brick()));
-//        ui->lbWoolP3->setText(QString::number(curr_p->get_num_of_wool()));
-//        ui->lbStoneP3->setText(QString::number(curr_p->get_num_of_stone()));
-//    }
-//    if ( curr_p->get_id() == 4){
-//        ui->lbWheatP4->setText(QString::number((curr_p->get_num_of_wheat())));
-//        ui->lbWoodP4->setText(QString::number(curr_p->get_num_of_wood()));
-//        ui->lbBrickP4->setText(QString::number(curr_p->get_num_of_brick()));
-//        ui->lbWoolP4->setText(QString::number(curr_p->get_num_of_wool()));
-//        ui->lbStoneP4->setText(QString::number(curr_p->get_num_of_stone()));
-//    }
-
-    //drugaciji nacin implementacije
     ui->lbWheatP1->setText(QString::number(m_game->getPlayer1()->get_num_of_wheat()));
     ui->lbWoodP1->setText(QString::number(m_game->getPlayer1()->get_num_of_wood()));
     ui->lbBrickP1->setText(QString::number(m_game->getPlayer1()->get_num_of_brick()));
@@ -238,13 +197,6 @@ void MainWindow::on_pbContinue_clicked(){
         //za svakog playera predstavljamo koliko resursa ima na pocetku
         displayResources();
         ui->lbPlayerTurn->setText(QString::fromStdString(m_game->getCurrentPlayer()->get_name()));
-//        m_game->nextPlayer();
-//        displayResources();
-//        m_game->nextPlayer();
-//        displayResources();
-//        m_game->nextPlayer();
-//        displayResources();
-//        m_game->nextPlayer();
 
         displayBankResources();
         displayPlayerPoints();
@@ -257,7 +209,7 @@ void MainWindow::on_pbContinue_clicked(){
 
 void MainWindow::on_pbRollDice_clicked()
 {
-    //if(korisnik je opet klinuo na dugme za bacanje kockice)
+
         if(m_dice->get_button_clicked() == true){
             QMessageBox msgBox;
             msgBox.setText("Dice already rolled!");
@@ -275,6 +227,7 @@ void MainWindow::on_pbRollDice_clicked()
 
             int d1 = m_dice->get_dice1();
             int d2 = m_dice->get_dice2();
+
             switch (d1) {
                 case 1 :
                     ui->wDice1->setStyleSheet("border-image: url(:/resources/images/dice1.png) 0 0 0 0 stretch stretch;");
@@ -339,13 +292,7 @@ void MainWindow::on_pb_House_clicked()
             m_board->m_setHouse = true;
             m_board->m_setRoad = false;
             m_board->m_setCity = false;
-            //m_game->BuildHouse();
             m_board->setCurrColor(m_game->getCurrentPlayer()->get_player_color());
-//            displayResources();
-//            displayBankResources();
-//            displayPlayerPoints();
-//            ui->lbError->setText("");
-            //m_game->getCurrentPlayer()->increase_victory_points(1);
         }
         else {
             m_board->m_setHouse = false;
@@ -406,13 +353,6 @@ void MainWindow::on_pb_Road_clicked()
             m_board->m_setRoad = true;
             m_board->m_setCity = false;
             m_board->m_setHouse = false;
-//            m_game->BuildRoad();
-//            displayResources();
-//            displayBankResources();
-//            displayPlayerPoints();
-//            displayPlayerRoads();
-//            ui->lbError->setText("");
-            //m_game->getCurrentPlayer()->increase_num_of_roads();
         }
         else {
             m_board->m_setHouse = false;
@@ -472,14 +412,8 @@ void MainWindow::on_pb_Settlement_clicked()
             m_board->m_setCity = true;
             m_board->m_setHouse = false;
             m_board->m_setRoad = false;
-//            m_game->BuildCity();
+
             m_board->setCurrColor(m_game->getCurrentPlayer()->get_city_color());
-//            displayResources();
-//            displayBankResources();
-//            displayPlayerPoints();
-//            ui->lbError->setText("");
-            //m_game->getCurrentPlayer()->decrease_victory_point();
-            //m_game->getCurrentPlayer()->increase_victory_points(2);
         }
         else {
             m_board->m_setHouse = false;

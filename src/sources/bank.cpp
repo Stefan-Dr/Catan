@@ -77,11 +77,4 @@ void Bank::remove_resource_card(ResourceType res_type, int num_cards) {
     }
 }
 
-// printing the content of every single resource in the bank
-void Bank::print_bank_content(){
-    cout << "Wood : " << m_bank_resource[ResourceType::Wood] << endl;
-    cout << "Brick : " << m_bank_resource[ResourceType::Brick] << endl;
-    cout << "Wool : " << m_bank_resource[ResourceType::Wool] << endl;
-    cout << "Wheat : " << m_bank_resource[ResourceType::Wheat] << endl;
-    cout << "Stone : " << m_bank_resource[ResourceType::Stone] << endl;
-}
+

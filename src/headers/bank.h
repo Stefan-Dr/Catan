@@ -8,7 +8,7 @@ class Bank
 {
 public:
     //constructor
-    Bank();    \
+    Bank();    
     //destructor
     Bank(const Bank &) = delete;
 
@@ -21,7 +21,6 @@ public:
     unsigned get_num_of_wheat_from_bank() const;
     unsigned get_num_of_stone_from_bank() const;
 
-    void print_bank_content();
     void add_resource_card(ResourceType, int num_cards);
     void remove_resource_card(ResourceType, int num_card);
 

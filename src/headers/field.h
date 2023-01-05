@@ -11,18 +11,11 @@ class Field
 {
 public:
     //constructor
-    Field(int id, int number, ResourceType res_type,
-          Node* up_corner, Node* bottom_corner,
-          Node* bottom_right_corner, Node* bottom_left_corner,
-          Node* up_right_corner, Node* up_left_corner,
-          Road* right_edge, Road* left_edge,
-          Road* bottom_right_edge, Road* bottom_left_edge,
-          Road* up_right_edge, Road* up_left_edge);
-    //constructor
     Field(int id, int number,
           Node* up_left_corner, Node* up_corner,
           Node* up_right_corner, Node* bottom_right_corner,
           Node* bottom_corner, Node* bottom_left_corner);
+
     Field(const Field&) = delete;
 
     //getters

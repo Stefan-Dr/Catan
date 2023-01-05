@@ -51,15 +51,6 @@ void Board::addAllNodes(){
     const auto gnode3 = new GUI_Node(node3);
     gnode3->setPos(315,55);
     m_gui_nodes.push_back(gnode3);
-    //vrh prvog heksagona njegovi susedi su - (185,130),(315,55)
-//    const auto node2 = new Node(2);
-//    m_nodes.push_back(node2);
-//    m_gui_nodes.push_back(new GUI_Node(node2,QPointF(250,20)));
-
-//    //gornji desni prvog heksagona, susedi su (250,20),(315,130),(380,20)
-//    const auto node3 = new Node(3);
-//    m_nodes.push_back(node3);
-//    m_gui_nodes.push_back(new GUI_Node(node3,QPointF(315,55)));
 
     //donji desni prvog heksagona, susedi su (315,55),(250,165),(380,165)
     const auto node4 = new Node(4);
@@ -231,7 +222,6 @@ void Board::addAllNodes(){
     gnode20->setPos(380,240);
     m_gui_nodes.push_back(gnode20);
 
-
     //treci
 
     //dno treceg
@@ -257,7 +247,6 @@ void Board::addAllNodes(){
     //cetvrti
 
     //dno cetvrtog
-
 
     const auto node23 = new Node(23);
     QVector<int> node23_neighbours = {22,25,35};
@@ -285,7 +274,6 @@ void Board::addAllNodes(){
     const auto gnode25 = new GUI_Node(node25);
     gnode25->setPos(640,240);
     m_gui_nodes.push_back(gnode25);
-
 
     //TRECI RED
 
@@ -591,23 +579,8 @@ void Board::addAllNodes(){
     gnode54->setPos(575,575);
     m_gui_nodes.push_back(gnode54);
 
-
-//    for(int i=0;i<54;i++){
-//        connect(m_gui_nodes[i],&GUI_Node::needRedraw,this,&Board::Redraw);
-//        addItem(m_gui_nodes[i]);
-
-//    }
-//    connect(gnode1,&GUI_Node::needRedraw,this,&Board::Redraw);
-//    addItem(gnode1);
-//    connect(gnode2,&GUI_Node::needRedraw,this,&Board::Redraw);
-//    addItem(gnode2);
-//    connect(gnode3,&GUI_Node::needRedraw,this,&Board::Redraw);
-//    addItem(gnode3);
     for(int i=0;i<54;i++){
-        connect(m_gui_nodes[i],&GUI_Node::needRedraw,this,&Board::Redraw); //slicno ovom hoveru i signalu treba da se uradi sa iscrtavanjem kuce odredjenog igraca
-
-        //tj. u fji set house/ city se baca signal needRedraw
-        //ali bitna napomena, sva crtanja kuca/grad itd se rade u okviru mousepressevent funkcije, samo se razlicito pisu uslovi i to je to
+        connect(m_gui_nodes[i],&GUI_Node::needRedraw,this,&Board::Redraw);
         addItem(m_gui_nodes[i]);
     }
 
@@ -616,10 +589,9 @@ void Board::addAllNodes(){
 
 void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
 
-    if(m_setRoad && itemAt(event->scenePos(), QTransform())/*->type() == 1*/){
+    if(m_setRoad && itemAt(event->scenePos(), QTransform())){
             if(!m_hasTmp){
                 this->m_tmp = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
-                //Node* node = m_tmp->getNode();
                 if (this->m_tmp->get_is_end_of_road()) { setHasTmp(true); }
                 else { emit invalidRoad(); }
             }

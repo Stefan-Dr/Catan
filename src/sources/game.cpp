@@ -105,29 +105,26 @@ void Game::setWin(bool x){
 }
 
 
-void Game::BuildHouse(/*Node* node*/){
+void Game::BuildHouse(){
 
-                //davanje potrebnih resursa banci
-                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
-                m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
-                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,1,*m_bank);
-                m_currentPlayer->return_resource_card_to_bank(ResourceType::Wool,1,*m_bank);
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,1,*m_bank);
+            m_currentPlayer->return_resource_card_to_bank(ResourceType::Wool,1,*m_bank);
 
-                //menja broj dostupnih objekata
-                m_currentPlayer->increase_allowed_house_number();
-               // m_currentPlayer->increase_victory_points(1);
 
-                //menjanje broja izgradjenih objekata
-                m_currentPlayer->increase_num_of_houses();
+            m_currentPlayer->increase_allowed_house_number();
 
-                m_currentPlayer->increase_victory_points(1);
-                if(m_currentPlayer->get_victory_points()>=10){
-                    setWin(true);
-                }
+            m_currentPlayer->increase_num_of_houses();
+
+            m_currentPlayer->increase_victory_points(1);
+            if(m_currentPlayer->get_victory_points()>=10){
+                 setWin(true);
+            }
 
 }
 
-void Game::BuildCity(/*Node* node*/){
+void Game::BuildCity(){
 
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Wheat,2,*m_bank);
             m_currentPlayer->return_resource_card_to_bank(ResourceType::Stone,3,*m_bank);
@@ -136,7 +133,6 @@ void Game::BuildCity(/*Node* node*/){
             m_currentPlayer->decrease_allowed_city_number();
             m_currentPlayer->increase_victory_points(1);
 
-            //menjanje broja izgradjenih objekata
             m_currentPlayer->decrease_num_of_houses();
             m_currentPlayer->increase_num_of_cities();
             if(m_currentPlayer->get_victory_points()>=10){
@@ -145,14 +141,13 @@ void Game::BuildCity(/*Node* node*/){
 
 }
 
-void Game::BuildRoad(/*Road* road*/){
+void Game::BuildRoad(){
 
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Brick,1,*m_bank);
         m_currentPlayer->return_resource_card_to_bank(ResourceType::Wood,1,*m_bank);
 
         m_currentPlayer->decrease_allowed_road_number();
 
-        //menjanje broja izgradjenih objekata
         m_currentPlayer->increase_num_of_roads();
         if(m_currentPlayer->get_num_of_roads() == 7){
             m_currentPlayer->increase_victory_points(2);
@@ -207,21 +202,10 @@ void Game::trade_with_bank(ResourceType player_resource, ResourceType bank_resou
 
 void Game::Turn(int result, Board* board){
 
-     //std::cout <<result << std::endl;
      for(auto &i : board->m_fields){
-         //prolazimo kroz sva polja na tabli
         if(result == i->get_number()){
-            //proveravamo da li trenutno polje sadzi broj koji je jednak zbiru bacenih kockica
-            //if(!i->is_robber_on_the_field()){
-                //ako se na tom polju ne nalazi lopov radimo sledece
-                //std::cout << i->get_id() << std::endl;
                 for(auto &j : i->get_corners()){
-                    //prolazimo kroz sve cvorove na tom polju
-                    //std::cout << j->get_is_house_built() << std::endl;
                     if(j->get_is_house_built()){
-                        //std::cout << j->get_id() << std::endl;
-                        //proveravamo da li ima izgradjena kucica na tom cvoru
-                        //std::cout << j->get_owner() << std::endl;
                         if(i->get_res_type() == ResourceType::Brick){
                             m_players[j->get_owner()-1]->inc_num_of_brick();
                             m_bank->remove_resource_card(ResourceType::Brick,1);
@@ -301,10 +285,8 @@ void Game::gameResult(){
 
       int numPlayers = sizeof(players) / sizeof(players[0]);
 
-      //std::sort(players, players + numPlayers, comparePlayers);
-
       for (int i = 0; i < numPlayers; i++) {
-        //std::cout << "Player " << i + 1 << ": " << players[i]->get_victory_points() << " points" << std::endl;
+
       }
 
 }
