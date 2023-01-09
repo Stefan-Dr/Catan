@@ -32,6 +32,7 @@ public:
     void displayBankResources();
     void displayPlayerPoints();
     void displayPlayerRoads();
+    void destroy(Dice* dice, Board* board, Game* game, QMediaPlayer *music);
 
 signals:
     void AddedNewBlankNode(GUI_Node *node);

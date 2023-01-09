@@ -538,6 +538,15 @@ void MainWindow::on_pb_MagicCard_clicked()
         }
 }
 
+void MainWindow::destroy(Dice* dice, Board* board, Game* game, QMediaPlayer* music){
+
+   delete board;
+   delete dice;
+   delete music;
+   delete game;
+
+}
+
 
 void MainWindow::manageResourcesCity()
 {
@@ -549,6 +558,9 @@ void MainWindow::manageResourcesCity()
         QMessageBox msgBox;
         msgBox.setText("CONGRATS "+QString::fromStdString(m_game->getCurrentPlayer()->get_name())+", YOU WON");
         int ret = msgBox.exec();
+
+        destroy(m_dice, m_board, m_game, m_music);
+
         if(ret == QMessageBox::Ok){
            qApp->exit();
         }
