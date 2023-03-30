@@ -1,13 +1,13 @@
 #ifndef BOARD_H
 #define BOARD_H
-#include <QVector>
-#include <QPointF>
-#include <QObject>
 #include <QGraphicsScene>
+#include <QObject>
+#include <QPointF>
+#include <QVector>
 
-#include<QGraphicsSceneMouseEvent>
-#include<QGraphicsLineItem>
 #include "gui_road.h"
+#include <QGraphicsLineItem>
+#include <QGraphicsSceneMouseEvent>
 
 class Node;
 class GUI_Node;
@@ -16,21 +16,20 @@ class Field;
 
 class Board : public QGraphicsScene
 {
-Q_OBJECT
-public:
-
+    Q_OBJECT
+  public:
     Board(QObject *parent = nullptr);
     ~Board();
 
-    QVector<Field *> get_fields() ;
+    QVector<Field *> get_fields();
 
     void addAllNodes();
     void addAllFields();
     QVector<Node *> m_nodes;
     QVector<GUI_Node *> m_gui_nodes;
-    QVector<Field*> m_fields;
+    QVector<Field *> m_fields;
 
-    void mousePressEvent ( QGraphicsSceneMouseEvent * event ) override;
+    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     void setHasTmp(bool x);
 
     void setCurrColor(QColor color);
@@ -46,7 +45,7 @@ public:
     bool is_first_turn() const;
     void set_first_turn(bool value);
 
-signals:
+  signals:
     void manageResourcesHouse();
     void manageResourcesRoad();
     void manageResourcesCity();
@@ -54,18 +53,16 @@ signals:
     void invalidRoad();
     void invalidCity();
 
-public slots:
+  public slots:
     void Redraw();
 
-private:
-
+  private:
     const int numOfNodes = 6;
     bool m_hasTmp = false;
-    GUI_Node* m_tmp;
+    GUI_Node *m_tmp;
     QColor m_curr_color;
     QColor m_road_color;
     bool m_first_turn = true;
-
 };
 
 #endif // BOARD_H

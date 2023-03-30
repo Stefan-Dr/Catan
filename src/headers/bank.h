@@ -1,20 +1,19 @@
 #ifndef BANK_H
 #define BANK_H
 
-#include <unordered_map>
 #include "resourcetype.h"
+#include <unordered_map>
 
 class Bank
 {
-public:
-    //constructor
-    Bank();    \
-    //destructor
+  public:
+    // constructor
+    Bank(); // destructor
     Bank(const Bank &) = delete;
 
-    std::unordered_map<ResourceType, unsigned>& get_bank_resources();
+    std::unordered_map<ResourceType, unsigned> &get_bank_resources();
 
-    //getters
+    // getters
     unsigned get_num_of_brick_from_bank() const;
     unsigned get_num_of_wood_from_bank() const;
     unsigned get_num_of_wool_from_bank() const;
@@ -25,8 +24,7 @@ public:
     void add_resource_card(ResourceType, int num_cards);
     void remove_resource_card(ResourceType, int num_card);
 
-private:
-
+  private:
     std::unordered_map<ResourceType, unsigned> m_bank_resource;
     unsigned m_num_of_brick;
     unsigned m_num_of_wood;

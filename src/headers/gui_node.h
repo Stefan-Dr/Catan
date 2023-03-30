@@ -1,27 +1,33 @@
 #ifndef GUI_NODE_H
 #define GUI_NODE_H
 #include "node.h"
-#include <QPointF>
-#include <QGraphicsObject>
 #include <QBrush>
+#include <QGraphicsObject>
+#include <QPointF>
 class Node;
 
 class GUI_Node : public QGraphicsObject
 {
     Q_OBJECT
-public:
+  public:
     GUI_Node(Node *node);
-
 
     // QGraphicsItem interface
     QRectF boundingRect() const override;
     QRectF position() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    inline void setBrush(QBrush b){m_brush = b;}
-    inline const Node *Node_get() const {
+    inline void setBrush(QBrush b)
+    {
+        m_brush = b;
+    }
+    inline const Node *Node_get() const
+    {
         return m_node;
     }
-    inline QBrush getBrush(){return m_brush;}
+    inline QBrush getBrush()
+    {
+        return m_brush;
+    }
     int type() const override;
     QPointF CenterPosition();
 
@@ -43,16 +49,15 @@ public:
     bool get_is_city_built() const;
     void set_is_city_built(bool value);
 
-
-signals:
+  signals:
     void nodeChanged();
     void needRedraw();
 
-protected:
+  protected:
     void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
     void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 
-private:
+  private:
     Node *m_node;
     bool hasRoad;
 
