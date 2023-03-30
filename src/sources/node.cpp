@@ -6,32 +6,32 @@ Node::Node(int m_id)
       m_owner(0), m_can_build(false) {}
 
 //getters
-int Node::get_id() const {
+auto Node::get_id() const -> int {
     return m_id;
 }
 
-bool Node::get_is_house_built() const {
+auto Node::get_is_house_built() const -> bool {
     return m_is_house_built;
 }
 
-bool Node::get_is_city_built() const {
+auto Node::get_is_city_built() const -> bool {
     return m_is_city_built;
 }
 
-bool Node::get_can_build() const {
+auto Node::get_can_build() const -> bool {
     return m_can_build;
 }
 
-bool Node::get_can_build_city() const
+auto Node::get_can_build_city() const -> bool
 {
     return m_can_build_city;
 }
 
-int Node::get_owner() const {
+auto Node::get_owner() const -> int {
     return m_owner;
 }
 
-const QVector<int>& Node::get_neighbours() const{
+auto Node::get_neighbours() const -> const QVector<int>&{
     return m_neighbours;
 }
 

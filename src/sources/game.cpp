@@ -30,26 +30,26 @@ Game::~Game() {
 }
 
 //getters
-Player* Game::getPlayer1() const{
+auto Game::getPlayer1() const -> Player*{
     return m_player1;
 }
-Player* Game::getPlayer2() const{
+auto Game::getPlayer2() const -> Player*{
     return m_player2;
 }
-Player* Game::getPlayer3() const{
+auto Game::getPlayer3() const -> Player*{
     return m_player3;
 }
-Player* Game::getPlayer4() const{
+auto Game::getPlayer4() const -> Player*{
     return m_player4;
 }
-Bank* Game::getBank() const{
+auto Game::getBank() const -> Bank*{
     return m_bank;
 }
-Player* Game::getCurrentPlayer() const{
+auto Game::getCurrentPlayer() const -> Player*{
     return m_currentPlayer;
 }
 
-QVector<Player*>& Game::get_players(){
+auto Game::get_players() -> QVector<Player*>&{
     return m_players;
 }
 
@@ -80,23 +80,23 @@ auto Game::currentPlayerId() const -> int {
 }
 
 
-bool Game::wonPlayer1() {
+auto Game::wonPlayer1() -> bool {
   return m_player1->get_victory_points() == 10;
 }
 
-bool Game::wonPlayer2() {
+auto Game::wonPlayer2() -> bool {
   return m_player2->get_victory_points() == 10;
 }
 
-bool Game::wonPlayer3() {
+auto Game::wonPlayer3() -> bool {
  return m_player3->get_victory_points() == 10;
 }
 
-bool Game::wonPlayer4() {
+auto Game::wonPlayer4() -> bool {
  return m_player4->get_victory_points() == 10;
 }
 
-bool Game::win(){
+auto Game::win() -> bool{
     return m_win;
 }
 
@@ -176,7 +176,7 @@ void Game::MagicCard(){
     }
 }
 
-bool Game::can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource)
+auto Game::can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource) -> bool
 {
     int num_player_resource;
     if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
@@ -327,17 +327,17 @@ void Game::set_can_build_city(bool value)
     m_can_build_city = value;
 }
 
-bool Game::get_can_build_house() const
+auto Game::get_can_build_house() const -> bool
 {
     return m_can_build_house;
 }
 
-bool Game::get_can_build_city() const
+auto Game::get_can_build_city() const -> bool
 {
     return m_can_build_city;
 }
 
-bool Game::can_build_house()
+auto Game::can_build_house() -> bool
 {
     if(m_currentPlayer->get_num_of_wood() >= 1 &&
                    m_currentPlayer->get_num_of_wool() >= 1 &&
@@ -346,14 +346,14 @@ bool Game::can_build_house()
     else return false;
 }
 
-bool Game::can_build_city()
+auto Game::can_build_city() -> bool
 {
     if(m_currentPlayer->get_num_of_wheat() >= 2 &&
        m_currentPlayer->get_num_of_stone() >= 3) { return true; }
     else return false;
 }
 
-bool Game::can_get_magic_card(){
+auto Game::can_get_magic_card() -> bool{
     if(m_currentPlayer->get_num_of_stone() >=1 && m_currentPlayer->get_num_of_wheat() >=1
             && m_currentPlayer->get_num_of_wool()>=1){
         return true;
@@ -362,7 +362,7 @@ bool Game::can_get_magic_card(){
 }
 
 
-bool Game::can_build_road()
+auto Game::can_build_road() -> bool
 {
     if ( m_currentPlayer->get_num_of_wood() >= 1 &&
          m_currentPlayer->get_num_of_brick() >= 1) { return true; }

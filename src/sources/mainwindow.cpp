@@ -625,6 +625,7 @@ void MainWindow::on_pbTrade_clicked()
             QMessageBox msgBox;
             msgBox.setText("Not enough resources form a player or in bank for procceding!");
             msgBox.exec();
+
         }
 
     }

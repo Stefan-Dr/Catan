@@ -6,16 +6,16 @@ Road::Road(int owner,int id)
 
 }
 //getters
-int Road::get_id() const{
+auto Road::get_id() const -> int{
     return m_id;
 }
 
-bool Road::get_can_build() const
+auto Road::get_can_build() const -> bool
 {
     return m_can_build;
 }
 
-int Road::get_owner() const{
+auto Road::get_owner() const -> int{
     return m_owner;
 }
 
