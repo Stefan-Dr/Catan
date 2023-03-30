@@ -1,0 +1,189 @@
+{
+	"BUILD_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen",
+	"CMAKE_BINARY_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src",
+	"HEADERS" : 
+	[
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/bank.h",
+			"Mu",
+			"K6S233IZAZ/moc_bank.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/board.h",
+			"Mu",
+			"K6S233IZAZ/moc_board.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/color.h",
+			"Mu",
+			"K6S233IZAZ/moc_color.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/dice.h",
+			"Mu",
+			"K6S233IZAZ/moc_dice.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/field.h",
+			"Mu",
+			"K6S233IZAZ/moc_field.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/game.h",
+			"Mu",
+			"K6S233IZAZ/moc_game.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/gui_node.h",
+			"Mu",
+			"K6S233IZAZ/moc_gui_node.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/gui_road.h",
+			"Mu",
+			"K6S233IZAZ/moc_gui_road.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/mainwindow.h",
+			"Mu",
+			"K6S233IZAZ/moc_mainwindow.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/node.h",
+			"Mu",
+			"K6S233IZAZ/moc_node.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/player.h",
+			"Mu",
+			"K6S233IZAZ/moc_player.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/resourcetype.h",
+			"Mu",
+			"K6S233IZAZ/moc_resourcetype.cpp"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/headers/road.h",
+			"Mu",
+			"K6S233IZAZ/moc_road.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+		"/home/snele/Desktop/azrs-Projekat/06-catan/src",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/snele/Desktop/azrs-Projekat/06-catan/src/build/qrc_resource.cpp",
+		"/home/snele/Desktop/azrs-Projekat/06-catan/src/build/ui_mainwindow.h"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/Catan_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/Catan_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/main.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/mainwindow.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp",
+			"Mu"
+		],
+		[
+			"/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp",
+			"Mu"
+		]
+	],
+	"VERBOSITY" : 0
+}

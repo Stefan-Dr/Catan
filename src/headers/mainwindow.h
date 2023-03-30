@@ -10,7 +10,7 @@
 #include "dice.h"
 #include "game.h"
 #include "resourcetype.h"
-#include <QMediaPlayer>
+//#include <QMediaPlayer>
 
 class QGraphicsScene;
 class Node;
@@ -78,7 +78,7 @@ protected:
     Ui::MainWindow *ui;
     Board *m_board;
     Dice *m_dice;
-    QMediaPlayer *m_music;
+    //QMediaPlayer *m_music;
     Game *m_game;
 };
 #endif // MAINWINDOW_H

@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , m_board(new Board(this))
     , m_dice(new Dice())
-    , m_music(new QMediaPlayer())
+//    , m_music(new QMediaPlayer())
     , m_game(new Game())
 {
     ui->setupUi(this);
@@ -34,9 +34,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(dynamic_cast<Board*>(m_board), &Board::invalidRoad, this, &MainWindow::invalidRoad);
     connect(dynamic_cast<Board*>(m_board), &Board::invalidCity, this, &MainWindow::invalidCity);
 
-    m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
-    m_music->play();
-    m_music->setVolume(10);
+    //m_music->setMedia(QUrl("qrc:/resources/sounds/background_music.mp3"));
+    //m_music->play();
+    //m_music->setVolume(10);
 
 
     //dodavenje izbora u prvi dropdown meni
@@ -322,13 +322,13 @@ void MainWindow::on_pbRollDice_clicked()
 
 void MainWindow::on_rbON_toggled(bool checked)
 {
-    if ( checked ) { m_music->play(); }
+    //if ( checked ) { m_music->play(); }
 }
 
 
 void MainWindow::on_rbOFF_toggled(bool checked)
 {
-    if ( checked ) { m_music->stop(); }
+    //if ( checked ) { m_music->stop(); }
 }
 
 

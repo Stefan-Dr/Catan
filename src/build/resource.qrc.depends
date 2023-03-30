@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>images/pozadina.jpg</file>
+        <file>images/helpBackground.jpg</file>
+        <file>images/helpb.png</file>
+        <file>images/rules.png</file>
+        <file>images/rls.png</file>
+        <file>images/rlss.png</file>
+        <file>images/rlsss.png</file>
+        <file>images/resBoard.png</file>
+        <file>images/boardR.png</file>
+        <file>images/wood.png</file>
+        <file>images/next.png</file>
+        <file>images/transparent.png</file>
+        <file>images/catanMap.png</file>
+        <file>images/button_house.png</file>
+        <file>images/button_magicCard.png</file>
+        <file>images/button_road.png</file>
+        <file>images/button_settlement.png</file>
+        <file>images/dice1.png</file>
+        <file>images/dice2.png</file>
+        <file>images/dice3.png</file>
+        <file>images/dice4.png</file>
+        <file>images/dice5.png</file>
+        <file>images/dice6.png</file>
+        <file>images/resources--brick.png</file>
+        <file>images/resources--grain.png</file>
+        <file>images/resources--lumber.png</file>
+        <file>images/resources--ore.png</file>
+        <file>images/resources--wool.png</file>
+        <file>sounds/background_music.mp3</file>
+        <file>images/trade_button.png</file>
+    </qresource>
+</RCC>
