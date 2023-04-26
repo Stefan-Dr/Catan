@@ -1,0 +1,714 @@
+Enabled checks:
+    clang-analyzer-apiModeling.StdCLibraryFunctions
+    clang-analyzer-apiModeling.TrustNonnull
+    clang-analyzer-apiModeling.google.GTest
+    clang-analyzer-apiModeling.llvm.CastValue
+    clang-analyzer-apiModeling.llvm.ReturnValue
+    clang-analyzer-core.CallAndMessage
+    clang-analyzer-core.DivideZero
+    clang-analyzer-core.DynamicTypePropagation
+    clang-analyzer-core.NonNullParamChecker
+    clang-analyzer-core.NonnilStringConstants
+    clang-analyzer-core.NullDereference
+    clang-analyzer-core.StackAddrEscapeBase
+    clang-analyzer-core.StackAddressEscape
+    clang-analyzer-core.UndefinedBinaryOperatorResult
+    clang-analyzer-core.VLASize
+    clang-analyzer-core.builtin.BuiltinFunctions
+    clang-analyzer-core.builtin.NoReturnFunctions
+    clang-analyzer-core.uninitialized.ArraySubscript
+    clang-analyzer-core.uninitialized.Assign
+    clang-analyzer-core.uninitialized.Branch
+    clang-analyzer-core.uninitialized.CapturedBlockVariable
+    clang-analyzer-core.uninitialized.UndefReturn
+    clang-analyzer-cplusplus.InnerPointer
+    clang-analyzer-cplusplus.Move
+    clang-analyzer-cplusplus.NewDelete
+    clang-analyzer-cplusplus.NewDeleteLeaks
+    clang-analyzer-cplusplus.PureVirtualCall
+    clang-analyzer-cplusplus.SelfAssignment
+    clang-analyzer-cplusplus.SmartPtr
+    clang-analyzer-cplusplus.VirtualCallModeling
+    clang-analyzer-deadcode.DeadStores
+    clang-analyzer-fuchsia.HandleChecker
+    clang-analyzer-nullability.NullPassedToNonnull
+    clang-analyzer-nullability.NullReturnedFromNonnull
+    clang-analyzer-nullability.NullabilityBase
+    clang-analyzer-nullability.NullableDereferenced
+    clang-analyzer-nullability.NullablePassedToNonnull
+    clang-analyzer-nullability.NullableReturnedFromNonnull
+    clang-analyzer-optin.cplusplus.UninitializedObject
+    clang-analyzer-optin.cplusplus.VirtualCall
+    clang-analyzer-optin.mpi.MPI-Checker
+    clang-analyzer-optin.osx.OSObjectCStyleCast
+    clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+    clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+    clang-analyzer-optin.performance.GCDAntipattern
+    clang-analyzer-optin.performance.Padding
+    clang-analyzer-optin.portability.UnixAPI
+    clang-analyzer-osx.API
+    clang-analyzer-osx.MIG
+    clang-analyzer-osx.NSOrCFErrorDerefChecker
+    clang-analyzer-osx.NumberObjectConversion
+    clang-analyzer-osx.OSObjectRetainCount
+    clang-analyzer-osx.ObjCProperty
+    clang-analyzer-osx.SecKeychainAPI
+    clang-analyzer-osx.cocoa.AtSync
+    clang-analyzer-osx.cocoa.AutoreleaseWrite
+    clang-analyzer-osx.cocoa.ClassRelease
+    clang-analyzer-osx.cocoa.Dealloc
+    clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+    clang-analyzer-osx.cocoa.Loops
+    clang-analyzer-osx.cocoa.MissingSuperCall
+    clang-analyzer-osx.cocoa.NSAutoreleasePool
+    clang-analyzer-osx.cocoa.NSError
+    clang-analyzer-osx.cocoa.NilArg
+    clang-analyzer-osx.cocoa.NonNilReturnValue
+    clang-analyzer-osx.cocoa.ObjCGenerics
+    clang-analyzer-osx.cocoa.RetainCount
+    clang-analyzer-osx.cocoa.RetainCountBase
+    clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak
+    clang-analyzer-osx.cocoa.SelfInit
+    clang-analyzer-osx.cocoa.SuperDealloc
+    clang-analyzer-osx.cocoa.UnusedIvars
+    clang-analyzer-osx.cocoa.VariadicMethodTypes
+    clang-analyzer-osx.coreFoundation.CFError
+    clang-analyzer-osx.coreFoundation.CFNumber
+    clang-analyzer-osx.coreFoundation.CFRetainRelease
+    clang-analyzer-osx.coreFoundation.containers.OutOfBounds
+    clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+    clang-analyzer-security.FloatLoopCounter
+    clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+    clang-analyzer-security.insecureAPI.SecuritySyntaxChecker
+    clang-analyzer-security.insecureAPI.UncheckedReturn
+    clang-analyzer-security.insecureAPI.bcmp
+    clang-analyzer-security.insecureAPI.bcopy
+    clang-analyzer-security.insecureAPI.bzero
+    clang-analyzer-security.insecureAPI.decodeValueOfObjCType
+    clang-analyzer-security.insecureAPI.getpw
+    clang-analyzer-security.insecureAPI.gets
+    clang-analyzer-security.insecureAPI.mkstemp
+    clang-analyzer-security.insecureAPI.mktemp
+    clang-analyzer-security.insecureAPI.rand
+    clang-analyzer-security.insecureAPI.strcpy
+    clang-analyzer-security.insecureAPI.vfork
+    clang-analyzer-unix.API
+    clang-analyzer-unix.DynamicMemoryModeling
+    clang-analyzer-unix.Malloc
+    clang-analyzer-unix.MallocSizeof
+    clang-analyzer-unix.MismatchedDeallocator
+    clang-analyzer-unix.Vfork
+    clang-analyzer-unix.cstring.BadSizeArg
+    clang-analyzer-unix.cstring.CStringModeling
+    clang-analyzer-unix.cstring.NullArg
+    clang-analyzer-valist.CopyToSelf
+    clang-analyzer-valist.Uninitialized
+    clang-analyzer-valist.Unterminated
+    clang-analyzer-valist.ValistBase
+    modernize-avoid-bind
+    modernize-avoid-c-arrays
+    modernize-concat-nested-namespaces
+    modernize-deprecated-headers
+    modernize-deprecated-ios-base-aliases
+    modernize-loop-convert
+    modernize-make-shared
+    modernize-make-unique
+    modernize-pass-by-value
+    modernize-raw-string-literal
+    modernize-redundant-void-arg
+    modernize-replace-auto-ptr
+    modernize-replace-random-shuffle
+    modernize-return-braced-init-list
+    modernize-shrink-to-fit
+    modernize-unary-static-assert
+    modernize-use-auto
+    modernize-use-bool-literals
+    modernize-use-default-member-init
+    modernize-use-emplace
+    modernize-use-equals-default
+    modernize-use-equals-delete
+    modernize-use-nodiscard
+    modernize-use-noexcept
+    modernize-use-nullptr
+    modernize-use-override
+    modernize-use-trailing-return-type
+    modernize-use-transparent-functors
+    modernize-use-uncaught-exceptions
+    modernize-use-using
+
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:3:10: warning: inclusion of deprecated C++ header 'time.h'; consider using 'ctime' instead [modernize-deprecated-headers]
+#include <time.h>
+         ^~~~~~~~
+         <ctime>
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:27:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Dice::get_dice1() const{
+~~~       ^
+auto                        -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:31:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Dice::get_dice2() const{
+~~~       ^
+auto                        -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:35:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Dice::get_dice_sum() const {
+~~~       ^
+auto                           -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:39:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Dice::get_button_clicked() const {
+~~~~       ^
+auto                                  -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:43:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Dice::get_dice_is_rolled()const {
+~~~~       ^
+auto                                 -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp:48:16: warning: use nullptr [modernize-use-nullptr]
+    srand(time(0));
+               ^
+               nullptr
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:19:51: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+std::unordered_map<ResourceType, unsigned>& Bank::get_bank_resources(){
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^
+auto                                                                   -> std::unordered_map<ResourceType, unsigned>&
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:23:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+unsigned Bank::get_num_of_brick_from_bank() const{
+~~~~~~~~       ^
+auto                                              -> unsigned
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:26:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+unsigned Bank::get_num_of_wood_from_bank() const{
+~~~~~~~~       ^
+auto                                             -> unsigned
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:29:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+unsigned Bank::get_num_of_wool_from_bank() const{
+~~~~~~~~       ^
+auto                                             -> unsigned
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:32:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+unsigned Bank::get_num_of_wheat_from_bank() const{
+~~~~~~~~       ^
+auto                                              -> unsigned
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp:35:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+unsigned Bank::get_num_of_stone_from_bank() const{
+~~~~~~~~       ^
+auto                                              -> unsigned
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:39:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Field::get_id() const{
+~~~        ^
+auto                      -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:43:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Field::get_number() const{
+~~~        ^
+auto                          -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:47:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+ResourceType Field::get_res_type() const{
+~~~~~~~~~~~~        ^
+auto                                     -> ResourceType
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:52:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QVector<Node*>& Field::get_corners(){
+~~~~~~~~~~~~~~~        ^
+auto                                 -> QVector<Node*>&
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:56:30: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+const QVector<Road*>& Field::get_edges() const{
+~~~~~~~~~~~~~~~~~~~~~        ^
+auto                                           -> const QVector<Road*>&
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:60:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_up_corner() const{
+~~~~~        ^
+auto                               -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:64:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_down_corner() const{
+~~~~~        ^
+auto                                 -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:68:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_bottom_right_corner() const{
+~~~~~        ^
+auto                                         -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:72:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_bottom_left_corner() const{
+~~~~~        ^
+auto                                        -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:76:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_up_right_corner() const{
+~~~~~        ^
+auto                                     -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:80:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* Field::get_up_left_conrer() const{
+~~~~~        ^
+auto                                    -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:84:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_right_edge() const{
+~~~~~        ^
+auto                                -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:88:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_left_edge() const{
+~~~~~        ^
+auto                               -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:92:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_bottom_right_edge() const{
+~~~~~        ^
+auto                                       -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:96:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_bottom_left_edge() const{
+~~~~~        ^
+auto                                      -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:100:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_up_right_edge() const{
+~~~~~        ^
+auto                                   -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:104:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Road* Field::get_up_left_edge() const{
+~~~~~        ^
+auto                                  -> Road*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp:109:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Field::is_robber_on_the_field() const{
+~~~~        ^
+auto                                       -> bool
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:18:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool GUI_Node::get_hasRoad() const{
+~~~~           ^
+auto                               -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:22:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool GUI_Node::get_is_city_built() const
+~~~~           ^
+auto                                     -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:27:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool GUI_Node::get_is_end_of_road() const
+~~~~           ^
+auto                                      -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:32:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Node* GUI_Node::getNode() const
+~~~~~           ^
+auto                            -> Node*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:37:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool GUI_Node::get_is_house_built() const
+~~~~           ^
+auto                                      -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:74:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QRectF GUI_Node::boundingRect() const
+~~~~~~           ^
+auto                                  -> QRectF
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:79:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QRectF GUI_Node::position() const{
+~~~~~~           ^
+auto                              -> QRectF
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:132:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QPointF GUI_Node::CenterPosition() {
+~~~~~~~           ^
+auto                               -> QPointF
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:137:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool GUI_Node::check_owner_city(QColor color)
+~~~~           ^
+auto                                          -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp:147:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int GUI_Node::type() const{
+~~~           ^
+auto                       -> int
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/mocs_compilation.cpp
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/main.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/main.cpp:5:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int main(int argc, char *argv[])
+~~~ ^
+auto                             -> int
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp:19:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QVector<Field *>Board::get_fields(){
+~~~~~~~~~~~~~~~~       ^
+auto                                -> QVector<Field *>
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp:630:21: warning: use auto when initializing with new to avoid duplicating the type name [modernize-use-auto]
+                    GUI_Road* road = new GUI_Road(m_tmp, node);
+                    ^~~~~~~~
+                    auto
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp:714:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QColor Board::getCurrColor()
+~~~~~~        ^
+auto                         -> QColor
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp:724:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QColor Board::getRoadColor()
+~~~~~~        ^
+auto                         -> QColor
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp:729:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Board::is_first_turn() const
+~~~~        ^
+auto                              -> bool
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp:6:10: warning: inclusion of deprecated C++ header 'math.h'; consider using 'cmath' instead [modernize-deprecated-headers]
+#include <math.h>
+         ^~~~~~~~
+         <cmath>
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp:17:11: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+GUI_Road::~GUI_Road(){
+          ^          ~
+                     = default;
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp:23:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QRectF GUI_Road::boundingRect() const {
+~~~~~~           ^
+auto                                  -> QRectF
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp:46:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QPointF GUI_Road::getCenter(){
+~~~~~~~           ^
+auto                          -> QPointF
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:9:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Node::get_id() const {
+~~~       ^
+auto                     -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:13:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Node::get_is_house_built() const {
+~~~~       ^
+auto                                  -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:17:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Node::get_is_city_built() const {
+~~~~       ^
+auto                                 -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:21:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Node::get_can_build() const {
+~~~~       ^
+auto                             -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:25:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Node::get_can_build_city() const
+~~~~       ^
+auto                                  -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:30:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Node::get_owner() const {
+~~~       ^
+auto                        -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp:34:27: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+const QVector<int>& Node::get_neighbours() const{
+~~~~~~~~~~~~~~~~~~~       ^
+auto                                             -> const QVector<int>&
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp:9:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Road::get_id() const{
+~~~       ^
+auto                     -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp:13:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Road::get_can_build() const
+~~~~       ^
+auto                             -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp:18:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Road::get_owner() const{
+~~~       ^
+auto                        -> int
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:5:9: warning: use '= default' to define a trivial default constructor [modernize-use-equals-default]
+Player::Player()
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:10:24: warning: pass by value and use std::move [modernize-pass-by-value]
+Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
+                       ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:10:42: warning: pass by value and use std::move [modernize-pass-by-value]
+Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
+                                         ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:10:56: warning: pass by value and use std::move [modernize-pass-by-value]
+Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
+                                                       ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:33:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+std::string Player::get_name() const
+~~~~~~~~~~~         ^
+auto                                 -> std::string
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:38:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_wood() const {
+~~~         ^
+auto                                -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:41:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_brick() const {
+~~~         ^
+auto                                 -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:44:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_wool() const {
+~~~         ^
+auto                                -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:47:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_wheat() const {
+~~~         ^
+auto                                 -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:50:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_stone() const {
+~~~         ^
+auto                                 -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:54:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_allowed_houses() const{
+~~~         ^
+auto                                          -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:57:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_allowed_cities() const{
+~~~         ^
+auto                                          -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:60:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_allowed_roads() const{
+~~~         ^
+auto                                         -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:64:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QColor Player::get_player_color() const
+~~~~~~         ^
+auto                                    -> QColor
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:69:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QColor Player::get_city_color() const
+~~~~~~         ^
+auto                                  -> QColor
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:74:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_id() const{
+~~~         ^
+auto                       -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:78:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_victory_points() const{
+~~~         ^
+auto                                   -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:81:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_houses() const{
+~~~         ^
+auto                                  -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:84:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_cities() const{
+~~~         ^
+auto                                  -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:87:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+int Player::get_num_of_roads() const{
+~~~         ^
+auto                                 -> int
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:90:47: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+std::unordered_map<ResourceType,int>& Player::get_PlayerResources(){
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ^
+auto                                                                -> std::unordered_map<ResourceType,int>&
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:94:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Player::get_first_turn() const
+~~~~         ^
+auto                                -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:207:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Player &p){
+~~~~         ^
+auto                                                                                    -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp:272:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Player::comparePlayers(const Player* pl1, const Player* pl2) {
+~~~~         ^
+auto                                                              -> bool
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/mainwindow.cpp
+clang-tidy-10 -checks=modernize-* -p=/home/snele/Desktop/azrs-Projekat/06-catan/src/build /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:33:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Player* Game::getPlayer1() const{
+~~~~~~~       ^
+auto                             -> Player*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:36:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Player* Game::getPlayer2() const{
+~~~~~~~       ^
+auto                             -> Player*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:39:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Player* Game::getPlayer3() const{
+~~~~~~~       ^
+auto                             -> Player*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:42:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Player* Game::getPlayer4() const{
+~~~~~~~       ^
+auto                             -> Player*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:45:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Bank* Game::getBank() const{
+~~~~~       ^
+auto                        -> Bank*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:48:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+Player* Game::getCurrentPlayer() const{
+~~~~~~~       ^
+auto                                   -> Player*
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:52:25: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+QVector<Player*>& Game::get_players(){
+~~~~~~~~~~~~~~~~~       ^
+auto                                  -> QVector<Player*>&
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:83:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::wonPlayer1() {
+~~~~       ^
+auto                    -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:87:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::wonPlayer2() {
+~~~~       ^
+auto                    -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:91:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::wonPlayer3() {
+~~~~       ^
+auto                    -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:95:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::wonPlayer4() {
+~~~~       ^
+auto                    -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:99:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::win(){
+~~~~       ^
+auto             -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:179:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource)
+~~~~       ^
+auto                                                                                     -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:30: warning: The left operand of '>=' is a garbage value [clang-analyzer-core.UndefinedBinaryOperatorResult]
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+                             ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:181:5: note: 'num_player_resource' declared without an initial value
+    int num_player_resource;
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:182:9: note: Assuming 'player_resource' is not equal to Wheat
+    if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:182:5: note: Taking false branch
+    if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:183:9: note: Assuming 'player_resource' is not equal to Wool
+    if (player_resource == ResourceType::Wool) { num_player_resource = getCurrentPlayer()->get_num_of_wool(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:183:5: note: Taking false branch
+    if (player_resource == ResourceType::Wool) { num_player_resource = getCurrentPlayer()->get_num_of_wool(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:184:9: note: Assuming 'player_resource' is not equal to Stone
+    if (player_resource == ResourceType::Stone) { num_player_resource = getCurrentPlayer()->get_num_of_stone(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:184:5: note: Taking false branch
+    if (player_resource == ResourceType::Stone) { num_player_resource = getCurrentPlayer()->get_num_of_stone(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:185:9: note: Assuming 'player_resource' is not equal to Wood
+    if (player_resource == ResourceType::Wood) { num_player_resource = getCurrentPlayer()->get_num_of_wood(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:185:5: note: Taking false branch
+    if (player_resource == ResourceType::Wood) { num_player_resource = getCurrentPlayer()->get_num_of_wood(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:186:9: note: Assuming 'player_resource' is not equal to Brick
+    if (player_resource == ResourceType::Brick) { num_player_resource = getCurrentPlayer()->get_num_of_brick(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:186:5: note: Taking false branch
+    if (player_resource == ResourceType::Brick) { num_player_resource = getCurrentPlayer()->get_num_of_brick(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:189:9: note: Assuming 'bank_resource' is not equal to Wheat
+    if (bank_resource == ResourceType::Wheat) { num_bank_resource = getBank()->get_num_of_wheat_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:189:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wheat) { num_bank_resource = getBank()->get_num_of_wheat_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:190:9: note: Assuming 'bank_resource' is not equal to Wool
+    if (bank_resource == ResourceType::Wool) { num_bank_resource = getBank()->get_num_of_wool_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:190:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wool) { num_bank_resource = getBank()->get_num_of_wool_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:191:9: note: Assuming 'bank_resource' is not equal to Stone
+    if (bank_resource == ResourceType::Stone) { num_bank_resource = getBank()->get_num_of_stone_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:191:5: note: Taking false branch
+    if (bank_resource == ResourceType::Stone) { num_bank_resource = getBank()->get_num_of_stone_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:192:9: note: Assuming 'bank_resource' is not equal to Wood
+    if (bank_resource == ResourceType::Wood) { num_bank_resource = getBank()->get_num_of_wood_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:192:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wood) { num_bank_resource = getBank()->get_num_of_wood_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:193:9: note: Assuming 'bank_resource' is not equal to Brick
+    if (bank_resource == ResourceType::Brick) { num_bank_resource = getBank()->get_num_of_brick_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:193:5: note: Taking false branch
+    if (bank_resource == ResourceType::Brick) { num_bank_resource = getBank()->get_num_of_brick_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:30: note: The left operand of '>=' is a garbage value
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+                             ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:58: warning: The left operand of '>=' is a garbage value [clang-analyzer-core.UndefinedBinaryOperatorResult]
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+                                                         ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:182:9: note: Assuming 'player_resource' is not equal to Wheat
+    if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:182:5: note: Taking false branch
+    if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:183:9: note: Assuming 'player_resource' is not equal to Wool
+    if (player_resource == ResourceType::Wool) { num_player_resource = getCurrentPlayer()->get_num_of_wool(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:183:5: note: Taking false branch
+    if (player_resource == ResourceType::Wool) { num_player_resource = getCurrentPlayer()->get_num_of_wool(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:184:9: note: Assuming 'player_resource' is equal to Stone
+    if (player_resource == ResourceType::Stone) { num_player_resource = getCurrentPlayer()->get_num_of_stone(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:184:5: note: Taking true branch
+    if (player_resource == ResourceType::Stone) { num_player_resource = getCurrentPlayer()->get_num_of_stone(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:185:9: note: 'player_resource' is not equal to Wood
+    if (player_resource == ResourceType::Wood) { num_player_resource = getCurrentPlayer()->get_num_of_wood(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:185:5: note: Taking false branch
+    if (player_resource == ResourceType::Wood) { num_player_resource = getCurrentPlayer()->get_num_of_wood(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:186:9: note: 'player_resource' is not equal to Brick
+    if (player_resource == ResourceType::Brick) { num_player_resource = getCurrentPlayer()->get_num_of_brick(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:186:5: note: Taking false branch
+    if (player_resource == ResourceType::Brick) { num_player_resource = getCurrentPlayer()->get_num_of_brick(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:188:5: note: 'num_bank_resource' declared without an initial value
+    int num_bank_resource;
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:189:9: note: Assuming 'bank_resource' is not equal to Wheat
+    if (bank_resource == ResourceType::Wheat) { num_bank_resource = getBank()->get_num_of_wheat_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:189:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wheat) { num_bank_resource = getBank()->get_num_of_wheat_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:190:9: note: Assuming 'bank_resource' is not equal to Wool
+    if (bank_resource == ResourceType::Wool) { num_bank_resource = getBank()->get_num_of_wool_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:190:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wool) { num_bank_resource = getBank()->get_num_of_wool_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:191:9: note: Assuming 'bank_resource' is not equal to Stone
+    if (bank_resource == ResourceType::Stone) { num_bank_resource = getBank()->get_num_of_stone_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:191:5: note: Taking false branch
+    if (bank_resource == ResourceType::Stone) { num_bank_resource = getBank()->get_num_of_stone_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:192:9: note: Assuming 'bank_resource' is not equal to Wood
+    if (bank_resource == ResourceType::Wood) { num_bank_resource = getBank()->get_num_of_wood_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:192:5: note: Taking false branch
+    if (bank_resource == ResourceType::Wood) { num_bank_resource = getBank()->get_num_of_wood_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:193:9: note: Assuming 'bank_resource' is not equal to Brick
+    if (bank_resource == ResourceType::Brick) { num_bank_resource = getBank()->get_num_of_brick_from_bank(); }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:193:5: note: Taking false branch
+    if (bank_resource == ResourceType::Brick) { num_bank_resource = getBank()->get_num_of_brick_from_bank(); }
+    ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:10: note: Assuming 'num_player_resource' is >= 3
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+         ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:9: note: Left side of '&&' is true
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+        ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:195:58: note: The left operand of '>=' is a garbage value
+    if ((num_player_resource >= 3) && (num_bank_resource >= 1) ) { return true; }
+                                                         ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:297:7: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+      Player* players[] = { m_player1,
+      ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:297:15: warning: Value stored to 'players' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+      Player* players[] = { m_player1,
+              ^
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:297:15: note: Value stored to 'players' during its initialization is never read
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:330:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::get_can_build_house() const
+~~~~       ^
+auto                                   -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:335:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::get_can_build_city() const
+~~~~       ^
+auto                                  -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:340:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::can_build_house()
+~~~~       ^
+auto                         -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:349:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::can_build_city()
+~~~~       ^
+auto                        -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:356:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::can_get_magic_card(){
+~~~~       ^
+auto                            -> bool
+/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp:365:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+bool Game::can_build_road()
+~~~~       ^
+auto                        -> bool

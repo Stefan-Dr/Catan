@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/mocs_compilation.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/bank.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/bank.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/board.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/board.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/dice.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/dice.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/field.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/field.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/game.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/game.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/gui_node.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_node.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/gui_road.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/gui_road.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/main.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/main.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/main.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/mainwindow.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/mainwindow.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/mainwindow.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/node.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/node.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/player.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/player.cpp"
+},
+{
+  "directory": "/home/snele/Desktop/azrs-Projekat/06-catan/src/build",
+  "command": "/usr/bin/c++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build -I/home/snele/Desktop/azrs-Projekat/06-catan/src -I/home/snele/Desktop/azrs-Projekat/06-catan/src/build/Catan_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork    -fPIC -std=gnu++17 -o CMakeFiles/Catan.dir/sources/road.cpp.o -c /home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp",
+  "file": "/home/snele/Desktop/azrs-Projekat/06-catan/src/sources/road.cpp"
+}
+]

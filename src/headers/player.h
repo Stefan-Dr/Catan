@@ -4,8 +4,8 @@
 #include <vector>
 
 #include "bank.h"
-#include "resourcetype.h"
 #include "color.h"
+#include "resourcetype.h"
 
 #include <QMainWindow>
 #include <QObject>
@@ -13,21 +13,21 @@
 
 class Player
 {
-public:
-    //constructor
+  public:
+    // constructor
     Player();
-    //destructor
-    Player(const Player& ) = delete;
+    // destructor
+    Player(const Player &) = delete;
     Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
-    //setters
+    // setters
     std::string get_name() const;
     void set_name(std::string new_name);
     void set_first_turn(bool value);
     void set_city(Bank &bank);
     void set_id(int id);
 
-    //getters
+    // getters
     bool get_first_turn() const;
     int get_id() const;
     Color get_color() const;
@@ -67,8 +67,8 @@ public:
     void take_resource_card_from_bank(ResourceType res_type, int amount, Bank &bank);
 
     void return_resource_card_to_bank(ResourceType res_type, int amount, Bank &bank);
-    std::unordered_map<ResourceType,int>& get_PlayerResources();
-    void set_PlayerResources(const std::unordered_map<ResourceType,int> &mPlayerResource);
+    std::unordered_map<ResourceType, int> &get_PlayerResources();
+    void set_PlayerResources(const std::unordered_map<ResourceType, int> &mPlayerResource);
 
     void increase_num_of_houses();
     void decrease_num_of_houses();
@@ -82,11 +82,9 @@ public:
     void decrease_allowed_road_number();
     void decrease_victory_point();
 
-    bool comparePlayers(const Player* pl1, const Player* pl2);
+    bool comparePlayers(const Player *pl1, const Player *pl2);
 
-
-private:
-
+  private:
     int m_id;
     std::string m_name;
     Color m_color;
@@ -109,8 +107,6 @@ private:
     QColor m_city_color;
 
     bool m_first_turn = true;
-
-
 };
 
 #endif // PLAYER_H

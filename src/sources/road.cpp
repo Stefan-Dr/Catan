@@ -1,26 +1,28 @@
 #include "../headers/road.h"
 
-//constructor
-Road::Road(int owner,int id)
-:m_owner(owner),m_id(id){
-
+// constructor
+Road::Road(int owner, int id) : m_owner(owner), m_id(id)
+{
 }
-//getters
-int Road::get_id() const{
+// getters
+auto Road::get_id() const -> int
+{
     return m_id;
 }
 
-bool Road::get_can_build() const
+auto Road::get_can_build() const -> bool
 {
     return m_can_build;
 }
 
-int Road::get_owner() const{
+auto Road::get_owner() const -> int
+{
     return m_owner;
 }
 
-//setters
-void Road::set_owner(int owner){
+// setters
+void Road::set_owner(int owner)
+{
     m_owner = owner;
 }
 

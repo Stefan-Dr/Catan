@@ -4,8 +4,7 @@
 
 class Node
 {
-private:
-
+  private:
     int m_id;
     bool m_is_house_built;
     bool m_is_city_built;
@@ -14,22 +13,22 @@ private:
     bool m_can_build_city = false;
     QVector<int> m_neighbours;
 
-public:
-    //constructor
+  public:
+    // constructor
     Node(int id);
-    //destructor
+    // destructor
     Node(const Node &) = delete;
 
-    //Getters
+    // Getters
     int get_id() const;
     bool get_is_house_built() const;
     bool get_is_city_built() const;
     int get_owner() const;
     bool get_can_build() const;
     bool get_can_build_city() const;
-    const QVector<int>& get_neighbours() const;
+    const QVector<int> &get_neighbours() const;
 
-    //Setters
+    // Setters
     void set_is_house_built(bool value);
     void set_is_city_built(bool value);
     void set_owner(int owner);
@@ -39,8 +38,6 @@ public:
 
     void place_house(int owner);
     void place_city(int owner);
-
-
 };
 
 #endif // NODE_H
