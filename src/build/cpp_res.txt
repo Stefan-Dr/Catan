@@ -1,0 +1,1 @@
+cppcheck: error: failed to open project 'compile_commands.json'. The file does not exist.
