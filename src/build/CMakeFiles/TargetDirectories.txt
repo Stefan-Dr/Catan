@@ -1,4 +1,4 @@
-/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/rebuild_cache.dir
-/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/edit_cache.dir
-/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/Catan.dir
-/home/snele/Desktop/azrs-Projekat/06-catan/src/build/CMakeFiles/Catan_autogen.dir
+/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles/Catan.dir
+/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles/edit_cache.dir
+/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles/rebuild_cache.dir
+/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles/Catan_autogen.dir
