@@ -3,13 +3,13 @@
 #include "board.h"
 #include "node.h"
 
-#include "gui_node.h"
-#include <QMainWindow>
-#include <QGraphicsItem>
-#include <QWidget>
 #include "dice.h"
 #include "game.h"
+#include "gui_node.h"
 #include "resourcetype.h"
+#include <QGraphicsItem>
+#include <QMainWindow>
+#include <QWidget>
 //#include <QMediaPlayer>
 
 class QGraphicsScene;
@@ -17,68 +17,67 @@ class Node;
 class GUI_Node;
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+  Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-    void addAllNodes();
-    void displayResources();
-    void displayBankResources();
-    void displayPlayerPoints();
-    void displayPlayerRoads();
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
+  void addAllNodes();
+  void displayResources();
+  void displayBankResources();
+  void displayPlayerPoints();
+  void displayPlayerRoads();
 
 signals:
-    void AddedNewBlankNode(GUI_Node *node);
-    void AddHouse();
+  void AddedNewBlankNode(GUI_Node *node);
+  void AddHouse();
 private slots:
 
-    void on_pbStartGame_clicked();
-    void on_pbSettings_clicked();
-    void on_pbBackToMenu_clicked();
-    void on_pbBackToMenu_2_clicked();
-    void on_pbHelp_clicked();
-    void on_pbExit_clicked();
-    void on_pbContinue_clicked();
-    void on_pbBackToMenu_3_clicked();
+  void on_pbStartGame_clicked();
+  void on_pbSettings_clicked();
+  void on_pbBackToMenu_clicked();
+  void on_pbBackToMenu_2_clicked();
+  void on_pbHelp_clicked();
+  void on_pbExit_clicked();
+  void on_pbContinue_clicked();
+  void on_pbBackToMenu_3_clicked();
 
+  void on_rbON_toggled(bool checked);
+  void on_rbOFF_toggled(bool checked);
 
-    void on_rbON_toggled(bool checked);
-    void on_rbOFF_toggled(bool checked);
+  void on_pb_House_clicked();
+  void manageResourcesHouse();
+  void houseBuilt();
+  void invalidHouse();
 
-    void on_pb_House_clicked();
-    void manageResourcesHouse();
-    void houseBuilt();
-    void invalidHouse();
+  void on_pb_Road_clicked();
+  void manageResourcesRoad();
+  void roadBuilt();
+  void invalidRoad();
 
-    void on_pb_Road_clicked();
-    void manageResourcesRoad();
-    void roadBuilt();
-    void invalidRoad();
+  void on_pb_Settlement_clicked();
+  void manageResourcesCity();
+  void cityBuilt();
+  void invalidCity();
 
-    void on_pb_Settlement_clicked();
-    void manageResourcesCity();
-    void cityBuilt();
-    void invalidCity();
-
-    void on_pushButton_clicked();
-    void on_pbRollDice_clicked();
-    void on_pb_MagicCard_clicked();
-    void on_pbTrade_clicked();
-    void tradeSuccessfull();
-    void magicCardDrawn();
-
+  void on_pushButton_clicked();
+  void on_pbRollDice_clicked();
+  void on_pb_MagicCard_clicked();
+  void on_pbTrade_clicked();
+  void tradeSuccessfull();
+  void magicCardDrawn();
 
 protected:
-    Ui::MainWindow *ui;
-    Board *m_board;
-    Dice *m_dice;
-    //QMediaPlayer *m_music;
-    Game *m_game;
+  Ui::MainWindow *ui;
+  Board *m_board;
+  Dice *m_dice;
+  // QMediaPlayer *m_music;
+  Game *m_game;
 };
 #endif // MAINWINDOW_H
