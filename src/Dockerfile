@@ -1,0 +1,42 @@
+FROM ubuntu:22.04
+
+RUN apt-get -y update && DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    git cmake python3 python3-pip build-essential \
+    libdbus-1-3 libpulse-mainloop-glib0 libgl-dev libxkbcommon-x11-0 libegl1
+
+RUN apt install -y '^libxcb.*-dev' libfontconfig1-dev libfreetype6-dev libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev\
+    libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-shape0-dev\
+    libxcb-randr0-dev libxcb-render-util0-dev libxcb-util-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-xinerama0 libxcb-util1\ 
+    libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev dbus-x11 at-spi2-core
+
+RUN pip3 install aqtinstall
+
+RUN apt install -y libxcb-cursor0
+
+
+ARG QT=6.6.0
+ARG QT_MODULES=qtmultimedia
+ARG QT_HOST=linux
+ARG QT_TARGET=desktop
+ARG QT_ARCH=gcc_64
+
+RUN aqt install-qt ${QT_HOST} ${QT_TARGET} ${QT} ${QT_ARCH} --outputdir /opt/qt -m ${QT_MODULES}
+
+ENV PATH /opt/qt/${QT}/gcc_64/bin:$PATH
+ENV QT_PLUGIN_PATH /opt/qt/${QT}/gcc_64/plugins/
+ENV QML_IMPORT_PATH /opt/qt/${QT}/gcc_64/qml/
+ENV QML2_IMPORT_PATH /opt/qt/${QT}/gcc_64/qml/
+
+COPY . src/Catan
+
+WORKDIR src/Catan
+
+RUN echo "Build about to start!"
+RUN qmake -makefile -o Makefile Catan.pro
+
+RUN make
+
+
+
+CMD ["/build/Catan"]
+
