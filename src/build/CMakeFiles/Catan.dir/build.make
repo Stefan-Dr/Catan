@@ -108,220 +108,220 @@ ui_mainwindow.h: ../forms/mainwindow.ui
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_mainwindow.h"
 	/usr/lib/qt5/bin/uic -o /home/stefan/Desktop/Catan/06-catan/src/build/ui_mainwindow.h /home/stefan/Desktop/Catan/06-catan/src/forms/mainwindow.ui
 
-CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o: Catan_autogen/mocs_compilation.cpp
-CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o -MF CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp
+CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: Catan_autogen/mocs_compilation.cpp
+CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o -MF CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o.d -o CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o -c /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp
 
-CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp > CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.i
+CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp > CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.i
 
-CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp -o CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.s
+CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/build/Catan_autogen/mocs_compilation.cpp -o CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.s
 
-CMakeFiles/Catan.dir/sources/bank.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/bank.cpp.o: ../sources/bank.cpp
-CMakeFiles/Catan.dir/sources/bank.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Catan.dir/sources/bank.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/bank.cpp.o -MF CMakeFiles/Catan.dir/sources/bank.cpp.o.d -o CMakeFiles/Catan.dir/sources/bank.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp
+CMakeFiles/Catan.dir/sources/bank.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/bank.o: ../sources/bank.cpp
+CMakeFiles/Catan.dir/sources/bank.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Catan.dir/sources/bank.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/bank.o -MF CMakeFiles/Catan.dir/sources/bank.o.d -o CMakeFiles/Catan.dir/sources/bank.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp
 
-CMakeFiles/Catan.dir/sources/bank.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/bank.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp > CMakeFiles/Catan.dir/sources/bank.cpp.i
+CMakeFiles/Catan.dir/sources/bank.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/bank.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp > CMakeFiles/Catan.dir/sources/bank.i
 
-CMakeFiles/Catan.dir/sources/bank.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/bank.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp -o CMakeFiles/Catan.dir/sources/bank.cpp.s
+CMakeFiles/Catan.dir/sources/bank.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/bank.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp -o CMakeFiles/Catan.dir/sources/bank.s
 
-CMakeFiles/Catan.dir/sources/board.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/board.cpp.o: ../sources/board.cpp
-CMakeFiles/Catan.dir/sources/board.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Catan.dir/sources/board.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/board.cpp.o -MF CMakeFiles/Catan.dir/sources/board.cpp.o.d -o CMakeFiles/Catan.dir/sources/board.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp
+CMakeFiles/Catan.dir/sources/board.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/board.o: ../sources/board.cpp
+CMakeFiles/Catan.dir/sources/board.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Catan.dir/sources/board.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/board.o -MF CMakeFiles/Catan.dir/sources/board.o.d -o CMakeFiles/Catan.dir/sources/board.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp
 
-CMakeFiles/Catan.dir/sources/board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/board.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp > CMakeFiles/Catan.dir/sources/board.cpp.i
+CMakeFiles/Catan.dir/sources/board.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/board.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp > CMakeFiles/Catan.dir/sources/board.i
 
-CMakeFiles/Catan.dir/sources/board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/board.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp -o CMakeFiles/Catan.dir/sources/board.cpp.s
+CMakeFiles/Catan.dir/sources/board.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/board.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp -o CMakeFiles/Catan.dir/sources/board.s
 
-CMakeFiles/Catan.dir/sources/dice.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/dice.cpp.o: ../sources/dice.cpp
-CMakeFiles/Catan.dir/sources/dice.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Catan.dir/sources/dice.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/dice.cpp.o -MF CMakeFiles/Catan.dir/sources/dice.cpp.o.d -o CMakeFiles/Catan.dir/sources/dice.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp
+CMakeFiles/Catan.dir/sources/dice.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/dice.o: ../sources/dice.cpp
+CMakeFiles/Catan.dir/sources/dice.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Catan.dir/sources/dice.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/dice.o -MF CMakeFiles/Catan.dir/sources/dice.o.d -o CMakeFiles/Catan.dir/sources/dice.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp
 
-CMakeFiles/Catan.dir/sources/dice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/dice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp > CMakeFiles/Catan.dir/sources/dice.cpp.i
+CMakeFiles/Catan.dir/sources/dice.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/dice.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp > CMakeFiles/Catan.dir/sources/dice.i
 
-CMakeFiles/Catan.dir/sources/dice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/dice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp -o CMakeFiles/Catan.dir/sources/dice.cpp.s
+CMakeFiles/Catan.dir/sources/dice.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/dice.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp -o CMakeFiles/Catan.dir/sources/dice.s
 
-CMakeFiles/Catan.dir/sources/field.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/field.cpp.o: ../sources/field.cpp
-CMakeFiles/Catan.dir/sources/field.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Catan.dir/sources/field.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/field.cpp.o -MF CMakeFiles/Catan.dir/sources/field.cpp.o.d -o CMakeFiles/Catan.dir/sources/field.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp
+CMakeFiles/Catan.dir/sources/field.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/field.o: ../sources/field.cpp
+CMakeFiles/Catan.dir/sources/field.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Catan.dir/sources/field.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/field.o -MF CMakeFiles/Catan.dir/sources/field.o.d -o CMakeFiles/Catan.dir/sources/field.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp
 
-CMakeFiles/Catan.dir/sources/field.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/field.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp > CMakeFiles/Catan.dir/sources/field.cpp.i
+CMakeFiles/Catan.dir/sources/field.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/field.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp > CMakeFiles/Catan.dir/sources/field.i
 
-CMakeFiles/Catan.dir/sources/field.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/field.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp -o CMakeFiles/Catan.dir/sources/field.cpp.s
+CMakeFiles/Catan.dir/sources/field.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/field.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp -o CMakeFiles/Catan.dir/sources/field.s
 
-CMakeFiles/Catan.dir/sources/game.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/game.cpp.o: ../sources/game.cpp
-CMakeFiles/Catan.dir/sources/game.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Catan.dir/sources/game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/game.cpp.o -MF CMakeFiles/Catan.dir/sources/game.cpp.o.d -o CMakeFiles/Catan.dir/sources/game.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp
+CMakeFiles/Catan.dir/sources/game.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/game.o: ../sources/game.cpp
+CMakeFiles/Catan.dir/sources/game.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Catan.dir/sources/game.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/game.o -MF CMakeFiles/Catan.dir/sources/game.o.d -o CMakeFiles/Catan.dir/sources/game.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp
 
-CMakeFiles/Catan.dir/sources/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp > CMakeFiles/Catan.dir/sources/game.cpp.i
+CMakeFiles/Catan.dir/sources/game.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/game.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp > CMakeFiles/Catan.dir/sources/game.i
 
-CMakeFiles/Catan.dir/sources/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp -o CMakeFiles/Catan.dir/sources/game.cpp.s
+CMakeFiles/Catan.dir/sources/game.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/game.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp -o CMakeFiles/Catan.dir/sources/game.s
 
-CMakeFiles/Catan.dir/sources/gui_node.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/gui_node.cpp.o: ../sources/gui_node.cpp
-CMakeFiles/Catan.dir/sources/gui_node.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Catan.dir/sources/gui_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/gui_node.cpp.o -MF CMakeFiles/Catan.dir/sources/gui_node.cpp.o.d -o CMakeFiles/Catan.dir/sources/gui_node.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp
+CMakeFiles/Catan.dir/sources/gui_node.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/gui_node.o: ../sources/gui_node.cpp
+CMakeFiles/Catan.dir/sources/gui_node.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Catan.dir/sources/gui_node.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/gui_node.o -MF CMakeFiles/Catan.dir/sources/gui_node.o.d -o CMakeFiles/Catan.dir/sources/gui_node.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp
 
-CMakeFiles/Catan.dir/sources/gui_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/gui_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp > CMakeFiles/Catan.dir/sources/gui_node.cpp.i
+CMakeFiles/Catan.dir/sources/gui_node.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/gui_node.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp > CMakeFiles/Catan.dir/sources/gui_node.i
 
-CMakeFiles/Catan.dir/sources/gui_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/gui_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp -o CMakeFiles/Catan.dir/sources/gui_node.cpp.s
+CMakeFiles/Catan.dir/sources/gui_node.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/gui_node.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp -o CMakeFiles/Catan.dir/sources/gui_node.s
 
-CMakeFiles/Catan.dir/sources/gui_road.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/gui_road.cpp.o: ../sources/gui_road.cpp
-CMakeFiles/Catan.dir/sources/gui_road.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Catan.dir/sources/gui_road.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/gui_road.cpp.o -MF CMakeFiles/Catan.dir/sources/gui_road.cpp.o.d -o CMakeFiles/Catan.dir/sources/gui_road.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp
+CMakeFiles/Catan.dir/sources/gui_road.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/gui_road.o: ../sources/gui_road.cpp
+CMakeFiles/Catan.dir/sources/gui_road.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Catan.dir/sources/gui_road.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/gui_road.o -MF CMakeFiles/Catan.dir/sources/gui_road.o.d -o CMakeFiles/Catan.dir/sources/gui_road.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp
 
-CMakeFiles/Catan.dir/sources/gui_road.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/gui_road.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp > CMakeFiles/Catan.dir/sources/gui_road.cpp.i
+CMakeFiles/Catan.dir/sources/gui_road.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/gui_road.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp > CMakeFiles/Catan.dir/sources/gui_road.i
 
-CMakeFiles/Catan.dir/sources/gui_road.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/gui_road.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp -o CMakeFiles/Catan.dir/sources/gui_road.cpp.s
+CMakeFiles/Catan.dir/sources/gui_road.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/gui_road.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp -o CMakeFiles/Catan.dir/sources/gui_road.s
 
-CMakeFiles/Catan.dir/sources/main.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/main.cpp.o: ../sources/main.cpp
-CMakeFiles/Catan.dir/sources/main.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Catan.dir/sources/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/main.cpp.o -MF CMakeFiles/Catan.dir/sources/main.cpp.o.d -o CMakeFiles/Catan.dir/sources/main.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp
+CMakeFiles/Catan.dir/sources/main.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/main.o: ../sources/main.cpp
+CMakeFiles/Catan.dir/sources/main.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Catan.dir/sources/main.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/main.o -MF CMakeFiles/Catan.dir/sources/main.o.d -o CMakeFiles/Catan.dir/sources/main.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp
 
-CMakeFiles/Catan.dir/sources/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp > CMakeFiles/Catan.dir/sources/main.cpp.i
+CMakeFiles/Catan.dir/sources/main.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/main.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp > CMakeFiles/Catan.dir/sources/main.i
 
-CMakeFiles/Catan.dir/sources/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp -o CMakeFiles/Catan.dir/sources/main.cpp.s
+CMakeFiles/Catan.dir/sources/main.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/main.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp -o CMakeFiles/Catan.dir/sources/main.s
 
-CMakeFiles/Catan.dir/sources/mainwindow.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/mainwindow.cpp.o: ../sources/mainwindow.cpp
-CMakeFiles/Catan.dir/sources/mainwindow.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Catan.dir/sources/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/mainwindow.cpp.o -MF CMakeFiles/Catan.dir/sources/mainwindow.cpp.o.d -o CMakeFiles/Catan.dir/sources/mainwindow.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp
+CMakeFiles/Catan.dir/sources/mainwindow.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/mainwindow.o: ../sources/mainwindow.cpp
+CMakeFiles/Catan.dir/sources/mainwindow.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Catan.dir/sources/mainwindow.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/mainwindow.o -MF CMakeFiles/Catan.dir/sources/mainwindow.o.d -o CMakeFiles/Catan.dir/sources/mainwindow.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp
 
-CMakeFiles/Catan.dir/sources/mainwindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp > CMakeFiles/Catan.dir/sources/mainwindow.cpp.i
+CMakeFiles/Catan.dir/sources/mainwindow.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/mainwindow.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp > CMakeFiles/Catan.dir/sources/mainwindow.i
 
-CMakeFiles/Catan.dir/sources/mainwindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp -o CMakeFiles/Catan.dir/sources/mainwindow.cpp.s
+CMakeFiles/Catan.dir/sources/mainwindow.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/mainwindow.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp -o CMakeFiles/Catan.dir/sources/mainwindow.s
 
-CMakeFiles/Catan.dir/sources/node.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/node.cpp.o: ../sources/node.cpp
-CMakeFiles/Catan.dir/sources/node.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Catan.dir/sources/node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/node.cpp.o -MF CMakeFiles/Catan.dir/sources/node.cpp.o.d -o CMakeFiles/Catan.dir/sources/node.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp
+CMakeFiles/Catan.dir/sources/node.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/node.o: ../sources/node.cpp
+CMakeFiles/Catan.dir/sources/node.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Catan.dir/sources/node.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/node.o -MF CMakeFiles/Catan.dir/sources/node.o.d -o CMakeFiles/Catan.dir/sources/node.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp
 
-CMakeFiles/Catan.dir/sources/node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp > CMakeFiles/Catan.dir/sources/node.cpp.i
+CMakeFiles/Catan.dir/sources/node.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/node.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp > CMakeFiles/Catan.dir/sources/node.i
 
-CMakeFiles/Catan.dir/sources/node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp -o CMakeFiles/Catan.dir/sources/node.cpp.s
+CMakeFiles/Catan.dir/sources/node.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/node.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp -o CMakeFiles/Catan.dir/sources/node.s
 
-CMakeFiles/Catan.dir/sources/player.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/player.cpp.o: ../sources/player.cpp
-CMakeFiles/Catan.dir/sources/player.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Catan.dir/sources/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/player.cpp.o -MF CMakeFiles/Catan.dir/sources/player.cpp.o.d -o CMakeFiles/Catan.dir/sources/player.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp
+CMakeFiles/Catan.dir/sources/player.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/player.o: ../sources/player.cpp
+CMakeFiles/Catan.dir/sources/player.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Catan.dir/sources/player.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/player.o -MF CMakeFiles/Catan.dir/sources/player.o.d -o CMakeFiles/Catan.dir/sources/player.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp
 
-CMakeFiles/Catan.dir/sources/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp > CMakeFiles/Catan.dir/sources/player.cpp.i
+CMakeFiles/Catan.dir/sources/player.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/player.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp > CMakeFiles/Catan.dir/sources/player.i
 
-CMakeFiles/Catan.dir/sources/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp -o CMakeFiles/Catan.dir/sources/player.cpp.s
+CMakeFiles/Catan.dir/sources/player.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/player.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp -o CMakeFiles/Catan.dir/sources/player.s
 
-CMakeFiles/Catan.dir/sources/road.cpp.o: CMakeFiles/Catan.dir/flags.make
-CMakeFiles/Catan.dir/sources/road.cpp.o: ../sources/road.cpp
-CMakeFiles/Catan.dir/sources/road.cpp.o: CMakeFiles/Catan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Catan.dir/sources/road.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/road.cpp.o -MF CMakeFiles/Catan.dir/sources/road.cpp.o.d -o CMakeFiles/Catan.dir/sources/road.cpp.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp
+CMakeFiles/Catan.dir/sources/road.o: CMakeFiles/Catan.dir/flags.make
+CMakeFiles/Catan.dir/sources/road.o: ../sources/road.cpp
+CMakeFiles/Catan.dir/sources/road.o: CMakeFiles/Catan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stefan/Desktop/Catan/06-catan/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Catan.dir/sources/road.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Catan.dir/sources/road.o -MF CMakeFiles/Catan.dir/sources/road.o.d -o CMakeFiles/Catan.dir/sources/road.o -c /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp
 
-CMakeFiles/Catan.dir/sources/road.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/road.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp > CMakeFiles/Catan.dir/sources/road.cpp.i
+CMakeFiles/Catan.dir/sources/road.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catan.dir/sources/road.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp > CMakeFiles/Catan.dir/sources/road.i
 
-CMakeFiles/Catan.dir/sources/road.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/road.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp -o CMakeFiles/Catan.dir/sources/road.cpp.s
+CMakeFiles/Catan.dir/sources/road.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catan.dir/sources/road.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp -o CMakeFiles/Catan.dir/sources/road.s
 
 # Object files for target Catan
 Catan_OBJECTS = \
-"CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/Catan.dir/sources/bank.cpp.o" \
-"CMakeFiles/Catan.dir/sources/board.cpp.o" \
-"CMakeFiles/Catan.dir/sources/dice.cpp.o" \
-"CMakeFiles/Catan.dir/sources/field.cpp.o" \
-"CMakeFiles/Catan.dir/sources/game.cpp.o" \
-"CMakeFiles/Catan.dir/sources/gui_node.cpp.o" \
-"CMakeFiles/Catan.dir/sources/gui_road.cpp.o" \
-"CMakeFiles/Catan.dir/sources/main.cpp.o" \
-"CMakeFiles/Catan.dir/sources/mainwindow.cpp.o" \
-"CMakeFiles/Catan.dir/sources/node.cpp.o" \
-"CMakeFiles/Catan.dir/sources/player.cpp.o" \
-"CMakeFiles/Catan.dir/sources/road.cpp.o"
+"CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o" \
+"CMakeFiles/Catan.dir/sources/bank.o" \
+"CMakeFiles/Catan.dir/sources/board.o" \
+"CMakeFiles/Catan.dir/sources/dice.o" \
+"CMakeFiles/Catan.dir/sources/field.o" \
+"CMakeFiles/Catan.dir/sources/game.o" \
+"CMakeFiles/Catan.dir/sources/gui_node.o" \
+"CMakeFiles/Catan.dir/sources/gui_road.o" \
+"CMakeFiles/Catan.dir/sources/main.o" \
+"CMakeFiles/Catan.dir/sources/mainwindow.o" \
+"CMakeFiles/Catan.dir/sources/node.o" \
+"CMakeFiles/Catan.dir/sources/player.o" \
+"CMakeFiles/Catan.dir/sources/road.o"
 
 # External object files for target Catan
 Catan_EXTERNAL_OBJECTS =
 
-Catan: CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/bank.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/board.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/dice.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/field.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/game.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/gui_node.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/gui_road.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/main.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/mainwindow.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/node.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/player.cpp.o
-Catan: CMakeFiles/Catan.dir/sources/road.cpp.o
+Catan: CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o
+Catan: CMakeFiles/Catan.dir/sources/bank.o
+Catan: CMakeFiles/Catan.dir/sources/board.o
+Catan: CMakeFiles/Catan.dir/sources/dice.o
+Catan: CMakeFiles/Catan.dir/sources/field.o
+Catan: CMakeFiles/Catan.dir/sources/game.o
+Catan: CMakeFiles/Catan.dir/sources/gui_node.o
+Catan: CMakeFiles/Catan.dir/sources/gui_road.o
+Catan: CMakeFiles/Catan.dir/sources/main.o
+Catan: CMakeFiles/Catan.dir/sources/mainwindow.o
+Catan: CMakeFiles/Catan.dir/sources/node.o
+Catan: CMakeFiles/Catan.dir/sources/player.o
+Catan: CMakeFiles/Catan.dir/sources/road.o
 Catan: CMakeFiles/Catan.dir/build.make
 Catan: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 Catan: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.15.3

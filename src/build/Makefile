@@ -142,317 +142,200 @@ Catan_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan_autogen.dir/build.make CMakeFiles/Catan_autogen.dir/build
 .PHONY : Catan_autogen/fast
 
-Catan_autogen/mocs_compilation.o: Catan_autogen/mocs_compilation.cpp.o
+# target to build an object file
+Catan_autogen/mocs_compilation.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o
 .PHONY : Catan_autogen/mocs_compilation.o
 
-# target to build an object file
-Catan_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o
-.PHONY : Catan_autogen/mocs_compilation.cpp.o
-
-Catan_autogen/mocs_compilation.i: Catan_autogen/mocs_compilation.cpp.i
+# target to preprocess a source file
+Catan_autogen/mocs_compilation.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.i
 .PHONY : Catan_autogen/mocs_compilation.i
 
-# target to preprocess a source file
-Catan_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.i
-.PHONY : Catan_autogen/mocs_compilation.cpp.i
-
-Catan_autogen/mocs_compilation.s: Catan_autogen/mocs_compilation.cpp.s
+# target to generate assembly for a file
+Catan_autogen/mocs_compilation.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.s
 .PHONY : Catan_autogen/mocs_compilation.s
 
-# target to generate assembly for a file
-Catan_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.s
-.PHONY : Catan_autogen/mocs_compilation.cpp.s
-
-sources/bank.o: sources/bank.cpp.o
+# target to build an object file
+sources/bank.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.o
 .PHONY : sources/bank.o
 
-# target to build an object file
-sources/bank.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.cpp.o
-.PHONY : sources/bank.cpp.o
-
-sources/bank.i: sources/bank.cpp.i
+# target to preprocess a source file
+sources/bank.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.i
 .PHONY : sources/bank.i
 
-# target to preprocess a source file
-sources/bank.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.cpp.i
-.PHONY : sources/bank.cpp.i
-
-sources/bank.s: sources/bank.cpp.s
+# target to generate assembly for a file
+sources/bank.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.s
 .PHONY : sources/bank.s
 
-# target to generate assembly for a file
-sources/bank.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/bank.cpp.s
-.PHONY : sources/bank.cpp.s
-
-sources/board.o: sources/board.cpp.o
+# target to build an object file
+sources/board.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.o
 .PHONY : sources/board.o
 
-# target to build an object file
-sources/board.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.cpp.o
-.PHONY : sources/board.cpp.o
-
-sources/board.i: sources/board.cpp.i
+# target to preprocess a source file
+sources/board.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.i
 .PHONY : sources/board.i
 
-# target to preprocess a source file
-sources/board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.cpp.i
-.PHONY : sources/board.cpp.i
-
-sources/board.s: sources/board.cpp.s
+# target to generate assembly for a file
+sources/board.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.s
 .PHONY : sources/board.s
 
-# target to generate assembly for a file
-sources/board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/board.cpp.s
-.PHONY : sources/board.cpp.s
-
-sources/dice.o: sources/dice.cpp.o
+# target to build an object file
+sources/dice.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.o
 .PHONY : sources/dice.o
 
-# target to build an object file
-sources/dice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.cpp.o
-.PHONY : sources/dice.cpp.o
-
-sources/dice.i: sources/dice.cpp.i
+# target to preprocess a source file
+sources/dice.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.i
 .PHONY : sources/dice.i
 
-# target to preprocess a source file
-sources/dice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.cpp.i
-.PHONY : sources/dice.cpp.i
-
-sources/dice.s: sources/dice.cpp.s
+# target to generate assembly for a file
+sources/dice.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.s
 .PHONY : sources/dice.s
 
-# target to generate assembly for a file
-sources/dice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/dice.cpp.s
-.PHONY : sources/dice.cpp.s
-
-sources/field.o: sources/field.cpp.o
+# target to build an object file
+sources/field.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.o
 .PHONY : sources/field.o
 
-# target to build an object file
-sources/field.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.cpp.o
-.PHONY : sources/field.cpp.o
-
-sources/field.i: sources/field.cpp.i
+# target to preprocess a source file
+sources/field.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.i
 .PHONY : sources/field.i
 
-# target to preprocess a source file
-sources/field.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.cpp.i
-.PHONY : sources/field.cpp.i
-
-sources/field.s: sources/field.cpp.s
+# target to generate assembly for a file
+sources/field.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.s
 .PHONY : sources/field.s
 
-# target to generate assembly for a file
-sources/field.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/field.cpp.s
-.PHONY : sources/field.cpp.s
-
-sources/game.o: sources/game.cpp.o
+# target to build an object file
+sources/game.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.o
 .PHONY : sources/game.o
 
-# target to build an object file
-sources/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.cpp.o
-.PHONY : sources/game.cpp.o
-
-sources/game.i: sources/game.cpp.i
+# target to preprocess a source file
+sources/game.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.i
 .PHONY : sources/game.i
 
-# target to preprocess a source file
-sources/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.cpp.i
-.PHONY : sources/game.cpp.i
-
-sources/game.s: sources/game.cpp.s
+# target to generate assembly for a file
+sources/game.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.s
 .PHONY : sources/game.s
 
-# target to generate assembly for a file
-sources/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/game.cpp.s
-.PHONY : sources/game.cpp.s
-
-sources/gui_node.o: sources/gui_node.cpp.o
+# target to build an object file
+sources/gui_node.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.o
 .PHONY : sources/gui_node.o
 
-# target to build an object file
-sources/gui_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.cpp.o
-.PHONY : sources/gui_node.cpp.o
-
-sources/gui_node.i: sources/gui_node.cpp.i
+# target to preprocess a source file
+sources/gui_node.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.i
 .PHONY : sources/gui_node.i
 
-# target to preprocess a source file
-sources/gui_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.cpp.i
-.PHONY : sources/gui_node.cpp.i
-
-sources/gui_node.s: sources/gui_node.cpp.s
+# target to generate assembly for a file
+sources/gui_node.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.s
 .PHONY : sources/gui_node.s
 
-# target to generate assembly for a file
-sources/gui_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_node.cpp.s
-.PHONY : sources/gui_node.cpp.s
-
-sources/gui_road.o: sources/gui_road.cpp.o
+# target to build an object file
+sources/gui_road.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.o
 .PHONY : sources/gui_road.o
 
-# target to build an object file
-sources/gui_road.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.cpp.o
-.PHONY : sources/gui_road.cpp.o
-
-sources/gui_road.i: sources/gui_road.cpp.i
+# target to preprocess a source file
+sources/gui_road.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.i
 .PHONY : sources/gui_road.i
 
-# target to preprocess a source file
-sources/gui_road.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.cpp.i
-.PHONY : sources/gui_road.cpp.i
-
-sources/gui_road.s: sources/gui_road.cpp.s
+# target to generate assembly for a file
+sources/gui_road.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.s
 .PHONY : sources/gui_road.s
 
-# target to generate assembly for a file
-sources/gui_road.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/gui_road.cpp.s
-.PHONY : sources/gui_road.cpp.s
-
-sources/main.o: sources/main.cpp.o
+# target to build an object file
+sources/main.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.o
 .PHONY : sources/main.o
 
-# target to build an object file
-sources/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.cpp.o
-.PHONY : sources/main.cpp.o
-
-sources/main.i: sources/main.cpp.i
+# target to preprocess a source file
+sources/main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.i
 .PHONY : sources/main.i
 
-# target to preprocess a source file
-sources/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.cpp.i
-.PHONY : sources/main.cpp.i
-
-sources/main.s: sources/main.cpp.s
+# target to generate assembly for a file
+sources/main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.s
 .PHONY : sources/main.s
 
-# target to generate assembly for a file
-sources/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/main.cpp.s
-.PHONY : sources/main.cpp.s
-
-sources/mainwindow.o: sources/mainwindow.cpp.o
+# target to build an object file
+sources/mainwindow.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.o
 .PHONY : sources/mainwindow.o
 
-# target to build an object file
-sources/mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.cpp.o
-.PHONY : sources/mainwindow.cpp.o
-
-sources/mainwindow.i: sources/mainwindow.cpp.i
+# target to preprocess a source file
+sources/mainwindow.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.i
 .PHONY : sources/mainwindow.i
 
-# target to preprocess a source file
-sources/mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.cpp.i
-.PHONY : sources/mainwindow.cpp.i
-
-sources/mainwindow.s: sources/mainwindow.cpp.s
+# target to generate assembly for a file
+sources/mainwindow.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.s
 .PHONY : sources/mainwindow.s
 
-# target to generate assembly for a file
-sources/mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/mainwindow.cpp.s
-.PHONY : sources/mainwindow.cpp.s
-
-sources/node.o: sources/node.cpp.o
+# target to build an object file
+sources/node.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.o
 .PHONY : sources/node.o
 
-# target to build an object file
-sources/node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.cpp.o
-.PHONY : sources/node.cpp.o
-
-sources/node.i: sources/node.cpp.i
+# target to preprocess a source file
+sources/node.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.i
 .PHONY : sources/node.i
 
-# target to preprocess a source file
-sources/node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.cpp.i
-.PHONY : sources/node.cpp.i
-
-sources/node.s: sources/node.cpp.s
+# target to generate assembly for a file
+sources/node.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.s
 .PHONY : sources/node.s
 
-# target to generate assembly for a file
-sources/node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/node.cpp.s
-.PHONY : sources/node.cpp.s
-
-sources/player.o: sources/player.cpp.o
+# target to build an object file
+sources/player.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.o
 .PHONY : sources/player.o
 
-# target to build an object file
-sources/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.cpp.o
-.PHONY : sources/player.cpp.o
-
-sources/player.i: sources/player.cpp.i
+# target to preprocess a source file
+sources/player.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.i
 .PHONY : sources/player.i
 
-# target to preprocess a source file
-sources/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.cpp.i
-.PHONY : sources/player.cpp.i
-
-sources/player.s: sources/player.cpp.s
+# target to generate assembly for a file
+sources/player.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.s
 .PHONY : sources/player.s
 
-# target to generate assembly for a file
-sources/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/player.cpp.s
-.PHONY : sources/player.cpp.s
-
-sources/road.o: sources/road.cpp.o
+# target to build an object file
+sources/road.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.o
 .PHONY : sources/road.o
 
-# target to build an object file
-sources/road.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.cpp.o
-.PHONY : sources/road.cpp.o
-
-sources/road.i: sources/road.cpp.i
+# target to preprocess a source file
+sources/road.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.i
 .PHONY : sources/road.i
 
-# target to preprocess a source file
-sources/road.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.cpp.i
-.PHONY : sources/road.cpp.i
-
-sources/road.s: sources/road.cpp.s
-.PHONY : sources/road.s
-
 # target to generate assembly for a file
-sources/road.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.cpp.s
-.PHONY : sources/road.cpp.s
+sources/road.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Catan.dir/build.make CMakeFiles/Catan.dir/sources/road.s
+.PHONY : sources/road.s
 
 # Help Target
 help:
