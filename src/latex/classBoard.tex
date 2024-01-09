@@ -1,0 +1,114 @@
+\hypertarget{classBoard}{}\doxysection{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+
+
+Inheritance diagram for Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classBoard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classBoard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBoard_a4e49ea56d2b2aef5b42f3b2d24829d6d}\label{classBoard_a4e49ea56d2b2aef5b42f3b2d24829d6d}} 
+void {\bfseries Redraw} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBoard_a8f5b641faa10dcc22fa3c8bafde8ade4}\label{classBoard_a8f5b641faa10dcc22fa3c8bafde8ade4}} 
+void {\bfseries manage\+Resources\+House} ()
+\item 
+\mbox{\Hypertarget{classBoard_a7189e02b92381411deadfbf6b5cda23e}\label{classBoard_a7189e02b92381411deadfbf6b5cda23e}} 
+void {\bfseries manage\+Resources\+Road} ()
+\item 
+\mbox{\Hypertarget{classBoard_a697306beedc8b5fa0600705daf8f4b72}\label{classBoard_a697306beedc8b5fa0600705daf8f4b72}} 
+void {\bfseries manage\+Resources\+City} ()
+\item 
+\mbox{\Hypertarget{classBoard_abad7747c67be6f1d752db5aed8361ac3}\label{classBoard_abad7747c67be6f1d752db5aed8361ac3}} 
+void {\bfseries invalid\+House} ()
+\item 
+\mbox{\Hypertarget{classBoard_a6d63df628a98250bf7684a8f6ddb2765}\label{classBoard_a6d63df628a98250bf7684a8f6ddb2765}} 
+void {\bfseries invalid\+Road} ()
+\item 
+\mbox{\Hypertarget{classBoard_ac4e7bffcc87e69f7269fc4989c9ec566}\label{classBoard_ac4e7bffcc87e69f7269fc4989c9ec566}} 
+void {\bfseries invalid\+City} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBoard_a50095123e76901e45fcf7f3051b5a88f}\label{classBoard_a50095123e76901e45fcf7f3051b5a88f}} 
+{\bfseries Board} (QObject $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{classBoard_a1f469a94a73e05c2d0236b4818dbea59}\label{classBoard_a1f469a94a73e05c2d0236b4818dbea59}} 
+QVector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$ {\bfseries get\+\_\+fields} ()
+\item 
+\mbox{\Hypertarget{classBoard_a58d09ede4c2a74322e6ef65d0291d78b}\label{classBoard_a58d09ede4c2a74322e6ef65d0291d78b}} 
+void {\bfseries add\+All\+Nodes} ()
+\item 
+\mbox{\Hypertarget{classBoard_a870e83775f778479c3bec4b66cd1834d}\label{classBoard_a870e83775f778479c3bec4b66cd1834d}} 
+void {\bfseries add\+All\+Fields} ()
+\item 
+\mbox{\Hypertarget{classBoard_af7b47ad42bdc0092ba6ae86ca4c3540c}\label{classBoard_af7b47ad42bdc0092ba6ae86ca4c3540c}} 
+void {\bfseries mouse\+Press\+Event} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\item 
+\mbox{\Hypertarget{classBoard_a2985bf103528ad4de612cba0b2b73af7}\label{classBoard_a2985bf103528ad4de612cba0b2b73af7}} 
+void {\bfseries set\+Has\+Tmp} (bool x)
+\item 
+\mbox{\Hypertarget{classBoard_a7c250a0a0681dcf5726ef2aa79523970}\label{classBoard_a7c250a0a0681dcf5726ef2aa79523970}} 
+void {\bfseries set\+Curr\+Color} (QColor color)
+\item 
+\mbox{\Hypertarget{classBoard_a4fc3a2dd3ee059f3f7263b32deafd948}\label{classBoard_a4fc3a2dd3ee059f3f7263b32deafd948}} 
+QColor {\bfseries get\+Curr\+Color} ()
+\item 
+\mbox{\Hypertarget{classBoard_adae940f94183f3f0ebd2c049f3af9ead}\label{classBoard_adae940f94183f3f0ebd2c049f3af9ead}} 
+void {\bfseries set\+Road\+Color} (QColor color)
+\item 
+\mbox{\Hypertarget{classBoard_a3be23c779747969e21636110a5c0bcb1}\label{classBoard_a3be23c779747969e21636110a5c0bcb1}} 
+QColor {\bfseries get\+Road\+Color} ()
+\item 
+\mbox{\Hypertarget{classBoard_a3839600efc865cd1c07251854d83c8a8}\label{classBoard_a3839600efc865cd1c07251854d83c8a8}} 
+bool {\bfseries is\+\_\+first\+\_\+turn} () const
+\item 
+\mbox{\Hypertarget{classBoard_ac6f317957fd940ea5e5ef305954cdf05}\label{classBoard_ac6f317957fd940ea5e5ef305954cdf05}} 
+void {\bfseries set\+\_\+first\+\_\+turn} (bool value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBoard_a62ab6cf4fceb3a66d17a0c9688a32d9c}\label{classBoard_a62ab6cf4fceb3a66d17a0c9688a32d9c}} 
+QVector$<$ \mbox{\hyperlink{classNode}{Node}} $\ast$ $>$ {\bfseries m\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classBoard_a0a37cf84cf78653eec51e8c137ad94f7}\label{classBoard_a0a37cf84cf78653eec51e8c137ad94f7}} 
+QVector$<$ \mbox{\hyperlink{classGUI__Node}{GUI\+\_\+\+Node}} $\ast$ $>$ {\bfseries m\+\_\+gui\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classBoard_aa968633ec82ef2c534749292a129c754}\label{classBoard_aa968633ec82ef2c534749292a129c754}} 
+QVector$<$ \mbox{\hyperlink{classField}{Field}} $\ast$ $>$ {\bfseries m\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classBoard_a22e25bcb8aab09c80f0d187e81521dd2}\label{classBoard_a22e25bcb8aab09c80f0d187e81521dd2}} 
+bool {\bfseries m\+\_\+set\+House} = false
+\item 
+\mbox{\Hypertarget{classBoard_a4d110878d00d08b8ebdc6c538ed1a3f6}\label{classBoard_a4d110878d00d08b8ebdc6c538ed1a3f6}} 
+bool {\bfseries m\+\_\+set\+Road} = false
+\item 
+\mbox{\Hypertarget{classBoard_a223c3729d46b539137daa1fa4dbfa29b}\label{classBoard_a223c3729d46b539137daa1fa4dbfa29b}} 
+bool {\bfseries m\+\_\+set\+City} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/board.\+h\end{DoxyCompactItemize}

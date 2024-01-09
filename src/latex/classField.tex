@@ -1,0 +1,89 @@
+\hypertarget{classField}{}\doxysection{Field Class Reference}
+\label{classField}\index{Field@{Field}}
+
+
+Collaboration diagram for Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classField__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField_a47ee72ba675f0499f8c6e9b26cdcec66}\label{classField_a47ee72ba675f0499f8c6e9b26cdcec66}} 
+{\bfseries Field} (int id, int number, Resource\+Type res\+\_\+type, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+right\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+left\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+right\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+left\+\_\+corner, \mbox{\hyperlink{classRoad}{Road}} $\ast$right\+\_\+edge, \mbox{\hyperlink{classRoad}{Road}} $\ast$left\+\_\+edge, \mbox{\hyperlink{classRoad}{Road}} $\ast$bottom\+\_\+right\+\_\+edge, \mbox{\hyperlink{classRoad}{Road}} $\ast$bottom\+\_\+left\+\_\+edge, \mbox{\hyperlink{classRoad}{Road}} $\ast$up\+\_\+right\+\_\+edge, \mbox{\hyperlink{classRoad}{Road}} $\ast$up\+\_\+left\+\_\+edge)
+\item 
+\mbox{\Hypertarget{classField_ae89573511eef17df611c078cca862848}\label{classField_ae89573511eef17df611c078cca862848}} 
+{\bfseries Field} (int id, int number, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+left\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$up\+\_\+right\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+right\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+corner, \mbox{\hyperlink{classNode}{Node}} $\ast$bottom\+\_\+left\+\_\+corner)
+\item 
+\mbox{\Hypertarget{classField_aae370ea37ae2365f399c8167c60fdaf3}\label{classField_aae370ea37ae2365f399c8167c60fdaf3}} 
+{\bfseries Field} (const \mbox{\hyperlink{classField}{Field}} \&)=delete
+\item 
+\mbox{\Hypertarget{classField_ab5507cd20f95579d5b427ef9a0ceac3b}\label{classField_ab5507cd20f95579d5b427ef9a0ceac3b}} 
+int {\bfseries get\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classField_a181e672bf27e2e06eec102ff82e9820a}\label{classField_a181e672bf27e2e06eec102ff82e9820a}} 
+Resource\+Type {\bfseries get\+\_\+res\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField_aa86662aa63b9e407a32f8564297d4f41}\label{classField_aa86662aa63b9e407a32f8564297d4f41}} 
+int {\bfseries get\+\_\+number} () const
+\item 
+\mbox{\Hypertarget{classField_ac60eba295557c7269059b35aab73f041}\label{classField_ac60eba295557c7269059b35aab73f041}} 
+QVector$<$ \mbox{\hyperlink{classNode}{Node}} $\ast$ $>$ \& {\bfseries get\+\_\+corners} ()
+\item 
+\mbox{\Hypertarget{classField_a745d00b76d1e616695e7f5773557586e}\label{classField_a745d00b76d1e616695e7f5773557586e}} 
+const QVector$<$ \mbox{\hyperlink{classRoad}{Road}} $\ast$ $>$ \& {\bfseries get\+\_\+edges} () const
+\item 
+\mbox{\Hypertarget{classField_ac4c11658fafdb61863c75155c78538d7}\label{classField_ac4c11658fafdb61863c75155c78538d7}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+up\+\_\+corner} () const
+\item 
+\mbox{\Hypertarget{classField_a7fa77916325f43c9e0e850fd9df30ccf}\label{classField_a7fa77916325f43c9e0e850fd9df30ccf}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+down\+\_\+corner} () const
+\item 
+\mbox{\Hypertarget{classField_ab9123a15356b5c5dbc58625e8500e770}\label{classField_ab9123a15356b5c5dbc58625e8500e770}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+bottom\+\_\+right\+\_\+corner} () const
+\item 
+\mbox{\Hypertarget{classField_ac7ab11a5cbb2754b17b766bd17012447}\label{classField_ac7ab11a5cbb2754b17b766bd17012447}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+bottom\+\_\+left\+\_\+corner} () const
+\item 
+\mbox{\Hypertarget{classField_ad08d80be7e622e2fe2f75b46c16aa129}\label{classField_ad08d80be7e622e2fe2f75b46c16aa129}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+up\+\_\+right\+\_\+corner} () const
+\item 
+\mbox{\Hypertarget{classField_a87c179bfa968fb8df4cec8c5ad99362e}\label{classField_a87c179bfa968fb8df4cec8c5ad99362e}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+\_\+up\+\_\+left\+\_\+conrer} () const
+\item 
+\mbox{\Hypertarget{classField_af1b034c5bf3a3ce00ad89f89ac5deed9}\label{classField_af1b034c5bf3a3ce00ad89f89ac5deed9}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+right\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_a71598e7130f4d0137eacfc29e9b6b71b}\label{classField_a71598e7130f4d0137eacfc29e9b6b71b}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+left\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_a4acb734b0faa57ee853ac2b3347e4fec}\label{classField_a4acb734b0faa57ee853ac2b3347e4fec}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+bottom\+\_\+right\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_aed8f850ac33e7019f6969a7372fec60e}\label{classField_aed8f850ac33e7019f6969a7372fec60e}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+bottom\+\_\+left\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_a26008698c29f32097c634d6c4cc61505}\label{classField_a26008698c29f32097c634d6c4cc61505}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+up\+\_\+right\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_a7cfb8e3f4aa5a9a3cc40efbc0018ed99}\label{classField_a7cfb8e3f4aa5a9a3cc40efbc0018ed99}} 
+\mbox{\hyperlink{classRoad}{Road}} $\ast$ {\bfseries get\+\_\+up\+\_\+left\+\_\+edge} () const
+\item 
+\mbox{\Hypertarget{classField_a1a8a2952b4b377a9867803ce01e8c0a6}\label{classField_a1a8a2952b4b377a9867803ce01e8c0a6}} 
+void {\bfseries set\+\_\+res\+\_\+type} (Resource\+Type res\+\_\+type)
+\item 
+\mbox{\Hypertarget{classField_af379d9e282a595aac76bc8ba0abddc51}\label{classField_af379d9e282a595aac76bc8ba0abddc51}} 
+void {\bfseries set\+\_\+robber\+\_\+on\+\_\+the\+\_\+field} (bool robber\+\_\+on\+\_\+the\+\_\+field)
+\item 
+\mbox{\Hypertarget{classField_a14569733d02e1cc5e25b77010e9ce688}\label{classField_a14569733d02e1cc5e25b77010e9ce688}} 
+bool {\bfseries is\+\_\+robber\+\_\+on\+\_\+the\+\_\+field} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/field.\+h\end{DoxyCompactItemize}
