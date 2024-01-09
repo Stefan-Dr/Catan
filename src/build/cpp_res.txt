@@ -1,1 +1,89 @@
-cppcheck: error: failed to open project 'compile_commands.json'. The file does not exist.
+Checking Catan_autogen/mocs_compilation.cpp ...
+Catan_autogen/K6S233IZAZ/moc_board.cpp:13:0: error: #error "The header file 'board.h' doesn't include <QObject>." [preprocessorErrorDirective]
+#error "The header file 'board.h' doesn't include <QObject>."
+^
+1/13 files checked 7% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/bank.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+2/13 files checked 15% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/board.cpp:9:8: warning: Member variable 'Board::m_tmp' is not initialized in the constructor. [uninitMemberVar]
+Board::Board(QObject *parent): QGraphicsScene(parent){}
+       ^
+3/13 files checked 23% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/dice.cpp:6:7: warning: Member variable 'Dice::m_dice_is_rolled' is not initialized in the constructor. [uninitMemberVar]
+Dice::Dice():
+      ^
+4/13 files checked 30% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_res_type' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_right_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_left_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_bottom_right_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_bottom_left_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_up_right_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_up_left_edge' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/field.cpp:24:8: warning: Member variable 'Field::m_is_robber_od_the_field' is not initialized in the constructor. [uninitMemberVar]
+Field::Field(int id, int number,
+       ^
+5/13 files checked 38% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp:9:7: warning: Member variable 'Game::next_player' is not initialized in the constructor. [uninitMemberVar]
+Game::Game()
+      ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp:9:7: warning: Member variable 'Game::m_can_build_house' is not initialized in the constructor. [uninitMemberVar]
+Game::Game()
+      ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp:9:7: warning: Member variable 'Game::m_can_build_city' is not initialized in the constructor. [uninitMemberVar]
+Game::Game()
+      ^
+/home/stefan/Desktop/Catan/06-catan/src/sources/game.cpp:10:7: warning: Class 'Game' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+    : m_player1(new Player(1, "", Qt::blue, Qt::darkBlue))
+      ^
+6/13 files checked 46% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/gui_node.cpp:85:5: error: There is an unknown macro here somewhere. Configuration is required. If Q_UNUSED is a macro then please configure it. [unknownMacro]
+    Q_UNUSED(option)
+    ^
+7/13 files checked 53% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/gui_road.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+8/13 files checked 61% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/main.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+9/13 files checked 69% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/mainwindow.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+10/13 files checked 76% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/node.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+11/13 files checked 84% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+/home/stefan/Desktop/Catan/06-catan/src/sources/player.cpp:10:9: warning: Member variable 'Player::m_color' is not initialized in the constructor. [uninitMemberVar]
+Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
+        ^
+12/13 files checked 92% done
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp ...
+Checking /home/stefan/Desktop/Catan/06-catan/src/sources/road.cpp: QT_CORE_LIB=1;QT_GUI_LIB=1;QT_NETWORK_LIB=1;QT_NO_DEBUG=1;QT_WIDGETS_LIB=1;__PIC__=1;__cplusplus=201703L...
+13/13 files checked 100% done
