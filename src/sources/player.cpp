@@ -2,7 +2,7 @@
 #include <iostream>
 
 // constructor(empty)
-Player::Player() {}
+Player::Player() = default;
 // constructor
 Player::Player(int id, std::string name, QColor color,
                QColor color_c /*, Color color*treba ovo da se doradi*/)

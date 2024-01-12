@@ -3,7 +3,7 @@
 #include <QPainter>
 #include <QtMath>
 #include <climits>
-#include <math.h>
+#include <cmath>
 
 // constructor
 GUI_Road::GUI_Road(GUI_Node *start, GUI_Node *end)
