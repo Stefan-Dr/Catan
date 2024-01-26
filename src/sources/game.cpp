@@ -178,14 +178,14 @@ void Game::MagicCard(){
 
 bool Game::can_trade_with_bank(ResourceType player_resource, ResourceType bank_resource)
 {
-    int num_player_resource;
+    int num_player_resource = 0;
     if (player_resource == ResourceType::Wheat) { num_player_resource = getCurrentPlayer()->get_num_of_wheat(); }
     if (player_resource == ResourceType::Wool) { num_player_resource = getCurrentPlayer()->get_num_of_wool(); }
     if (player_resource == ResourceType::Stone) { num_player_resource = getCurrentPlayer()->get_num_of_stone(); }
     if (player_resource == ResourceType::Wood) { num_player_resource = getCurrentPlayer()->get_num_of_wood(); }
     if (player_resource == ResourceType::Brick) { num_player_resource = getCurrentPlayer()->get_num_of_brick(); }
 
-    int num_bank_resource;
+    int num_bank_resource = 0;
     if (bank_resource == ResourceType::Wheat) { num_bank_resource = getBank()->get_num_of_wheat_from_bank(); }
     if (bank_resource == ResourceType::Wool) { num_bank_resource = getBank()->get_num_of_wool_from_bank(); }
     if (bank_resource == ResourceType::Stone) { num_bank_resource = getBank()->get_num_of_stone_from_bank(); }
