@@ -1,0 +1,126 @@
+\hypertarget{classGUI__Node}{}\doxysection{GUI\+\_\+\+Node Class Reference}
+\label{classGUI__Node}\index{GUI\_Node@{GUI\_Node}}
+
+
+Inheritance diagram for GUI\+\_\+\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classGUI__Node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GUI\+\_\+\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classGUI__Node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_aa11b84f18460ff241a504703c2a10a71}\label{classGUI__Node_aa11b84f18460ff241a504703c2a10a71}} 
+void {\bfseries node\+Changed} ()
+\item 
+\mbox{\Hypertarget{classGUI__Node_afbc1639abac2184052062f71fd123378}\label{classGUI__Node_afbc1639abac2184052062f71fd123378}} 
+void {\bfseries need\+Redraw} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_abecaf9814abe15c6ff52c20b1f62d165}\label{classGUI__Node_abecaf9814abe15c6ff52c20b1f62d165}} 
+{\bfseries GUI\+\_\+\+Node} (\mbox{\hyperlink{classNode}{Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a0623b288497b21f9f974da94b8fdd9d6}\label{classGUI__Node_a0623b288497b21f9f974da94b8fdd9d6}} 
+QRectF {\bfseries bounding\+Rect} () const override
+\item 
+\mbox{\Hypertarget{classGUI__Node_a1aea34f6591f05a1a25f3f32d56ebf8b}\label{classGUI__Node_a1aea34f6591f05a1a25f3f32d56ebf8b}} 
+QRectF {\bfseries position} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_afc8552583505cdeb3d587e40d95512ec}\label{classGUI__Node_afc8552583505cdeb3d587e40d95512ec}} 
+void {\bfseries paint} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget) override
+\item 
+\mbox{\Hypertarget{classGUI__Node_ad99f6c8e7213cd881330bbb1b59ee4ae}\label{classGUI__Node_ad99f6c8e7213cd881330bbb1b59ee4ae}} 
+void {\bfseries set\+Brush} (QBrush b)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a91b6cd11a4b0e8df2049dc213dd6e7d1}\label{classGUI__Node_a91b6cd11a4b0e8df2049dc213dd6e7d1}} 
+const \mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries Node\+\_\+get} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a3b7345c38d5f3650d0ac3139e72c114e}\label{classGUI__Node_a3b7345c38d5f3650d0ac3139e72c114e}} 
+QBrush {\bfseries get\+Brush} ()
+\item 
+\mbox{\Hypertarget{classGUI__Node_a8cb54203c0911b4cd47c5befd12da203}\label{classGUI__Node_a8cb54203c0911b4cd47c5befd12da203}} 
+int {\bfseries type} () const override
+\item 
+\mbox{\Hypertarget{classGUI__Node_a808f73242f7dd673218587ee7b4de7ca}\label{classGUI__Node_a808f73242f7dd673218587ee7b4de7ca}} 
+QPointF {\bfseries Center\+Position} ()
+\item 
+\mbox{\Hypertarget{classGUI__Node_aa5549e20e9087b11a154e1a297899582}\label{classGUI__Node_aa5549e20e9087b11a154e1a297899582}} 
+void {\bfseries set\+Node} (\mbox{\hyperlink{classNode}{Node}} $\ast$new\+Node)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a831168fb501eca879e23f0668e9eb618}\label{classGUI__Node_a831168fb501eca879e23f0668e9eb618}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries get\+Node} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a9ba11a219d9c0241003954eaff81b2da}\label{classGUI__Node_a9ba11a219d9c0241003954eaff81b2da}} 
+bool {\bfseries get\+\_\+is\+\_\+house\+\_\+built} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a102a9034ce579db59cbd5d8f230e67c2}\label{classGUI__Node_a102a9034ce579db59cbd5d8f230e67c2}} 
+void {\bfseries set\+\_\+is\+\_\+house\+\_\+built} (bool value)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a19b1e1808e63153f9623d2ba5fadd6b8}\label{classGUI__Node_a19b1e1808e63153f9623d2ba5fadd6b8}} 
+bool {\bfseries check\+\_\+owner\+\_\+city} (QColor color)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a9b79c6b212775de0d22f8261d09ca8e1}\label{classGUI__Node_a9b79c6b212775de0d22f8261d09ca8e1}} 
+bool {\bfseries get\+\_\+has\+Road} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a947e16a1435c958bb3fd5307d17fb72e}\label{classGUI__Node_a947e16a1435c958bb3fd5307d17fb72e}} 
+void {\bfseries set\+\_\+has\+Road} (bool x)
+\item 
+\mbox{\Hypertarget{classGUI__Node_ab8322dd35f38b829e16d71564a52e23d}\label{classGUI__Node_ab8322dd35f38b829e16d71564a52e23d}} 
+bool {\bfseries get\+\_\+is\+\_\+end\+\_\+of\+\_\+road} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a627fe5983174d53bd413d8612bdecbdf}\label{classGUI__Node_a627fe5983174d53bd413d8612bdecbdf}} 
+void {\bfseries set\+\_\+is\+\_\+end\+\_\+of\+\_\+road} (bool value)
+\item 
+\mbox{\Hypertarget{classGUI__Node_a4bed162d5b9a07e3b4d37633ad78df19}\label{classGUI__Node_a4bed162d5b9a07e3b4d37633ad78df19}} 
+bool {\bfseries get\+\_\+is\+\_\+city\+\_\+built} () const
+\item 
+\mbox{\Hypertarget{classGUI__Node_a5bc851eba476c4877dad99c8c2fa9c53}\label{classGUI__Node_a5bc851eba476c4877dad99c8c2fa9c53}} 
+void {\bfseries set\+\_\+is\+\_\+city\+\_\+built} (bool value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_a6b63ad8342e19f11237375e74a90f66b}\label{classGUI__Node_a6b63ad8342e19f11237375e74a90f66b}} 
+QString {\bfseries m\+\_\+text} = QString\+::from\+Std\+String(\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_a8c0011ab1c2c2d03583ec1b9c9ca2b4e}\label{classGUI__Node_a8c0011ab1c2c2d03583ec1b9c9ca2b4e}} 
+static QColor {\bfseries m\+\_\+color}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_ac6e3304d04f7688fe0153b3496fd98ec}\label{classGUI__Node_ac6e3304d04f7688fe0153b3496fd98ec}} 
+void {\bfseries hover\+Enter\+Event} (QGraphics\+Scene\+Hover\+Event $\ast$event) override
+\item 
+\mbox{\Hypertarget{classGUI__Node_ada80773eb70c44aa1246ad21d6b631b9}\label{classGUI__Node_ada80773eb70c44aa1246ad21d6b631b9}} 
+void {\bfseries hover\+Leave\+Event} (QGraphics\+Scene\+Hover\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGUI__Node_abd04b8fd78830e4ae076f77fe95ba025}\label{classGUI__Node_abd04b8fd78830e4ae076f77fe95ba025}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries node}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/gui\+\_\+node.\+h\end{DoxyCompactItemize}

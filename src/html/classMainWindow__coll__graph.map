@@ -1,0 +1,9 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="226,696,421,861"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,424,121,501"/>
+<area shape="rect" id="node3" href="$classGame.html" title=" " alt="" coords="145,351,312,575"/>
+<area shape="rect" id="node4" href="$classPlayer.html" title=" " alt="" coords="161,5,296,229"/>
+<area shape="rect" id="node5" href="$classBoard.html" title=" " alt="" coords="337,292,499,633"/>
+<area shape="rect" id="node6" title=" " alt="" coords="354,79,482,156"/>
+<area shape="rect" id="node7" href="$classDice.html" title=" " alt="" coords="523,343,710,582"/>
+</map>
