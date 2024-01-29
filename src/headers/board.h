@@ -1,62 +1,61 @@
 #ifndef BOARD_H
 #define BOARD_H
+#include <QGraphicsLineItem>
 #include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
 #include <QObject>
 #include <QPointF>
 #include <QVector>
 
 #include "gui_road.h"
-#include <QGraphicsLineItem>
-#include <QGraphicsSceneMouseEvent>
 
 class Node;
 class GUI_Node;
 class GUI_Road;
 class Field;
 
-class Board : public QGraphicsScene
-{
+class Board : public QGraphicsScene {
   Q_OBJECT
-public:
-  Board (QObject *parent = nullptr);
-  ~Board ();
+ public:
+  Board(QObject *parent = nullptr);
+  ~Board();
 
-  QVector<Field *> get_fields ();
+  QVector<Field *> get_fields();
 
-  void addAllNodes ();
-  void addAllFields ();
+  void addAllNodes();
+  void addAllFields();
   QVector<Node *> m_nodes;
   QVector<GUI_Node *> m_gui_nodes;
   QVector<Field *> m_fields;
 
-  void mousePressEvent (QGraphicsSceneMouseEvent *event) override;
-  void setHasTmp (bool x);
+  void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
+  void setHasTmp(bool x);
 
-  void setCurrColor (QColor color);
-  QColor getCurrColor ();
+  void setCurrColor(QColor color);
+  QColor getCurrColor();
 
-  void setRoadColor (QColor color);
-  QColor getRoadColor ();
+  void setRoadColor(QColor color);
+  QColor getRoadColor();
 
   bool m_setHouse = false;
   bool m_setRoad = false;
   bool m_setCity = false;
 
-  bool is_first_turn () const;
-  void set_first_turn (bool value);
+  bool is_first_turn() const;
+  void set_first_turn(bool value);
 
-signals:
-  void manageResourcesHouse ();
-  void manageResourcesRoad ();
-  void manageResourcesCity ();
-  void invalidHouse ();
-  void invalidRoad ();
-  void invalidCity ();
+ signals:
+  void manageResourcesHouse();
+  void manageResourcesRoad();
+  void manageResourcesCity();
+  void invalidHouse();
+  void invalidRoad();
+  void invalidCity();
 
-public slots:
-  void Redraw ();
+ public slots:
+  void Redraw();
 
-private:
+ private:
   const int numOfNodes = 6;
   bool m_hasTmp = false;
   GUI_Node *m_tmp;
@@ -65,4 +64,4 @@ private:
   bool m_first_turn = true;
 };
 
-#endif // BOARD_H
+#endif  // BOARD_H

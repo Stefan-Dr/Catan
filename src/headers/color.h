@@ -1,12 +1,6 @@
 #ifndef COLOR_H
 #define COLOR_H
 
-enum class Color
-{
-  Red,
-  Green,
-  Blue,
-  Yellow
-};
+enum class Color { Red, Green, Blue, Yellow };
 
-#endif // COLOR_H
+#endif  // COLOR_H
