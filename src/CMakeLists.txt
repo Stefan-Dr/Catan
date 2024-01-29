@@ -9,10 +9,16 @@ set(CMAKE_AUTOUIC OFF)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra --coverage")
+
+#set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+#set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
+
 set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
@@ -61,5 +67,10 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${UI_HEADERS} ${RESOURCES})
 
-qt5_use_modules(${PROJECT_NAME} Core Gui Widgets Network)
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /W4)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic)
+endif()
 
+qt5_use_modules(${PROJECT_NAME} Core Gui Widgets Network)

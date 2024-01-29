@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/06_catan.dir/sources/main.cpp.o CMakeFiles/06_catan.dir/sources/mainwindow.cpp.o CMakeFiles/06_catan.dir/sources/board.cpp.o CMakeFiles/06_catan.dir/sources/field.cpp.o -o 06_catan  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 
