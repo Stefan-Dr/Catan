@@ -272,31 +272,21 @@ CMakeFiles/Catan.dir/sources/gui_road.cpp.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/gui_node.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/node.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
- /usr/include/c++/11/climits \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
- /usr/include/c++/11/cmath /usr/include/math.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/gui_node.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/node.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/c++/11/math.h /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -317,4 +307,14 @@ CMakeFiles/Catan.dir/sources/gui_road.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/math.h
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
+ /usr/include/c++/11/climits

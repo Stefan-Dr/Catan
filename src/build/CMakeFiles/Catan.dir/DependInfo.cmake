@@ -8,19 +8,19 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/luka/Desktop/06-catan/src/build/Catan_autogen/mocs_compilation.cpp" "CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/bank.cpp" "CMakeFiles/Catan.dir/sources/bank.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/bank.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/board.cpp" "CMakeFiles/Catan.dir/sources/board.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/board.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/dice.cpp" "CMakeFiles/Catan.dir/sources/dice.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/dice.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/field.cpp" "CMakeFiles/Catan.dir/sources/field.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/field.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/game.cpp" "CMakeFiles/Catan.dir/sources/game.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/game.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/gui_node.cpp" "CMakeFiles/Catan.dir/sources/gui_node.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/gui_node.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/gui_road.cpp" "CMakeFiles/Catan.dir/sources/gui_road.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/gui_road.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/main.cpp" "CMakeFiles/Catan.dir/sources/main.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/main.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/mainwindow.cpp" "CMakeFiles/Catan.dir/sources/mainwindow.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/mainwindow.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/node.cpp" "CMakeFiles/Catan.dir/sources/node.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/node.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/player.cpp" "CMakeFiles/Catan.dir/sources/player.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/player.cpp.o.d"
-  "/home/luka/Desktop/06-catan/src/sources/road.cpp" "CMakeFiles/Catan.dir/sources/road.cpp.o" "gcc" "CMakeFiles/Catan.dir/sources/road.cpp.o.d"
+  "/home/luka/Desktop/06-catan/src/build/Catan_autogen/mocs_compilation.cpp" "CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o" "gcc" "CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/bank.cpp" "CMakeFiles/Catan.dir/sources/bank.o" "gcc" "CMakeFiles/Catan.dir/sources/bank.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/board.cpp" "CMakeFiles/Catan.dir/sources/board.o" "gcc" "CMakeFiles/Catan.dir/sources/board.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/dice.cpp" "CMakeFiles/Catan.dir/sources/dice.o" "gcc" "CMakeFiles/Catan.dir/sources/dice.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/field.cpp" "CMakeFiles/Catan.dir/sources/field.o" "gcc" "CMakeFiles/Catan.dir/sources/field.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/game.cpp" "CMakeFiles/Catan.dir/sources/game.o" "gcc" "CMakeFiles/Catan.dir/sources/game.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/gui_node.cpp" "CMakeFiles/Catan.dir/sources/gui_node.o" "gcc" "CMakeFiles/Catan.dir/sources/gui_node.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/gui_road.cpp" "CMakeFiles/Catan.dir/sources/gui_road.o" "gcc" "CMakeFiles/Catan.dir/sources/gui_road.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/main.cpp" "CMakeFiles/Catan.dir/sources/main.o" "gcc" "CMakeFiles/Catan.dir/sources/main.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/mainwindow.cpp" "CMakeFiles/Catan.dir/sources/mainwindow.o" "gcc" "CMakeFiles/Catan.dir/sources/mainwindow.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/node.cpp" "CMakeFiles/Catan.dir/sources/node.o" "gcc" "CMakeFiles/Catan.dir/sources/node.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/player.cpp" "CMakeFiles/Catan.dir/sources/player.o" "gcc" "CMakeFiles/Catan.dir/sources/player.o.d"
+  "/home/luka/Desktop/06-catan/src/sources/road.cpp" "CMakeFiles/Catan.dir/sources/road.o" "gcc" "CMakeFiles/Catan.dir/sources/road.o.d"
   )
 
 # Targets to which this target links.

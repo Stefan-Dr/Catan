@@ -2,7 +2,6 @@ CMakeFiles/Catan.dir/sources/field.cpp.o: \
  /home/luka/Desktop/06-catan/src/sources/field.cpp \
  /usr/include/stdc-predef.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/field.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/resourcetype.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -201,4 +200,5 @@ CMakeFiles/Catan.dir/sources/field.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/bit /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/resourcetype.h

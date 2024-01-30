@@ -1,0 +1,15 @@
+        -:    0:Source:/home/luka/Desktop/06-catan/src/sources/main.cpp
+        -:    0:Graph:main.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    1:#include <QApplication>
+        -:    2:
+        -:    3:#include "../headers/mainwindow.h"
+        -:    4:
+    #####:    5:int main(int argc, char *argv[]) {
+    #####:    6:  QApplication a(argc, argv);
+    #####:    7:  MainWindow w;
+    #####:    8:  w.show();
+        -:    9:
+    #####:   10:  return a.exec();
+    #####:   11:}

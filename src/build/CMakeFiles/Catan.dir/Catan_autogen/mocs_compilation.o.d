@@ -118,9 +118,10 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/board.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsLineItem \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
  /usr/include/c++/11/cstddef /usr/include/assert.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
@@ -166,15 +167,18 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/string \
  /usr/include/c++/11/bits/char_traits.h /usr/include/c++/11/cstdint \
  /usr/include/c++/11/bits/localefwd.h \
@@ -209,18 +213,15 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -246,21 +247,15 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
+ /usr/include/c++/11/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
@@ -269,43 +264,48 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsSceneMouseEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsLineItem \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/11/variant \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/gui_road.h \
- /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/gui_node.h \
- /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/node.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
+ /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/gui_node.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
+ /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/node.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/moc_gui_node.cpp \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/gui_node.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/moc_gui_road.cpp \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/gui_road.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/moc_mainwindow.cpp \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/mainwindow.h \
- /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/board.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
@@ -317,9 +317,9 @@ CMakeFiles/Catan.dir/Catan_autogen/mocs_compilation.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/board.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/dice.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/game.h \
  /home/luka/Desktop/06-catan/src/build/Catan_autogen/K6S233IZAZ/../../../headers/bank.h \

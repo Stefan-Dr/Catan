@@ -2,8 +2,12 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /home/luka/Desktop/06-catan/src/sources/game.cpp \
  /usr/include/stdc-predef.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/game.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/bank.h \
- /usr/include/c++/11/unordered_map /usr/include/c++/11/type_traits \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
+ /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -14,61 +18,31 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/pstl/pstl_config.h \
- /usr/include/c++/11/initializer_list \
- /usr/include/c++/11/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
- /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
- /usr/include/c++/11/bits/exception.h \
- /usr/include/c++/11/bits/functexcept.h \
- /usr/include/c++/11/bits/exception_defines.h \
- /usr/include/c++/11/bits/move.h /usr/include/c++/11/bits/memoryfwd.h \
- /usr/include/c++/11/ext/alloc_traits.h \
- /usr/include/c++/11/bits/alloc_traits.h \
- /usr/include/c++/11/bits/stl_construct.h \
- /usr/include/c++/11/bits/stl_iterator_base_types.h \
- /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/11/bits/concept_check.h \
- /usr/include/c++/11/debug/assertions.h \
- /usr/include/c++/11/bits/ptr_traits.h \
- /usr/include/c++/11/ext/numeric_traits.h \
- /usr/include/c++/11/bits/cpp_type_traits.h \
- /usr/include/c++/11/ext/type_traits.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/stl_pair.h \
- /usr/include/c++/11/bits/stl_function.h \
- /usr/include/c++/11/backward/binders.h \
- /usr/include/c++/11/bits/functional_hash.h \
- /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/cstddef \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/stl_algobase.h \
- /usr/include/c++/11/bits/stl_iterator.h \
- /usr/include/c++/11/debug/debug.h \
- /usr/include/c++/11/bits/predefined_ops.h \
- /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/resourcetype.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/board.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
- /usr/include/c++/11/cstddef \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/assert.h \
+ /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/initializer_list /usr/include/assert.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h \
- /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
- /usr/include/c++/11/cstdlib /usr/include/stdlib.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algobase.h \
+ /usr/include/c++/11/bits/functexcept.h \
+ /usr/include/c++/11/bits/exception_defines.h \
+ /usr/include/c++/11/bits/cpp_type_traits.h \
+ /usr/include/c++/11/ext/type_traits.h \
+ /usr/include/c++/11/ext/numeric_traits.h \
+ /usr/include/c++/11/bits/stl_iterator_base_types.h \
+ /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/11/bits/concept_check.h \
+ /usr/include/c++/11/debug/assertions.h \
+ /usr/include/c++/11/bits/stl_iterator.h \
+ /usr/include/c++/11/bits/ptr_traits.h /usr/include/c++/11/debug/debug.h \
+ /usr/include/c++/11/bits/predefined_ops.h \
+ /usr/include/c++/11/bits/stl_algo.h /usr/include/c++/11/cstdlib \
+ /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -106,11 +80,32 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_construct.h /usr/include/c++/11/new \
+ /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/stl_function.h \
+ /usr/include/c++/11/backward/binders.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/range_access.h \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/functional_hash.h \
+ /usr/include/c++/11/bits/hash_bytes.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+ /usr/include/c++/11/ext/new_allocator.h \
+ /usr/include/c++/11/bits/memoryfwd.h \
+ /usr/include/c++/11/ext/alloc_traits.h \
+ /usr/include/c++/11/bits/alloc_traits.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
@@ -131,15 +126,13 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/11/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
@@ -203,18 +196,15 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/bit /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/bits/list.tcc \
@@ -241,21 +231,25 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/bank.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/resourcetype.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/board.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsLineItem \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
+ /usr/include/c++/11/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
@@ -264,13 +258,13 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -281,32 +275,34 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsSceneMouseEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsLineItem \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/11/variant \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/gui_road.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/gui_node.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/node.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/gui_node.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsObject \
+ /home/luka/Desktop/06-catan/src/sources/../headers/node.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/dice.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/field.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/player.h \
- /home/luka/Desktop/06-catan/src/sources/../headers/color.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
@@ -320,6 +316,7 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/color.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/road.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/basic_ios.h \
@@ -331,6 +328,6 @@ CMakeFiles/Catan.dir/sources/game.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/luka/Desktop/06-catan/src/sources/../headers/player.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/dice.h \
+ /home/luka/Desktop/06-catan/src/sources/../headers/player.h \
  /home/luka/Desktop/06-catan/src/sources/../headers/resourcetype.h

@@ -17,6 +17,8 @@ Game::Game()
       m_bank(new Bank())
 /*, m_board(new Board())*/ {
   m_players = {m_player1, m_player2, m_player3, m_player4};
+  m_can_build_city = false;
+  m_can_build_house = false;
 }
 
 // destructor
@@ -27,7 +29,9 @@ Game::~Game() {
   delete m_player4;
   delete m_currentPlayer;
   delete m_bank;
+
 }
+
 
 // getters
 Player *Game::getPlayer1() const { return m_player1; }
