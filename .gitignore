@@ -41,3 +41,4 @@ Catan.pro.user.*
 
 # End of https://www.toptal.com/developers/gitignore/api/qtcreator
 src/build/
+src/html/
