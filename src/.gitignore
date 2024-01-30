@@ -1,4 +1,5 @@
 build-Catan-Desktop-Debug/
+src/build/
 Catan.pro.user.*
 *.pro.user
 *.pro.user.*
