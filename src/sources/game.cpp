@@ -169,8 +169,8 @@ bool Game::can_trade_with_bank(ResourceType player_resource,
 
   if ((num_player_resource >= 3) && (num_bank_resource >= 1)) {
     return true;
-  } else
-    return false;
+  }
+  return false;
 }
 
 void Game::trade_with_bank(ResourceType player_resource,
@@ -287,16 +287,16 @@ bool Game::can_build_house() {
       m_currentPlayer->get_num_of_wheat() >= 1 &&
       m_currentPlayer->get_num_of_brick() >= 1) {
     return true;
-  } else
-    return false;
+  }
+  return false;
 }
 
 bool Game::can_build_city() {
   if (m_currentPlayer->get_num_of_wheat() >= 2 &&
       m_currentPlayer->get_num_of_stone() >= 3) {
     return true;
-  } else
-    return false;
+  }
+  return false;
 }
 
 bool Game::can_get_magic_card() {
@@ -304,14 +304,14 @@ bool Game::can_get_magic_card() {
       m_currentPlayer->get_num_of_wheat() >= 1 &&
       m_currentPlayer->get_num_of_wool() >= 1) {
     return true;
-  } else
-    return false;
+  }
+  return false;
 }
 
 bool Game::can_build_road() {
   if (m_currentPlayer->get_num_of_wood() >= 1 &&
       m_currentPlayer->get_num_of_brick() >= 1) {
     return true;
-  } else
-    return false;
+  }
+  return false;
 }

@@ -610,7 +610,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event) {
       node->set_hasRoad(true);
       if ((m_tmp->get_is_house_built() || m_tmp->get_hasRoad()) &&
           m_tmp != node) {
-        GUI_Road *road = new GUI_Road(m_tmp, node);
+        auto *road = new GUI_Road(m_tmp, node);
         road->set_pen(getRoadColor());
         addItem(road);
         node->set_is_end_of_road(true);

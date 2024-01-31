@@ -28,7 +28,7 @@ bool Dice::get_button_clicked() const { return m_button_is_clicked; }
 bool Dice::get_dice_is_rolled() const { return m_dice_is_rolled; }
 
 void Dice::roll_dice() {
-  srand(time(0));
+  srand(time(nullptr));
   set_dice1((rand() % 6) + 1);
   set_dice2((rand() % 6) + 1);
 }

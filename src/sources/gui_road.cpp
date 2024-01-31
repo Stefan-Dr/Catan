@@ -9,7 +9,7 @@
 GUI_Road::GUI_Road(GUI_Node *start, GUI_Node *end)
     : QGraphicsLineItem(), m_start(start), m_end(end) {}
 
-GUI_Road::~GUI_Road() {}
+GUI_Road::~GUI_Road() = default;
 
 QColor GUI_Road::m_color = QColor("blue");
 
