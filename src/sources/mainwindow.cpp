@@ -204,7 +204,13 @@ void MainWindow::on_pbBackToMenu_2_clicked() {
 
 void MainWindow::on_pbHelp_clicked() { ui->stackedWidget->setCurrentIndex(2); }
 
-void MainWindow::on_pbExit_clicked() { qApp->exit(); }
+void MainWindow::on_pbExit_clicked() {
+    delete m_board;
+    delete m_dice;
+    delete m_game;
+    delete ui;
+    qApp->exit();
+}
 
 void MainWindow::on_pbBackToMenu_3_clicked() {
   ui->lePlayer1->setText("");
@@ -420,6 +426,10 @@ void MainWindow::manageResourcesHouse() {
         ", YOU WON");
     int ret = msgBox.exec();
     if (ret == QMessageBox::Ok) {
+      delete m_board;
+      delete m_dice;
+      delete m_game;
+      delete ui;
       qApp->exit();
     }
   } else {
@@ -483,6 +493,9 @@ void MainWindow::manageResourcesRoad() {
         ", YOU WON");
     int ret = msgBox.exec();
     if (ret == QMessageBox::Ok) {
+      delete m_board;
+      delete m_dice;
+      delete m_game;
       qApp->exit();
     }
   } else {
@@ -551,6 +564,10 @@ void MainWindow::on_pb_MagicCard_clicked() {
             ", YOU WON");
         int ret = msgBox.exec();
         if (ret == QMessageBox::Ok) {
+          delete m_board;
+          delete m_dice;
+          delete m_game;
+          delete ui;
           qApp->exit();
         }
       } else {
@@ -586,6 +603,10 @@ void MainWindow::manageResourcesCity() {
         ", YOU WON");
     int ret = msgBox.exec();
     if (ret == QMessageBox::Ok) {
+      delete m_board;
+      delete m_dice;
+      delete m_game;
+      delete ui;
       qApp->exit();
     }
   } else {
