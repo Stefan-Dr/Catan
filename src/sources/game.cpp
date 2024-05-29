@@ -27,6 +27,7 @@ Game::~Game() {
   delete m_player4;
   delete m_currentPlayer;
   delete m_bank;
+  m_players.clear();
 }
 
 //getters

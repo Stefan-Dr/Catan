@@ -8,8 +8,8 @@ class Bank
 {
 public:
     //constructor
-    Bank();    \
-    //destructor
+    Bank();
+    //can not have copy of bank
     Bank(const Bank &) = delete;
 
     std::unordered_map<ResourceType, unsigned>& get_bank_resources();
