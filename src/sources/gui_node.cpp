@@ -13,7 +13,9 @@ GUI_Node::GUI_Node(Node *node)
     setAcceptHoverEvents(true);
 
 }
-
+GUI_Node::~GUI_Node(){
+    delete m_node;
+}
 //getters
 bool GUI_Node::get_hasRoad() const{
     return hasRoad;

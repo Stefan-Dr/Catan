@@ -18,6 +18,7 @@ Board::~Board(){
     for(auto &field: m_fields){
         delete field;
     }
+    m_fields.clear();
 }
 
 QVector<Field *>Board::get_fields(){
