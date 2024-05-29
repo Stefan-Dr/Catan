@@ -35,6 +35,10 @@ Field::Field(int id, int number,
                          m_down_corner,m_bottom_right_corner, m_up_right_corner};
     }
 
+//destructor
+Field::~Field(){
+
+}
 //getters
 int Field::get_id() const{
     return m_id;

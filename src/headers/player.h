@@ -18,6 +18,7 @@ public:
     Player();
     //destructor
     Player(const Player& ) = delete;
+    ~Player();
     Player(int id, std::string name, QColor color, QColor color_c /*Color*/);
 
     //setters

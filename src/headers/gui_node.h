@@ -11,7 +11,7 @@ class GUI_Node : public QGraphicsObject
     Q_OBJECT
 public:
     GUI_Node(Node *node);
-
+    ~GUI_Node();
 
     // QGraphicsItem interface
     QRectF boundingRect() const override;
