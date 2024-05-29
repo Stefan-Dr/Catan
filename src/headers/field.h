@@ -25,6 +25,9 @@ public:
           Node* bottom_corner, Node* bottom_left_corner);
     Field(const Field&) = delete;
 
+    //destructor
+    ~Field();
+
     //getters
     int get_id() const;
     ResourceType get_res_type() const;
