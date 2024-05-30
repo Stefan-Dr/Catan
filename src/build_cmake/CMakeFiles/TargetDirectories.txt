@@ -1,0 +1,4 @@
+/home/luka/Desktop/06-catan/src/build_cmake/CMakeFiles/rebuild_cache.dir
+/home/luka/Desktop/06-catan/src/build_cmake/CMakeFiles/edit_cache.dir
+/home/luka/Desktop/06-catan/src/build_cmake/CMakeFiles/Catan-azrs.dir
+/home/luka/Desktop/06-catan/src/build_cmake/CMakeFiles/Catan-azrs_autogen.dir
