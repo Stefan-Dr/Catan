@@ -1,17 +1,17 @@
 #include "../headers/player.h"
 #include <iostream>
+#include <utility>
+
 
 //constructor(empty)
 Player::Player()
-{
-
-}
+= default;
 //constructor
 Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color color*treba ovo da se doradi*/)
-    : m_id(id), m_name(name),
+    : m_id(id), m_name(std::move(name)),
       m_victory_points(0),m_num_of_roads(0),
       m_num_of_houses(0),m_num_of_cities(0),m_num_of_allowed_houses(5),
-      m_num_of_allowed_cities(4),m_num_of_allowed_roads(15), m_player_color(color), m_city_color(color_c){
+      m_num_of_allowed_cities(4),m_num_of_allowed_roads(15), m_player_color(std::move(color)), m_city_color(std::move(color_c)){
 
       m_player_resource[ResourceType::Brick] = 4;
       m_player_resource[ResourceType::Stone] = 0;
@@ -30,68 +30,68 @@ Player::Player(int id, std::string name, QColor color, QColor color_c/*, Color c
 
 }
 //getters
-std::string Player::get_name() const
+auto Player::get_name() const -> std::string
 {
     return m_name;
 }
 
-int Player::get_num_of_wood() const {
+auto Player::get_num_of_wood() const -> int {
     return m_num_of_wood;
 }
-int Player::get_num_of_brick() const {
+auto Player::get_num_of_brick() const -> int {
     return m_num_of_brick;
 }
-int Player::get_num_of_wool() const {
+auto Player::get_num_of_wool() const -> int {
     return m_num_of_wool;
 }
-int Player::get_num_of_wheat() const {
+auto Player::get_num_of_wheat() const -> int {
     return m_num_of_wheat;
 }
-int Player::get_num_of_stone() const {
+auto Player::get_num_of_stone() const -> int {
     return m_num_of_stone;
 }
 
-int Player::get_num_of_allowed_houses() const{
+auto Player::get_num_of_allowed_houses() const -> int{
     return m_num_of_allowed_houses;
 }
-int Player::get_num_of_allowed_cities() const{
+auto Player::get_num_of_allowed_cities() const -> int{
     return m_num_of_allowed_cities;
 }
-int Player::get_num_of_allowed_roads() const{
+auto Player::get_num_of_allowed_roads() const -> int{
     return m_num_of_allowed_roads;
 }
 
-QColor Player::get_player_color() const
+auto Player::get_player_color() const -> QColor
 {
     return m_player_color;
 }
 
-QColor Player::get_city_color() const
+auto Player::get_city_color() const -> QColor
 {
     return m_city_color;
 }
 
-int Player::get_id() const{
+auto Player::get_id() const -> int{
     return m_id;
 }
 
-int Player::get_victory_points() const{
+auto Player::get_victory_points() const -> int{
     return m_victory_points;
 }
-int Player::get_num_of_houses() const{
+auto Player::get_num_of_houses() const -> int{
     return m_num_of_houses;
 }
-int Player::get_num_of_cities() const{
+auto Player::get_num_of_cities() const -> int{
     return m_num_of_cities;
 }
-int Player::get_num_of_roads() const{
+auto Player::get_num_of_roads() const -> int{
     return m_num_of_roads;
 }
-std::unordered_map<ResourceType,int>& Player::get_PlayerResources(){
+auto Player::get_PlayerResources() -> std::unordered_map<ResourceType,int>&{
     return m_player_resource;
 }
 
-bool Player::get_first_turn() const
+auto Player::get_first_turn() const -> bool
 {
     return m_first_turn;
 }
@@ -204,7 +204,7 @@ void Player::set_id(int id){
     m_id = id;
 }
 
-bool Player::give_resource_card_to_player(ResourceType res_type, int amount, Player &p){
+auto Player::give_resource_card_to_player(ResourceType res_type, int amount, Player &p) -> bool{
     if(m_player_resource[res_type]<amount){
         return false;
     }
@@ -269,6 +269,6 @@ void Player::decrease_victory_point(){
     m_victory_points--;
 }
 
-bool Player::comparePlayers(const Player* pl1, const Player* pl2) {
+auto Player::comparePlayers(const Player* pl1, const Player* pl2) -> bool {
   return pl1->get_victory_points() < pl2->get_victory_points();
 }

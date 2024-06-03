@@ -16,23 +16,23 @@ m_num_of_wheat(19),m_num_of_stone(19){
 }
 
 //getters
-std::unordered_map<ResourceType, unsigned>& Bank::get_bank_resources(){
+auto Bank::get_bank_resources() -> std::unordered_map<ResourceType, unsigned>&{
     return m_bank_resource;
 }
 
-unsigned Bank::get_num_of_brick_from_bank() const{
+auto Bank::get_num_of_brick_from_bank() const -> unsigned{
     return m_num_of_brick;
 }
-unsigned Bank::get_num_of_wood_from_bank() const{
+auto Bank::get_num_of_wood_from_bank() const -> unsigned{
     return m_num_of_wood;
 }
-unsigned Bank::get_num_of_wool_from_bank() const{
+auto Bank::get_num_of_wool_from_bank() const -> unsigned{
     return m_num_of_wool;
 }
-unsigned Bank::get_num_of_wheat_from_bank() const{
+auto Bank::get_num_of_wheat_from_bank() const -> unsigned{
     return m_num_of_wheat;
 }
-unsigned Bank::get_num_of_stone_from_bank() const{
+auto Bank::get_num_of_stone_from_bank() const -> unsigned{
     return m_num_of_stone;
 }
 
