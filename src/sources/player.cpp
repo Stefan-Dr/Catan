@@ -103,7 +103,7 @@ void Player::set_first_turn(bool value)
     m_first_turn = value;
 }
 
-void Player::set_name(std::string new_name)
+void Player::set_name(const std::string new_name)
 {
     m_name = new_name;
 }

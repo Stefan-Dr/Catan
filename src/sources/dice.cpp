@@ -4,7 +4,7 @@
 
 //constructor
 Dice::Dice():
-    m_dice1(0), m_dice2(0) {}
+    m_dice1(0), m_dice2(0) , m_dice_is_rolled(bool){}
 
 //setters
 void Dice::set_button_is_clicked(bool button_clicked){
