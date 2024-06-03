@@ -84,11 +84,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "resource.qrc.depends"
   "CMakeFiles/Catan-azrs_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/MyLibrary_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Catan-azrs.dir/DependInfo.cmake"
+  "CMakeFiles/MyLibrary.dir/DependInfo.cmake"
   "CMakeFiles/Catan-azrs_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/MyLibrary_autogen.dir/DependInfo.cmake"
   )

@@ -124,6 +124,19 @@ Catan-azrs/fast:
 .PHONY : Catan-azrs/fast
 
 #=============================================================================
+# Target rules for targets named MyLibrary
+
+# Build rule for target.
+MyLibrary: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MyLibrary
+.PHONY : MyLibrary
+
+# fast build rule for target.
+MyLibrary/fast:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/build
+.PHONY : MyLibrary/fast
+
+#=============================================================================
 # Target rules for targets named Catan-azrs_autogen
 
 # Build rule for target.
@@ -135,6 +148,19 @@ Catan-azrs_autogen: cmake_check_build_system
 Catan-azrs_autogen/fast:
 	$(MAKE) -f CMakeFiles/Catan-azrs_autogen.dir/build.make CMakeFiles/Catan-azrs_autogen.dir/build
 .PHONY : Catan-azrs_autogen/fast
+
+#=============================================================================
+# Target rules for targets named MyLibrary_autogen
+
+# Build rule for target.
+MyLibrary_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MyLibrary_autogen
+.PHONY : MyLibrary_autogen
+
+# fast build rule for target.
+MyLibrary_autogen/fast:
+	$(MAKE) -f CMakeFiles/MyLibrary_autogen.dir/build.make CMakeFiles/MyLibrary_autogen.dir/build
+.PHONY : MyLibrary_autogen/fast
 
 Catan-azrs_autogen/mocs_compilation.o: Catan-azrs_autogen/mocs_compilation.cpp.o
 
@@ -163,13 +189,40 @@ Catan-azrs_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/Catan-azrs_autogen/mocs_compilation.cpp.s
 .PHONY : Catan-azrs_autogen/mocs_compilation.cpp.s
 
+MyLibrary_autogen/mocs_compilation.o: MyLibrary_autogen/mocs_compilation.cpp.o
+
+.PHONY : MyLibrary_autogen/mocs_compilation.o
+
+# target to build an object file
+MyLibrary_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/MyLibrary_autogen/mocs_compilation.cpp.o
+.PHONY : MyLibrary_autogen/mocs_compilation.cpp.o
+
+MyLibrary_autogen/mocs_compilation.i: MyLibrary_autogen/mocs_compilation.cpp.i
+
+.PHONY : MyLibrary_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+MyLibrary_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/MyLibrary_autogen/mocs_compilation.cpp.i
+.PHONY : MyLibrary_autogen/mocs_compilation.cpp.i
+
+MyLibrary_autogen/mocs_compilation.s: MyLibrary_autogen/mocs_compilation.cpp.s
+
+.PHONY : MyLibrary_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+MyLibrary_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/MyLibrary_autogen/mocs_compilation.cpp.s
+.PHONY : MyLibrary_autogen/mocs_compilation.cpp.s
+
 sources/bank.o: sources/bank.cpp.o
 
 .PHONY : sources/bank.o
 
 # target to build an object file
 sources/bank.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/bank.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/bank.cpp.o
 .PHONY : sources/bank.cpp.o
 
 sources/bank.i: sources/bank.cpp.i
@@ -178,7 +231,7 @@ sources/bank.i: sources/bank.cpp.i
 
 # target to preprocess a source file
 sources/bank.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/bank.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/bank.cpp.i
 .PHONY : sources/bank.cpp.i
 
 sources/bank.s: sources/bank.cpp.s
@@ -187,7 +240,7 @@ sources/bank.s: sources/bank.cpp.s
 
 # target to generate assembly for a file
 sources/bank.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/bank.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/bank.cpp.s
 .PHONY : sources/bank.cpp.s
 
 sources/board.o: sources/board.cpp.o
@@ -196,7 +249,7 @@ sources/board.o: sources/board.cpp.o
 
 # target to build an object file
 sources/board.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/board.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/board.cpp.o
 .PHONY : sources/board.cpp.o
 
 sources/board.i: sources/board.cpp.i
@@ -205,7 +258,7 @@ sources/board.i: sources/board.cpp.i
 
 # target to preprocess a source file
 sources/board.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/board.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/board.cpp.i
 .PHONY : sources/board.cpp.i
 
 sources/board.s: sources/board.cpp.s
@@ -214,7 +267,7 @@ sources/board.s: sources/board.cpp.s
 
 # target to generate assembly for a file
 sources/board.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/board.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/board.cpp.s
 .PHONY : sources/board.cpp.s
 
 sources/dice.o: sources/dice.cpp.o
@@ -223,7 +276,7 @@ sources/dice.o: sources/dice.cpp.o
 
 # target to build an object file
 sources/dice.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/dice.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/dice.cpp.o
 .PHONY : sources/dice.cpp.o
 
 sources/dice.i: sources/dice.cpp.i
@@ -232,7 +285,7 @@ sources/dice.i: sources/dice.cpp.i
 
 # target to preprocess a source file
 sources/dice.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/dice.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/dice.cpp.i
 .PHONY : sources/dice.cpp.i
 
 sources/dice.s: sources/dice.cpp.s
@@ -241,7 +294,7 @@ sources/dice.s: sources/dice.cpp.s
 
 # target to generate assembly for a file
 sources/dice.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/dice.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/dice.cpp.s
 .PHONY : sources/dice.cpp.s
 
 sources/field.o: sources/field.cpp.o
@@ -250,7 +303,7 @@ sources/field.o: sources/field.cpp.o
 
 # target to build an object file
 sources/field.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/field.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/field.cpp.o
 .PHONY : sources/field.cpp.o
 
 sources/field.i: sources/field.cpp.i
@@ -259,7 +312,7 @@ sources/field.i: sources/field.cpp.i
 
 # target to preprocess a source file
 sources/field.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/field.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/field.cpp.i
 .PHONY : sources/field.cpp.i
 
 sources/field.s: sources/field.cpp.s
@@ -268,7 +321,7 @@ sources/field.s: sources/field.cpp.s
 
 # target to generate assembly for a file
 sources/field.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/field.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/field.cpp.s
 .PHONY : sources/field.cpp.s
 
 sources/game.o: sources/game.cpp.o
@@ -277,7 +330,7 @@ sources/game.o: sources/game.cpp.o
 
 # target to build an object file
 sources/game.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/game.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/game.cpp.o
 .PHONY : sources/game.cpp.o
 
 sources/game.i: sources/game.cpp.i
@@ -286,7 +339,7 @@ sources/game.i: sources/game.cpp.i
 
 # target to preprocess a source file
 sources/game.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/game.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/game.cpp.i
 .PHONY : sources/game.cpp.i
 
 sources/game.s: sources/game.cpp.s
@@ -295,7 +348,7 @@ sources/game.s: sources/game.cpp.s
 
 # target to generate assembly for a file
 sources/game.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/game.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/game.cpp.s
 .PHONY : sources/game.cpp.s
 
 sources/gui_node.o: sources/gui_node.cpp.o
@@ -304,7 +357,7 @@ sources/gui_node.o: sources/gui_node.cpp.o
 
 # target to build an object file
 sources/gui_node.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_node.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_node.cpp.o
 .PHONY : sources/gui_node.cpp.o
 
 sources/gui_node.i: sources/gui_node.cpp.i
@@ -313,7 +366,7 @@ sources/gui_node.i: sources/gui_node.cpp.i
 
 # target to preprocess a source file
 sources/gui_node.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_node.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_node.cpp.i
 .PHONY : sources/gui_node.cpp.i
 
 sources/gui_node.s: sources/gui_node.cpp.s
@@ -322,7 +375,7 @@ sources/gui_node.s: sources/gui_node.cpp.s
 
 # target to generate assembly for a file
 sources/gui_node.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_node.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_node.cpp.s
 .PHONY : sources/gui_node.cpp.s
 
 sources/gui_road.o: sources/gui_road.cpp.o
@@ -331,7 +384,7 @@ sources/gui_road.o: sources/gui_road.cpp.o
 
 # target to build an object file
 sources/gui_road.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_road.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_road.cpp.o
 .PHONY : sources/gui_road.cpp.o
 
 sources/gui_road.i: sources/gui_road.cpp.i
@@ -340,7 +393,7 @@ sources/gui_road.i: sources/gui_road.cpp.i
 
 # target to preprocess a source file
 sources/gui_road.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_road.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_road.cpp.i
 .PHONY : sources/gui_road.cpp.i
 
 sources/gui_road.s: sources/gui_road.cpp.s
@@ -349,7 +402,7 @@ sources/gui_road.s: sources/gui_road.cpp.s
 
 # target to generate assembly for a file
 sources/gui_road.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/gui_road.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/gui_road.cpp.s
 .PHONY : sources/gui_road.cpp.s
 
 sources/main.o: sources/main.cpp.o
@@ -358,7 +411,7 @@ sources/main.o: sources/main.cpp.o
 
 # target to build an object file
 sources/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/main.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/main.cpp.o
 .PHONY : sources/main.cpp.o
 
 sources/main.i: sources/main.cpp.i
@@ -367,7 +420,7 @@ sources/main.i: sources/main.cpp.i
 
 # target to preprocess a source file
 sources/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/main.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/main.cpp.i
 .PHONY : sources/main.cpp.i
 
 sources/main.s: sources/main.cpp.s
@@ -376,7 +429,7 @@ sources/main.s: sources/main.cpp.s
 
 # target to generate assembly for a file
 sources/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/main.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
 
 sources/mainwindow.o: sources/mainwindow.cpp.o
@@ -385,7 +438,7 @@ sources/mainwindow.o: sources/mainwindow.cpp.o
 
 # target to build an object file
 sources/mainwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/mainwindow.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/mainwindow.cpp.o
 .PHONY : sources/mainwindow.cpp.o
 
 sources/mainwindow.i: sources/mainwindow.cpp.i
@@ -394,7 +447,7 @@ sources/mainwindow.i: sources/mainwindow.cpp.i
 
 # target to preprocess a source file
 sources/mainwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/mainwindow.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/mainwindow.cpp.i
 .PHONY : sources/mainwindow.cpp.i
 
 sources/mainwindow.s: sources/mainwindow.cpp.s
@@ -403,7 +456,7 @@ sources/mainwindow.s: sources/mainwindow.cpp.s
 
 # target to generate assembly for a file
 sources/mainwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/mainwindow.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/mainwindow.cpp.s
 .PHONY : sources/mainwindow.cpp.s
 
 sources/node.o: sources/node.cpp.o
@@ -412,7 +465,7 @@ sources/node.o: sources/node.cpp.o
 
 # target to build an object file
 sources/node.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/node.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/node.cpp.o
 .PHONY : sources/node.cpp.o
 
 sources/node.i: sources/node.cpp.i
@@ -421,7 +474,7 @@ sources/node.i: sources/node.cpp.i
 
 # target to preprocess a source file
 sources/node.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/node.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/node.cpp.i
 .PHONY : sources/node.cpp.i
 
 sources/node.s: sources/node.cpp.s
@@ -430,7 +483,7 @@ sources/node.s: sources/node.cpp.s
 
 # target to generate assembly for a file
 sources/node.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/node.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/node.cpp.s
 .PHONY : sources/node.cpp.s
 
 sources/player.o: sources/player.cpp.o
@@ -439,7 +492,7 @@ sources/player.o: sources/player.cpp.o
 
 # target to build an object file
 sources/player.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/player.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/player.cpp.o
 .PHONY : sources/player.cpp.o
 
 sources/player.i: sources/player.cpp.i
@@ -448,7 +501,7 @@ sources/player.i: sources/player.cpp.i
 
 # target to preprocess a source file
 sources/player.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/player.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/player.cpp.i
 .PHONY : sources/player.cpp.i
 
 sources/player.s: sources/player.cpp.s
@@ -457,7 +510,7 @@ sources/player.s: sources/player.cpp.s
 
 # target to generate assembly for a file
 sources/player.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/player.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/player.cpp.s
 .PHONY : sources/player.cpp.s
 
 sources/road.o: sources/road.cpp.o
@@ -466,7 +519,7 @@ sources/road.o: sources/road.cpp.o
 
 # target to build an object file
 sources/road.cpp.o:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/road.cpp.o
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/road.cpp.o
 .PHONY : sources/road.cpp.o
 
 sources/road.i: sources/road.cpp.i
@@ -475,7 +528,7 @@ sources/road.i: sources/road.cpp.i
 
 # target to preprocess a source file
 sources/road.cpp.i:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/road.cpp.i
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/road.cpp.i
 .PHONY : sources/road.cpp.i
 
 sources/road.s: sources/road.cpp.s
@@ -484,7 +537,7 @@ sources/road.s: sources/road.cpp.s
 
 # target to generate assembly for a file
 sources/road.cpp.s:
-	$(MAKE) -f CMakeFiles/Catan-azrs.dir/build.make CMakeFiles/Catan-azrs.dir/sources/road.cpp.s
+	$(MAKE) -f CMakeFiles/MyLibrary.dir/build.make CMakeFiles/MyLibrary.dir/sources/road.cpp.s
 .PHONY : sources/road.cpp.s
 
 # Help Target
@@ -496,10 +549,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Catan-azrs"
+	@echo "... MyLibrary"
 	@echo "... Catan-azrs_autogen"
+	@echo "... MyLibrary_autogen"
 	@echo "... Catan-azrs_autogen/mocs_compilation.o"
 	@echo "... Catan-azrs_autogen/mocs_compilation.i"
 	@echo "... Catan-azrs_autogen/mocs_compilation.s"
+	@echo "... MyLibrary_autogen/mocs_compilation.o"
+	@echo "... MyLibrary_autogen/mocs_compilation.i"
+	@echo "... MyLibrary_autogen/mocs_compilation.s"
 	@echo "... sources/bank.o"
 	@echo "... sources/bank.i"
 	@echo "... sources/bank.s"
