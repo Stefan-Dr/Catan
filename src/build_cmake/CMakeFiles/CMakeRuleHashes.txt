@@ -1,5 +1,0 @@
-# Hashes of file build rules.
-5ba79a454191347de9e9c7d179dc9c80 CMakeFiles/Catan-azrs_autogen
-bf86edecb48e935c246f839b99cbb2c7 CMakeFiles/MyLibrary_autogen
-d07288f5a9c2b55fcc8e97044967386a qrc_resource.cpp
-b4344723fb8ccb05cfc3cae0497f2050 ui_mainwindow.h
