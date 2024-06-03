@@ -2,6 +2,10 @@ build-Catan-Desktop-Debug/
 Catan.pro.user.*
 *.pro.user
 *.pro.user.*
+
+#files from build directory
+/build/*
+/build_cmake/*
 # Created by https://www.toptal.com/developers/gitignore/api/qtcreator
 # Edit at https://www.toptal.com/developers/gitignore?templates=qtcreator
 
