@@ -16,7 +16,7 @@ private:
 
 public:
     //constructor
-    Node(int id);
+    explicit Node(int id);
     //destructor
     Node(const Node &) = delete;
 
