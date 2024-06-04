@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 
 project(Catan-azrs VERSION 1.0.0 LANGUAGES CXX)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+
 #Postavljamo standard da bude c++17 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -49,5 +53,6 @@ target_link_libraries(MyLibrary PRIVATE Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Net
 add_executable(${PROJECT_NAME} ${FORMS})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE MyLibrary)
+# target_link_libraries(prog ${CONAN_LIBS})
 
 
