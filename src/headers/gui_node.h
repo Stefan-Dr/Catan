@@ -10,7 +10,7 @@ class GUI_Node : public QGraphicsObject
 {
     Q_OBJECT
 public:
-    GUI_Node(Node *node);
+    explicit GUI_Node(Node *node);
     ~GUI_Node();
 
     // QGraphicsItem interface

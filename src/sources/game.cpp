@@ -56,18 +56,20 @@ QVector<Player*>& Game::get_players(){
 
 
 //setters
-void Game::setPlayer1(Player *player1) {
-    m_player1 = player1;
-}
-void Game::setPlayer2(Player *player2) {
-    m_player2 = player2;
-}
-void Game::setPlayer3(Player *player3) {
-    m_player3 = player3;
-}
-void Game::setPlayer4(Player *player4) {
-    m_player4 = player4;
-}
+//i made those functions a comment
+//because we never actually use them
+// void Game::setPlayer1(Player *player1) {
+//     m_player1 = player1;
+// }
+// void Game::setPlayer2(Player *player2) {
+//     m_player2 = player2;
+// }
+// void Game::setPlayer3(Player *player3) {
+//     m_player3 = player3;
+// }
+// void Game::setPlayer4(Player *player4) {
+//     m_player4 = player4;
+// }
 void Game::setBank(Bank* bank){
     m_bank = bank;
 }
@@ -269,24 +271,6 @@ void Game::Turn(int result, Board* board){
                     }
                 }
         }
-    }
-}
-
-
-
-
-void Game::ChangeCurrentPlayer(){
-    if(m_currentPlayer->get_id() == m_player1->get_id()){
-        m_currentPlayer = m_player2;
-    }
-    else if(m_currentPlayer->get_id() == m_player2->get_id()){
-        m_currentPlayer = m_player3;
-    }
-    else if(m_currentPlayer->get_id() == m_player3->get_id()){
-        m_currentPlayer = m_player4;
-    }
-    else if(m_currentPlayer->get_id() == m_player4->get_id()){
-        m_currentPlayer = m_player1;
     }
 }
 

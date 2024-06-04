@@ -8,6 +8,7 @@
 GUI_Node::GUI_Node(Node *node)
     : QGraphicsObject()
     , m_node(node)
+    , hasRoad(false)
 {
     setFlags(GraphicsItemFlag::ItemIsSelectable);
     setAcceptHoverEvents(true);

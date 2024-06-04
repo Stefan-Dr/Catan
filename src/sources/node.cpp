@@ -1,5 +1,6 @@
 #include "../headers/node.h"
-
+#include <algorithm>
+#include <QVector>
 //constructor
 Node::Node(int m_id)
     : m_id(m_id), m_is_house_built(false), m_is_city_built(false),
@@ -69,10 +70,8 @@ void Node::place_city(int owner) {
     set_owner(owner);
 }
 
-void Node::set_all_neighbours(QVector<int> &neighbours){
-    for(auto i : neighbours){
-       m_neighbours.push_back(i);
-    }
+void Node::set_all_neighbours(const QVector<int> &neighbours){
+    std::copy(neighbours.begin(), neighbours.end(), std::back_inserter(m_neighbours));
 }
 
 
