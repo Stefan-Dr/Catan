@@ -17,26 +17,26 @@ GUI_Node::~GUI_Node(){
     delete m_node;
 }
 //getters
-bool GUI_Node::get_hasRoad() const{
+auto GUI_Node::get_hasRoad() const -> bool{
     return hasRoad;
 }
 
-bool GUI_Node::get_is_city_built() const
+auto GUI_Node::get_is_city_built() const -> bool
 {
     return m_is_city_built;
 }
 
-bool GUI_Node::get_is_end_of_road() const
+auto GUI_Node::get_is_end_of_road() const -> bool
 {
     return m_is_end_of_road;
 }
 
-Node* GUI_Node::getNode() const
+auto GUI_Node::getNode() const -> Node*
 {
     return m_node;
 }
 
-bool GUI_Node::get_is_house_built() const
+auto GUI_Node::get_is_house_built() const -> bool
 {
     return m_is_house_built;
 }
@@ -73,12 +73,12 @@ void GUI_Node::set_is_house_built(bool value)
 
 QColor GUI_Node::m_color = QColor("white");
 
-QRectF GUI_Node::boundingRect() const
+auto GUI_Node::boundingRect() const -> QRectF
 {
     return QRectF(0,0,36,36);
 }
 
-QRectF GUI_Node::position() const{
+auto GUI_Node::position() const -> QRectF{
     return QRectF(0,0,36,36);
 }
 
@@ -131,12 +131,12 @@ void GUI_Node::hoverLeaveEvent(QGraphicsSceneHoverEvent *event) {
 }
 
 
-QPointF GUI_Node::CenterPosition() {
+auto GUI_Node::CenterPosition() -> QPointF {
     return pos() + QPointF(18, 18);
 }
 
 
-bool GUI_Node::check_owner_city(QColor color)
+auto GUI_Node::check_owner_city(QColor color) -> bool
 {
     if (getNode()->get_owner() == 1 && color == Qt::darkBlue ) return true;
     else if (getNode()->get_owner() == 2 && color == Qt::darkYellow ) return true;
@@ -146,7 +146,7 @@ bool GUI_Node::check_owner_city(QColor color)
 }
 
 
-int GUI_Node::type() const{
+auto GUI_Node::type() const -> int{
     return 1;
 }
 

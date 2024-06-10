@@ -1,6 +1,6 @@
 #include "../headers/dice.h"
 #include <cstdlib>
-#include <time.h>
+#include <ctime>
 
 //constructor
 Dice::Dice():
@@ -24,28 +24,28 @@ void Dice::set_dice2(int num) {
 }
 
 //getters
-int Dice::get_dice1() const{
+auto Dice::get_dice1() const -> int{
     return m_dice1;
 }
 
-int Dice::get_dice2() const{
+auto Dice::get_dice2() const -> int{
     return m_dice2;
 }
 
-int Dice::get_dice_sum() const {
+auto Dice::get_dice_sum() const -> int {
     return m_dice1 + m_dice2;
 }
 
-bool Dice::get_button_clicked() const {
+auto Dice::get_button_clicked() const -> bool {
     return m_button_is_clicked;
 }
 
-bool Dice::get_dice_is_rolled()const {
+auto Dice::get_dice_is_rolled()const -> bool {
     return m_dice_is_rolled;
 }
 
 void Dice::roll_dice() {
-    srand(time(0));
+    srand(time(nullptr));
     set_dice1((rand() % 6) + 1);
     set_dice2((rand() % 6) + 1);
 }

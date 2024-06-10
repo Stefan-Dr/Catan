@@ -1,9 +1,9 @@
 #include "../headers/gui_road.h"
 
-#include <climits>
 #include <QPainter>
 #include <QtMath>
-#include <math.h>
+#include <climits>
+#include <cmath>
 
 //constructor
 GUI_Road::GUI_Road(GUI_Node *start, GUI_Node *end)
@@ -14,13 +14,11 @@ GUI_Road::GUI_Road(GUI_Node *start, GUI_Node *end)
 
 }
 
-GUI_Road::~GUI_Road(){
-
-}
+GUI_Road::~GUI_Road()= default;
 
 QColor GUI_Road::m_color = QColor("blue");
 
-QRectF GUI_Road::boundingRect() const {
+auto GUI_Road::boundingRect() const -> QRectF {
     QPainterPath ret;
     QPolygonF nPolygon;
     auto line = QLineF(m_start->CenterPosition(), m_end->CenterPosition());
@@ -43,7 +41,7 @@ QRectF GUI_Road::boundingRect() const {
 }
 
 //getters
-QPointF GUI_Road::getCenter(){
+auto GUI_Road::getCenter() -> QPointF{
     return QPointF(m_start->CenterPosition().rx() - (m_start->CenterPosition().rx() - m_end->CenterPosition().rx())/2.0,
                    m_start->CenterPosition().ry() - (m_start->CenterPosition().ry() - m_end->CenterPosition().ry())/2.0);
 }

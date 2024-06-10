@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-b53581f031f682ba57588996bf3dba2b CMakeFiles/Catan_autogen
-a4d8be762806941d4168af8a6dc63ad5 qrc_resource.cpp
-ebfc7ce84201b1a3cf5c6a4adb991f4e ui_mainwindow.h

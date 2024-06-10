@@ -36,81 +36,79 @@ Field::Field(int id, int number,
     }
 
 //destructor
-Field::~Field(){
-
-}
+Field::~Field()= default;
 //getters
-int Field::get_id() const{
+auto Field::get_id() const -> int{
     return m_id;
 }
 
-int Field::get_number() const{
+auto Field::get_number() const -> int{
     return m_number;
 }
 
-ResourceType Field::get_res_type() const{
+auto Field::get_res_type() const -> ResourceType{
     return m_res_type;
 }
 
 
-QVector<Node*>& Field::get_corners(){
+auto Field::get_corners() -> QVector<Node*>&{
     return m_corners;
 }
 
-const QVector<Road*>& Field::get_edges() const{
+auto Field::get_edges() const -> const QVector<Road*>&{
     return m_edges;
 }
 
-Node* Field::get_up_corner() const{
+auto Field::get_up_corner() const -> Node*{
     return m_up_corner;
 }
 
-Node* Field::get_down_corner() const{
+auto Field::get_down_corner() const -> Node*{
     return m_down_corner;
 }
 
-Node* Field::get_bottom_right_corner() const{
+auto Field::get_bottom_right_corner() const -> Node*{
     return m_bottom_right_corner;
 }
 
-Node* Field::get_bottom_left_corner() const{
+auto Field::get_bottom_left_corner() const -> Node*{
     return m_bottom_left_corner;
 }
 
-Node* Field::get_up_right_corner() const{
+auto Field::get_up_right_corner() const -> Node*{
     return m_up_right_corner;
 }
 
-Node* Field::get_up_left_conrer() const{
+auto Field::get_up_left_conrer() const -> Node*{
     return m_up_left_corner;
 }
 
-Road* Field::get_right_edge() const{
+auto Field::get_right_edge() const -> Road*{
     return m_right_edge;
 }
 
-Road* Field::get_left_edge() const{
+auto Field::get_left_edge() const -> Road*{
     return m_left_edge;
 }
 
-Road* Field::get_bottom_right_edge() const{
+auto Field::get_bottom_right_edge() const -> Road*{
     return m_bottom_right_edge;
 }
 
-Road* Field::get_bottom_left_edge() const{
+auto Field::get_bottom_left_edge() const -> Road*{
     return m_bottom_left_edge;
 }
 
-Road* Field::get_up_right_edge() const{
+auto Field::get_up_right_edge() const -> Road*{
     return m_up_right_edge;
 }
 
-Road* Field::get_up_left_edge() const{
+auto Field::get_up_left_edge() const -> Road*{
     return m_up_left_edge;
 }
 
 
-bool Field::is_robber_on_the_field() const{
+auto Field::is_robber_on_the_field() const -> bool{
     return m_is_robber_od_the_field;
 }
 

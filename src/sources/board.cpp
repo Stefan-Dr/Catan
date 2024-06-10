@@ -21,7 +21,7 @@ Board::~Board(){
     m_fields.clear();
 }
 
-QVector<Field *>Board::get_fields(){
+auto Board::get_fields() -> QVector<Field *>{
     return m_fields;
 }
 
@@ -632,7 +632,7 @@ void Board::mousePressEvent(QGraphicsSceneMouseEvent *event){
                 GUI_Node *node = dynamic_cast<GUI_Node*>(itemAt(event->scenePos(), QTransform()));
                 node->set_hasRoad(true);
                 if((m_tmp->get_is_house_built() || m_tmp->get_hasRoad()) && m_tmp != node) {
-                    GUI_Road* road = new GUI_Road(m_tmp, node);
+                    auto* road = new GUI_Road(m_tmp, node);
                     road->set_pen(getRoadColor());
                     addItem(road);
                     node->set_is_end_of_road(true);
@@ -716,7 +716,7 @@ void Board::setCurrColor(QColor color)
     m_curr_color = color;
 }
 
-QColor Board::getCurrColor()
+auto Board::getCurrColor() -> QColor
 {
     return m_curr_color;
 }
@@ -726,12 +726,12 @@ void Board::setRoadColor(QColor color)
     m_road_color = color;
 }
 
-QColor Board::getRoadColor()
+auto Board::getRoadColor() -> QColor
 {
     return m_road_color;
 }
 
-bool Board::is_first_turn() const
+auto Board::is_first_turn() const -> bool
 {
     return m_first_turn;
 }
